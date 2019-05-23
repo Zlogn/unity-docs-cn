@@ -1,5 +1,5 @@
 # Unity 中文文档
 
-[用户手册](https://www.zlogn.com/unity-docs-cn/Manual/index.html)
+[用户手册](./Manual/index.html)
 
-[脚本API](https://www.zlogn.com/unity-docs-cn/ScriptReference/index.html)
+[脚本API](./ScriptReference/index.html)
