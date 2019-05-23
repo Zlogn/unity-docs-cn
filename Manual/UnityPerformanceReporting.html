@@ -1,0 +1,302 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Unity Performance Reporting - Unity Manual">
+<title>Unity Performance Reporting - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/UnityPerformanceReporting.png">
+<meta name="description" content="Unity Performance Reporting 可捕获并聚合异常数据和本机崩溃报告，从而帮助您了解运行时发生的情况并更快地优化项目。当游戏作为完整版本运行时以及在 Editor 中处于播放模式下时，异常会更新到 Services Dashboard。">
+<meta property="og:description" content="Unity Performance Reporting 可捕获并聚合异常数据和本机崩溃报告，从而帮助您了解运行时发生的情况并更快地优化项目。当游戏作为完整版本运行时以及在 Editor 中处于播放模式下时，异常会更新到 Services Dashboard。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'UnityPerformanceReporting';
+      if(!page) page = 'index';
+      var version = '2018.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2018.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UnityPerformanceReporting.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UnityPerformanceReporting.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UnityPerformanceReporting.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UnityPerformanceReporting.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UnityPerformanceReporting.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UnityPerformanceReporting.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UnityPerformanceReporting.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UnityPerformanceReporting.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UnityPerformanceReporting.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2018.1/Documentation/Manual/UnityPerformanceReporting.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.1/Manual/UnityPerformanceReporting.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.1/Manual/UnityPerformanceReporting.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.1/Manual/UnityPerformanceReporting.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2018.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UnityPerformanceReporting.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UnityPerformanceReporting.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UnityPerformanceReporting.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UnityPerformanceReporting.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/UnityPerformanceReporting.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/UnityPerformanceReporting.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/UnityPerformanceReporting.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/UnityPerformanceReporting.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/UnityPerformanceReporting.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityServices.html">Unity 服务</a></li>
+<li>Unity Performance Reporting</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityCollaborateTroubleShooting.html"></a></span><div class="tip">Collaborate 故障排除技巧</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityPerformanceReportingSettingUp.html"></a></span><div class="tip">设置 Performance Reporting</div>
+</div>
+</div></div>
+<h1>Unity Performance Reporting</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Unity Performance Reporting 可捕获并聚合异常数据和本机崩溃报告，从而帮助您了解运行时发生的情况并更快地优化项目。当游戏作为完整版本运行时以及在 Editor 中处于播放模式下时，异常会更新到 Services Dashboard。</p>
+
+<figure>
+<img src="../uploads/Main/UnityPerformanceReporting.png" alt="Services Dashboard">
+<figcaption>Services Dashboard</figcaption>
+</figure>
+
+<p>有关启用 Performance Reporting 来跟踪崩溃（包括本机用户代码、引擎代码和插件中的崩溃）的信息，请参阅<a href="UnityPerformanceReportingSettingUp.html">设置 Performance Reporting</a>。</p>
+
+<h2>本机崩溃报告可用性</h2>
+
+<p>本机崩溃报告可作为 <a href="https://unity3d.com/unity/features/performance-reporting">Unity Performance Reporting</a> 服务的一部分供 Unity Plus 和 Pro 用户使用。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>平台</strong></th>
+	<th style="text-align:left;"><strong>可用起始版本</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">iOS</td>
+	<td style="text-align:left;">5.6</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Android</td>
+	<td style="text-align:left;">2017.2</td>
+</tr>
+<tr>
+	<td style="text-align:left;">MacOS</td>
+	<td style="text-align:left;">2017.3</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Windows</td>
+	<td style="text-align:left;">2018.1</td>
+</tr>
+</tbody>
+</table>
+
+<h2>iOS 崩溃报告</h2>
+
+<p>使用 <a href="IL2CPP.html">IL2CPP</a> 并将 <a href="class-PlayerSettingsiOS.html">iOS Player Settings</a> <strong>Script Call Optimization</strong> 设置设为 <strong>Fast but no exceptions</strong> 时，iOS 崩溃报告会收集由于未捕获的托管异常而导致的崩溃。</p>
+
+<p>有关 <strong>Script Call Optimization</strong> 设置的更多信息，请参阅 <a href="iphone-iOS-Optimization.html">iPhone 优化</a>。</p>
+
+<h2>报告</h2>
+
+<p>报告会显示崩溃线程的本机堆栈跟踪。如果崩溃是由未捕获的托管异常引起的，则报告还会显示异常源自的托管堆栈跟踪以及本机堆栈跟踪。</p>
+
+<p>请注意，iOS 崩溃报告无法收集应用程序内存不足而随后被操作系统关闭所导致的崩溃。</p>
+
+<p>应通过 <a href="http://developer.cloud.unity3d.com">Unity Cloud Developer Dashboard</a> 查看崩溃。此处，选择您的游戏并选择 __Enable Game Performance__（请参阅图 A）。</p>
+
+<figure>
+<img src="../uploads/Main/UnityPerformanceReportingGamePerformance.png" alt="图 A：Unity Cloud Developer Dashboard 中的 Game Performance 选项">
+<figcaption>图 A：Unity Cloud Developer Dashboard 中的 Game Performance 选项</figcaption>
+</figure>
+
+<h2>示例</h2>
+
+<p>下面的示例报告展示了由于托管异常而导致崩溃的类似报告：</p>
+
+<pre><code>
+Managed Stack Trace:
+
+at CrashTests.CrashNextUpdate () [0x00000] in &lt;filename unknown&gt;:0
+
+at CrashTests.Update () [0x00000] in &lt;filename unknown&gt;:0
+
+Native StackTrace:
+
+Thread 0 (crashed)
+
+0 crashreporttest CrashedCheckBelowForHintsWhy() (CrashReporter.mm:106)
+
+1 crashreporttest UnhandledExceptionEventHandler_Invoke_m689053609 (mscorlib_System_Delegate3660574010.h:79)
+
+2 crashreporttest RuntimeInvoker_Void_t2779279689_Il2CppObject_Il2CppObject(MethodInfo const*, void*, void**) (Il2CppInvokerTable.cpp:405)
+
+3 crashreporttest il2cpp::vm::Runtime::CallUnhandledExceptionDelegate(Il2CppDomain*, Il2CppDelegate*, Il2CppObject*) (Runtime.cpp:350)
+
+4 crashreporttest il2cpp::vm::Runtime::UnhandledException(Il2CppObject*) (Runtime.cpp:440)
+
+5 crashreporttest ScriptingInvocationNoArgs::Invoke(ScriptingException**) (ScriptingInvocationNoArgs.cpp:131)
+
+6 crashreporttest ScriptingInvocationNoArgs::Invoke() (ScriptingInvocationNoArgs.cpp:95)
+
+7 crashreporttest MonoBehaviour::CallUpdateMethod(int) (MonoBehaviour.cpp:541)
+
+8 crashreporttest void BaseBehaviourManager::CommonUpdate&lt;BehaviourManager&gt;() (Behaviour.cpp:169)
+
+9 crashreporttest PlayerLoop(bool, bool, IHookEvent*) (Player.cpp:1721)
+
+10 crashreporttest UnityPlayerLoopImpl(bool) (LibEntryPoint.mm:240)
+
+11 crashreporttest UnityRepaint (UnityAppController+Rendering.mm:238)
+
+12 crashreporttest -[UnityAppController(Rendering) repaintDisplayLink] (UnityAppController+Rendering.mm:54)
+
+13 QuartzCore CA::Display::DisplayLinkItem::dispatch()
+
+14 QuartzCore CA::Display::DisplayLink::dispatch_items(unsigned long long, unsigned long long, unsigned long long)
+
+15 IOKit IODispatchCalloutFromCFMessage
+
+16 CoreFoundation __CFMachPortPerform
+
+17 CoreFoundation __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE1_PERFORM_FUNCTION__
+
+18 CoreFoundation __CFRunLoopDoSource1
+
+19 CoreFoundation __CFRunLoopRun
+
+20 CoreFoundation CFRunLoopRunSpecific
+
+21 GraphicsServices GSEventRunModal
+
+22 UIKit UIApplicationMain
+
+23 crashreporttest main (main.mm:32)
+
+</code></pre>
+
+<ul>
+<li><span class="page-edit">2018–03–27 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+<li><span class="page-history">在 Unity 5.5 中添加了 <strong>Capture Editor Exceptions</strong> 设置并将 <strong>Optimize game performance</strong> 开关标签重命名为 <strong>Discover app errors</strong></span></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityCollaborateTroubleShooting.html"></a></span><div class="tip">Collaborate 故障排除技巧</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityPerformanceReportingSettingUp.html"></a></span><div class="tip">设置 Performance Reporting</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>
