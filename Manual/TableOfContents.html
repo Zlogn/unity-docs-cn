@@ -151,6 +151,7 @@
 <ul>
 <li><a href="GettingStartedUnityHub.html">Unity Hub</a></li>
 <li><a href="GettingStartedInstallingHub.html">使用 Hub 来安装 Unity</a></li>
+<li><a href="GettingStartedAddingEditorComponents.html">Adding components to the Unity Editor</a></li>
 <li><a href="InstallingUnity.html">在没有 Hub 的情况下安装 Unity</a></li>
 <li><a href="DeployingUnityOffline.html">Installing Unity offline without the Hub</a></li>
 <li><a href="GettingStartedHubAdvancedConsiderations.html">Unity Hub advanced deployment considerations</a></li>
@@ -538,6 +539,7 @@
 <a href="Sprites.html">精灵</a>
 
 <ul>
+<li><a href="class-SpriteRenderer.html">精灵渲染器 (Sprite Renderer)</a></li>
 <li><a href="SpriteCreator.html">Sprite Creator</a></li>
 <li>
 <a href="SpriteEditor.html">Sprite Editor</a>
@@ -548,17 +550,18 @@
 </ul>
 </li>
 <li><a href="SpritePacker.html">Sprite Packer</a></li>
-<li><a href="SortingGroup.html">排序组</a></li>
+<li><a href="class-SortingGroup.html">排序组</a></li>
 <li><a href="9SliceSprites.html">9 切片精灵</a></li>
 <li><a href="class-SpriteMask.html">精灵遮罩</a></li>
-<li><a href="SpriteAtlas.html">精灵图集</a></li>
+<li><a href="class-SpriteAtlas.html">精灵图集</a></li>
 </ul>
 </li>
 <li>
-<a href="Tilemap.html">Tilemap</a>
+<a href="class-Tilemap.html">Tilemap</a>
 
 <ul>
 <li><a href="Tilemap-TileAsset.html">瓦片资源</a></li>
+<li><a href="class-TilemapRenderer.html">Tilemap Renderer</a></li>
 <li><a href="Tilemap-CreatingTiles.html">创建瓦片</a></li>
 <li><a href="Tilemap-CreatingTilemaps.html">创建瓦片地图 (Tilemap)</a></li>
 <li><a href="Tilemap-Palette.html">Tilemap Palette</a></li>
@@ -794,6 +797,7 @@
 </ul>
 </li>
 <li><a href="OcclusionCulling.html">遮挡剔除</a></li>
+<li><a href="DynamicResolution.html">Dynamic resolution</a></li>
 </ul>
 </li>
 <li>
@@ -829,6 +833,7 @@
 <li><a href="StandardShaderMakeYourOwn.html">自行创建</a></li>
 </ul>
 </li>
+<li><a href="shader-StandardParticleShaders.html">Standard Particle Shaders</a></li>
 <li><a href="MaterialValidator.html">基于物理的渲染材质验证器</a></li>
 <li><a href="MaterialsAccessingViaScript.html">通过脚本访问和修改材质参数</a></li>
 <li><a href="ShadersOverview.html">编写着色器</a></li>
@@ -1025,7 +1030,7 @@
 <li><a href="OpenGLCoreDetails.html">OpenGL Core</a></li>
 </ul>
 </li>
-<li><a href="ComputeShaders.html">计算着色器</a></li>
+<li><a href="class-ComputeShader.html">计算着色器</a></li>
 <li><a href="GraphicsCommandBuffers.html">图形命令缓冲区</a></li>
 <li><a href="GPUInstancing.html">GPU 实例化</a></li>
 <li><a href="SparseTextures.html">稀疏纹理</a></li>
@@ -1047,7 +1052,7 @@
 <a href="OptimizingGraphicsPerformance.html">优化图形性能</a>
 
 <ul>
-<li><a href="DrawCallBatching.html">绘制调用批处理</a></li>
+<li><a href="DrawCallBatching.html">DrawCallBatching</a></li>
 <li><a href="ModelingOptimizedCharacters.html">角色建模的性能优化</a></li>
 <li><a href="RenderingStatistics.html">渲染 Statistics 窗口</a></li>
 <li><a href="FrameDebugger.html">帧调试器</a></li>
@@ -1160,6 +1165,7 @@
 <li><a href="SL-ShaderLOD.html">着色器细节级别</a></li>
 <li><a href="SL-TextureArrays.html">纹理数组</a></li>
 <li><a href="SL-DebuggingD3D11ShadersWithVS.html">使用 Visual Studio 来调试 DirectX 11 着色器</a></li>
+<li><a href="DebuggingShadersWithPIX.html">Debugging DirectX 12 shaders with PIX</a></li>
 <li><a href="SL-ImplementingTexGen.html">在着色器中实现固定函数 TexGen</a></li>
 </ul>
 </li>
@@ -1267,7 +1273,7 @@
 <a href="class-RenderTexture.html">渲染纹理</a>
 
 <ul>
-<li><a href="CustomRenderTextures.html">自定义渲染纹理</a></li>
+<li><a href="class-CustomRenderTexture.html">自定义渲染纹理</a></li>
 </ul>
 </li>
 <li><a href="class-MovieTexture.html">电影纹理</a></li>
@@ -1298,7 +1304,6 @@
 <li><a href="RenderTech-HardwareRequirements.html">Unity 的图形功能的硬件要求</a></li>
 </ul>
 </li>
-<li><a href="class-SpriteRenderer.html">精灵渲染器 (Sprite Renderer)</a></li>
 </ul>
 </li>
 <li>
@@ -2071,7 +2076,7 @@
 <a href="UnityServices.html">Unity 服务</a>
 
 <ul>
-<li><p><a href="SettingUpProjectServices.html">设置项目启用 Unity 服务</a></p></li>
+<li><a href="SettingUpProjectServices.html">设置项目启用 Unity 服务</a></li>
 <li>
 <a href="OrgsUnityOrganizations.html">Unity Organizations</a>
 
@@ -2094,8 +2099,8 @@
 <a href="UnityAnalytics.html">Unity Analytics</a>
 
 <ul>
-<li><p><a href="UnityAnalyticsOverview.html">Unity Analytics 概述</a></p></li>
-<li><p><a href="UnityAnalyticsSetup.html">设置 Analytics</a></p></li>
+<li><a href="UnityAnalyticsOverview.html">Unity Analytics 概述</a></li>
+<li><a href="UnityAnalyticsSetup.html">设置 Analytics</a></li>
 <li>
 <a href="UnityAnalyticsDashboard.html">Analytics Dashboard</a>
 
@@ -2109,6 +2114,7 @@
 <li><a href="UnityAnalyticsDashboardRDE.html">原始数据导出 (Raw Data Export) 页面</a></li>
 <li><a href="UnityAnalyticsDashboardEventManager.html">事件管理器 (Event Manager)</a></li>
 <li><a href="UnityAnalyticsDashboardConfigure.html">配置 (Configure) 选项卡</a></li>
+<li><a href="UnityAnalyticsMarketInsights.html">Market Insights</a></li>
 </ul>
 </li>
 <li>
@@ -2126,9 +2132,10 @@
 </li>
 <li><a href="class-AnalyticsEventTracker.html">Analytics Event Tracker</a></li>
 <li><a href="UnityAnalyticsEventParameters.html">Analytics 事件参数</a></li>
+<li><a href="UnityAnalyticsEventLimits.html">Analytics Event limits</a></li>
 </ul>
 </li>
-<li><p><a href="UnityAnalyticsFunnels.html">漏斗图</a></p></li>
+<li><a href="UnityAnalyticsFunnels.html">漏斗图</a></li>
 <li>
 <a href="UnityAnalyticsRemoteSettings.html">Remote Settings</a>
 
@@ -2148,6 +2155,7 @@
 </li>
 </ul>
 </li>
+<li><a href="UnityAnalyticsABTesting.html">Unity Analytics A/B Testing</a></li>
 <li>
 <a href="UnityAnalyticsMonetization.html">变现</a>
 
@@ -2155,9 +2163,9 @@
 <li><a href="UnityAnalyticsReceiptVerification.html">收据验证</a></li>
 </ul>
 </li>
-<li><p><a href="UnityAnalyticsUserAttributes.html">用户属性</a></p></li>
-<li><p><a href="UnityAnalyticsRawDataExport.html">Unity Analytics 原始数据导出 (Raw Data Export)</a></p></li>
-<li><p><a href="UnityAnalyticsDataReset.html">数据重置</a></p></li>
+<li><a href="UnityAnalyticsUserAttributes.html">用户属性</a></li>
+<li><a href="UnityAnalyticsRawDataExport.html">Unity Analytics 原始数据导出 (Raw Data Export)</a></li>
+<li><a href="UnityAnalyticsDataReset.html">数据重置</a></li>
 <li>
 <a href="UnityAnalyticsUpgrading.html">升级 Unity Analytics</a>
 
@@ -2168,9 +2176,15 @@
 <li><a href="UnityAnalyticsMismatchedProjectId.html">项目 ID 不匹配的情况下如何应对</a></li>
 </ul>
 </li>
-<li><p><a href="UnityAnalyticsCOPPA.html">COPPA 合规性</a></p></li>
-<li><p><a href="UnityAnalyticsDataPrivacy.html">Unity Analytics 和欧盟一般数据保护条例 (GDPR)</a></p></li>
-<li><p><a href="UnityAnalyticsTerminology.html">Analytics 指标、细分段和术语</a></p></li>
+<li><a href="UnityAnalyticsCOPPA.html">COPPA 合规性</a></li>
+<li>
+<a href="UnityAnalyticsDataPrivacy.html">Unity Analytics 和欧盟一般数据保护条例 (GDPR)</a>
+
+<ul>
+<li><a href="UnityAnalyticsDataPrivacyAPI.html">Unity Analytics DataPrivacy API</a></li>
+</ul>
+</li>
+<li><a href="UnityAnalyticsTerminology.html">Analytics 指标、细分段和术语</a></li>
 </ul>
 </li>
 <li>
@@ -2190,6 +2204,8 @@
 <li><a href="UnityCloudBuildVcsMercurialUsingEditor.html">使用 Unity Editor 对 Unity Cloud Build 进行 Mercurial 配置</a></li>
 <li><a href="UnityCloudBuildVcsSubversion.html">将 Apache Subversion (SVN) 用于 Unity Cloud Build</a></li>
 <li><a href="UnityCloudBuildVcsPerforce.html">将 Perforce 用于 Unity Cloud Build</a></li>
+<li><a href="UnityCloudBuildVcsPerforceUsingEditor.html">Using the Unity Editor to configure Unity Cloud Build for Perforce
+</a></li>
 </ul>
 </li>
 <li><a href="UnityCloudBuildiOS.html">发布到 iOS</a></li>
@@ -2316,23 +2332,9 @@
 <li><a href="UnityCollaborateTroubleShooting.html">Collaborate 故障排除技巧</a></li>
 </ul>
 </li>
-<li>
-<a href="UnityPerformanceReporting.html">Unity Performance Reporting</a>
-
-<ul>
-<li><a href="UnityPerformanceReportingSettingUp.html">设置 Performance Reporting</a></li>
-<li><a href="UnityPerformanceReportingUnderstandingReports.html">理解异常报告</a></li>
-<li>
-<a href="UnityPerformanceReportingSymbols.html">Performance Reporting 缺失符号</a>
-
-<ul>
-<li><a href="UnityPerformanceReportingFindingiOSSymbols.html">查找 iOS/OSX 应用程序符号和上传缺失的符号</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><a href="UnityIntegrations.html">Unity Integrations</a></p></li>
-<li><p><a href="UnityMultiplayerService.html">Multiplayer 服务</a></p></li>
+<li><a href="UnityCloudDiagnostics.html">UnityCloudDiagnostics</a></li>
+<li><a href="UnityIntegrations.html">Unity Integrations</a></li>
+<li><a href="UnityMultiplayerService.html">Multiplayer 服务</a></li>
 </ul>
 </li>
 <li>
@@ -2498,7 +2500,7 @@
 </ul>
 </li>
 <li>
-<a href="AppleMac.html">Apple Mac</a>
+<a href="AppleMac.html">macOS</a>
 
 <ul>
 <li>

@@ -209,8 +209,8 @@
 	<td style="text-align:left;">The adaptive force affects the way forces are transmitted through a pile or stack of objects, to give more realistic behaviour. Tick this box to enable the adaptive force. This setting is unticked by default.</td>
 </tr>
 <tr>
-	<td style="text-align:left;"><strong>Enable PCM</strong></td>
-	<td style="text-align:left;">Tick this checkbox to enable the persistent contacts manifold (PCM) contacts generation method of the physics engine. This means that fewer contacts are regenerated every physics frame, and more contact data is shared across frames. The PCM contacts generation path is also more accurate, and usually produces better collision feedback in most of the cases. See <a href="http://docs.nvidia.com/gameworks/content/gameworkslibrary/physx/guide/Manual/AdvancedCollisionDetection.html#persistent-contact-manifold-pcm">Nvidia documentation on Persistent Contact Manifold</a> for more information. <br><strong>Note</strong>: Before Unity 5.5, Unity used a contacts generation method called SAT, based on the separating axis theorem (see <a href="http://www.dyn4j.org/2010/01/sat/">dyn4j.org’s guide to SAT</a>). PCM is more efficient, but for older projects, you might find it easier to continue using SAT, to avoid needing to retweak physics slightly. PCM can result in a slightly different bounce, and fewer useless contacts end up in the contacts buffers (that is, the arrays you get in the Collision instance passed to <code>OnCollisionEnter</code>, <code>OnCollisionStay</code>, <code>OnCollisionExit</code>).</td>
+	<td style="text-align:left;"><strong>Contacts Generation</strong></td>
+	<td style="text-align:left;">Choose a contact generation method:<br><br><strong>Persistent Contacts Manifold (PCM)</strong>: Regenerates fewer contacts every physics frame and shares more contact data across frames. The PCM contacts generation path is also more accurate, and usually produces better collision feedback in most of the cases. See <a href="https://docs.nvidia.com/gameworks/content/gameworkslibrary/physx/guide/Manual/AdvancedCollisionDetection.html#persistent-contact-manifold-pcm">Nvidia documentation on Persistent Contact Manifold</a> for more information.<br><strong>Legacy Contacts Generation</strong>: Generates contacts using the separating axis theorem (see <a href="http://www.dyn4j.org/2010/01/sat/">dyn4j.org’s guide to SAT</a>).<br><br>PCM is more efficient, but for projects made in versions of Unity earlier than Unity 5.5, you might find it easier to continue using SAT, to avoid needing to retweak physics slightly. PCM can result in a slightly different bounce, and fewer useless contacts end up in the contacts buffers (that is, the arrays you get in the Collision instance passed to <code>OnCollisionEnter</code>, <code>OnCollisionStay</code>, and <code>OnCollisionExit</code>).</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Auto Simulation</strong></td>
@@ -221,8 +221,28 @@
 	<td style="text-align:left;">Automatically sync transform changes with the physics system whenever a Transform component changes.</td>
 </tr>
 <tr>
+	<td style="text-align:left;"><strong>Contact Pairs Mode</strong></td>
+	<td style="text-align:left;">Select the type of contact pair generation to use:<br><br><strong>Default Contact Pairs</strong>: Receive collision and trigger events from all contact pairs except kinematic-kinematic and kinematic-static pairs.<br><strong>Enable Kinematic Kinematic Pairs</strong>: Receive collision and trigger events from kinematic-kinematic contact pairs.<br><strong>Enable Kinematic Static Pairs</strong>: Receive collision and trigger events from kinematic-static contact pairs.<br><strong>Enable All Contact Pairs</strong>:Receive collision and trigger events from all contact pairs.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Broadphase Type</strong></td>
+	<td style="text-align:left;">Choose which broad-phase algorithm to use in the physics simulation: <strong>Sweep and Prune Broadphase</strong> or <strong>Multibox Pruning Broadphase</strong>. Multi-box pruning uses a grid, and each grid cell performs sweep-and-prune. This usually helps improve performance if, for example, there are many GameObjects in a flat world. For more information, see NVIDIA’s documentation on <a href="https://docs.nvidia.com/gameworks/content/gameworkslibrary/physx/apireference/files/structPxBroadPhaseType.html">PhysX SDK</a> and <a href="https://docs.nvidia.com/gameworks/content/gameworkslibrary/physx/guide/Manual/RigidBodyCollision.html">Rigid Body Collision</a>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>World Bounds</strong></td>
+	<td style="text-align:left;">Define the 2D grid that encloses the world to prevent far away objects from affecting each other when using the <strong>Multibox Pruning Broadphase</strong> algorithm. This option is only available when you set <strong>Broadphase Type</strong> to <strong>Multibox Pruning Broadphase</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>World Subdivisions</strong></td>
+	<td style="text-align:left;">The number of cells along the x and z axis in the 2D gri__ algorithm. This option is only available when you set <strong>Broadphase Type</strong> to <strong>Multibox Pruning Broadphase</strong>.</td>
+</tr>
+<tr>
 	<td style="text-align:left;"><strong>Layer Collision Matrix</strong></td>
 	<td style="text-align:left;">Use this to define how the <a href="LayerBasedCollision.html">layer-based collision</a> detection system behaves.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Cloth Inter-Collision</strong></td>
+	<td style="text-align:left;">Control cloth particle <strong>Distance</strong> and <strong>Stiffness</strong> when setting up particles for <a href="class-Cloth.html#intercollision">Cloth intercollision</a>.</td>
 </tr>
 </tbody>
 </table>
@@ -232,9 +252,10 @@
 <hr>
 
 <ul>
-<li><p><span class="page-edit"> 2017–05–18 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+<li><p><span class="page-edit"> 2018–08–10 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
 </span></p></li>
 <li><p><span class="page-history">Settings added in 5.5: Default Solver Iterations, Default Solver Velocity Iterations, Queries Hit Backfaces, Enable PCM</span></p></li>
+<li><p><span class="page-history">Physics Manager settings documentation updated in 2017.4</span></p></li>
 </ul>
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">

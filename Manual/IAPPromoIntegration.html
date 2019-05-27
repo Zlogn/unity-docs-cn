@@ -173,11 +173,11 @@
 <p>要使用内购推荐 (IAP Promo)，您需要：</p>
 
 <p>1.<a href="https://docs.unity3d.com/Manual/SettingUpProjectServices.html">配置项目以使用 Unity 服务</a>。
-2.在项目中启用 Unity IAP (SDK 1.17+) 和 Unity Ads (SDK 2.2+)。</p>
+2. Enable the <a href="https://assetstore.unity.com/packages/add-ons/services/billing/unity-iap-68207">Unity IAP SDK</a> (1.2+) and <a href="https://assetstore.unity.com/packages/add-ons/services/unity-ads-66123">Unity Ads SDK</a> (2.3+) in your Project.</p>
 
 <h4>设置 Unity IAP</h4>
 
-<p>内购推荐 (IAP Promo) 需要受支持的 Unity IAP SDK 版本 (1.17+)。要获取最新 IAP SDK，请在 Services 窗口 (<strong>Window</strong> &gt; <strong>Services</strong>) 中启用 __In-App Purchasing__，或者从 <a href="https://assetstore.unity.com/packages/add-ons/services/billing/unity-iap-68207">Asset Store</a> 将其导入。如果是从 Services 窗口启用，务必在系统提示时选择<strong>导入</strong> (Import) 资源包。</p>
+<p>IAP Promo requires a supported version of the Unity IAP SDK (1.17+). To acquire the latest IAP SDK, either enable <strong>In-App Purchasing</strong> in the Services window (<strong>Window &gt; Services</strong>), or import it from the <a href="https://assetstore.unity.com/packages/add-ons/services/billing/unity-iap-68207">Asset store</a>. If you’re enabling it from the Services window, be sure to <strong>Import</strong> the Asset package when prompted.</p>
 
 <figure>
 <img src="../uploads/Main/Enable_IAP.png" alt="Enabling Unity IAP in the Editor’s Services window">
@@ -202,7 +202,7 @@
 
 <h3>实现 IAP</h3>
 
-<p>必须在初始化 Unity Ads 之前先初始化 IAP 才能使用__推荐 (Promotions)__。初始化有两个选项：无码或脚本。</p>
+<p>There are two options for initialization: codeless or scripting. </p>
 
 <h4>使用 Codeless IAP</h4>
 
@@ -210,30 +210,27 @@
 
 <p>要使用 Codeless IAP，请填充__商品目录__ (Product Catalog)，然后创建 <strong>IAP 监听器</strong> (IAP Listener) 来获取该目录：</p>
 
-<p>1.在 Editor 中，选择 <strong>Window</strong> &gt; <strong>UnityIAP</strong> &gt; <strong>IAP Catalog</strong> 以打开 <strong>IAP Catalog</strong> 窗口。该窗口会列出您以前配置的所有商品。必须在__商品目录__中至少配置一个__商品__。有关设置__商品__的完整过程，请参阅 <a href="https://docs.unity3d.com/Manual/UnityIAPCodelessIAP.html">Codeless IAP</a>。</p>
-
-<p>2.在 <strong>IAP Catalog</strong> 窗口中，选择 <strong>App Store Export</strong> &gt; <strong>Cloud JSON</strong> 以导出__商品目录__的本地副本。<br><img src="../uploads/Main/IAP_Catalog_Window.png" alt="将 IAP 商品目录导出到 JSON"></p>
-
-<p>3.创建 <strong>IAP 监听器</strong>。选择 <strong>Window</strong> &gt; <strong>Unity IAP</strong> &gt; <strong>Create IAP Listener</strong>，然后将其添加到游戏的第一个场景。游戏一启动，监听器就会获取__商品目录<strong>。这样可以避免在游戏请求__推荐 (Promotions)</strong> 而__商品__没有准备好（因为无码按钮尚未出现在场景中）时发生错误。</p>
+<ol>
+<li><p>In the Editor, select <strong>Window &gt; UnityIAP &gt; IAP Catalog</strong> to open the <strong>IAP Catalog</strong> window. This window lists all of your previously configured Products. You must have at least one <strong>Product</strong> configured in your <strong>Product Catalog</strong>. For a complete walkthrough on setting up <strong>Products</strong>, see <a href="https://docs.unity3d.com/Manual/UnityIAPCodelessIAP.html">Codeless IAP</a>.</p></li>
+<li><p>In the <strong>IAP Catalog</strong> window, select <strong>App Store Export &gt; Cloud JSON</strong> to export a local copy of the <strong>Product Catalog</strong>.<br><img src="../uploads/Main/IAP_Catalog_Window.png" alt="Exporting an IAP Product Catalog to JSON"></p></li>
+<li><p>Create an <strong>IAP Listener</strong>. Select <strong>Window &gt; Unity IAP &gt; Create IAP Listener</strong>, and add it to the first scene of your game. The listener fetches your <strong>Product Catalog</strong> as soon as the game boots. This avoids errors where the game requests <strong>Promotions</strong> but a <strong>Product</strong> isn’t ready because the codeless button hasn’t appeared in the scene yet.</p></li>
+</ol>
 
 <h4>使用脚本</h4>
 
-<p>如果通过脚本来<a href="https://docs.unity3d.com/Manual/UnityIAPInitialization.html">手动初始化 Unity IAP</a>，则可从 <code>OnInitialized()</code> 回调方法中初始化 Unity Ads 以确保 IAP 始终先初始化。请参阅以下代码示例：</p>
+<p>If you do not use Codeless IAP, you must <a href="https://docs.unity3d.com/Manual/UnityIAPInitialization.html">initialize Unity IAP manually</a> through a script. See the following code example: </p>
 
 <pre><code>using System.Collections;
 using System.Collections.Generic;
 
 using UnityEngine;
-using UnityEngine.Advertisements;
 using UnityEngine.Events;
 using UnityEngine.Purchasing;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(AdsManager))]
 public class UnityIAP : MonoBehaviour, IStoreListener
 {
     private IStoreController controller;
-    private AdsManager ads;
 
     private const string product_coins = "100.gold.coins";
     private const string product_hat = "top_hat";
@@ -244,18 +241,9 @@ public class UnityIAP : MonoBehaviour, IStoreListener
     public bool hat_owned = false;
     public bool elite_member = false;
 
-
-    private void Awake()
-    {
-        this.ads = GetComponent&lt;AdsManager&gt;();
-        // 其中 AdsManager 是您的 Ads 初始化脚本
-    }
-
     private void Start()
     {
         Debug.Log("UnityIAP.Init()");
-
-        // var builder = ConfigurationBuilder.Instance(StandardPurchasingModule.Instance());
 
         StandardPurchasingModule module = StandardPurchasingModule.Instance();
         ProductCatalog catalog = ProductCatalog.LoadDefaultCatalog();
@@ -270,16 +258,14 @@ public class UnityIAP : MonoBehaviour, IStoreListener
         Debug.Log("UnityIAP.OnInitialized(...)");
         this.controller = controller;
 
-        this.ads.Init();
-        // 其中 Init() 是您的 Unity Ads 初始化方法
+        // Include any additional initialization logic as needed
     }
 
     public void OnInitializeFailed(InitializationFailureReason error)
     {
         Debug.Log("UnityIAP.OnInitializeFailed(" + error + ")");
 
-        this.ads.Init();
-        // 如果 IAP 初始化失败，您可能仍然希望初始化 Ads
+        // Include any additional initialization failure logic as needed 
     }
 
     public void Buy(string productId)
@@ -334,7 +320,7 @@ public class UnityIAP : MonoBehaviour, IStoreListener
 
 <h3>实现 Unity Ads</h3>
 
-<p>在 IAP 初始化脚本的 <code>OnInitialized()</code> 回调方法中初始化 Unity Ads 可确保正确的初始化顺序。以下代码示例显示了要调用的 Unity Ads 初始化方法：</p>
+<p>You must also <a href="https://unityads.unity3d.com/help/monetization/integration-guide-unity">initialize Unity Ads</a>, whether or not you use the Codeless or manual IAP initialization method. The following code sample illustrates an initialization method to invoke:</p>
 
 <pre><code>using System.Collections;
 using System.Collections.Generic;
@@ -382,8 +368,6 @@ public class AdsManager : MonoBehaviour
 }
 </code></pre>
 
-<p><strong>注意</strong>：如果使用 Codeless IAP 进行 IAP 初始化，必须在代码的其他位置调用 Unity Ads 初始化方法。</p>
-
 <p><a name="ConfiguringPromotions"></a> </p>
 
 <h2>在开发者控制面板 (Developer Dashboard) 中配置推荐 (Promotions)</h2>
@@ -408,7 +392,7 @@ public class AdsManager : MonoBehaviour
 }
 </code></pre>
 
-<p>按 Editor 中的 <strong>Play</strong> 可检查__广告位__提出请求时是否显示测试广告。要查看真实的推荐创意资源，必须在生产模式下将游戏发布到设备。</p>
+<p>Press <strong>Play</strong> in the Editor to check that a test ad appears when the <strong>Placement</strong> makes its request. To see real promotional creative assets, you must build the game to a device in production mode.</p>
 
 <p><br>
 <br></p>
@@ -416,7 +400,7 @@ public class AdsManager : MonoBehaviour
 <hr>
 
 <ul>
-<li><span class="page-edit">2018–03–01 Page published with <a href="DocumentationEditorialReview.html">editorial review</a>
+<li><span class="page-edit">2018–09–10 Page amended with <a href="DocumentationEditorialReview.html">editorial review</a>
 </span></li>
 </ul>
 <div class="nextprev clear">

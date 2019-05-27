@@ -308,16 +308,15 @@
 |</strong>-logFile &lt;pathname&gt;<strong>|指定写入 Editor 或 Windows/Linux/OSX 独立日志文件的位置。如果省略该路径，OSX 和 Linux 将把输出写入控制台。Windows 使用路径 <em>%LOCALAPPDATA%\Unity\Editor\Editor.log</em> 作为默认值。|
 |</strong>-nographics<strong>|在批处理模式下运行时，完全不初始化图形设备。这样，即使在没有 GPU 的机器上也能运行自动化工作流程（自动工作流程仅在有窗口获得焦点时才起作用，否则无法发送模拟输入命令）。请注意，<code>-nographics</code> 不允许烘焙 GI，因为 Enlighten 需要 GPU 加速。|
 |</strong>-noUpm<strong>| 禁用 Unity Package Manager。 |
-|</strong>-password &lt;password&gt;<strong>|用户的密码（启动时需要）。|
+|</strong>-password &lt;password&gt;<strong>|在激活 Unity Editor 期间，在登录窗体中输入密码。|
 |</strong>-projectPath &lt;pathname&gt;<strong>|在指定路径下打开项目。|
 |</strong>-quit<strong>|在其他命令执行完毕后退出 Unity Editor。请注意，这可能导致错误消息被隐藏（但是，它们仍会出现在 Editor.log 文件中）。|
 |</strong>-returnlicense<strong>|将当前激活的许可证退回到许可证服务器。在删除许可证文件前请留出几秒钟，因为 Unity 需要与许可证服务器通信。|
 |</strong>-runEditorTests<strong>|从项目中运行 Editor 测试。这个参数需要 <code>projectPath</code>，并且最好与 <code>batchmode</code> 参数一起运行。<code>quit</code> 不是必需的，因为 Editor 在运行完后自动关闭。|
 |</strong>-serial &lt;serial&gt;<strong>|使用指定的序列号激活 Unity。最好还能传递 <code>-batchmode</code> 和 <code>-quit</code> 参数，以便在完成时退出 Unity（如果用来自动激活 Unity）。在创建许可证文件前请留出几秒钟，因为 Unity 需要与许可证服务器通信。确保许可证文件的文件夹存在，并且在使用此参数运行 Unity 之前具有适当的权限。如果激活失败，请查看 <a href="LogFiles.html">Editor.log</a> 获取信息。|
 |</strong>-setDefaultPlatformTextureFormat<strong>|在导入纹理或构建项目之前，将默认纹理压缩设置为所需的格式。这样就不必再使用所需的格式导入纹理。可用的格式为 dxt、pvrtc、atc、etc、etc2 和 astc。<br>请注意，这仅在 Android 上受支持。|
-|</strong>-silent-crashes<strong>|不显示崩溃对话框。|
+|</strong>-silent-crashes<strong>|Prevent Unity from displaying the dialog that appears when a Standalone Player crashes. This argument is useful when you want to run the Player in automated builds or tests, where you don’t want a dialog prompt to obstruct automation.|
 |</strong>-username &lt;username&gt;<strong>|在激活 Unity Editor 期间，在登录窗体中输入用户名。|
-|</strong>-password &lt;password&gt;<strong>|在激活 Unity Editor 期间，在登录窗体中输入密码。|
 |</strong>-disable-assembly-updater &lt;assembly1 assembly2&gt;__</td>
 	<td style="text-align:left;">指定一个以空格分隔的程序集名称列表作为 Unity 在自动更新时忽略的参数。<br>以空格分隔的程序集名称列表是可选的：如果传递命令行选项时不带任何程序集名称，表示忽略所有程序集，如示例 1 所示。<br><br>示例 1<br><code>unity.exe -disable-assembly-updater</code><br><br>示例 2 有两个程序集名称，其中一个具有路径名。示例 2 无论 <code>A1.dll</code> 存储在哪个文件夹中都会将其忽略，但只有 <code>A2.dll</code> 存储在 <code>subfolder</code> 文件夹下时才会将其忽略：<br><br>示例 2<br><code>unity.exe -disable-assembly-updater A1.dll subfolder/A2.dll</code><br><br>如果在 <code>-disable-assembly-updater</code> 命令行参数中列出程序集（或者如果不指定程序集），Unity 会将以下消息记录到 <a href="LogFiles.html">Editor.log</a>：<br><br> <code>[Assembly Updater] warning: Ignoring assembly [assembly_path] as requested by command line parameter.”).</code> <br><br> 可用于在导入程序集时避免不必要的 <a href="APIUpdater.html">API Updater</a> 开销。<br><br>如果知道 Unity API 不需要更新，对于导入访问 Unity API 的程序集非常有用。在导入完全不访问 Unity API 的程序集时也很有用（例如，如果在 Unity 之外构建了游戏源代码或其中部分代码，并且想要将生成的程序集导入到 Unity 项目中）。<br><br>注意：如果对任何需要更新的程序集禁用更新，则可能会在编译时和/或运行时都出现难以跟踪的错误。</td>
 </tr>
@@ -562,7 +561,7 @@ class MyEditorScript
 <hr>
 
 <ul>
-<li><p><span class="page-edit">2018–05–22 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+<li><p><span class="page-edit">2018–09–07 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
 </span><br></p></li>
 <li><p><span class="page-history">在 Unity <a href="https://docs.unity3d.com/2017.2/Documentation/Manual/30_search.html?q=newin20172">2017.2</a> 中添加了“accept-apiupdate”命令行选项 <span class="search-words">NewIn20172</span></span></p></li>
 <li><p><span class="page-history">在 Unity <a href="https://docs.unity3d.com/2017.3/Documentation/Manual/30_search.html?q=newin20173">2017.3</a> 中添加了“-force-clamped”命令行参数 <span class="search-words">NewIn20172</span></span></p></li>

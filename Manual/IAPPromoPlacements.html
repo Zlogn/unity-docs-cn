@@ -12,7 +12,7 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="内购推荐 (IAP Promo) 广告位 - Unity Manual">
 <title>内购推荐 (IAP Promo) 广告位 - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/DashboardHome.png">
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/AddPlacement.png">
 <meta name="description" content="使用__广告位__可控制__推荐 (Promotions)__ 在游戏中的显示时机和方式。应在开发者控制面板 (Developer Dashboard) 中创建__广告位__，然后在 Unity Editor 中通过代码调用它们（类似于普通的 Unity Ads 广告位）。">
 <meta property="og:description" content="使用__广告位__可控制__推荐 (Promotions)__ 在游戏中的显示时机和方式。应在开发者控制面板 (Developer Dashboard) 中创建__广告位__，然后在 Unity Editor 中通过代码调用它们（类似于普通的 Unity Ads 广告位）。">
 <meta name="author" content="Unity Technologies">
@@ -148,44 +148,18 @@
 
 <h2>创建广告位</h2>
 
-<p>从<a href="https://iap.unityads.unity3d.com">开发者控制面板 (Developer Dashboard) 的 <strong>内购推荐 (IAP Promo)</strong> 部分</a>创建__广告位__。当前操作的项目会出现在左上角。</p>
+<p>Create Promo <strong>Placements</strong> on the <a href="https://operate.dashboard.unity3d.com/">Operate page of the Developer Dashboard</a>. Your active Project appears in the top-left corner. To create a Promo <strong>Placement</strong>:</p>
 
-<figure>
-<img src="../uploads/Main/DashboardHome.png" alt="开发者控制面板 (Developer Dashboard) 中的内购推荐 (IAP Promo)">
-<figcaption>开发者控制面板 (Developer Dashboard) 中的内购推荐 (IAP Promo)</figcaption>
-</figure>
+<ol>
+<li><p>Select <strong>Monetization</strong> &gt; <strong>Placements</strong> from the left navigation bar.</p></li>
+<li><p>Click the <strong>ADD PLACEMENT</strong> button in the top-right corner.<br><br><img src="../uploads/Main/AddPlacement.png" alt="Adding Placements in the Developer Dashboard"></p></li>
+<li><p>Enter a <strong>Placement Name</strong>, then select whether the Placement is <strong>Rewarded</strong> or <strong>Non-rewarded</strong> (for more information on rewarded and non-rewarded ad Placements, see documentation on <a href="https://unityads.unity3d.com/help/monetization/best-practices">monetization best practices</a>).<br><br><img src="../uploads/Main/CreatePlacement.png" alt="Creating a new Placement in the Developer Dashboard"><br><strong>Note</strong>: The dashboard auto-populates <strong>Placement IDs</strong> based on the Placement’s name. You cannot edit <strong>Placement IDs</strong> after the <strong>Placement</strong> is created, even if you updated the name. Use them to call <strong>Placements</strong> in your code using the Unity Ads API (see Unity Ads documentation on <a href="https://unityads.unity3d.com/help/monetization/placements-and-filters">Placements and filters</a> for more information).<br><br></p></li>
+<li><p>Select <strong>CREATE NEW PLACEMENT</strong> to save the new Placement and return to your Project’s Placements list.</p></li>
+<li><p>Select the Placement you created for IAP Promo to open its <strong>General Settings</strong> menu.</p></li>
+<li><p>Expand the <strong>Ad Types</strong> setting, then check <strong>IAP</strong> and click the <strong>SAVE</strong> button.<br><br><img src="../uploads/Main/PlacementSettings.png" alt="Specifying the IAP Placement type."></p></li>
+</ol>
 
-<p>创建__广告位__步骤：</p>
-
-<p>1.从左侧导航栏中选择 <strong>Placements</strong>。<br><br><strong>注意</strong>：此情况下会从 Unity Ads 集成过程自动继承两个__广告位__（<strong>Rewarded Video</strong> 和 <strong>Video</strong>），但是两者均为禁用状态。<br><br></p>
-
-<p>2.选择右上角的 <strong>ADD NEW PLACEMENT</strong> 以打开 <strong>Attributes</strong> 菜单。<br><br> <strong>注意</strong>：可通过从左侧导航栏选择 <strong>Placements</strong>，然后从列表中选择 <strong>Placement</strong> 来查看广告位的属性。<br><br></p>
-
-<p>3.填写 <strong>Placement Name</strong>，然后单击 <strong>SAVE</strong>。<br><br> </p>
-
-<figure>
-<img src="../uploads/Main/NewPlacementName.png" alt="在开发者控制面板 (Developer Dashboard) 中输入广告位的名称">
-<figcaption>在开发者控制面板 (Developer Dashboard) 中输入广告位的名称</figcaption>
-</figure>
-
-<h3>广告位 ID</h3>
-
-<p>控制面板根据广告位的名称自动填充 <strong>Placement IDs__（广告位 ID）。即使更新了名称，也无法在创建__广告位__后编辑__广告位 ID</strong>。使用 Unity Ads API 时可通过广告位 ID 在代码中调用__广告位__（请参阅有关<a href="https://unityads.unity3d.com/help/monetization/placements-and-filters"><strong>广告位和过滤 (Placements and filters)</strong></a> 的文档以了解更多信息）。</p>
-
-<h3>关联的推荐 (Promotions)</h3>
-
-<p>保存__广告位__后，<strong>Placement Config</strong> 菜单会显示与之相关的每个__推荐 (Promotion)<strong>。</strong>广告位__有三种可能的状态：</p>
-
-<ul>
-<li>
-<strong>Configured</strong>（已配置）：在__推荐 (Promotion)__ 中处于正在使用状态</li>
-<li>
-<strong>Not Configured</strong>（未配置）：在__推荐 (Promotion)__ 中未处于正在使用状态</li>
-<li>
-<strong>Not IAP Enabled</strong>（未启用 IAP）：仅与广告相关的__广告位__，无法显示 IAP 优惠</li>
-</ul>
-
-<p>请参阅有关<a href="https://docs.unity3d.com/Manual/IAPPromoPromotions">内购推荐 (IAP Promotions)</a> 的文档以了解更多详细信息。</p>
+<p>Your Placement is now configured for use with IAP <a href="#IAPPromoPromotions">Promotions</a>.</p>
 
 <p><br>
 <br></p>
@@ -193,7 +167,7 @@
 <hr>
 
 <ul>
-<li><span class="page-edit">2018–03–01 Page published with <a href="DocumentationEditorialReview.html">editorial review</a>
+<li><span class="page-edit">2018–09–10 Page amended with <a href="DocumentationEditorialReview.html">editorial review</a>
 </span></li>
 </ul>
 <div class="nextprev clear">

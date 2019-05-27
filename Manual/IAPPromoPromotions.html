@@ -12,7 +12,7 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="推荐 (Promotions) - Unity Manual">
 <title>推荐 (Promotions) - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/NewPromotion.png">
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/AddPromotion.png">
 <meta name="description" content="IAP 推荐 (Promotions) 与__广告位__ (Placements) 相结合，即可瞄准玩家以根据其独特情况精准投放量身定制的购买机会。推荐 (Promotion) 有三个组件：">
 <meta property="og:description" content="IAP 推荐 (Promotions) 与__广告位__ (Placements) 相结合，即可瞄准玩家以根据其独特情况精准投放量身定制的购买机会。推荐 (Promotion) 有三个组件：">
 <meta name="author" content="Unity Technologies">
@@ -156,32 +156,40 @@
 
 <h2>创建推荐 (Promotions)</h2>
 
-<p>导航至<a href="https://iap.unityads.unity3d.com">开发者控制面板 (Developer Dashboard) 的<strong>内购推荐 (IAP Promo)</strong> 部分</a>可创建__推荐 (Promotions)__。当前操作的项目会出现在左上角。</p>
+<p>Create IAP <strong>Promotions</strong> from the <a href="https://operate.dashboard.unity3d.com/">Operate page of the Developer Dashboard</a>. Your active Project appears in the top-left corner. To create a <strong>Promotion</strong>: </p>
 
-<p>要新建__推荐 (Promotion)__，请遵循以下步骤：</p>
+<ol>
+<li>Select <strong>Monetization &gt; Configure IAP Promotions</strong> from the left navigation bar. Any existing <strong>Promotions</strong> appear here.</li>
+<li>Click the <strong>ADD NEW PROMOTION</strong> button in the top-right corner. <br><br> <img src="../uploads/Main/AddPromotion.png" alt="Creating a new Promotion on the Developer Dashboard">
+</li>
+<li>Enter a <strong>Promotion Name</strong>, then select <strong>SAVE AND CONTINUE</strong> to configure it. <br><br><img src="../uploads/Main/NamePromotion.png" alt="Naming a Promotion">
+</li>
+</ol>
 
-<p>1.从左侧导航栏中选择 <strong>Promotions</strong>。此处会显示所有的现有__推荐 (Promotions)<strong>。
-2.选择 <strong>ADD NEW PROMOTION</strong>。<br><br> <img src="../uploads/Main/NewPromotion.png" alt="在开发者控制面板 (Developer Dashboard) 中新建推荐 (Promotion)">
-3.为__推荐 (Promotion)</strong> 命名，然后选择 <strong>SAVE AND CONTINUE</strong> 以展开下一部分。</p>
+<h2>Configuring Promotions</h2>
+
+<p>At any time during the configuration process, you can use the creation timeline to select the step you wish to configure.</p>
 
 <h3>添加商品</h3>
 
-<p>下一步，选中要包含在__推荐 (Promotion)__ 中的<a href="https://docs.unity3d.com/Manual/IAPPromoProducts">商品</a>。单击 <strong>SAVE AND CONTINUE</strong> 以展开下一部分。</p>
+<p>Click <strong>2 Select Product ID(s)</strong> on the creation timeline to include <strong>Products</strong> for your <strong>Promotion</strong>. Your Project’s Product Catalog appears here. To include a <strong>Product</strong>, it must have an associated creative asset. Select the eligible <strong>Product</strong>(s) you wish to include, then click <strong>SAVE AND CONTINUE</strong> to confirm your selections. </p>
 
 <figure>
 <img src="../uploads/Main/AddPromoProducts.png" alt="在开发者控制面板 (Developer Dashboard) 中选择要包含在推荐 (Promotion) 中的商品">
 <figcaption>在开发者控制面板 (Developer Dashboard) 中选择要包含在推荐 (Promotion) 中的商品</figcaption>
 </figure>
 
-<p><strong>注意</strong>：__广告位__请求会返回要显示的所有可能__商品__的列表。如果所选的__商品__缺少创意资源，则不符合推荐 (Promotion) 条件，因此会被过滤掉。请参阅<a href="https://docs.unity3d.com/Manual/IAPPromo">内购推荐 (IAP Promo) 概述</a>的<strong>机器学习</strong>部分以了解更多信息。</p>
+<p>For more information on configuring Products, see the <a href="https://docs.unity3d.com/Manual/IAPPromoProducts">IAP Promo Products</a> documentation. </p>
+
+<p><strong>Note</strong>: <strong>Placement</strong> requests return a list of all potential <strong>Products</strong> to show. Selected <strong>Products</strong> that lack creative assets are ineligible for promotion, and get filtered out. See the <strong>Machine learning</strong> section of the <a href="https://docs.unity3d.com/Manual/IAPPromo">IAP Promo overview</a> for more information.</p>
 
 <h3>添加广告位</h3>
 
-<p>下一步，选中要与__推荐 (Promotion)__ 关联的<a href="https://docs.unity3d.com/Manual/IAPPromoPlacements">广告位</a>。单击 <strong>SAVE AND CONTINUE</strong> 以展开下一部分。</p>
+<p>Click <strong>3 Select Placement(s)</strong> on the creation timeline to choose which <strong>Placements</strong> can show your <strong>Promotion</strong>. Your Project’s <strong>Placements</strong> appear here. To include a <strong>Placement</strong>, it must be <a href="https://docs.unity3d.com/Manual/IAPPromoPlacements">configured to show IAP</a>. Select the eligible <strong>Placement</strong>(s) you wish to include, then click <strong>SAVE AND CONTINUE</strong> to confirm your selections.</p>
 
 <figure>
-<img src="../uploads/Main/AddPromoPlacements.png" alt="在开发者控制面板 (Developer Dashboard) 中选择要包含在推荐 (Promotion) 中的广告位">
-<figcaption>在开发者控制面板 (Developer Dashboard) 中选择要包含在推荐 (Promotion) 中的广告位</figcaption>
+<img src="../uploads/Main/SelectPlacements.png" alt="Selecting Placements for inclusion in your Promotion on the Developer Dashboard">
+<figcaption>Selecting Placements for inclusion in your Promotion on the Developer Dashboard</figcaption>
 </figure>
 
 <p><strong>注意</strong>：多个__广告位__可以针对同一个__推荐 (Promotion)__，反之亦然。</p>
@@ -190,37 +198,51 @@
 
 <h3>定义业务逻辑</h3>
 
-<p>指定__推荐 (Promotion)__ 的有效期。这是必需步骤。如果是无限持续时间，请选中 <strong>Begin Immediately</strong> 和 <strong>No End Date</strong>，否则请选择日历图标以指定开始日期和结束日期。</p>
+<p>Click <strong>4 Set up Targeting and Scheduling</strong> on the creation timeline to define the logic your <strong>Promotion</strong> uses to target customers.</p>
+
+<p>Specify an active period for the <strong>Promotion</strong> to run. Check <strong>Begin Immediately</strong> and <strong>No End Date</strong> for an indefinite duration, or select the calendar icons to specify a start and end date. </p>
 
 <figure>
 <img src="../uploads/Main/Scheduling.png" alt="在开发者控制面板 (Developer Dashboard) 中指定推荐 (Promotion) 的有效期">
 <figcaption>在开发者控制面板 (Developer Dashboard) 中指定推荐 (Promotion) 的有效期</figcaption>
 </figure>
 
-<p><strong>Note</strong>: Selected dates trigger at midnight, according to the device’s local time zone.</p>
+<h4>Additional Options</h4>
 
-<p>展开 <strong>Additional Options</strong> 菜单可显示更多有针对性的推荐策略。</p>
+<p>Expand the <strong>Additional Options</strong> menu for more targeted promotional strategies.</p>
 
-<p>1.<strong>Operating System</strong> 按 iOS 或 Android 设备过滤目标玩家。
-2.<strong>Territory</strong> 按国家或地区过滤目标玩家。
-3.<strong>Life-to-Date Revenue</strong> 按目标玩家截至目前在游戏中通过应用内购 (IAP) 花费的金额来过滤目标玩家（例如，__推荐 (Promotion)__ 可以瞄准非付费玩家或花费超过 100 美元的玩家）。</p>
+<ol>
+<li>
+<strong>Operating System</strong> filters targeted players by iOS or Android devices.</li>
+<li>
+<strong>Territory</strong> filters targeted players by country or region.</li>
+<li>
+<strong>Life-to-Date Revenue</strong> filters targeted players by the amount they have spent on in-app purchases for their life-to-date in the game (for example, a <strong>Promotion</strong> can target non-payers, or players who have spent in excess of $100).</li>
+</ol>
 
 <figure>
 <img src="../uploads/Main/BusinessCriteria.png" alt="在开发者控制面板 (Developer Dashboard) 中选择推荐 (Promotions) 的目标业务条件">
 <figcaption>在开发者控制面板 (Developer Dashboard) 中选择推荐 (Promotions) 的目标业务条件</figcaption>
 </figure>
 
-<p>选择 <strong>SAVE</strong> 以完成__推荐 (Promotion)__ 的配置。</p>
+<p>Select <strong>SAVE</strong> to finish configuring the <strong>Promotion</strong>.</p>
 
-<p>You can view each Promotion’s number of <strong>Products</strong>, active period, and active status from the <strong>Promotions</strong> tab of the left navigation bar. You can also edit a <strong>Promotion</strong> at any time by clicking on it, and easily navigate between configuration steps using the timeline at the top of the menu. </p>
+<figure>
+<img src="../uploads/Main/ActivePromo.png" alt="A successfully activated Promotion">
+<figcaption>A successfully activated Promotion</figcaption>
+</figure>
 
-<p><br>
-<br></p>
+<p>You can view each Promotion’s number of <strong>Attached Products</strong>, <strong>Attached Placements</strong>, <strong>Schedule</strong>, and <strong>Status</strong> from the <strong>Configure IAP Promotions</strong> page. Edit a <strong>Promotion</strong> at any time by clicking on it. </p>
+
+<figure>
+<img src="../uploads/Main/SavedPromo.png" alt="A successfully saved Promotion">
+<figcaption>A successfully saved Promotion</figcaption>
+</figure>
 
 <hr>
 
 <ul>
-<li><span class="page-edit">2018–03–01 Page published with <a href="DocumentationEditorialReview.html">editorial review</a>
+<li><span class="page-edit">2018–09–10 Page amended with <a href="DocumentationEditorialReview.html">editorial review</a>
 </span></li>
 </ul>
 <div class="nextprev clear">

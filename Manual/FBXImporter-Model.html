@@ -208,7 +208,7 @@
 </tr>
 <tr>
 	<td style="text-align:left;" colspan="2"><strong>Read/Write Enabled</strong></td>
-	<td style="text-align:left;">If enabled, Mesh data is kept in memory so that a custom script can read and change it. Disabling this option saves memory, because Unity can unload a copy of Mesh data in the game. However, in certain cases when the Mesh is used with a <a href="class-MeshCollider.html">Mesh Collider</a> or <a href="class-ParticleSystem.html">Particle System</a>, this option must be enabled. These cases include: <br>- Negative scaling (for example, (–1, 1, 1)). <br>- Shear transform (for example, when a rotated Mesh has a scaled parent transform).</td>
+	<td style="text-align:left;">When this option is enabled, Unity uploads the Mesh data to GPU-addressable memory, but also keeps it in CPU-addressable memory. This means that Unity can access the mesh data at run time, and you can access it from your scripts. For example, if you’re generating a mesh procedurally, or if you want to copy some data from a mesh. When this option is disabled, Unity uploads the Mesh data to GPU-addressable memory, and then removes it from CPU-addressable memory. <br><br>In most cases, you should disable this option to save runtime memory usage. For information on when to enable Read/Write Enabled, see <a href="../ScriptReference/Mesh-isReadable.html">Mesh.isReadable</a>.</td>
 </tr>
 <tr>
 	<td style="text-align:left;" colspan="2"><strong>Optimize Mesh</strong></td>
@@ -476,6 +476,8 @@
 <hr>
 
 <ul>
+<li><p><span class="page-edit"> 2018–08–23 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
 <li><p><span class="page-edit"> 2018–04–25 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
 </span></p></li>
 <li><p><span class="page-edit"> 2017–12–05 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
@@ -486,6 +488,7 @@
 <li><p><span class="page-history"><strong>Normals Mode</strong>, <strong>Light</strong> and <strong>Camera</strong> import options added in Unity <a href="../Manual/30_search.html?q=newin20171">2017.1</a> <span class="search-words">NewIn20171</span></span></p></li>
 <li><p><span class="page-history"><a href="https://docs.unity3d.com/2017.2/Documentation/Manual/30_search.html?q=newin20172">2017.2</a> 中添加了 <strong>Materials</strong> 选项卡 <span class="search-words">NewIn20172</span></span></p></li>
 <li><p><span class="page-history"><strong>Index Format</strong> property added in <a href="https://docs.unity3d.com/2017.3/Documentation/Manual/30_search.html?q=newin20173">2017.3</a> <span class="search-words">NewIn20173</span></span></p></li>
+<li><p><span class="page-history">Updated description of read/write enabled setting and reorganized properties table, to match improvements in Unity <a href="../Manual/30_search.html?q=newin20173">2017.3</a> <span class="search-words">NewIn20173</span></span></p></li>
 </ul>
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">

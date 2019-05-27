@@ -13,8 +13,8 @@
 <meta property="og:title" content="HDR 拾色器 - Unity Manual">
 <title>HDR 拾色器 - Unity Manual</title>
 <meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/HDRColorPicker1.png">
-<meta name="description" content="HDR 拾色器外观类似于普通拾色器，但具有一些额外的属性。">
-<meta property="og:description" content="HDR 拾色器外观类似于普通拾色器，但具有一些额外的属性。">
+<meta name="description" content="The HDR Color picker looks similar to the ordinary Color picker, but it contains additional controls for adjusting the color’s exposure.">
+<meta property="og:description" content="The HDR Color picker looks similar to the ordinary Color picker, but it contains additional controls for adjusting the color’s exposure.">
 <meta name="author" content="Unity Technologies">
 <link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
 <link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
@@ -146,39 +146,58 @@
 <!--BeginSwitchLink--><!--EndSwitchLink-->
 <div class="clear"></div>
 
+<p>The HDR Color picker looks similar to the ordinary <a href="PresetLibraries.html">Color picker</a>, but it contains additional controls for adjusting the color’s exposure.</p>
+
 <figure>
 <img src="../uploads/Main/HDRColorPicker1.png" alt="">
 </figure>
 
-<p>HDR 拾色器外观类似于普通<a href="PresetLibraries.html">拾色器</a>，但具有一些额外的属性。</p>
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
 
-<h3>Current brightness</h3>
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性：</strong></th>
+	<th style="text-align:left;"><strong>功能：</strong></th>
+</tr>
+</thead>
 
-<p>您可以将颜色的 <strong>Current Brightness</strong> 属性设置为大于 1。这将创建一个位于取色器左上角的白色度区域。</p>
+<tbody>
+<tr>
+	<td style="text-align:left;">Mode <br>(default: <strong>RGB 0–255</strong>)</td>
+	<td style="text-align:left;">When using <strong>HSV</strong> or <strong>RGB 0–255</strong> mode, the color picker treats exposure adjustments independently from color channel data. However, the color channel data displayed in <strong>RBG (0–1.0)</strong> mode reflects the results of your exposure adjustment on the color data. <br> Unlike the ordinary color picker, you can directly enter float values greater than 1.0 when editing color channels in <strong>RGB 0–1.0</strong> mode. In this case, the color picker derives the <strong>Intensity</strong> value automatically from the value you set.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>RGBA</strong></td>
+	<td style="text-align:left;">Use the slider or text box to define a RGBA value. The <strong>Hexadecimal</strong> value automatically updates to reflect the RGBA values.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Hexadecimal</strong></td>
+	<td style="text-align:left;">Use the text box to define a hexadecimal value. The <strong>RGBA</strong> values automatically update to reflect the hexadecimal value.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Intensity</strong></td>
+	<td style="text-align:left;">Use the <strong>Intensity</strong> slider to overexpose or underexpose the color. Each positive step along the slider provides twice as much light as the previous slider position, and each negative step provides half as much light.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Swatches</td>
+	<td style="text-align:left;">Use the exposure swatches under the <strong>Intensity</strong> slider to preview what the current color value looks like within a range of two steps in either direction. To quickly adjust the color’s exposure, click a preview swatch.</td>
+</tr>
+</tbody>
+</table>
 
-<figure>
-<img src="../uploads/Main/HDRColorPicker3.png" alt="">
-</figure>
+<p>Whenever you close the HDR Color window and reopen it, the window derives the color channel and intensity values from the color you are editing. Because of this, you might see slightly different values for the color channels in <strong>HSV</strong> and <strong>RGB 0–255</strong> mode or for the Intensity slider, even though the color channel values in <strong>RGB 0–1.0</strong> mode are the same as the last time you edited the color.</p>
 
-<h3>Tonemapped preview</h3>
+<hr>
 
-<p>单击 Tonemapped preview 可查看拾色器生成的颜色的预览。将 <strong>Tonemapping Exposure</strong> 值设置为您在附加到摄像机的 <strong>Tonemapping</strong> 脚本中设置的值（在此示例中为 2.2）。</p>
-
-<figure>
-<img src="../uploads/Main/TonemappingScript.png" alt="">
-</figure>
-
-<p>HDR 颜色也显示在 HDR 拾色器顶部的框中，而且衰减颜色显示在框的边缘。</p>
-
-<figure>
-<img src="../uploads/Main/HDRFalloffColor.png" alt="">
-</figure>
-
-<p>就像普通颜色一样，可以将 HDR 颜色保存为预设值。这些预设值在预设值列表中以<strong>“h”</strong>进行标记，表示它们是 HDR。</p>
-
-<figure>
-<img src="../uploads/Main/HDRColorPresets.png" alt="">
-</figure>
+<ul>
+<li><p><span class="page-edit">2018–07–27 Page amended with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">HDR color picker updated in 2018.1</span></p></li>
+</ul>
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
 <span class="prev"><a href="HDR.html"></a></span><div class="tip">高动态范围渲染</div>

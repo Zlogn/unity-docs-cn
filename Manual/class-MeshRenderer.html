@@ -13,8 +13,8 @@
 <meta property="og:title" content="网格渲染器 (Mesh Renderer) - Unity Manual">
 <title>网格渲染器 (Mesh Renderer) - Unity Manual</title>
 <meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/class-MeshRenderer-0.png">
-<meta name="description" content="网格渲染器从网格过滤器 (Mesh Filter)获取几何体，然后在对象的变换组件所定义的位置渲染该几何体。">
-<meta property="og:description" content="网格渲染器从网格过滤器 (Mesh Filter)获取几何体，然后在对象的变换组件所定义的位置渲染该几何体。">
+<meta name="description" content="The Mesh Renderer takes the geometry from the Mesh Filter and renders it at the position defined by the GameObject’s Transform component.">
+<meta property="og:description" content="The Mesh Renderer takes the geometry from the Mesh Filter and renders it at the position defined by the GameObject’s Transform component.">
 <meta name="author" content="Unity Technologies">
 <link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
 <link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
@@ -145,7 +145,7 @@
 <!--BeginSwitchLink--><!--EndSwitchLink-->
 <div class="clear"></div>
 
-<p>网格渲染器从<a href="class-MeshFilter.html">网格过滤器 (Mesh Filter)</a>获取几何体，然后在对象的<a href="class-Transform.html">变换</a>组件所定义的位置渲染该几何体。</p>
+<p>The Mesh Renderer takes the geometry from the <a href="class-MeshFilter.html">Mesh Filter</a> and renders it at the position defined by the GameObject’s <a href="class-Transform.html">Transform</a> component.</p>
 
 <figure>
 <img src="../uploads/Main/class-MeshRenderer-0.png" alt="">
@@ -187,7 +187,7 @@
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Reflection Probes</strong></td>
-	<td style="text-align:left;">指定对象如何受场景中的反射影响。不能在延迟渲染模式下禁用此属性。</td>
+	<td style="text-align:left;">Specifies how the GameObject is affected by reflections in the scene. You cannot disable this property in deferred rendering modes.</td>
 </tr>
 <tr>
 	<td style="text-align:left;">    Off</td>
@@ -239,7 +239,7 @@
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Lightmap Static</strong></td>
-	<td style="text-align:left;">启用此复选框可向 Unity 指示该对象的位置是固定的并将参与全局光照计算。如果某个对象未标记为 Lightmap Static，则仍可使用<a href="LightProbes.html">光照探针</a>为该对象提供光照。</td>
+	<td style="text-align:left;">Enable this check box to indicate to Unity that the GameObject’s location is fixed and it will participate in Global Illumination computations. If an GameObject is not marked as Lightmap Static then it can still be lit using <a href="LightProbes.html">Light Probes</a>.</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Materials</strong></td>
@@ -247,12 +247,12 @@
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Dynamic Occluded</strong></td>
-	<td style="text-align:left;">启用此复选框可向 Unity 指示即使该对象未标记为静态，仍应该对该对象执行遮挡剔除。</td>
+	<td style="text-align:left;">Enable this check box to indicate to Unity that occlusion culling should be performed for this GameObject even if it is not marked as static.</td>
 </tr>
 </tbody>
 </table>
 
-<p>勾选 Lightmap Static 复选框可在 Inspector 中显示 MeshRenderer Lightmap 信息（另请参阅游戏对象的 <strong>Static</strong> 复选框）。</p>
+<p>Tick the lightmap static checkbox to display MeshRenderer Lightmap information in the Inspector(see also the <strong>static</strong> checkbox of the GameObject).</p>
 
 <figure>
 <img src="../uploads/Main/class-MeshRenderer-1.png" alt="">
@@ -319,15 +319,15 @@
 <tbody>
 <tr>
 	<td style="text-align:left;"><strong>Scale in Lightmap</strong></td>
-	<td style="text-align:left;">此值指定了对象的 UV 在光照贴图中的相对大小。值为 0 将使对象不进行光照贴图，但仍然有助于为场景中的其他对象提供光照。大于 1.0 的值会增加用于此对象的像素数（即光照贴图分辨率），而小于 1.0 的值会减小该像素数。您可以使用此属性来优化光照贴图，从而更精确地为重要和高度细节化的区域提供光照。例如：一幢具有平坦黑暗墙壁的隔离建筑物将使用低光照贴图比例（小于 1.0），而一组靠近在一起显示的彩色摩托车则需要高比例值。</td>
+	<td style="text-align:left;">This value specifies the relative size of the GameObject’s UVs within a lightmap. A value of 0 will result in the GameObject not being lightmapped, but it will still contribute to lighting other GameObjects in the scene. A value greater than 1.0 increases the number of pixels (ie, the lightmap resolution) used for this GameObject while a value less than 1.0 decreases it. You can use this property to optimise lightmaps so that important and detailed areas are more accurately lit. For example: an isolated building with flat, dark walls will use a low lightmap scale (less than 1.0) while a collection of colourful motorcycles displayed close together warrant a high scale value.</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Prioritize illumination</strong></td>
-	<td style="text-align:left;">选中此复选框可告知 Unity 始终在光照计算中包含此对象。对于发射强光的对象非常有用，可确保此对象照亮其他对象。</td>
+	<td style="text-align:left;">Check this box to tell Unity to always include this GameObject in lighting calculations. Useful for GameObjects that are strongly emissive to make sure that other GameObjects will be illuminated by this GameObject.</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Lightmap Parameters</strong></td>
-	<td style="text-align:left;">Allows you to choose or create a set of <a href="class-LightmapParameters.html">Lightmap Parameters</a> for the this object.</td>
+	<td style="text-align:left;">Allows you to choose or create a set of <a href="class-LightmapParameters.html">Lightmap Parameters</a> for the this GameObject.</td>
 </tr>
 </tbody>
 </table>
@@ -338,14 +338,14 @@
 
 <p>根据 <strong>Use Light Probes</strong> 和 <strong>Use Reflection Probes</strong> 选项的设置，网格可接受来自<a href="LightProbes.html">光照探针</a>系统的光照和来自<a href="class-ReflectionProbe.html">反射探针</a>系统的反射。这两种类型的探针使用同一个点作为网格的名义位置探针插值。默认情况下，此位置点是网格包围盒的中心，但可通过将<a href="class-Transform.html">变换 (Transform)</a> 拖动到 <strong>Anchor Override</strong> 属性来更改此值（Anchor Override 会同时影响这两种类型的探针）。</p>
 
-<p>在游戏对象包含两个相邻网格的情况下，设置锚点可能很有用；由于每个网格都有一个单独的包围盒，因此默认情况下两者在连接处的光照不是连续的。但是，如果将两个网格设置为使用相同的锚点，则它们将获得连续光照。默认情况下，探针光照渲染器从插入于场景内周围光照探针之间的单个光照探针接受光照。因此，游戏对象在整个表面上具有恒定的环境光照。该光照使用球谐函数，因此具有旋转渐变，但没有空间渐变。在更大的对象或粒子系统上，这一点更明显。游戏对象上的光照与锚点处的光照相匹配，如果游戏对象跨越光照渐变，游戏对象的某些部分将看起来不正确。</p>
+<p>It may be useful to set the anchor in cases where a GameObject contains two adjoining Meshes; since each Mesh has a separate bounding box, the two are lit discontinuously at the join by default. However, if you set both Meshes to use the same anchor point, then they are consistently lit. By default, a probe-lit Renderer receives lighting from a single Light Probe that is interpolated from the surrounding Light Probes in the Scene. Because of this, GameObjects have constant ambient lighting across the surface. It has a rotational gradient because it is using spherical harmonics, but it lacks a spatial gradient. This is more noticeable on larger GameObjects or Particle Systems. The lighting across the GameObject matches the lighting at the anchor point, and if the GameObject straddles a lighting gradient, parts of the GameObject look incorrect. </p>
 
 <p>为了缓解这种问题，请将 <strong>Light Probes</strong> 属性设置为 __Use Proxy Volume__，使用附加的<a href="class-LightProbeProxyVolume.html">光照探针代理体 (Light Probe Proxy Volume)</a> 组件。这样就能在包围体内生成插值光照探针的 3D 网格，这种情况下的网格分辨率可由用户指定。插值光照探针的球谐函数系数会更新到 3D 纹理中；在渲染时将对这些纹理进行采样以便计算对漫射环境光照的影响。这会向探针光照游戏对象添加空间渐变。</p>
 
 <hr>
 
 <ul>
-<li><p><span class="page-edit"> 2017–06–08 Page published with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+<li><p><span class="page-edit"> 2018–09–21 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
 </span></p></li>
 <li><p><span class="page-history">更新了双面阴影 (Two Sided shadows) 和接受阴影 (Recieve shadows) 所支持的光照后端。</span></p></li>
 <li><p><span class="page-history">在 5.6 版中更新了 Mesh Renderer UI</span></p></li>

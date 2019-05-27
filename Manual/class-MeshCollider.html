@@ -156,12 +156,13 @@
 <colgroup>
 <col style="text-align:left;">
 <col style="text-align:left;">
+<col style="text-align:left;">
 </colgroup>
 
 <thead>
 <tr>
-	<th style="text-align:left;" colspan="2"><strong><em>Property</em></strong></th>
-	<th style="text-align:left;"><strong><em>Function</em></strong></th>
+	<th style="text-align:left;" colspan="2"><strong><em>属性</em></strong></th>
+	<th style="text-align:left;"><strong><em>功能</em></strong></th>
 </tr>
 </thead>
 
@@ -210,7 +211,7 @@
 </tr>
 <tr>
 	<td style="text-align:left;" colspan="2"><strong>Material</strong></td>
-	<td style="text-align:left;">Reference to the <a href="class-PhysicMaterial.html">Physics Material</a> that determines how this Collider interacts with others.</td>
+	<td style="text-align:left;">引用<a href="class-PhysicMaterial.html">物理材质</a>，可确定该碰撞体与其他对象的交互方式。</td>
 </tr>
 <tr>
 	<td style="text-align:left;" colspan="2"><strong>Mesh</strong></td>
@@ -241,15 +242,14 @@
 
 <p>There are some limitations when using the Mesh Collider:</p>
 
-<ul>
-<li>Mesh Colliders that do not have <strong>Convex</strong> enabled are only supported on GameObjects without a Rigidbody component. To apply a Mesh Collider to a Rigidbody component, tick the <strong>Convex</strong> checkbox.</li>
-<li>In certain cases, for a Mesh Collider to work properly, you need to enable the <strong>Read/Write Enabled</strong> setting on the <a href="FBXImporter-Model.html">Model tab</a> of the Mesh’s <a href="class-FBXImporter.html">Model Import Settings</a> window. These cases include:
+<p>Mesh Colliders that do not have <strong>Convex</strong> enabled are only supported on GameObjects without a Rigidbody component. To apply a Mesh Collider to a Rigidbody component, tick the <strong>Convex</strong> checkbox.</p>
+
+<p>For a Mesh Collider to work properly, the Mesh must be read/write enabled in any of these circumstances:</p>
 
 <ul>
-<li>Negative scaling (for example, (–1, 1, 1)).</li>
-<li>Shear transform (for example, when a rotated Mesh has a scaled parent transform).</li>
-</ul>
-</li>
+<li>The Mesh Collider’s transform has negative scaling (for example, (–1, 1, 1)).</li>
+<li>The Mesh Collider’s transform is skewed or sheared (for example, when a rotated transform has a scaled parent transform).</li>
+<li>The Mesh Collider’s Cooking Options flags are set to any value other than the default.</li>
 </ul>
 
 <p><strong>Optimization tip:</strong> If a Mesh is used only by a Mesh Collider, you can disable <strong>Normals</strong> in <strong>Import Settings</strong>, because the physics system doesn’t need them.</p>
@@ -259,8 +259,11 @@
 <ul>
 <li><p><span class="page-edit">2018–06–07 Page amended with <a href="DocumentationEditorialReview.html">editorial review</a>
 </span></p></li>
+<li><p><span class="page-edit">2018–08–23 Page amended with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
 <li><p><span class="page-history">Mesh Cooking Options added in <a href="https://docs.unity3d.com/2017.3/Documentation/Manual/30_search.html?q=newin20173">2017.3</a> <span class="search-words">NewIn20173</span></span></p></li>
 <li><p><span class="page-history">Updated functionality in 2018.1</span></p></li>
+<li><p><span class="page-history">Updated limitations relating to read/write enabled setting in 2017.3</span></p></li>
 </ul>
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">

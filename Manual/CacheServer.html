@@ -349,11 +349,20 @@
 
 <h3>使用材质时是否有任何问题？</h3>
 
-<p>修改已存在的材质可能会导致问题。使用缓存服务器时，Unity 会验证是否维持了对材质的引用，但由于不会调用后期处理调用，因此在通过缓存服务器导入模型时无法更改材质的内容。因此，使用和不使用缓存服务器进行导入可能会得到不同的结果。最好不要修改磁盘上已经存在的材质。</p>
+<p>Modifying Materials that already exist might cause problems. When using the Cache Server, Unity validates that the references to Materials are maintained, but because no postprocessing calls are invoked, the contents of the Material cannot be changed when a model is imported through the Cache Server. Because of this, you might get different results when importing with and without the Cache Server. </p>
+
+<p>Don’t modify materials that already exist on disk from an Asset postprocessor because if you download an fbx file through the cache server, then there is no import process running for it. So if you rely on resetting the generated materials to some generated defaults every time the model importer runs, then this Asset postprocessor will not be run when importing a cached fbx file.</p>
 
 <h3>是否有任何资源类型不会被服务器缓存？</h3>
 
 <p>有几种类型的资源数据不会被服务器缓存。对脚本文件进行缓存实际上不会带来任何好处，因此服务器会忽略它们。此外，3D 建模软件（Maya、3D Max 等）使用的原生文件将由应用程序本身转换为 FBX。资源服务器不会缓存原生文件，也不会缓存导入过程中生成的中间 FBX 文件。但是，通过从建模软件导出文件作为 FBX，然后将这些文件添加到 Unity 项目，也许可从该服务器受益。</p>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2018–11–09 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+</ul>
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
 <span class="prev"><a href="ClassIDReference.html"></a></span><div class="tip">YAML 类 ID 参考</div>

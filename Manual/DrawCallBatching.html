@@ -10,11 +10,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="twitter:card" content="summary">
-<meta property="og:title" content="绘制调用批处理 - Unity Manual">
-<title>绘制调用批处理 - Unity Manual</title>
+<meta property="og:title" content="DrawCallBatching - Unity Manual">
+<title>DrawCallBatching - Unity Manual</title>
 <meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/StaticTagInspector.png">
-<meta name="description" content="要在屏幕上绘制游戏对象，引擎必须向图形 API（例如 OpenGL 或 Direct3D）发出绘制调用。绘制调用通常为资源密集型操作，图形 API 为每次绘制调用执行大量工作，从而导致 CPU 端的性能开销。此开销的主要原因是绘制调用之间的状态变化（例如切换到不同材质），而这种情况会导致图形驱动程序中执行资源密集型验证和转换步骤。">
-<meta property="og:description" content="要在屏幕上绘制游戏对象，引擎必须向图形 API（例如 OpenGL 或 Direct3D）发出绘制调用。绘制调用通常为资源密集型操作，图形 API 为每次绘制调用执行大量工作，从而导致 CPU 端的性能开销。此开销的主要原因是绘制调用之间的状态变化（例如切换到不同材质），而这种情况会导致图形驱动程序中执行资源密集型验证和转换步骤。">
+<meta name="description" content="DrawCallBatching">
+<meta property="og:description" content="DrawCallBatching">
 <meta name="author" content="Unity Technologies">
 <link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
 <link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
@@ -131,7 +131,7 @@
 <li><a href="Graphics.html">图形</a></li>
 <li><a href="GraphicsOverview.html">图形概述</a></li>
 <li><a href="OptimizingGraphicsPerformance.html">优化图形性能</a></li>
-<li>绘制调用批处理</li>
+<li>DrawCallBatching</li>
 </ul></div>
 <div class="mb20"><div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
@@ -141,9 +141,9 @@
 <span class="next"><a href="ModelingOptimizedCharacters.html"></a></span><div class="tip">角色建模的性能优化</div>
 </div>
 </div></div>
+<p>DrawCallBatching</p>
+
 <h1>绘制调用批处理</h1>
-<!--BeginSwitchLink--><!--EndSwitchLink-->
-<div class="clear"></div>
 
 <p>要在屏幕上绘制游戏对象，引擎必须向图形 API（例如 OpenGL 或 Direct3D）发出绘制调用。绘制调用通常为资源密集型操作，图形 API 为每次绘制调用执行大量工作，从而导致 CPU 端的性能开销。此开销的主要原因是绘制调用之间的状态变化（例如切换到不同材质），而这种情况会导致图形驱动程序中执行资源密集型验证和转换步骤。</p>
 
@@ -156,8 +156,6 @@
 
 <p>与手动合并游戏对象相比，内置批处理有几个好处；最值得注意的是，仍然可以单独剔除游戏对象。但是，也有一些缺点；静态批处理会导致内存和存储开销，动态批处理会产生一些 CPU 开销。</p>
 
-<p><strong>注意</strong>：动态批处理与图形作业不兼容（请参阅<a href="https://docs.unity3d.com/Manual/class-PlayerSettingsStandalone.html">播放器设置 (Player Settings)</a>）。如果已启用图形作业，则会在独立构建中禁用动态批处理。</p>
-
 <h3>批处理的材质设置</h3>
 
 <p>只有共享相同材质的游戏对象才可一起接受批处理。因此，如果想要实现良好批处理，应在尽可能多的不同游戏对象之间共享材质。</p>
@@ -168,12 +166,12 @@
 
 <p>阴影投射物即使材质不同，通常也可以在渲染时接受批处理。Unity 中的阴影投射物即使具有不同材质也可以使用动态批处理，只要阴影 pass 所需材质中的值相同即可。例如，许多板条箱可能使用具有不同纹理的材质，但是由于渲染纹理的阴影投射物不相关，所以在此情况下，它们可以一起接受批处理。</p>
 
-<h2>动态批处理</h2>
+<h2>Dynamic batching (Meshes)</h2>
 
 <p>如果移动的游戏对象共享相同材质并满足其他条件，则 Unity 可自动在同一绘制调用中批处理这些游戏对象。动态批处理是自动完成的，无需您进行任何额外工作。</p>
 
 <ul>
-<li>批处理动态游戏对象在每个顶点都有一定开销，因此批处理仅会应用于总共包含少于 900 个顶点属性的网格。
+<li>Batching dynamic GameObjects has certain overhead per vertex, so batching is applied only to Meshes containing no more than 900 vertex attributes, and no more than 300 vertices.
 
 <ul>
 <li>如果着色器使用顶点位置、法线和单个 UV，最多可以批处理 300 个顶点，而如果着色器使用顶点位置、法线、UV0、UV1 和切线，则只能批处理 180 个顶点。</li>
@@ -192,7 +190,22 @@
 </li>
 </ul>
 
-<p>因为动态批处理的工作原理是将所有游戏对象顶点转换到 CPU 上的世界空间，所以仅在该工作小于进行绘制调用的情况下，才有优势。绘制调用的资源需求取决于许多因素，主要是使用的图形 API。例如，对于游戏主机或诸如 Apple Metal 之类的现代 API，绘制调用的开销通常低得多，通常动态批处理根本没有优势。</p>
+<p>Dynamic batching works by transforming all GameObject vertices into world space on the CPU, so it is only an advantage if that work is smaller than doing a draw call. The resource requirements of a draw call depends on many factors, primarily the graphics API used. For example, on consoles or modern APIs like Apple Metal, the draw call overhead is generally much lower, and often dynamic batching cannot be an advantage at all.</p>
+
+<h2>Dynamic batching (Particle Systems, Line Renderers, Trail Renderers)</h2>
+
+<p>For components with geometry that Unity generates dynamically, dynamic batching works differently compared to how it works for Meshes.</p>
+
+<ul>
+<li>For each compatible renderer type, Unity builds all batchable content into 1 large Vertex Buffer.</li>
+<li>The renderer sets up the Material state for the batch.</li>
+<li>Unity binds the Vertex Buffer to the Graphics Device.</li>
+<li>For each Renderer in the batch, Unity updates the offset into the Vertex Buffer, and then submits a new draw call.</li>
+</ul>
+
+<p>When measuring the cost of the Graphics Device calls, the slowest part of rendering a Component is the set-up of the Material state. Submitting draw calls at different offsets into a shared Vertex Buffer is very fast by comparison.</p>
+
+<p>This approach is very similar to how Unity submits draw calls when using Static batching.</p>
 
 <h2>静态批处理</h2>
 
@@ -206,7 +219,7 @@
 
 <p>使用静态批处理需要额外的内存来存储组合的几何体。如果多个游戏对象在静态批处理之前共享相同几何体，则会在 Editor 中或运行时为每个游戏对象创建几何体的副本。这可能并非总是好办法；有时您必须避免为某些游戏对象进行静态批处理，这样会牺牲渲染性能，但可保持较小的内存占用量。例如，在茂密森林关卡中，将树标记为静态可能会产生严重的内存影响。</p>
 
-<p>在内部，静态批处理的工作原理是将静态游戏对象转换到世界空间并为它们构建大型的顶点和索引缓冲区。然后，针对同一批次中的可见游戏对象，执行一系列简单的绘制调用，其间几乎没有状态变化。在技术上，这种处理方式不会保存 3D API 绘制调用，但可节省它们之间的状态变化（这正是消耗大量资源的部分）。在大多数平台上，批次限制为 64k 个顶点和 64k 个索引（OpenGLES 上为 48k 个索引，在 macOS 上为 32k 个索引）。</p>
+<p>Internally, static batching works by transforming the static GameObjects into world space and building one shared vertex and index buffer for them. If you have enabled <strong>Optimized Mesh Data</strong> (in the <strong>Player Settings</strong>) then Unity removes any vertex elements that are not being used by any shader variant when building the vertex buffer. There are some special keyword checks to perform this; for example, if Unity does not detect the LIGHTMAP_ON keyword, it removes lightmap UVs from a batch. Then, for visible GameObjects in the same batch, Unity performs a series of simple draw calls, with almost no state changes in between each one. Technically, Unity does not save API draw calls, but instead saves on state changes between them (which is the resource-intensive part). Batch limits are 64k vertices and 64k indices on most platforms (48k indices on OpenGLES, 32k indices on macOS).</p>
 
 <h2>提示</h2>
 

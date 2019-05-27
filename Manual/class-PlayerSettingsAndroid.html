@@ -356,6 +356,8 @@
 
 <h2>Other Settings</h2>
 
+<h3>渲染</h3>
+
 <figure>
 <img src="../uploads/Main/PlayerSetAndroidRender.png" alt="The Rendering section of the Android PlayerSettings window">
 <figcaption>The <strong>Rendering</strong> section of the Android PlayerSettings window</figcaption>
@@ -375,9 +377,6 @@
 </thead>
 
 <tbody>
-<tr>
-	<td style="text-align:left;" colspan="2"><strong>Rendering</strong></td>
-</tr>
 <tr>
 	<td style="text-align:left;"><strong>Color Space</strong></td>
 	<td style="text-align:left;">The Color Space used for your application. See <a href="LinearLighting.html">Linear Lighting</a> for more information.</td>
@@ -417,6 +416,8 @@
 </tbody>
 </table>
 
+<h3>Identification</h3>
+
 <figure>
 <img src="../uploads/Main/PlayerSetAndroidIdentification.png" alt="The Identification section of the Android PlayerSettings window">
 <figcaption>The Identification section of the Android PlayerSettings window</figcaption>
@@ -430,7 +431,8 @@
 
 <thead>
 <tr>
-	<th style="text-align:left;" colspan="2"><strong>Identification</strong></th>
+	<th style="text-align:left;"><strong><em>属性：</em></strong></th>
+	<th style="text-align:left;"><strong><em>功能：</em></strong></th>
 </tr>
 </thead>
 
@@ -458,6 +460,8 @@
 </tbody>
 </table>
 
+<h3>Configuration</h3>
+
 <figure>
 <img src="../uploads/Main/PlayerSetAndroidConfiguration.png" alt="The Configuration section of the Android PlayerSettings window">
 <figcaption>The Configuration section of the Android PlayerSettings window</figcaption>
@@ -471,7 +475,8 @@
 
 <thead>
 <tr>
-	<th style="text-align:left;" colspan="2"><strong>Configuration</strong></th>
+	<th style="text-align:left;"><strong><em>属性：</em></strong></th>
+	<th style="text-align:left;"><strong><em>功能：</em></strong></th>
 </tr>
 </thead>
 
@@ -514,7 +519,7 @@
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Target Architectures</strong></td>
-	<td style="text-align:left;">Allows the application to run on the specified CPUs.</td>
+	<td style="text-align:left;">Allows the application to run on the specified CPUs. <strong>Note</strong>: Running Android apps in a 64-bit environment has performance benefits and 64-bit apps can address more than 4 GB of memory space.</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Install Location</strong></td>
@@ -563,6 +568,8 @@
 </tbody>
 </table>
 
+<h2>Optimization</h2>
+
 <figure>
 <img src="../uploads/Main/PlayerSetAndroidOptimization.png" alt="The Optimization section of the Android PlayerSettings window">
 <figcaption>The Optimization section of the Android PlayerSettings window</figcaption>
@@ -576,65 +583,66 @@
 
 <thead>
 <tr>
-	<th style="text-align:left;" colspan="2"><strong>Optimization</strong></th>
+	<th style="text-align:left;" colspan="2"><strong><em>Property:</em></strong></th>
+	<th style="text-align:left;"><strong><em>Function:</em></strong></th>
 </tr>
 </thead>
 
 <tbody>
 <tr>
-	<td style="text-align:left;"><strong>Prebake Collision Meshes</strong></td>
-	<td style="text-align:left;">Should collision data be added to meshes at build time?</td>
+	<td style="text-align:left;" colspan="2"><strong>Prebake Collision Meshes</strong></td>
+	<td style="text-align:left;">Check this box to add collision data to meshes at build time.</td>
 </tr>
 <tr>
-	<td style="text-align:left;"><strong>Keep Loaded Shaders Alive</strong></td>
+	<td style="text-align:left;" colspan="2"><strong>Keep Loaded Shaders Alive</strong></td>
 	<td style="text-align:left;">Check this box to prevent shaders from being unloaded.</td>
 </tr>
 <tr>
-	<td style="text-align:left;"><strong>Preload Shaders</strong></td>
-	<td style="text-align:left;">Should shaders be loaded when the application starts up?</td>
-</tr>
-<tr>
-	<td style="text-align:left;"><strong>Preloaded Assets</strong></td>
+	<td style="text-align:left;" colspan="2"><strong>Preloaded Assets</strong></td>
 	<td style="text-align:left;">An array of assets to be loaded when the application starts up.</td>
 </tr>
 <tr>
-	<td style="text-align:left;"><strong>Stripping Level</strong></td>
+	<td style="text-align:left;" colspan="2"><strong>Stripping Level</strong></td>
 	<td style="text-align:left;">Options to strip out scripting features to reduce the output package (APK) size (This setting is shared between iOS and Android platforms, and is available with the Mono scripting backend only.)</td>
 </tr>
 <tr>
-	<td style="text-align:left;">    Disabled</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">Disabled</td>
 	<td style="text-align:left;">No reduction is done.</td>
 </tr>
 <tr>
-	<td style="text-align:left;">    Strip Assemblies</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">Strip Assemblies</td>
 	<td style="text-align:left;">Level 1 size reduction.</td>
 </tr>
 <tr>
-	<td style="text-align:left;">    Strip ByteCode (iOS only)</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">Strip ByteCode (iOS only)</td>
 	<td style="text-align:left;">Level 2 size reduction (includes reductions from Level 1).</td>
 </tr>
 <tr>
-	<td style="text-align:left;">    Use micro mscorlib</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">Use micro mscorlib</td>
 	<td style="text-align:left;">Level 3 size reduction (includes reductions from Levels 1 and 2).</td>
 </tr>
 <tr>
-	<td style="text-align:left;"><strong>Strip Engine Code</strong></td>
+	<td style="text-align:left;" colspan="2"><strong>Strip Engine Code</strong></td>
 	<td style="text-align:left;">Enable code stripping. (This setting is only available with the <a href="https://docs.unity3d.com/Manual/IL2CPP.html">IL2CPP</a> scripting backend.)</td>
 </tr>
 <tr>
-	<td style="text-align:left;"><strong>Enable Internal profiler</strong></td>
+	<td style="text-align:left;" colspan="2"><strong>Enable Internal profiler</strong></td>
 	<td style="text-align:left;">Check this box if you want to get the profiler data from your device in the Android SDK’s <a href="https://developer.android.com/studio/command-line/logcat.html">adblogcat</a> output while testing your projects (only available in development builds).</td>
 </tr>
 <tr>
-	<td style="text-align:left;"><strong>Vertex Compression</strong></td>
+	<td style="text-align:left;" colspan="2"><strong>Vertex Compression</strong></td>
 	<td style="text-align:left;">Select which vertex channels should be compressed. Compression can save memory and bandwidth but precision will be lower.</td>
 </tr>
 <tr>
-	<td style="text-align:left;"><strong>Optimize Mesh Data</strong></td>
-	<td style="text-align:left;">从网格中删除应用于网格的材质不需要的所有数据（切线、法线、颜色、UV）。</td>
+	<td style="text-align:left;" colspan="2"><strong>Optimize Mesh Data</strong></td>
+	<td style="text-align:left;">Remove any data from meshes that is not required by the material applied to them (tangents, normals, colors, UV).</td>
 </tr>
 <tr>
-	<td style="text-align:left;"><strong>Logging</strong></td>
+	<td style="text-align:left;" colspan="2"><strong>Logging</strong></td>
 	<td style="text-align:left;">Enable different logging types (see the <a href="../ScriptReference/StackTraceLogType.html">StackTraceLogType</a> page for details).</td>
 </tr>
 </tbody>

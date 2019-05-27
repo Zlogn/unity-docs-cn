@@ -13,8 +13,8 @@
 <meta property="og:title" content="离线/手动激活 - Unity Manual">
 <title>离线/手动激活 - Unity Manual</title>
 <meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/communicationProblem.png">
-<meta name="description" content="如果在线激活失败，可能是因为：">
-<meta property="og:description" content="如果在线激活失败，可能是因为：">
+<meta name="description" content="Online activation usually fails when Unity cannot contact the license server. This might be because you don&amp;#8217;t have access to the onternet, your firewall or proxy settings are blocking the connection, or the Unity license servers are down. For more information on why this can happen, see Troubleshooting, below.">
+<meta property="og:description" content="Online activation usually fails when Unity cannot contact the license server. This might be because you don&amp;#8217;t have access to the onternet, your firewall or proxy settings are blocking the connection, or the Unity license servers are down. For more information on why this can happen, see Troubleshooting, below.">
 <meta name="author" content="Unity Technologies">
 <link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
 <link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
@@ -144,87 +144,101 @@
 <!--BeginSwitchLink--><!--EndSwitchLink-->
 <div class="clear"></div>
 
-<p>如果在线激活失败，可能是因为：</p>
+<p>Online activation usually fails when Unity cannot contact the license server. This might be because you don’t have access to the onternet, your firewall or proxy settings are blocking the connection, or the Unity license servers are down. For more information on why this can happen, see <a href="#Troubleshooting">Troubleshooting</a>, below. </p>
 
-<ul>
-<li>没有接入互联网</li>
-<li>位于防火墙、代理或反病毒软件的后方</li>
-</ul>
+<p>When online activation fails, the Unity Editor automatically attempts to perform a manual activation. This page provides step-by-step instructions to manually activate Unity on your machine. <strong>You still need access to a machine with internet access</strong>, but it does not have to be the machine on which you are trying to activate Unity.</p>
 
-<p>如果上述任何一种情况属实，Unity 将无法联系许可证服务器，Editor 将自动尝试执行手动激活。</p>
+<p>This documentation assumes you have already downloaded and installed Unity. To download Unity, you need an internet connection. Go to <a href="https://unity3d.com/get-unity/download">Download Unity</a> to get the latest version. If you’re not sure which type of license you need, go to the <a href="https://store.unity.com/">Unity Store</a> and view comparisons for Unity Personal, Plus and Pro. </p>
 
-<p>请按照以下步骤在计算机上手动激活 Unity：</p>
+<h2>Step 1: Get a license request file</h2>
 
-<p>（请注意，在此过程中，需要能够访问一台已接入互联网的计算机，但这不一定是尝试激活 Unity 的计算机。）</p>
+<ol>
+<li><p>Open Unity. When Unity cannot contact the license server, it displays a message in the License Management window that says “No network connection”.
+<img src="../uploads/Main/communicationProblem.png" alt=""></p></li>
+<li><p>Click <strong>Manual Activation</strong>.</p></li>
+<li><p>Click <strong>Save License Request</strong>.
+<img src="../uploads/Main/wouldYouLikeToSave.png" alt=""></p></li>
+<li><p>Save the file in a directory of your choice. Make sure you remember where you save the file. When you click <strong>Save</strong>, Unity displays a notification that reads “License request file saved successfully”. </p></li>
+</ol>
 
-<p>1.打开 Unity。如果 Unity 无法联系许可证服务器，则将显示以下窗口。
-<img src="../uploads/Main/communicationProblem.png" alt=""></p>
+<p>This license request file is tied to the machine you used to generate it. This license file does not work on any other machine, and will not recognise the machine if you reformat it or make certain hardware changes.</p>
 
-<p>2.单击 <strong>Manual Activation</strong> 按钮。</p>
+<h2>Step 2: Request a license</h2>
 
-<p>3.单击 <strong>Save License Request</strong> 按钮以保存许可证请求文件。
-<img src="../uploads/Main/wouldYouLikeToSave.png" alt=""></p>
+<p>Now that you have your license request file, the next steps require internet access. If your machine does not have internet access, you can activate your license on a machine that does have access by copying the file to the other machine, activating the license using the following steps, and then copying the file back to your machine to use Unity.</p>
 
-<p>4.选择 <strong>Save License Request</strong> 按钮以保存许可证请求文件。将文件保存在自选的目录中。（务必记住保存文件的位置。在此示例中，许可证文件保存在 <strong>Documents</strong> 文件夹中）。
-<img src="../uploads/Main/saveLicenseFile.png" alt=""></p>
-
-<p><em>按 <strong>Save</strong> 按钮后将会保存文件，此时应该会在窗口顶部看到以下通知。</em></p>
-
-<figure>
-<img src="../uploads/Main/licenseSaved.png" alt="">
-</figure>
-
-<p>刚创建的许可证请求文件将与生成该文件的计算机相关联。此许可证文件不适用于任何其他计算机。许可证文件将无法识别已重新格式化或已更换硬件的计算机。</p>
-
-<p>接下来的步骤需要接入互联网。如果您的计算机未接入互联网，则可以在已联网的计算机上激活许可证，方法是将文件复制到另一台计算机，按照以下步骤激活许可证，然后将文件复制回您的计算机即可使用 Unity。</p>
-
-<p>5.访问 <a href="https://license.unity3d.com/"><strong>Manual Activation</strong> 页面</a>。此时将显示一个新窗口：</p>
+<ol>
+<li>
+<p>Go to the <a href="https://license.unity3d.com/">Unity license Manual Activation webpage</a>. Click the <strong>Browse</strong> button, choose the license request file that you created in step 1, then click <strong>Next</strong></p>
 
 <figure>
 <img src="../uploads/Main/manualactivationwindow.png" alt="">
 </figure>
-
-<p>6.单击 <strong>Browse</strong> 按钮以选择保存到 <strong>Documents</strong> 文件夹的文件，然后单击 <strong>Next</strong> 按钮。此时将显示以下窗口。</p>
+</li>
+<li>
+<p>Select the type of license you want to activate.</p>
 
 <figure>
 <img src="../uploads/Main/activateyourlicense.png" alt="">
 </figure>
+</li>
+<li>
+<p>Enter the serial number, then click <strong>Next</strong>.</p>
 
-<p>在此示例中，我们要授权 Unity 的 Plus 或 Pro 版本。</p>
-
-<p>7.输入序列号。
-<img src="../uploads/Main/manualActivation.png" alt=""></p>
-
-<p>注意：此窗口已隐藏序列号。单击 <strong>Next</strong> 按钮。</p>
-
-<p>8.单击 <strong>Download license file</strong>。这会将许可证文件保存到选择的位置。</p>
+<figure>
+<img src="../uploads/Main/manualActivation.png" alt="Note: In this window the serial number has been hidden.">
+<figcaption>Note: In this window the serial number has been hidden.</figcaption>
+</figure>
+</li>
+<li>
+<p>Click <strong>Download license file</strong>.</p>
 
 <figure>
 <img src="../uploads/Main/youAreAlmostDone.png" alt="">
 </figure>
+</li>
+</ol>
 
-<p>9.返回到 Unity。单击 <strong>Load License</strong> 按钮以加载先前下载的序列号文件。</p>
+<p>This downloads your license to the machine you’re using to browse the website. If you’re activating Unity on a different machine to the one that has internet acces, remember to transfer the license to the machine you want to activate Unity on.</p>
+
+<p>Some browsers append “.xml” to the license file name. If this is the case, you need to delete this from the file name before you load the license file into Unity.</p>
+
+<h2>Step 3: Activate your licence</h2>
+
+<p>Now that you have your licence file, you can activate your Unity account. </p>
+
+<p>Open Unity again and return to the License Management page.</p>
 
 <figure>
 <img src="../uploads/Main/loadLicense.png" alt="">
 </figure>
 
-<p>此时将打开硬盘驱动器上的目录。</p>
+<p>Click <strong>Load License</strong>, and choose the license request file that you downloaded in step 2. If the license loads successfully, Unity displays a “Thank you!” message. Click <strong>Start Using Unity</strong> to continue.</p>
 
-<p>10.现在，选择刚下载的文件，然后单击 <strong>OK</strong>。此时将显示一个“Thank you!”窗口。按 <strong>Start Using Unity</strong> 按钮继续。</p>
+<p><a name="Troubleshooting"></a></p>
 
-<p><strong>注意：</strong>有些浏览器可能会在许可证文件名后面附加“.xml”。如果是这种情况，则在尝试加载许可证文件之前，您需要删除此扩展名。</p>
+<h2>故障排除</h2>
 
-<p>如果已激活 Unity 并需要进行其他操作，例如需要更新许可证，请参阅<a href="ManagingYourUnityLicense.html">管理您的 Unity 许可证</a>页面。</p>
+<p>If you encounter any error codes or other problems during the activation process, they might be caused by the following issues:</p>
 
-<p>如需进一步帮助，请联系 <strong>support@unity3d.com</strong>。</p>
+<ul>
+<li>Your machine might not have internet access.</li>
+<li>Unity’s license servers might be down. See the <a href="https://status.cloud.unity3d.com/">Unity Cloud System Status Page</a> for status updates on the all Unity servers.</li>
+<li>Your firewall settings might be blocking Unity from sending and receiving data about your license file.</li>
+<li>You might not have the correct read/write privileges on the machine to save the license file. This is a particularly common problem in workplaces and schools; contact yout IT administrator to find out whether there are restrictions in palce that might prevent the activation process from working correctly.</li>
+<li>Major operating system changes or updates might affect your machine’s ID, causing your licence to stop recognising your machine. See the Unity Knowledge Base article <a href="https://support.unity3d.com/hc/en-us/articles/205698949-I-have-just-updated-installed-a-new-Operating-System-Why-is-my-license-failing-to-activate-">I Have Just Updated/Installed A New Operating System. Why Is My License Failing To Activate?</a> for more details, or contact <a href="https://support.unity3d.com/hc/en-us/requests/new?ticket_form_id=65905">Unity Customer Services</a>.</li>
+</ul>
+
+<p>For more information on these errors and how to resolve them, see the <a href="https://support.unity3d.com/hc/en-us/sections/202242003-Activations-and-Management">Unity Support Knowledge Base</a>. If your problem is not listed there, please contact <a href="https://support.unity3d.com/hc/en-us/requests/new?ticket_form_id=65905">Unity Customer Services</a> for more assistance.</p>
 
 <hr>
 
 <ul>
-<li><span class="page-edit">2017–09–06 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
-</span></li>
-<li><span class="page-history">在 Unity 2017.2 中更新了许可证激活方法</span></li>
+<li><p><span class="page-edit">2018–07–25 Page amended with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-edit">2017–09–06 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">在 Unity 2017.2 中更新了许可证激活方法</span></p></li>
 </ul>
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">

@@ -207,7 +207,7 @@ public struct MyParallelJob : IJobParallelFor
 
 NativeArray&lt;float&gt; b = new NativeArray&lt;float&gt;(2, Allocator.TempJob);
 
-NativeArray&lt;float&gt; result = new NativeArray&lt;float&gt;(1, Allocator.TempJob);
+NativeArray&lt;float&gt; result = new NativeArray&lt;float&gt;(2, Allocator.TempJob);
 
 a[0] = 1.1;
 b[0] = 2.2;

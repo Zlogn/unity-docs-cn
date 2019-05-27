@@ -212,17 +212,17 @@
 <tr>
 	<td style="text-align:left;">- <strong>Discrete</strong>
 </td>
-	<td style="text-align:left;">对场景中的所有其他碰撞体使用离散碰撞检测。其他碰撞体在测试碰撞时会使用离散碰撞检测。用于正常碰撞（这是默认值）。</td>
+	<td style="text-align:left;">Use discrete collision detection against all other Colliders in the Scene. Other colliders will use discrete collision detection when testing for collision against it. Used for normal collisions (This is the default value).</td>
 </tr>
 <tr>
 	<td style="text-align:left;">- <strong>Continuous</strong>
 </td>
-	<td style="text-align:left;">对动态碰撞体（具有刚体）使用离散碰撞检测，并对静态网格碰撞体（没有刚体）使用连续碰撞检测。设置为连续动态 (Continuous Dynamic) 的刚体将在测试与该刚体的碰撞时使用连续碰撞检测。其他刚体将使用离散碰撞检测。用于连续动态检测需要碰撞的对象。（此属性对物理性能有很大影响，如果没有快速对象的碰撞问题，请将其保留为 Discrete 设置）</td>
+	<td style="text-align:left;">Use Discrete collision detection against dynamic Colliders (with a Rigidbody) and sweep-based continuous collision detection against static Colliders (without a Rigidbody). Rigidbodies set to <strong>Continuous Dynamic</strong> will use continuous collision detection when testing for collision against this rigidbody. Other rigidbodies will use Discrete Collision detection. Used for objects which the <strong>Continuous Dynamic</strong> detection needs to collide with. (This has a big impact on physics performance, leave it set to <strong>Discrete</strong>, if you don’t have issues with collisions of fast objects)</td>
 </tr>
 <tr>
 	<td style="text-align:left;">- <strong>Continuous Dynamic</strong>
 </td>
-	<td style="text-align:left;">对设置为连续 (Continuous) 和连续动态碰撞 (Continuous Dynamic Collision) 的对象使用连续碰撞检测。还将对静态网格碰撞体（没有刚体）使用连续碰撞检测。对于所有其他碰撞体，使用离散碰撞检测。用于快速移动的对象。</td>
+	<td style="text-align:left;">Use sweep-based continuous collision detection against GameOjects set to <strong>Continuous</strong> and <strong>Continuous Dynamic</strong> collision. It will also use continuous collision detection against static Colliders (without a Rigidbody). For all other colliders, it uses discrete collision detection. Used for fast moving objects.</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Constraints</strong></td>

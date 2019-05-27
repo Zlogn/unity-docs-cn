@@ -138,7 +138,7 @@
 <span class="prev"><a href="class-TextureImporterOverride.html"></a></span><div class="tip">特定于平台的覆盖的纹理压缩格式</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
-<span class="next"><a href="CustomRenderTextures.html"></a></span><div class="tip">自定义渲染纹理</div>
+<span class="next"><a href="class-CustomRenderTexture.html"></a></span><div class="tip">自定义渲染纹理</div>
 </div>
 </div></div>
 <h1>渲染纹理</h1>
@@ -162,64 +162,119 @@
 <colgroup>
 <col style="text-align:left;">
 <col style="text-align:left;">
+<col style="text-align:left;">
 </colgroup>
 
 <thead>
 <tr>
-	<th style="text-align:left;"><strong><em>属性：</em></strong></th>
+	<th style="text-align:left;" colspan="2"><strong><em>属性：</em></strong></th>
 	<th style="text-align:left;"><strong><em>功能：</em></strong></th>
 </tr>
 </thead>
 
 <tbody>
 <tr>
-	<td style="text-align:left;"><strong>Size</strong></td>
-	<td style="text-align:left;">渲染纹理的大小（以像素为单位）。请注意，选择的大小值必须是 2 的幂。</td>
+	<td style="text-align:left;" colspan="2"><strong>Dimension</strong></td>
+	<td style="text-align:left;">The dimensionality (type) of the render texture.</td>
 </tr>
 <tr>
-	<td style="text-align:left;"><strong>Anti-Aliasing</strong></td>
-	<td style="text-align:left;">要应用的抗锯齿量。None、两个、四个或八个样本。</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>2D</strong></td>
+	<td style="text-align:left;">The render texture is two-dimensional.</td>
 </tr>
 <tr>
-	<td style="text-align:left;"><strong>Depth Buffer</strong></td>
-	<td style="text-align:left;">深度缓冲区的类型。None、16 位或 24 位。</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Cube</strong></td>
+	<td style="text-align:left;">The render texture is a cube map.</td>
 </tr>
 <tr>
-	<td style="text-align:left;"><strong>Wrap Mode</strong></td>
-	<td style="text-align:left;">选择纹理平铺时的行为方式：</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>3D</strong></td>
+	<td style="text-align:left;">The render texture is three-dimensional.</td>
 </tr>
 <tr>
-	<td style="text-align:left;">&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;<strong>Repeat</strong>
-</td>
-	<td style="text-align:left;">纹理重复（平铺）自身</td>
+	<td style="text-align:left;" colspan="2"><strong>Size</strong></td>
+	<td style="text-align:left;">The size of the render texture in pixels. You can only enter power-of-two values, such as 128 and 256.</td>
 </tr>
 <tr>
-	<td style="text-align:left;">&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;<strong>Clamp</strong>
-</td>
-	<td style="text-align:left;">纹理的边缘被拉伸</td>
+	<td style="text-align:left;" colspan="2"><strong>Anti-Aliasing</strong></td>
+	<td style="text-align:left;">The number of anti-aliasing samples. You can select <strong>None</strong>, <strong>2 samples</strong>, <strong>4 samples</strong>, or <strong>8 samples</strong>. If you select <strong>None</strong>, Unity does not apply anti-aliasing.</td>
 </tr>
 <tr>
-	<td style="text-align:left;"><strong>Filter Mode</strong></td>
-	<td style="text-align:left;">选择纹理在通过 3D 变换拉伸时如何进行过滤：</td>
+	<td style="text-align:left;" colspan="2"><strong>Color Format</strong></td>
+	<td style="text-align:left;">The color format of the render texture.</td>
 </tr>
 <tr>
-	<td style="text-align:left;">&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;<strong>No Filtering</strong>
-</td>
-	<td style="text-align:left;">纹理在靠近时变为块状</td>
+	<td style="text-align:left;" colspan="2"><strong>Depth Buffer</strong></td>
+	<td style="text-align:left;">The format of the depth buffer. You can select <strong>No depth buffer</strong>, <strong>At least 16 bits depth (no stencil)</strong>, or <strong>At least 24 bits depth (with stencil)</strong>. The stencil buffer is a general purpose buffer that allows you to store an additional unsigned 8-bit integer (0–255) for each pixel drawn to the screen.</td>
 </tr>
 <tr>
-	<td style="text-align:left;">&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;<strong>Bilinear</strong>
-</td>
-	<td style="text-align:left;">纹理在靠近时变得模糊</td>
+	<td style="text-align:left;" colspan="2"><strong>sRGB (Color RenderTexture)</strong></td>
+	<td style="text-align:left;">Check this box to make the render texture use sRGB read/write conversions.</td>
 </tr>
 <tr>
-	<td style="text-align:left;">&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;<strong>Trilinear</strong>
-</td>
-	<td style="text-align:left;">与 Bilinear 类似，但纹理也在不同的 Mip 级别之间模糊</td>
+	<td style="text-align:left;" colspan="2"><strong>Enable Mip Maps</strong></td>
+	<td style="text-align:left;">Check this box to make the render texture generate <a href="https://docs.unity3d.com/Manual/ImportingTextures.html#Mipmaps">mipmaps</a>.</td>
 </tr>
 <tr>
-	<td style="text-align:left;"><strong>Aniso Level</strong></td>
-	<td style="text-align:left;">以大角度查看纹理时提高纹理质量。适用于地板和地面纹理</td>
+	<td style="text-align:left;" colspan="2"><strong>Auto generate Mip Maps</strong></td>
+	<td style="text-align:left;">Check this box to automatically fill the generated mipmaps with relevant data. If you don’t enable this, you’ll have to use the <a href="https://docs.unity3d.com/ScriptReference/RenderTexture.GenerateMips.html"><code>GenerateMips</code></a> function to fill those mipmaps manually. Alternatively, choose which mip to render into when you call the various <code>SetRenderTarget</code> functions. For more information about the <code>SetRenderTarget</code> functions, see <a href="https://docs.unity3d.com/ScriptReference/Graphics.SetRenderTarget.html"><code>Graphics.SetRenderTarget</code></a> and <a href="https://docs.unity3d.com/ScriptReference/Rendering.CommandBuffer.SetRenderTarget.html"><code>Rendering.CommandBuffer.SetRenderTarget</code></a>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Dynamic Scaling</strong></td>
+	<td style="text-align:left;">Check this box to let <a href="DynamicResolution.html">dynamic resolution scaling</a> resize the render texture. If you don’t enable this, the render texture maintains the same size regardless of the Dynamic Resolution setting.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Wrap Mode</strong></td>
+	<td style="text-align:left;">Controls how the texture is wrapped:</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Repeat</strong></td>
+	<td style="text-align:left;">Tiles the texture to create a repeating pattern.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Clamp</strong></td>
+	<td style="text-align:left;">Stretches the edges of the texture. This is useful for preventing wrapping artifacts when you map an image onto an object and you don’t want the texture to tile.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Mirror</strong></td>
+	<td style="text-align:left;">Tiles the texture to create a repeating pattern that mirrors the texture at every integer boundary.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Mirror Once</strong></td>
+	<td style="text-align:left;">Mirrors the texture once, and then falls back to clamping.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Per-axis</strong></td>
+	<td style="text-align:left;">Lets you set different wrap modes for the <strong>U axis</strong> and the <strong>V axis</strong>. The available options are also <strong>Repeat</strong>, <strong>Clamp</strong>, <strong>Mirror</strong> and <strong>Mirror Once</strong>. For example, when you use latitude-longitude environment maps for reflection probes, it is useful to have <strong>Clamp</strong> on the vertical coordinate (<strong>V axis</strong>), but <strong>Repeat</strong> on the horizontal coordinate (<strong>U axis</strong>).</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Filter Mode</strong></td>
+	<td style="text-align:left;">Controls how the sampling of the texture uses nearby pixels. The options are:</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Point</strong></td>
+	<td style="text-align:left;">Uses the nearest pixel. This makes the texture appear pixelated.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Bilinear</strong></td>
+	<td style="text-align:left;">Uses a weighted average of the four nearest texels. This makes the texture appear blurry when you magnify it.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Trilinear</strong></td>
+	<td style="text-align:left;">Uses a weighted average of the two nearest mips, which are bilinearly filtered. This creates a soft transition between mips, at the cost of a slightly more blurry appearance.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Aniso Level</strong></td>
+	<td style="text-align:left;">Anisotropic filtering level of the texture. This increases texture quality when you view the texture at a steep angle. Good for floor, ground, or road textures.</td>
 </tr>
 </tbody>
 </table>
@@ -236,23 +291,23 @@
 1.进入播放模式，观察盒体的纹理是否会根据新摄像机的输出情况实时更新。</p>
 
 <figure>
-<img src="../uploads/Main/RenderTextureLiveCam.png" alt="根据上述要求设置的渲染纹理">
-<figcaption>根据上述要求设置的渲染纹理</figcaption>
+<img src="../uploads/Main/RenderTextureLiveCam.jpg" alt="Render Textures are set up as demonstrated above">
+<figcaption>Render Textures are set up as demonstrated above</figcaption>
 </figure>
 
 <hr>
 
 <ul>
-<li><p><span class="page-edit">2017–09–19 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+<li><p><span class="page-edit">2018–11–01 Page published with <a href="DocumentationEditorialReview.html">editorial review</a>
 </span></p></li>
-<li><p><span class="page-history">在 Unity 4.6 中更改了 GameObject 菜单</span></p></li>
+<li><p><span class="page-history">Render Texture inspector changed in Unity 2017.2</span></p></li>
 </ul>
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
 <span class="prev"><a href="class-TextureImporterOverride.html"></a></span><div class="tip">特定于平台的覆盖的纹理压缩格式</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
-<span class="next"><a href="CustomRenderTextures.html"></a></span><div class="tip">自定义渲染纹理</div>
+<span class="next"><a href="class-CustomRenderTexture.html"></a></span><div class="tip">自定义渲染纹理</div>
 </div>
 </div>
 </div>
