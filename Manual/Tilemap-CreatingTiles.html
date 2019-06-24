@@ -12,9 +12,9 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="创建瓦片 - Unity Manual">
 <title>创建瓦片 - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/Tilemap-CreatingTiles-3.png">
-<meta name="description" content="可通过两种方法创建瓦片。第一种方法是直接创建瓦片资源。另一种方法是从一组精灵自动生成瓦片。">
-<meta property="og:description" content="可通过两种方法创建瓦片。第一种方法是直接创建瓦片资源。另一种方法是从一组精灵自动生成瓦片。">
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.4/uploads/Main/2D_TileAsset.png">
+<meta name="description" content="There are two ways to create a Tile Asset in Unity; the first method is to directly create a Tile Asset from the Assets menu. The second method is to automatically generate Tile Assets from a selection of Sprites.">
+<meta property="og:description" content="There are two ways to create a Tile Asset in Unity; the first method is to directly create a Tile Asset from the Assets menu. The second method is to automatically generate Tile Assets from a selection of Sprites.">
 <meta name="author" content="Unity Technologies">
 <link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
 <link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
@@ -31,7 +31,7 @@
       var lang = 'zh_CN';
       var page = 'Tilemap-CreatingTiles';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -63,7 +63,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -92,10 +92,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/Tilemap-CreatingTiles.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/Tilemap-CreatingTiles.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/Tilemap-CreatingTiles.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/Tilemap-CreatingTiles.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/Tilemap-CreatingTiles.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/Tilemap-CreatingTiles.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/Tilemap-CreatingTiles.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/Tilemap-CreatingTiles.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -107,7 +107,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -129,7 +129,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="Unity2D.html">2D</a></li>
 <li><a href="class-Tilemap.html">Tilemap</a></li>
 <li>创建瓦片</li>
@@ -146,35 +146,39 @@
 <!--BeginSwitchLink--><!--EndSwitchLink-->
 <div class="clear"></div>
 
-<p>可通过两种方法创建瓦片。第一种方法是直接创建瓦片资源。另一种方法是从一组精灵自动生成瓦片。</p>
+<p>There are two ways to create a <strong>Tile</strong> Asset in Unity; the first method is to directly create a Tile Asset from the <strong>Assets</strong> menu. The second method is to automatically generate Tile Assets from a selection of Sprites.</p>
 
-<h2>如何创建瓦片资源</h2>
+<h2>Create a Tile Asset from the Asset menu</h2>
 
-<p>要创建瓦片，请找到 <strong>Assets</strong> 菜单并选择 <strong>Create</strong> &gt; <strong>Tile</strong>。然后，选择要保存新瓦片资源的位置。</p>
+<p>Create a Tile directly from the Assets menu (<strong>Assets &gt; Create &gt; Tile</strong>). You will be prompted to name and save the new Tile Asset to your chosen location.</p>
 
-<h2>如何生成多个瓦片资源</h2>
+<figure>
+<img src="../uploads/Main/2D_TileAsset.png" alt="New Tile Asset">
+<figcaption>New Tile Asset</figcaption>
+</figure>
 
-<p>自动创建瓦片或创建多个瓦片需要在 Tile Palette 中加载面板。如果未加载面板，则需要创建一个新面板。</p>
+<p>Refer to the documentation on <a href="script-Tile">Tile Assets</a> for more information.</p>
 
-<p>要创建新面板，请从 <strong>Window</strong> &gt; <strong>Tile Palette</strong> 中打开 Tile Palette。</p>
+<h2>Generate Tile Assets from the Tile Palette</h2>
 
-<p>单击 Tile Palette 中的 <strong>Create New Palette</strong> 按钮。提供面板名称，然后单击 <strong>Create</strong> 按钮。选择一个文件夹来保存面板。创建的面板会自动加载。</p>
+<p>Tiles can be automatically generated when selecting Sprites for a Palette in the <strong>Tile Palette</strong> window. To create a new Tile Palette, select <strong>Create New Palette</strong> on the Tile Palette window, and select <strong>Create</strong>. Refer to the documentation on <a href="Tilemap-Palette.html">Tile Palettes</a> for more information about the different options available when creating or editing Palettes.</p>
 
 <figure>
 <img src="../uploads/Main/Tilemap-CreatingTiles-3.png" alt="">
 </figure>
 
-<p>将 <em>Assets</em> 文件夹中的纹理或精灵拖放到 Tile Palette 上。选择要保存新瓦片资源的位置。在所选文件夹中将生成新的瓦片资源，并会将瓦片放置在 Tile Palette 上。请记住保存项目以便保存面板。</p>
+<p>After creating or loading a Palette, drag and drop <strong>Textures </strong>or <strong>Sprites</strong> from the <strong>Assets</strong> folder onto the Tile Palette. </p>
 
 <figure>
 <img src="../uploads/Main/Tilemap-CreatingTiles-4.png" alt="">
 </figure>
 
+<p>You will be prompted for the save location for the new Tile Assets. Select the save location, and the new Tile Assets are generated in the selected folder, and the Tiles are placed in the Palette. </p>
+
 <hr>
 
 <ul>
-<li><span class="page-edit">2018–04–12 Page published with limited <a href="DocumentationEditorialReview.html">editorial review</a>
-</span></li>
+<li><span class="page-history">Tilemaps added in <a href="https://docs.unity3d.com/2017.2/Documentation/Manual/30_search.html?q=newin20172">2017.2</a> <span class="search-words">NewIn20172</span></span></li>
 </ul>
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
@@ -187,7 +191,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

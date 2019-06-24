@@ -30,7 +30,7 @@
       var lang = 'zh_CN';
       var page = 'GraphicsEmulation';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -62,7 +62,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -91,10 +91,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/GraphicsEmulation.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/GraphicsEmulation.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/GraphicsEmulation.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/GraphicsEmulation.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/GraphicsEmulation.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/GraphicsEmulation.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/GraphicsEmulation.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/GraphicsEmulation.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -106,7 +106,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -128,7 +128,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="Graphics.html">图形</a></li>
 <li><a href="GraphicsOverview.html">图形概述</a></li>
 <li>高级渲染功能</li>
@@ -156,7 +156,7 @@
 
 <ul>
 <li>对 DirectX 10 功能集仿真（2007 到 2009 年期间制造的 PC GPU）。</li>
-<li>关闭对<a href="ComputeShaders">计算着色器</a>和相关功能（计算缓冲区、随机写入纹理）、<a href="SparseTextures.html">稀疏纹理</a>和曲面细分着色器的支持。</li>
+<li>Turns off support for <a href="class-ComputeShader.html">compute Shaders</a> and related features (compute buffers, random-write Textures), <a href="SparseTextures.html">sparse Textures</a>, and tessellation Shaders.</li>
 </ul>
 
 <h4>Shader Model 3（独立平台）</h4>
@@ -177,7 +177,7 @@
 
 <ul>
 <li>对移动端 OpenGL ES 3.0 功能集仿真。</li>
-<li>关闭对<a href="ComputeShaders">计算着色器</a>和相关功能（计算缓冲区、随机写入纹理）、<a href="SparseTextures.html">稀疏纹理</a>、曲面细分着色器和几何着色器的支持。最多可以强制执行 4 个同步渲染目标，并且在单个着色器中最多使用 16 个纹理。允许的最大纹理大小设置为 4096，最大立方体贴图大小设置为 2048。禁用实时柔和阴影。</li>
+<li>Turns off support for <a href="class-ComputeShader.html">compute Shaders</a> and related features (compute buffers, random-write Textures), <a href="SparseTextures.html">sparse Textures</a>, tessellation Shaders and geometry Shaders. Enforces maximum of 4 simultaneous render targets, and maximum of 16 Textures used in a single Shader. Maximum allowed Texture size is set to 4096, and maximum cubemap size to 2048. Realtime soft shadows are disabled.</li>
 </ul>
 
 <h4>Metal（iOS 和 tvOS 平台）</h4>
@@ -223,7 +223,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

@@ -12,7 +12,7 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="音频性能分析器 (Audio Profiler) - Unity Manual">
 <title>音频性能分析器 (Audio Profiler) - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/AudioProfilerChannels.png">
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.4/uploads/Main/AudioProfilerChannels.jpg">
 <meta name="description" content="在 Profiler 窗口中，有一个名为 Audio 的面板。该面板将显示有关音频系统的重要性能指标，例如总负载和语音计数。突出显示该面板时，窗口的下半部分将变为详细视图，其中包含图表未涵盖的音频系统各个部分。">
 <meta property="og:description" content="在 Profiler 窗口中，有一个名为 Audio 的面板。该面板将显示有关音频系统的重要性能指标，例如总负载和语音计数。突出显示该面板时，窗口的下半部分将变为详细视图，其中包含图表未涵盖的音频系统各个部分。">
 <meta name="author" content="Unity Technologies">
@@ -31,7 +31,7 @@
       var lang = 'zh_CN';
       var page = 'ProfilerAudio';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -63,7 +63,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -92,10 +92,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/ProfilerAudio.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/ProfilerAudio.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/ProfilerAudio.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/ProfilerAudio.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/ProfilerAudio.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/ProfilerAudio.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/ProfilerAudio.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/ProfilerAudio.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -107,7 +107,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -129,7 +129,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="UnityOverview.html">在 Unity 中操作</a></li>
 <li><a href="AdvancedDevelopment.html">高级开发</a></li>
 <li><a href="Profiler.html">性能分析器概述</a></li>
@@ -167,9 +167,9 @@
 <p>帧日志中的行会显示诸如哪些音频源播放了哪些剪辑、播放的音量、与监听器的距离以及相对回放时间等信息。
 单击其中一行将在 Project Browser 和 Hierarchy 窗口中突出显示关联的音频源和剪辑。</p>
 
-<p><img src="../uploads/Main/AudioProfilerChannels.png" alt=""> <strong>Channel</strong> 视图。单击一行时，首先突出显示音频剪辑资源，然后在层级视图中突出显示播放该资源的音频源。</p>
+<p><img src="../uploads/Main/AudioProfilerChannels.jpg" alt=""> <strong>Channel</strong> view. When clicking a row the AudioClip Asset is highlighted first, then the AudioSource in the Hierarchy that played it.</p>
 
-<p><img src="../uploads/Main/AudioProfilerHierarchyHighlight.png" alt=""> <strong>Channels and groups</strong> 视图。此处突出显示了在所选行中播放声音的音频源。</p>
+<p><img src="../uploads/Main/AudioProfilerHierarchyHighlight.jpg" alt=""> <strong>Channels and groups</strong> view. Here the AudioSource that played the sound in the selected row is highlighted.</p>
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
 <span class="prev"><a href="ProfilerMemory.html"></a></span><div class="tip">内存性能分析器 (Memory Profiler)</div>
@@ -181,7 +181,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

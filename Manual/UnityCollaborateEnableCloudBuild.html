@@ -12,6 +12,7 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="通过 Collaborate 启用 Cloud Build - Unity Manual">
 <title>通过 Collaborate 启用 Cloud Build - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.4/uploads/Main/UnityCollaborate12.png">
 <meta name="description" content="Unity Cloud Build 是 Unity 项目的持续集成服务。想了解更多相关信息，请参阅 Unity Cloud Build。">
 <meta property="og:description" content="Unity Cloud Build 是 Unity 项目的持续集成服务。想了解更多相关信息，请参阅 Unity Cloud Build。">
 <meta name="author" content="Unity Technologies">
@@ -30,7 +31,7 @@
       var lang = 'zh_CN';
       var page = 'UnityCollaborateEnableCloudBuild';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -62,7 +63,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -91,10 +92,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/UnityCollaborateEnableCloudBuild.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/UnityCollaborateEnableCloudBuild.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/UnityCollaborateEnableCloudBuild.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/UnityCollaborateEnableCloudBuild.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/UnityCollaborateEnableCloudBuild.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/UnityCollaborateEnableCloudBuild.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/UnityCollaborateEnableCloudBuild.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/UnityCollaborateEnableCloudBuild.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -106,7 +107,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -128,7 +129,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="UnityServices.html">Unity 服务</a></li>
 <li><a href="UnityCollaborate.html">Unity Collaborate</a></li>
 <li>通过 Collaborate 启用 Cloud Build</li>
@@ -151,34 +152,46 @@
 
 <p>要通过 Unity Collaborate 启用 Cloud Build：</p>
 
-<p>1.在 Unity Editor 菜单栏上，选择 <strong>Window</strong> &gt; <strong>Services</strong>。
-1.在 <strong>Services</strong> 窗口中，单击 <strong>Collaborate</strong> 选项卡。
-1.在 <strong>Collaborate</strong> 窗口中，单击 <strong>Open the history panel</strong>。
-1.单击 <strong>Build Now</strong> 按钮，打开 <strong>Cloud Build</strong> 窗口。</p>
+<ol>
+<li><p>On the Unity Editor menu bar, select <strong>Window</strong> &gt; <strong>General</strong> &gt; <strong>Services</strong>.</p></li>
+<li><p>In the <strong>Services</strong> window, click the <strong>Collaborate</strong> tab.</p></li>
+<li><p>In the <strong>Collaborate</strong> window, click <strong>Open the history panel</strong>.</p></li>
+<li>
+<p>To open the <strong>Cloud Build</strong> window, click the <strong>build now</strong> button.</p>
 
-<pre><code>![](../uploads/Main/UnityCollaborate12.png) 
-</code></pre>
+<figure>
+<img src="../uploads/Main/UnityCollaborate12.png" alt="">
+</figure>
+</li>
+<li>
+<p>To enable Cloud Build, click the <strong>Build games faster</strong> toggle.</p>
 
-<p>1.单击 <strong>Build games faster</strong> 切换开关，启用 Cloud Build。</p>
+<figure>
+<img src="../uploads/Main/UnityCollaborateEnableCloudBuild2.png" alt="">
+</figure>
+</li>
+<li>
+<p>From the <strong>PLATFORM</strong> drop-down menu, select the build platform. </p>
 
-<pre><code>![](../uploads/Main/UnityCollaborateEnableCloudBuild2.png) 
-</code></pre>
+<figure>
+<img src="../uploads/Main/UnityCollaborateEnableCloudBuild3.png" alt="">
+</figure>
+</li>
+<li><p>Click <strong>Next</strong>.</p></li>
+<li>In the <strong>TARGET SETUP</strong> window:
 
-<p>1.从 <strong>PLATFORM</strong> 下拉菜单中，选择编译平台。</p>
+<ol>
+<li>In the <strong>TARGET LABEL</strong> textbox, enter a name to identify the build.</li>
+<li>From the <strong>UNITY VERSION</strong> drop-down menu, choose the Unity version to use for the build.</li>
+<li>If your root folder does not contain your Assets and Project Settings, specify the location in the <strong>PROJECT SUBFOLDER</strong> textbox.</li>
+</ol>
 
-<pre><code>![](../uploads/Main/UnityCollaborateEnableCloudBuild3.png) 
-</code></pre>
-
-<p>1.单击 <strong>Next</strong>。
-2.在打开的 <strong>TARGET SETUP</strong> 窗口中：
- 1.在 <strong>TARGET LABEL</strong> 文本框中，输入用于标识编译的名称。
- 1.从 <strong>UNITY VERSION</strong> 下拉菜单中，选择用于构建的 Unity 版本。
- 1.如果根文件夹未包含您的资源和项目设置，请在 <strong>PROJECT SUBFOLDER</strong> 文本框中指定该目录。</p>
-
-<pre><code>![](../uploads/Main/UnityCollaborateEnableCloudBuild4.png) 
-</code></pre>
-
-<p>1.请单击 <strong>Next: Build</strong> 开始构建项目。</p>
+<figure>
+<img src="../uploads/Main/UnityCollaborateEnableCloudBuild4.png" alt="">
+</figure>
+</li>
+<li><p>To start the initial build of your Project, click <strong>Next: Build</strong>. </p></li>
+</ol>
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
 <span class="prev"><a href="UnityCollaborateViewingHistory.html"></a></span><div class="tip">查看历史记录</div>
@@ -190,7 +203,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

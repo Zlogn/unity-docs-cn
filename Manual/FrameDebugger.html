@@ -12,7 +12,7 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="帧调试器 - Unity Manual">
 <title>帧调试器 - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/FrameDebugger.jpg">
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.4/uploads/Main/FrameDebugger.jpg">
 <meta name="description" content="帧调试器 (Frame Debugger) 可将正在运行的游戏的状态冻结到特定帧来自由回放，并查看用于渲染该帧的各个_绘制调用_。除了列出绘制调用，调试器还可逐个单步执行这些调用，以便您详细查看场景是如何从场景的图形元素构建的。">
 <meta property="og:description" content="帧调试器 (Frame Debugger) 可将正在运行的游戏的状态冻结到特定帧来自由回放，并查看用于渲染该帧的各个_绘制调用_。除了列出绘制调用，调试器还可逐个单步执行这些调用，以便您详细查看场景是如何从场景的图形元素构建的。">
 <meta name="author" content="Unity Technologies">
@@ -31,7 +31,7 @@
       var lang = 'zh_CN';
       var page = 'FrameDebugger';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -63,7 +63,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -92,10 +92,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/FrameDebugger.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/FrameDebugger.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/FrameDebugger.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/FrameDebugger.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/FrameDebugger.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/FrameDebugger.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/FrameDebugger.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/FrameDebugger.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -107,7 +107,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -129,7 +129,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="Graphics.html">图形</a></li>
 <li><a href="GraphicsOverview.html">图形概述</a></li>
 <li><a href="OptimizingGraphicsPerformance.html">优化图形性能</a></li>
@@ -155,7 +155,7 @@
 
 <h2>使用帧调试器</h2>
 
-<p>Frame Debugger 窗口（菜单：__Window &gt; Frame Debugger__）会显示绘制调用信息，并允许您控制正在构建的帧的“回放”。</p>
+<p>The Frame Debugger window (menu: <strong>Window</strong> &gt; <strong>Analysis</strong> &gt; <strong>Frame Debugger</strong>) shows the drawcall information and lets you control the “playback” of the frame under construction.</p>
 
 <p>主列表以层级视图形式显示绘制调用（以及其他事件，例如帧缓冲区清除）的序列，并在其中标识绘制调用的来源。列表右侧面板提供有关绘制调用的更多信息，例如几何体细节和用于渲染的着色器。</p>
 
@@ -281,7 +281,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

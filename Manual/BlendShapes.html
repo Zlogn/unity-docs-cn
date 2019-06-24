@@ -12,8 +12,8 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="动画混合形状 - Unity Manual">
 <title>动画混合形状 - Unity Manual</title>
-<meta name="description" content="在 Maya 中设置好混合形状后：">
-<meta property="og:description" content="在 Maya 中设置好混合形状后：">
+<meta name="description" content="Once you have your Blend Shapes set up in Autodesk® Maya®:">
+<meta property="og:description" content="Once you have your Blend Shapes set up in Autodesk® Maya®:">
 <meta name="author" content="Unity Technologies">
 <link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
 <link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
@@ -30,7 +30,7 @@
       var lang = 'zh_CN';
       var page = 'BlendShapes';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -62,7 +62,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -91,10 +91,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/BlendShapes.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/BlendShapes.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/BlendShapes.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/BlendShapes.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/BlendShapes.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/BlendShapes.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/BlendShapes.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/BlendShapes.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -106,7 +106,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -128,7 +128,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="AnimationSection.html">动画</a></li>
 <li><a href="AnimatorControllers.html">Animator Controllers</a></li>
 <li>动画混合形状</li>
@@ -147,12 +147,12 @@
 
 <h2>准备原始作品</h2>
 
-<p>在 Maya 中设置好混合形状后：</p>
+<p>Once you have your Blend Shapes set up in Autodesk® Maya®:</p>
 
 <ul>
 <li><p>将选择的内容导出到 FBX，确保选中动画复选框并选中变形模型下的混合形状。</p></li>
-<li><p>将 FBX 文件导入 Unity（Assets &gt; Import New Assets &gt; [文件名].fbx）。</p></li>
-<li><p>将资源拖动到 Hierarchy 窗口中。如果在层级视图中选择对象并查看检视面板，则会在 SkinnedMeshRenderer 组件下看到列出的混合形状。在此位置，您可以调整混合形状对默认形状的影响，0 表示混合形状没有影响，100 表示混合形状具有最大影响。</p></li>
+<li><p>Import your FBX file into Unity (from the main Unity menu: <strong>Assets</strong> &gt; <strong>Import New Asset</strong> and then choose your file).</p></li>
+<li><p>Drag the Asset into the hierarchy window. If you select your object in the hierarchy and look in the inspector, you will see your Blend Shapes are listed under the SkinnedMeshRenderer component. Here you can adjust the influence of the blend shape to the default shape, 0 means the blend shape has no influence and 100 means the blend shape has full influence.</p></li>
 </ul>
 
 <h2>在 Unity 中创建动画</h2>
@@ -160,7 +160,7 @@
 <p>也可以使用 Unity 中的 Animation 窗口来创建混合动画，步骤如下：</p>
 
 <ul>
-<li><p>在 Window &gt; Animation 下打开 Animation 窗口。</p></li>
+<li><p>Open the Animation window under <strong>Window</strong> &gt; <strong>Animation</strong> &gt; <strong>Animation</strong>.</p></li>
 <li><p>在窗口左侧，单击“Add Curve”，然后添加 Blend Shape，它将位于 Skinned Mesh Renderer 下。</p></li>
 </ul>
 
@@ -234,7 +234,7 @@ public class BlendShapeExample : MonoBehaviour
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

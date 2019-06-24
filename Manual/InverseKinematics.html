@@ -12,7 +12,7 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="反向动力学 - Unity Manual">
 <title>反向动力学 - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/MecanimIKGrabbing.png">
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.4/uploads/Main/MecanimIKGrabbing.jpg">
 <meta name="description" content="大多数动画是通过将骨架中的关节角度旋转到预定值来生成的。子关节的位置根据父关节的旋转而改变，因此可从父关节包含的各个关节的角度和相对位置来确定关节链的终点。这种构建骨架的方法被称为正向动力学。">
 <meta property="og:description" content="大多数动画是通过将骨架中的关节角度旋转到预定值来生成的。子关节的位置根据父关节的旋转而改变，因此可从父关节包含的各个关节的角度和相对位置来确定关节链的终点。这种构建骨架的方法被称为正向动力学。">
 <meta name="author" content="Unity Technologies">
@@ -31,7 +31,7 @@
       var lang = 'zh_CN';
       var page = 'InverseKinematics';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -63,7 +63,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -92,10 +92,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/InverseKinematics.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/InverseKinematics.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/InverseKinematics.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/InverseKinematics.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/InverseKinematics.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/InverseKinematics.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/InverseKinematics.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/InverseKinematics.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -107,7 +107,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -129,7 +129,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="AnimationSection.html">动画</a></li>
 <li><a href="AnimatorControllers.html">Animator Controllers</a></li>
 <li><a href="AnimationStateMachines.html">动画状态机</a></li>
@@ -152,7 +152,7 @@
 <p>然而，从相反视角看待构建关节的任务通常很有用：在空间中选择一个位置后，向后找到一种有效的关节定位方法，使终点落在该位置。如果您希望角色触摸位于用户选定位置的对象或让角色的双脚牢牢扎入不平坦的表面，这种方法可能很有用。此方法称为__反向动力学__ (IK)，可在 Mecanim 中用于_已正确配置的任何人形Avatar骨骼。</p>
 
 <figure>
-<img src="../uploads/Main/MecanimIKGrabbing.png" alt="">
+<img src="../uploads/Main/MecanimIKGrabbing.jpg" alt="">
 </figure>
 
 <p>要为角色设置 IK，通常要在场景周围放置与角色互动的对象，然后通过脚本（尤其是，诸如
@@ -239,8 +239,8 @@ public class IKControl : MonoBehaviour {
 <p>因为我们不打算让角色的手伸到物体内部中心（圆柱的轴心点），所以放置一个空的子对象（在此情况下，命名为“Cylinder Grab Handle”（圆柱抓握把手）），确保手应该放在圆柱上，并将其相应旋转。然后，这只手瞄准此子对象。</p>
 
 <figure>
-<img src="../uploads/Main/MecanimIKGrabHandle.png" alt="一个空的子游戏对象充当 IK 目标，因此这只手将正确放在可见的圆柱对象上">
-<figcaption>一个空的子游戏对象充当 IK 目标，因此这只手将正确放在可见的圆柱对象上</figcaption>
+<img src="../uploads/Main/MecanimIKGrabHandle.jpg" alt="An empty Game Object acts as the IK target, so the hand will sit correctly on the visible Cylinder object">
+<figcaption>An empty Game Object acts as the IK target, so the hand will sit correctly on the visible Cylinder object</figcaption>
 </figure>
 
 <p>然后，应将此“抓握把手”游戏对象分配为 IKControl 脚本的“Right Hand Obj”属性</p>
@@ -263,7 +263,7 @@ public class IKControl : MonoBehaviour {
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

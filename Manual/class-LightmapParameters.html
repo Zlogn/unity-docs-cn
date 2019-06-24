@@ -12,7 +12,7 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="光照贴图参数 - Unity Manual">
 <title>光照贴图参数 - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/LightmapParameters1.png">
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.4/uploads/Main/LightmapParameters1.png">
 <meta name="description" content="光照贴图参数资源存储了一组用于控制 Unity 全局光照 (GI) 功能的参数值。这些资源允许定义和保存不同的光照值集合，以便用于不同的情况。">
 <meta property="og:description" content="光照贴图参数资源存储了一组用于控制 Unity 全局光照 (GI) 功能的参数值。这些资源允许定义和保存不同的光照值集合，以便用于不同的情况。">
 <meta name="author" content="Unity Technologies">
@@ -31,7 +31,7 @@
       var lang = 'zh_CN';
       var page = 'class-LightmapParameters';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -63,7 +63,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -92,10 +92,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/class-LightmapParameters.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/class-LightmapParameters.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/class-LightmapParameters.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/class-LightmapParameters.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/class-LightmapParameters.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/class-LightmapParameters.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/class-LightmapParameters.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/class-LightmapParameters.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -107,7 +107,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -129,7 +129,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="Graphics.html">图形</a></li>
 <li><a href="GraphicsOverview.html">图形概述</a></li>
 <li><a href="LightingOverview.html">光照</a></li>
@@ -183,14 +183,35 @@
 <tbody>
 <tr>
 	<td style="text-align:left;"><strong>Resolution</strong></td>
-	<td style="text-align:left;">该值在 Lighting 窗口的 Scene 选项卡中缩放 <strong>Realtime Resolution</strong> 值（菜单：__Window__ &gt; <strong>Lighting</strong> &gt; <strong>Scene__）以提供光照贴图的最终分辨率（纹理像素/距离单位）。 |
-| </strong>Cluster Resolution<strong>| 聚类分辨率（内部计算光反射的分辨率）与最终光照贴图分辨率的比率。请参阅有关 <a href="GIVis.html">Scene 视图中的 GI 可视化</a>的文档以了解更多信息。 |
-| </strong>Irradiance Budget<strong>| 此值确定用于照射光照贴图中每个纹理像素的入射光数据的精度。从纹理像素的位置对场景的“视图”采样来获得每个纹理像素的光照。较低的辐照度预算值会导致样本更模糊。值越高，样本的清晰度越高。较高的辐照度预算会改善光照，但这会增大运行时内存使用量并可能增大 CPU 使用率。 |
-| </strong>Irradiance Quality<strong>| 使用滑动条来定义投射的射线数量，并计算影响给定输出光照贴图纹理像素的集合。较高的值可在光照贴图中实现视觉改善，但会增加 Unity Editor 中的预计算时间。该值不会影响运行时性能。 |
-| </strong>Modelling Tolerance<strong>| 此值控制网格几何体中允许光线通过的间隙的最小大小。降低此值可允许光线穿过环境中更小的间隙。 |
-| </strong>Edge Stitching<strong>| 如果启用此属性，则表示光照贴图中的 UV 图表应无缝连接在一起，从而避免不必要的视觉瑕疵。 |
-| </strong>Is Transparent<strong>| 如果启用此属性，在全局光照计算期间，对象显示将为透明。背面对这些计算没有影响，光线将穿过表面。这可用于不可见的发光表面。 |
-| </strong>System Tag<strong>| 光照贴图纹理组合在同一个光照贴图图集内的一组对象称为“系统”。如果无法将所有对象放入单个图集中，Unity Editor 会自动定义其他系统及其附带的图集。但是，有时自己定义单独的系统会非常有用（例如，确保不同房间内的对象分组到每个房间的一个系统中）。更改 </strong>System Tag__ 号可强制创建新的系统和光照贴图。标签的确切数字序列值不重要。</td>
+	<td style="text-align:left;">This value scales the <strong>Realtime Resolution</strong> value in the Scene tab of the Lighting Window (menu: <strong>Window</strong> &gt; <strong>Rendering</strong> &gt; <strong>Lighting Settings</strong> &gt; <strong>Scene</strong>) to give the final resolution of the lightmap in texels per unit of distance.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Cluster Resolution</strong></td>
+	<td style="text-align:left;">聚类分辨率（内部计算光反射的分辨率）与最终光照贴图分辨率的比率。请参阅有关 <a href="GIVis.html">Scene 视图中的 GI 可视化</a>的文档以了解更多信息。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Irradiance Budget</strong></td>
+	<td style="text-align:left;">此值确定用于照射光照贴图中每个纹理像素的入射光数据的精度。从纹理像素的位置对场景的“视图”采样来获得每个纹理像素的光照。较低的辐照度预算值会导致样本更模糊。值越高，样本的清晰度越高。较高的辐照度预算会改善光照，但这会增大运行时内存使用量并可能增大 CPU 使用率。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Irradiance Quality</strong></td>
+	<td style="text-align:left;">使用滑动条来定义投射的射线数量，并计算影响给定输出光照贴图纹理像素的集合。较高的值可在光照贴图中实现视觉改善，但会增加 Unity Editor 中的预计算时间。该值不会影响运行时性能。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Modelling Tolerance</strong></td>
+	<td style="text-align:left;">此值控制网格几何体中允许光线通过的间隙的最小大小。降低此值可允许光线穿过环境中更小的间隙。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Edge Stitching</strong></td>
+	<td style="text-align:left;">如果启用此属性，则表示光照贴图中的 UV 图表应无缝连接在一起，从而避免不必要的视觉瑕疵。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Is Transparent</strong></td>
+	<td style="text-align:left;">如果启用此属性，在全局光照计算期间，对象显示将为透明。背面对这些计算没有影响，光线将穿过表面。这可用于不可见的发光表面。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>System Tag</strong></td>
+	<td style="text-align:left;">光照贴图纹理组合在同一个光照贴图图集内的一组对象称为“系统”。如果无法将所有对象放入单个图集中，Unity Editor 会自动定义其他系统及其附带的图集。但是，有时自己定义单独的系统会非常有用（例如，确保不同房间内的对象分组到每个房间的一个系统中）。更改 <strong>System Tag</strong> 号可强制创建新的系统和光照贴图。标签的确切数字序列值不重要。</td>
 </tr>
 </tbody>
 </table>
@@ -318,7 +339,7 @@
 
 <h3>场景</h3>
 
-<p>要将光照贴图参数资源分配到整个场景，请打开 <a href="GlobalIllumination.html">Lighting 窗口</a> (<strong>Window</strong> &gt; <strong>Lighting</strong>)，单击 <strong>Scene</strong> 选项卡，然后导航到 <strong>General GI</strong> 设置。</p>
+<p>To assign a Lightmap Parameters Asset to the whole Scene, open the <a href="GlobalIllumination.html">Lighting window</a> (<strong>Window</strong> &gt; <strong>rendering</strong> &gt; <strong>Lighting Settings</strong>), click the <strong>Scene</strong> tab, and navigate to the <strong>General GI</strong> settings.</p>
 
 <figure>
 <img src="../uploads/Main/LightmapParameters3.png" alt="">
@@ -363,7 +384,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

@@ -12,7 +12,7 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="Editing Curves - Unity Manual">
 <title>Editing Curves - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/AnimationEditorCurve.png">
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.4/uploads/Main/AnimationEditorCurve.png">
 <meta name="description" content="There are several different features and windows in the Unity Editor which use Curves to display and edit data. The methods you can use to view and manipulate curves is largely the same across all these areas, although there are some exceptions.">
 <meta property="og:description" content="There are several different features and windows in the Unity Editor which use Curves to display and edit data. The methods you can use to view and manipulate curves is largely the same across all these areas, although there are some exceptions.">
 <meta name="author" content="Unity Technologies">
@@ -31,7 +31,7 @@
       var lang = 'zh_CN';
       var page = 'EditingCurves';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -63,7 +63,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -92,10 +92,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/EditingCurves.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/EditingCurves.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/EditingCurves.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/EditingCurves.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/EditingCurves.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/EditingCurves.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/EditingCurves.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/EditingCurves.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -107,7 +107,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -129,7 +129,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="AnimationSection.html">动画</a></li>
 <li><a href="AnimationClips.html">动画剪辑</a></li>
 <li><a href="AnimationEditorGuide.html">Animation 窗口指南</a></li>
@@ -150,16 +150,16 @@
 <p>There are several different features and windows in the Unity Editor which use <strong>Curves</strong> to display and edit data. The methods you can use to view and manipulate curves is largely the same across all these areas, although there are some exceptions.</p>
 
 <ul>
-<li>The <a href="AnimationEditorGuide.html">Animation View</a> uses curves to display and edit the values of animated properties over time in an <strong>Animation Clip</strong>.</li>
+<li>The <a href="AnimationEditorGuide.html">Animation Window</a> uses curves to display and edit the values of animated properties over time in an <strong>Animation Clip</strong>.</li>
 </ul>
 
 <figure>
-<img src="../uploads/Main/AnimationEditorCurve.png" alt="The Animation View.">
-<figcaption>The Animation View.</figcaption>
+<img src="../uploads/Main/AnimationEditorCurve.png" alt="The Animation Window.">
+<figcaption>The Animation Window.</figcaption>
 </figure>
 
 <ul>
-<li>Script components can have member variables of type <a href="EditingValueProperties.html">AnimationCurve</a> that can be used for all kinds of things. Clicking on those in the Inspector will open up the <strong>Curve Editor</strong>.</li>
+<li>Script components can have member variables of type <a href="EditingValueProperties.html">Animation Curve</a> that can be used for all kinds of things. Clicking on those in the Inspector will open up the <strong>Curve Editor</strong>.</li>
 </ul>
 
 <figure>
@@ -174,6 +174,15 @@
 <figure>
 <img src="../uploads/Main/AudioSourceCurve.png" alt="Distance function curves in the AudioSource component in the Inspector.">
 <figcaption>Distance function curves in the AudioSource component in the Inspector.</figcaption>
+</figure>
+
+<ul>
+<li>The <a href="PartSysUsage.html">Particle System</a> uses curves to vary particle properties over time.</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/ParticleSystemCurve.png" alt="Particle System curves editor.">
+<figcaption>Particle System curves editor.</figcaption>
 </figure>
 
 <p>While these controls have subtle differences, the <strong>curves</strong> can be edited in exactly the same way in all of them. This page explains how to navigate and edit curves in those controls. </p>
@@ -326,7 +335,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

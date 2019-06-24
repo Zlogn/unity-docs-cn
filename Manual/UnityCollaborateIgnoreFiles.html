@@ -12,8 +12,9 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="排除资源使其不发布到 Collaborate  - Unity Manual">
 <title>排除资源使其不发布到 Collaborate  - Unity Manual</title>
-<meta name="description" content="在某些情况下，您可能希望排除项目中的某些资源，使其不被发布到云端。Collaborate 使用 gitignore 文件来排除不发布的文件。要排除不发布的资源，请将这些资源添加到 Project 根目录下的 .collabignore 文件。此文件列出了在发布到 Collaborate 时需要排除的文件和文件夹。">
-<meta property="og:description" content="在某些情况下，您可能希望排除项目中的某些资源，使其不被发布到云端。Collaborate 使用 gitignore 文件来排除不发布的文件。要排除不发布的资源，请将这些资源添加到 Project 根目录下的 .collabignore 文件。此文件列出了在发布到 Collaborate 时需要排除的文件和文件夹。">
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.4/uploads/Main/FileDisplaySelectorMacOS.png">
+<meta name="description" content="In some cases, you might want to exclude certain Assets in your Project from publishing to the cloud. Collaborate uses a gitignore file, named .collabignore, to exclude files.">
+<meta property="og:description" content="In some cases, you might want to exclude certain Assets in your Project from publishing to the cloud. Collaborate uses a gitignore file, named .collabignore, to exclude files.">
 <meta name="author" content="Unity Technologies">
 <link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
 <link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
@@ -30,7 +31,7 @@
       var lang = 'zh_CN';
       var page = 'UnityCollaborateIgnoreFiles';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -62,7 +63,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -91,10 +92,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/UnityCollaborateIgnoreFiles.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/UnityCollaborateIgnoreFiles.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/UnityCollaborateIgnoreFiles.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/UnityCollaborateIgnoreFiles.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/UnityCollaborateIgnoreFiles.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/UnityCollaborateIgnoreFiles.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/UnityCollaborateIgnoreFiles.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/UnityCollaborateIgnoreFiles.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -106,7 +107,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -128,7 +129,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="UnityServices.html">Unity 服务</a></li>
 <li><a href="UnityCollaborate.html">Unity Collaborate</a></li>
 <li>排除资源使其不发布到 Collaborate </li>
@@ -145,20 +146,50 @@
 <!--BeginSwitchLink--><!--EndSwitchLink-->
 <div class="clear"></div>
 
-<p>在某些情况下，您可能希望排除项目中的某些资源，使其不被发布到云端。Collaborate 使用 <a href="https://help.github.com/articles/ignoring-files/">gitignore</a> 文件来排除不发布的文件。要排除不发布的资源，请将这些资源添加到 Project 根目录下的 <em>.collabignore</em> 文件。此文件列出了在发布到 Collaborate 时需要排除的文件和文件夹。</p>
+<p>In some cases, you might want to exclude certain Assets in your Project from publishing to the cloud. Collaborate uses a <a href="https://help.github.com/articles/ignoring-files/">gitignore</a> file, named <em>.collabignore</em>, to exclude files. </p>
 
-<p>向 <em>.collabignore</em> 文件添加排除规则的步骤如下：</p>
+<p>To add your own exclusions to the <em>.collabignore</em> file:</p>
 
-<p>1.阅读 <a href="https://git-scm.com/docs/gitignore">Git-SCM.com 上的 GitIgnore 文档</a>。
-2.编辑 <em>.collabignore</em> 文件以添加新规则。
-3.启动 Unity Editor（如果 Editor 已经在运行，请将其重新启动）。
-4.在 Collaborate 中发布您的 <em>.collabignore</em> 文件更改，以便与团队的其他成员共享您的排除规则。</p>
+<ol>
+<li>Locate the <em>.collabignore</em> file in the root of your Project file. If you don’t see this file, see the instructions below to display hidden files.</li>
+<li>Use the <a href="https://git-scm.com/docs/gitignore">GitIgnore documentation</a> to edit the <em>.collabignore</em> file and add your new rules. You can edit the file in any text editor.</li>
+<li>
+<a href="https://docs.unity3d.com/Manual/UnityCollaboratePartialPublish.html">Publish</a> your <em>.collabignore</em> file changes in Collaborate to share your exclusions with the rest of your team.</li>
+</ol>
 
-<p><strong>注意</strong>：为了使本地编辑的 <em>.collabignore</em> 文件生效，必须重新启动 Unity Editor。</p>
+<h2>Displaying hidden files</h2>
 
-<p><strong>注意</strong>：如果排除已在 Collaborate 中跟踪的文件，该文件现有的历史记录仍会保留。</p>
+<p>If you can’t see the <em>.collabignore</em> file, or the Asset files you want to exclude, your system may be configured to hide system files. Windows and Macs hide system files by default. </p>
 
-<p>有些项目文件和文件夹永远无法通过 <em>.collabignore</em> 文件从 Collaborate 中排除。如下：</p>
+<h3>Windows</h3>
+
+<p>To display hidden files in Windows 10 and above:</p>
+
+<ol>
+<li>Open <strong>File Explorer</strong> from the taskbar.</li>
+<li>Select <strong>View</strong> &gt; <strong>Options</strong> &gt; <strong>Change folder and search options</strong>.</li>
+<li>Select the <strong>View</strong> tab, then <strong>Advanced settings</strong>.</li>
+<li>Select <strong>Show hidden files, folders, and drives</strong>, then select <strong>OK</strong>.</li>
+</ol>
+
+<p>For details, see <a href="https://support.microsoft.com/en-us/help/4028316/windows-view-hidden-files-and-folders-in-windows-10">Windows support</a>.</p>
+
+<h3>MacOS</h3>
+
+<p>To display hidden files in MacOS: </p>
+
+<ol>
+<li>Navigate to the root directory of your Project.</li>
+<li>Display the files as a list<br><img src="../uploads/Main/FileDisplaySelectorMacOS.png" alt="FilePicker">
+</li>
+<li>Press the Shift+Command+Period keys to toggle system files between hidden and visible.</li>
+</ol>
+
+<p>For details, see <a href="https://discussions.apple.com/thread/7581737">Macintosh support</a></p>
+
+<h2>Files that you cannot exclude</h2>
+
+<p>There are Project files and folders that you can never exclude from Collaborate using the <em>.collabignore</em> file. These are:</p>
 
 <ul>
 <li>
@@ -172,10 +203,6 @@
 <li>
 <em>Project Settings</em> 文件夹中的 <em>ProjectVersion.txt</em>。</li>
 </ul>
-
-<h2>另请参阅</h2>
-
-<p><a href="UnityCollaborateSettingUp.html">设置 Unity Collaborate</a></p>
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
 <span class="prev"><a href="UnityCollaborateResolvingConflicts.html"></a></span><div class="tip">解决文件冲突</div>
@@ -187,7 +214,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

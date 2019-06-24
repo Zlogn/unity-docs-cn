@@ -12,7 +12,7 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="Facebook 开发入门 - Unity Manual">
 <title>Facebook 开发入门 - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/Facebook-GettingStarted-0.png">
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.4/uploads/Main/Facebook-GettingStarted-0.png">
 <meta name="description" content="Facebook 构建目标可让开发者轻松地将 Unity 游戏发布到 Facebook 并在游戏中使用 Facebook 功能。通过使用 Facebook 构建目标，可将内容构建为 WebGL 播放器，然后可将其发布到 facebook.com，或者构建为自定义本机 Windows 独立平台播放器，然后可将其发布到 Facebook Gameroom 客户端。">
 <meta property="og:description" content="Facebook 构建目标可让开发者轻松地将 Unity 游戏发布到 Facebook 并在游戏中使用 Facebook 功能。通过使用 Facebook 构建目标，可将内容构建为 WebGL 播放器，然后可将其发布到 facebook.com，或者构建为自定义本机 Windows 独立平台播放器，然后可将其发布到 Facebook Gameroom 客户端。">
 <meta name="author" content="Unity Technologies">
@@ -31,7 +31,7 @@
       var lang = 'zh_CN';
       var page = 'Facebook-GettingStarted';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -63,7 +63,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -92,10 +92,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/Facebook-GettingStarted.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/Facebook-GettingStarted.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/Facebook-GettingStarted.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/Facebook-GettingStarted.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/Facebook-GettingStarted.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/Facebook-GettingStarted.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/Facebook-GettingStarted.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/Facebook-GettingStarted.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -107,7 +107,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -129,7 +129,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="PlatformSpecific.html">特定于平台的信息</a></li>
 <li><a href="Facebook.html">Facebook</a></li>
 <li>Facebook 开发入门</li>
@@ -139,7 +139,7 @@
 <span class="prev"><a href="Facebook.html"></a></span><div class="tip">Facebook</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
-<span class="next"><a href="class-PlayerSettingsFacebook.html"></a></span><div class="tip">Facebook Player Settings</div>
+<span class="next"><a href="class-PlayerSettingsFacebook.html"></a></span><div class="tip">Player settings for the Facebook platform</div>
 </div>
 </div></div>
 <h1>Facebook 开发入门</h1>
@@ -156,7 +156,7 @@
 
 <h3>配置</h3>
 
-<p>要将游戏发布到 Facebook，首先需要<a href="https://developers.facebook.com/?advanced_app_create=true">在 Facebook 开发者页面上创建新的应用程序</a>。完成后便会提供一个 AppID，应将其粘贴到 <a href="class-PlayerSettingsFacebook.html">Facebook PlayerSettings</a> 中。现在，可从 Facebook 的应用程序配置页面的 <strong>Web Hosting</strong> 选项卡下获取<em>上传访问令牌 (Upload access token)</em>。同样，将其粘贴到 Facebook Player Settings 中。这样一来，就可以直接将游戏从 Unity Editor 上传到 Facebook。</p>
+<p>To publish your game to Facebook, you first need to<a href="https://developers.facebook.com/?advanced_app_create=true"> create a new App on the Facebook developer page</a>. Once completed, this will give you an AppID, which you should paste into your <a href="class-PlayerSettingsFacebook.html">Facebook Player</a> settings. Now, you can get an <em>Upload access token</em> from Facebook, on your app configuration page, under the <strong>Web Hosting</strong> tab. Also paste this into your Facebook Player settings. This will allow you to upload your game to Facebook directly from the Unity Editor.</p>
 
 <h3>构建</h3>
 
@@ -176,7 +176,7 @@
 
 <p>当 Facebook 构建目标处于激活状态时，您可以在脚本中使用 Facebook SDK。如此便可在 Facebook 上共享内容、跟踪分析事件、使用 Facebook 付款 (Facebook Payments) 等。有关如何使用该 SDK 的更多信息，请参阅 <a href="https://developers.facebook.com/docs/unity/reference/current">Facebook 的文档</a>。</p>
 
-<p>在 Unity Editor 的 <a href="class-PlayerSettingsFacebook.html">Facebook Player Settings</a> 中选择要使用的 SDK 版本（单击 Build Settings 窗口中的 <strong>Player Settings</strong> 按钮，或选择菜单：__Edit &gt; Project Settings &gt; Player__）。这些设置会显示 Facebook 为您的 Unity 版本提供的所有 SDK 版本。</p>
+<p>Select which version of the SDK you want to use in the Unity Editor’s <a href="class-PlayerSettingsFacebook.html">Facebook Player</a> settings (click the <strong>Player Settings</strong> button in the Build Settings window, or select menu: <strong>Edit &gt; Project Settings</strong>, then select the <strong>Player</strong> category). These settings show all the versions that Facebook has made available for your version of Unity.</p>
 
 <h3>使用自定义的 Facebook SDK</h3>
 
@@ -195,13 +195,13 @@
 <span class="prev"><a href="Facebook.html"></a></span><div class="tip">Facebook</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
-<span class="next"><a href="class-PlayerSettingsFacebook.html"></a></span><div class="tip">Facebook Player Settings</div>
+<span class="next"><a href="class-PlayerSettingsFacebook.html"></a></span><div class="tip">Player settings for the Facebook platform</div>
 </div>
 </div>
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

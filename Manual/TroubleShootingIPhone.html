@@ -12,7 +12,7 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="Troubleshooting on iOS devices - Unity Manual">
 <title>Troubleshooting on iOS devices - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/ActivityMonitor.png">
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.4/uploads/Main/ActivityMonitor.jpg">
 <meta name="description" content="There are some situations with iOS where your game can work perfectly in the Unity editor but then doesn&amp;#8217;t work or maybe doesn&amp;#8217;t even start on the actual device.
 The problems are often related to code or content quality. This section describes the most common scenarios.">
 <meta property="og:description" content="There are some situations with iOS where your game can work perfectly in the Unity editor but then doesn&amp;#8217;t work or maybe doesn&amp;#8217;t even start on the actual device.
@@ -33,7 +33,7 @@ The problems are often related to code or content quality. This section describe
       var lang = 'zh_CN';
       var page = 'TroubleShootingIPhone';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -65,7 +65,7 @@ The problems are often related to code or content quality. This section describe
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -94,10 +94,10 @@ The problems are often related to code or content quality. This section describe
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/TroubleShootingIPhone.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/TroubleShootingIPhone.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/TroubleShootingIPhone.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/TroubleShootingIPhone.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/TroubleShootingIPhone.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/TroubleShootingIPhone.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/TroubleShootingIPhone.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/TroubleShootingIPhone.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -109,7 +109,7 @@ The problems are often related to code or content quality. This section describe
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -131,7 +131,7 @@ The problems are often related to code or content quality. This section describe
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="PlatformSpecific.html">特定于平台的信息</a></li>
 <li><a href="iphone.html">iOS</a></li>
 <li>Troubleshooting on iOS devices</li>
@@ -170,7 +170,7 @@ Information from the XCode Debugger console can often help detect these problems
 
 <h4>Managed stack traces</h4>
 
-<p>Unity includes software-based handling of the NullReferenceException. The AOT compiler includes quick checks for null references each time a method or variable is accessed on an object. This feature affects script performance, which is why it is enabled only for development builds (enable the <em>script debugging</em> option in build settings dialog).
+<p>Unity includes software-based handling of the NullReferenceException. The AOT compiler includes quick checks for null references each time a method or variable is accessed on an object. This feature affects script performance, which is why it is enabled only for development builds (enable the <em>script debugging</em> option in <strong>Build Settings</strong> dialog).
 If everything was done right and the fault actually is occurring in .NET code then you won’t see EXC_BAD_ACCESS anymore. Instead, the .NET exception text will be printed in the Xcode console (or else your code will just handle it in a “catch” statement). Typical output might be:</p>
 
 <pre><code>Unhandled Exception: System.NullReferenceException: A null value was found where an object instance was required.
@@ -220,9 +220,9 @@ In some cases only a partial stack trace is seen on the Debugger Console:</p>
 <p>This usually happens when an external library is compiled with the ARM Thumb instruction set. Currently, such libraries are not compatible with Unity. The problem can be solved easily by recompiling the library without Thumb instructions. You can do this for the library’s Xcode project with the following steps:</p>
 
 <ul>
-<li>In Xcode, select <em>View</em> &gt; <em>Navigators</em> &gt; <em>Show Project Navigator</em> from the menu</li>
-<li>Select the <em>Unity-iPhone</em> project, activate <em>Build Settings</em> tab</li>
-<li>In the search field enter: <em>Other C Flags</em>
+<li>In Xcode, select <strong>View</strong> &gt; <strong>Navigators</strong> &gt; <strong>Show Project Navigator</strong> from the menu</li>
+<li>Select the <strong>Unity-iPhone</strong> project, activate <strong>Build Settings</strong> tab</li>
+<li>In the search field enter: <strong>Other C Flags</strong>
 </li>
 <li>Add <em>-mno-thumb</em> flag there and rebuild the library.</li>
 </ul>
@@ -244,7 +244,7 @@ Your application memory usage can be tracked by two Xcode Instruments tools: <st
 </ul>
 
 <figure>
-<img src="../uploads/Main/ActivityMonitor.png" alt="">
+<img src="../uploads/Main/ActivityMonitor.jpg" alt="">
 </figure>
 
 <p><strong>Note:</strong> The <a href="iphone-InternalProfiler.html">internal profiler</a> shows only the heap allocated by .NET scripts. Total memory usage can be determined via Xcode Instruments as shown above. This figure includes parts of the application binary, some standard framework buffers, Unity engine internal state buffers, the .NET runtime heap (number printed by internal profiler), GLES driver heap and some other miscellaneous stuff. </p>
@@ -252,13 +252,13 @@ Your application memory usage can be tracked by two Xcode Instruments tools: <st
 <p>The other tool displays all allocations made by your application and includes both native heap and managed heap statistics. The important statistic is the <strong>Net bytes</strong> value.</p>
 
 <figure>
-<img src="../uploads/Main/ObjectAlloc.png" alt="">
+<img src="../uploads/Main/ObjectAlloc.jpg" alt="">
 </figure>
 
 <p>To keep memory usage low:</p>
 
 <ul>
-<li>Reduce the application binary size by using the strongest iOS stripping options, and avoid unnecessary dependencies on different .NET libraries. See the <a href="class-PlayerSettings.html">player settings</a> and <a href="iphone-playerSizeOptimization.html">player size optimization</a> manual pages for further details.</li>
+<li>Reduce the application binary size by using the strongest iOS stripping options, and avoid unnecessary dependencies on different .NET libraries. See the <a href="class-PlayerSettings.html">Player</a> settings and <a href="iphone-playerSizeOptimization.html">Optimizing the size of the built iOS Player</a> for further details.</li>
 <li>Reduce the size of your content. Use PVRTC compression for textures and use low poly models. See the manual page about <a href="ReducingFilesize.html">reducing file size</a> for more information.</li>
 <li>Don’t allocate more memory than necessary in your scripts. Track mono heap size and usage with the <a href="iphone-InternalProfiler.html">internal profiler</a>.</li>
 </ul>
@@ -282,7 +282,7 @@ Your application memory usage can be tracked by two Xcode Instruments tools: <st
 
 <h2>Type.GetProperty() or Type.GetValue() cause crashes on the device</h2>
 
-<p>Currently <strong>Type.GetProperty()</strong> and <strong>Type.GetValue()</strong> are supported only for the <strong>.NET 2.0 Subset</strong> profile. You can select the .NET API compatibility level in the <a href="class-PlayerSettings.html">Player Settings</a>. </p>
+<p>Currently <strong>Type.GetProperty()</strong> and <strong>Type.GetValue()</strong> are supported only for the <strong>.NET 2.0 Subset</strong> profile. You can select the .NET API compatibility level in the <a href="class-PlayerSettings.html">Player</a> settings. </p>
 
 <p><strong>Note:</strong> <strong>Type.GetProperty()</strong> and <strong>Type.GetValue()</strong> might be incompatible with managed code stripping and might need to be excluded (you can supply a custom non-strippable type list during the stripping process to accomplish this). For further details, see the <a href="iphone-playerSizeOptimization.html">iOS player size optimization guide</a>.</p>
 
@@ -321,7 +321,7 @@ Your application memory usage can be tracked by two Xcode Instruments tools: <st
 
 <h2>“Ran out of trampolines of type 0/1/2” runtime error</h2>
 
-<p>This error usually happens if you use lots of recursive generics. You can hint to the AOT compiler to allocate more trampolines of type 0, type 1 or type 2. Additional AOT compiler command line options can be specified in the <em>Other Settings</em> section of the <a href="class-PlayerSettings.html">Player Settings</a>. For type 1 trampolines, specify <code>nrgctx-trampolines=ABCD</code>, where ABCD is the number of new trampolines required (i.e. 4096). For type 2 trampolines specify <code>nimt-trampolines=ABCD</code> and for type 0 trampolines specify <code>ntrampolines=ABCD</code>.</p>
+<p>This error usually happens if you use lots of recursive generics. You can hint to the AOT compiler to allocate more trampolines of type 0, type 1 or type 2. Additional AOT compiler command line options can be specified in the <strong>Other Settings</strong> section of the <a href="class-PlayerSettings.html">Player</a> settings. For for type 0 trampolines specify <code>ntrampolines=ABCD</code>, where ABCD is the number of new trampolines required (i.e. 4096). For type 1 trampolines specify <code>nrgctx-trampolines=ABCD</code> and for type 2 trampolines specify <code>nimt-trampolines=ABCD</code>.</p>
 
 <h2>After upgrading Xcode Unity iOS, runtime fails with message “You are using Unity iPhone Basic. You are not allowed to remove the Unity splash screen from your game”</h2>
 
@@ -405,7 +405,7 @@ public class NewBehaviourScript : MonoBehaviour {
 
 <p>This error usually means there is just too much code in single module. Typically, it is caused by having lots of script code or having big external .NET assemblies included into build. And enabling script debugging might make things worse, because it adds quite few additional instructions to each function, so it is easier to hit that limit.</p>
 
-<p>Enabling managed code stripping in <a href="class-PlayerSettings.html">player settings</a> might help with this problem, especially if big external .NET assemblies are involved. But if the issue persists then the best solution is to split user script code into multiple assemblies. The easiest way to this is move some code to <em>Plugins</em> folder. Code at this location is put to a different assembly. Also, check the information about how <a href="ScriptCompileOrderFolders.html">special folder names</a> affect script compilation.</p>
+<p>Enabling managed code stripping in <a href="class-PlayerSettings.html">Player</a> settings might help with this problem, especially if big external .NET assemblies are involved. But if the issue persists then the best solution is to split user script code into multiple assemblies. The easiest way to this is move some code to <em>Plugins</em> folder. Code at this location is put to a different assembly. Also, check the information about how <a href="ScriptCompileOrderFolders.html">special folder names</a> affect script compilation.</p>
 
 <hr>
 
@@ -424,7 +424,7 @@ public class NewBehaviourScript : MonoBehaviour {
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

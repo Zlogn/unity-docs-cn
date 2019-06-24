@@ -12,9 +12,9 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="后期处理概述 - Unity Manual">
 <title>后期处理概述 - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/PostProcessing-0.jpg">
-<meta name="description" content="__后期处理__是在将摄像机的图像缓冲区显示到屏幕之前将全屏滤镜和效果应用于图像缓冲区的过程。它可以通过很短的设置时间大幅改善产品的视觉效果。">
-<meta property="og:description" content="__后期处理__是在将摄像机的图像缓冲区显示到屏幕之前将全屏滤镜和效果应用于图像缓冲区的过程。它可以通过很短的设置时间大幅改善产品的视觉效果。">
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.4/uploads/Main/PostProcessing-0.jpg">
+<meta name="description" content="Post-processing applies full-screen filters and effects to a camera&amp;#8217;s image buffer before the image appears on screen. It can drastically improve the visuals of your application with little set-up time. You can use post-processing effects to simulate physical camera and film properties.">
+<meta property="og:description" content="Post-processing applies full-screen filters and effects to a camera&amp;#8217;s image buffer before the image appears on screen. It can drastically improve the visuals of your application with little set-up time. You can use post-processing effects to simulate physical camera and film properties.">
 <meta name="author" content="Unity Technologies">
 <link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
 <link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
@@ -31,7 +31,7 @@
       var lang = 'zh_CN';
       var page = 'PostProcessingOverview';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -63,7 +63,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -92,10 +92,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/PostProcessingOverview.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/PostProcessingOverview.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/PostProcessingOverview.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/PostProcessingOverview.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/PostProcessingOverview.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/PostProcessingOverview.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/PostProcessingOverview.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/PostProcessingOverview.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -107,7 +107,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -129,7 +129,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="Graphics.html">图形</a></li>
 <li><a href="GraphicsOverview.html">图形概述</a></li>
 <li>后期处理概述</li>
@@ -139,54 +139,84 @@
 <span class="prev"><a href="PartSysInstancing.html"></a></span><div class="tip">粒子系统 GPU 实例化</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
-<span class="next"><a href="PostProcessing-Stack.html"></a></span><div class="tip">Post-processing stack（后期处理栈）</div>
+<span class="next"><a href="PostProcessing-Antialiasing.html"></a></span><div class="tip">Anti-aliasing</div>
 </div>
 </div></div>
 <h1>后期处理概述</h1>
 <!--BeginSwitchLink--><!--EndSwitchLink-->
 <div class="clear"></div>
 
-<p>__后期处理__是在将摄像机的图像缓冲区显示到屏幕之前将全屏滤镜和效果应用于图像缓冲区的过程。它可以通过很短的设置时间大幅改善产品的视觉效果。</p>
+<p><strong>Post-processing</strong> applies full-screen filters and effects to a camera’s image buffer before the image appears on screen. It can drastically improve the visuals of your application with little set-up time. You can use post-processing effects to simulate physical camera and film properties.</p>
 
-<p>您可以使用后期处理效果来模拟实际摄像机和胶片属性；例如：__泛光 (Bloom)<strong>、</strong>景深 (Depth of Field)<strong>、</strong>色差 (Chromatic Aberration)__ 或__颜色分级 (Color Grading)__。</p>
-
-<h3>使用后期处理</h3>
-
-<p>要在项目中使用后期处理，可导入 Unity 的<a href="PostProcessing-Stack.html">后期处理栈</a>。您也可以编写自己的后期处理效果。有关详细信息，请参阅<a href="PostProcessingWritingEffects.html">编写后期处理效果</a>。</p>
+<h2>Using post-processing</h2>
 
 <p>下面的图像展示了应用和未应用后期处理的场景。</p>
 
 <figure>
-<img src="../uploads/Main/PostProcessing-0.jpg" alt="应用后期处理后的场景">
-<figcaption>应用后期处理后的场景</figcaption>
+<img src="../uploads/Main/PostProcessing-0.jpg" alt="Scene with no post-processing">
+<figcaption>Scene with no post-processing</figcaption>
 </figure>
 
 <figure>
-<img src="../uploads/Main/PostProcessing-1.jpg" alt="未应用后期处理的场景">
-<figcaption>未应用后期处理的场景</figcaption>
+<img src="../uploads/Main/PostProcessing-1.jpg" alt="Scene with post-processing">
+<figcaption>Scene with post-processing</figcaption>
 </figure>
+
+<p>The post-processing effects available in Unity depend on what pipeline you are using to render graphics. Each pipeline has a different way of setting up post-processing effects as follows:</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Render pipeline</strong></th>
+	<th style="text-align:left;"><strong>Post-processing support</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><a href="SL-RenderPipeline.html"><strong>Built-in render pipeline</strong></a></td>
+	<td style="text-align:left;">To use post-processing effects, download the <a href="https://docs.unity3d.com/Packages/com.unity.postprocessing@2.1/manual/index.html">post-processing version 2</a> package.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><a href="https://docs.unity3d.com/Packages/com.unity.render-pipelines.lightweight@latest/index.html?preview=1"><strong>Lighteight Render Pipeline (LWRP)</strong></a></td>
+	<td style="text-align:left;">LWRP uses the <a href="https://docs.unity3d.com/Packages/com.unity.postprocessing@2.1/manual/index.html">post-processing version 2</a> package, which Unity installs when you create a Project using an LWRP Template. Some post-processing effects are not compatible with this pipeline, such as Ambient Occlusion and Screen Space Reflections.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>High Definition Render Pipeline (HDRP)</strong></td>
+	<td style="text-align:left;">HDRP includes a high definition post-processing solution, which Unity installs when you create a Project using an HDRP Template.</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Note: Post processing stack</strong> version 1 is now deprecated and should not be used. For more information on render pipelines, see the documentation on <a href="ScriptableRenderPipeline.html">Scriptable Render Pipelines</a>.</p>
+
+<p>This section of the manual gives an overview of the post-processing effects that are available in Unity. For specific information on how to use the post-processing properties and scripting available in Unity, read the package documentation on <a href="https://docs.unity3d.com/Packages/com.unity.postprocessing@2.1/manual/index.html">post-processing</a>. </p>
 
 <p><br> <br> </p>
 
 <hr>
 
 <ul>
-<li><p><span class="page-edit"> 2017–05–24 Page published with limited <a href="DocumentationEditorialReview.html">editorial review</a>
-</span></p></li>
-<li><p><span class="page-history">5.6 中的新功能</span></p></li>
+<li><span class="page-edit"> 2019–05–07 Page published with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
 </ul>
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
 <span class="prev"><a href="PartSysInstancing.html"></a></span><div class="tip">粒子系统 GPU 实例化</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
-<span class="next"><a href="PostProcessing-Stack.html"></a></span><div class="tip">Post-processing stack（后期处理栈）</div>
+<span class="next"><a href="PostProcessing-Antialiasing.html"></a></span><div class="tip">Anti-aliasing</div>
 </div>
 </div>
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

@@ -30,7 +30,7 @@
       var lang = 'zh_CN';
       var page = 'InstantiatingPrefabs';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -62,7 +62,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -91,10 +91,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/InstantiatingPrefabs.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/InstantiatingPrefabs.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/InstantiatingPrefabs.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/InstantiatingPrefabs.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/InstantiatingPrefabs.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/InstantiatingPrefabs.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/InstantiatingPrefabs.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/InstantiatingPrefabs.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -106,7 +106,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -128,18 +128,18 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="UnityOverview.html">在 Unity 中操作</a></li>
 <li><a href="CreatingGameplay.html">创建游戏玩法</a></li>
-<li><a href="GameObjects.html">游戏对象</a></li>
+<li><a href="Prefabs.html">预制件</a></li>
 <li>在运行时实例化预制件</li>
 </ul></div>
 <div class="mb20"><div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
-<span class="prev"><a href="Prefabs.html"></a></span><div class="tip">预制件</div>
+<span class="prev"><a href="UnpackingPrefabInstances.html"></a></span><div class="tip">Unpacking Prefab instances</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
-<span class="next"><a href="Saving.html"></a></span><div class="tip">保存工作</div>
+<span class="next"><a href="Input.html"></a></span><div class="tip">输入</div>
 </div>
 </div></div>
 <h1>在运行时实例化预制件</h1>
@@ -170,24 +170,14 @@
 
 <p>首先，利用代码来修建砖墙：</p>
 
-<pre><code>// JavaScript
-function Start () {
-    for (var y = 0; y &lt; 5; y++) {
-        for (var x = 0; x &lt; 5; x++) {
-            var cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
-            cube.AddComponent.&lt;Rigidbody&gt;();
-            cube.transform.position = Vector3 (x, y, 0);
-        }
-    }
-}
-
-
-// C#
-public class Instantiation : MonoBehaviour {
-
-    void Start() {
-        for (int y = 0; y &lt; 5; y++) {
-            for (int x = 0; x &lt; 5; x++) {
+<pre><code>public class Instantiation : MonoBehaviour 
+{
+    void Start()
+    {
+        for (int y = 0; y &lt; 5; y++) 
+        {
+            for (int x = 0; x &lt; 5; x++) 
+            {
                 GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
                 cube.AddComponent&lt;Rigidbody&gt;();
                 cube.transform.position = new Vector3(x, y, 0);
@@ -208,26 +198,16 @@ public class Instantiation : MonoBehaviour {
 
 <p>如果将预制件用于每块砖，下面就是筑墙所需的代码。</p>
 
-<pre><code>// JavaScript
+<pre><code>//Instantiate accepts any component type, because it instantiates the GameObject 
 
-//Instantiate 接受任何组件类型，因为它会将附加到组件的游戏对象实例化。因此，在此处接受变换组件。
-
-var brick : Transform;
-function Start () {
-    for (var y = 0; y &lt; 5; y++) {
-        for (var x = 0; x &lt; 5; x++) {
-            Instantiate(brick, Vector3 (x, y, 0), Quaternion.identity);
-        }
-    }
-}
-
-
-// C#
 public Transform brick;
 
-void Start() {
-    for (int y = 0; y &lt; 5; y++) {
-        for (int x = 0; x &lt; 5; x++) {
+void Start() 
+{
+    for (int y = 0; y &lt; 5; y++)
+    {
+        for (int x = 0; x &lt; 5; x++) 
+        {
             Instantiate(brick, new Vector3(x, y, 0), Quaternion.identity);
         }
     }
@@ -266,46 +246,25 @@ void Start() {
 
 <p>以下脚本显示了如何使用 <strong>Instantiate()</strong> 函数来发射火箭。</p>
 
-<pre><code>// JavaScript
-
-// 要求火箭是一个刚体。
-// 这样，我们就无法在没有刚体的情况下分配预制件
-var rocket : Rigidbody;
-var speed = 10.0;
-
-function FireRocket () {
-    var rocketClone : Rigidbody = Instantiate(rocket, transform.position, transform.rotation);
-    rocketClone.velocity = transform.forward * speed;
-    // 您还可以访问克隆体的其他组件/脚本
-    rocketClone.GetComponent.&lt;MyRocketScript&gt;().DoSomething();
-}
-
-// 按住 Ctrl 或鼠标时调用 fire 方法
-function Update () {
-    if (Input.GetButtonDown("Fire1")) {
-        FireRocket();
-    }
-}
-
-
-// C#
-
-// 要求火箭是一个刚体。
-// 这样，我们就无法在没有刚体的情况下分配预制件
+<pre><code>// Require the rocket to be a rigidbody.
+// This way we the user can not assign a prefab without rigidbody
 public Rigidbody rocket;
 public float speed = 10f;
 
-void FireRocket () {
+void FireRocket () 
+{
     Rigidbody rocketClone = (Rigidbody) Instantiate(rocket, transform.position, transform.rotation);
     rocketClone.velocity = transform.forward * speed;
     
-    //您还可以访问克隆体的其他组件/脚本
+    // You can also access other components / scripts of the clone
     rocketClone.GetComponent&lt;MyRocketScript&gt;().DoSomething();
 }
 
-// 按住 Ctrl 或鼠标时调用 fire 方法
-void Update () {
-    if (Input.GetButtonDown("Fire1")) {
+// Calls the fire method when holding down ctrl or mouse
+void Update () 
+{
+    if (Input.GetButtonDown("Fire1"))
+    {
         FireRocket();
     }
 }
@@ -337,52 +296,27 @@ void Update () {
 
 <p>以下示例演示了如何在代码中对这些步骤建模。</p>
 
-<pre><code>// JavaScript
+<pre><code>public GameObject wreck;
 
-var wreck : GameObject;
-
-// 例如，我们会 3 秒后自动将游戏对象变为残骸
-function Start () {
-    yield WaitForSeconds(3);
-    KillSelf();
-}
-
-// 按住 Ctrl 或鼠标时调用 fire 方法
-function KillSelf () {
-    // 在我们所处的同一位置将残骸游戏对象实例化
-    var wreckClone = Instantiate(wreck, transform.position, transform.rotation);
-
-    // 有时我们需要将一些变量从此对象转移
-    // 到残骸
-    wreckClone.GetComponent.&lt;MyScript&gt;().someVariable = GetComponent.&lt;MyScript&gt;().someVariable;
-
-    // 自行终止
-    Destroy(gameObject);
-
-
-// C#
-
-public GameObject wreck;
-
-// 例如，我们会 3 秒后自动将游戏对象变为残骸
-IEnumerator Start() {
+// As an example, we turn the game object into a wreck after 3 seconds automatically
+IEnumerator Start() 
+{
     yield return new WaitForSeconds(3);
     KillSelf();
 }
 
-// 按住 Ctrl 或鼠标时调用 fire 方法
-void KillSelf () {
-    // 在我们所处的同一位置将残骸游戏对象实例化
+// Calls the fire method when holding down ctrl or mouse
+void KillSelf () 
+{
+    // Instantiate the wreck game object at the same position we are at
     GameObject wreckClone = (GameObject) Instantiate(wreck, transform.position, transform.rotation);
     
-    // 有时我们需要将一些变量从此对象转移
-    //到残骸
+    // Sometimes we need to carry over some variables from this object
+    // to the wreck
     wreckClone.GetComponent&lt;MyScript&gt;().someVariable = GetComponent&lt;MyScript&gt;().someVariable;
     
-    // 自行终止
+    // Kill ourselves
     Destroy(gameObject);
-}
-
 }
 
 </code></pre>
@@ -396,92 +330,57 @@ void KillSelf () {
 
 <p>因此最好是对预制件使用 <strong>Instantiate()</strong>！我们认为您已了解为什么预制件在这些场景中非常有用。以下是这些场景所需的代码：</p>
 
-<pre><code>// JavaScript
-
-// 将圆形中的预制件实例化
-
-var prefab : GameObject;
-var numberOfObjects = 20;
-var radius = 5;
-
-function Start () {
-    for (var i = 0; i &lt; numberOfObjects; i++) {
-        var angle = i * Mathf.PI * 2 / numberOfObjects;
-        var pos = Vector3 (Mathf.Cos(angle), 0, Mathf.Sin(angle)) * radius;
-        Instantiate(prefab, pos, Quaternion.identity);
-    }
-}
-
-
-// C#
-// 将圆形中的预制件实例化
+<pre><code>// Instantiates a prefab in a circle
 
 public GameObject prefab;
 public int numberOfObjects = 20;
 public float radius = 5f;
 
-void Start() {
-    for (int i = 0; i &lt; numberOfObjects; i++) {
+void Start() 
+{
+    for (int i = 0; i &lt; numberOfObjects; i++)
+    {
         float angle = i * Mathf.PI * 2 / numberOfObjects;
         Vector3 pos = new Vector3(Mathf.Cos(angle), 0, Mathf.Sin(angle)) * radius;
         Instantiate(prefab, pos, Quaternion.identity);
     }
 }
 
-
 </code></pre>
 
-<pre><code>// JavaScript
-
-// 将网格中的预制件实例化
-
-var prefab : GameObject;
-var gridX = 5;
-var gridY = 5;
-var spacing = 2.0;
-
-function Start () {
-    for (var y = 0; y &lt; gridY; y++) {
-        for (var x=0;x&lt;gridX;x++) {
-            var pos = Vector3 (x, 0, y) * spacing;
-            Instantiate(prefab, pos, Quaternion.identity);
-        }
-    }
-}
-
-
-// C#
-
-// 将网格中的预制件实例化
+<pre><code>// Instantiates a prefab in a grid
 
 public GameObject prefab;
 public float gridX = 5f;
 public float gridY = 5f;
 public float spacing = 2f;
 
-void Start() {
-    for (int y = 0; y &lt; gridY; y++) {
-        for (int x = 0; x &lt; gridX; x++) {
+void Start()
+{
+    for (int y = 0; y &lt; gridY; y++) 
+    {
+        for (int x = 0; x &lt; gridX; x++)
+        {
             Vector3 pos = new Vector3(x, 0, y) * spacing;
             Instantiate(prefab, pos, Quaternion.identity);
         }
     }
-}
+} 
 
 
 </code></pre>
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
-<span class="prev"><a href="Prefabs.html"></a></span><div class="tip">预制件</div>
+<span class="prev"><a href="UnpackingPrefabInstances.html"></a></span><div class="tip">Unpacking Prefab instances</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
-<span class="next"><a href="Saving.html"></a></span><div class="tip">保存工作</div>
+<span class="next"><a href="Input.html"></a></span><div class="tip">输入</div>
 </div>
 </div>
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

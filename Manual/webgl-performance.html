@@ -30,7 +30,7 @@
       var lang = 'zh_CN';
       var page = 'webgl-performance';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -62,7 +62,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -91,10 +91,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/webgl-performance.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/webgl-performance.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/webgl-performance.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/webgl-performance.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/webgl-performance.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/webgl-performance.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/webgl-performance.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/webgl-performance.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -106,7 +106,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -128,7 +128,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="PlatformSpecific.html">特定于平台的信息</a></li>
 <li><a href="webgl.html">WebGL</a></li>
 <li><a href="webgl-gettingstarted.html">WebGL 开发入门</a></li>
@@ -139,7 +139,7 @@
 <span class="prev"><a href="webgl-audio.html"></a></span><div class="tip">使用 WebGL 中的音频</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
-<span class="next"><a href="webgl-memory.html"></a></span><div class="tip">以 WebGL 为目标平台时的内存注意事项</div>
+<span class="next"><a href="webgl-memory.html"></a></span><div class="tip">Memory in WebGL</div>
 </div>
 </div></div>
 <h1>WebGL 性能注意事项</h1>
@@ -158,7 +158,7 @@
 
 <h2>影响性能的 WebGL 特有设置</h2>
 
-<p>为获得最佳性能，请在 Build Player 对话框中将优化级别设置为“Fastest”，并在 WebGL 的播放器设置中将“Exception support”设置为“None”。</p>
+<p>For best performance, set the optimization level to <strong>Fastest</strong> in the Build Player dialog, and set <strong>Exception support</strong> to <strong>None</strong> in the <strong>Player</strong> settings for WebGL.</p>
 
 <h2>WebGL 性能分析</h2>
 
@@ -166,9 +166,9 @@
 
 <h2>后台标签中的 WebGL 内容</h2>
 
-<p>如果在 <a href="class-PlayerSettingsWebGL.html">WebGL Player Settings</a> 中启用了 _Run in background_，或者如果启用了 <strong><a href="../ScriptReference/Application-runInBackground.html">Application.runInBackground</a></strong>，则您的内容将在画布或浏览器窗口失去焦点时继续运行。</p>
+<p>If <strong>Run in background</strong> is enabled in the <a href="class-PlayerSettingsWebGL.html">Player settings for the WebGL platform</a>, or if you enable <a href="../ScriptReference/Application-runInBackground.html">Application.runInBackground</a>, your content continues to run when the canvas or the browser window loses focus.</p>
 
-<p>但应该注意的是，浏览器可能会限制在后台标签中运行的内容。如果包含该内容的标签不可见，大多数浏览器中只会每秒更新一次内容。请注意，这种情况将导致 <strong><a href="../ScriptReference/Time-time.html">Time.time</a></strong> 比平常采用默认设置时更慢，因为 <strong><a href="../ScriptReference/Time-maximumDeltaTime.html">Time.maximumDeltaTime</a></strong> 的默认值小于一秒。</p>
+<p>However, it should be noted that browsers may throttle content running in background tabs. If the tab with your content is not visible, your content will only be updated once a second in most browsers. Note that this will cause <a href="../ScriptReference/Time-time.html">Time.time</a> to progress slower than usual with the default settings, as the default value of <a href="../ScriptReference/Time-maximumDeltaTime.html">Time.maximumDeltaTime</a> is lower than one second.</p>
 
 <h2>限制 WebGL 性能</h2>
 
@@ -180,13 +180,13 @@
 <span class="prev"><a href="webgl-audio.html"></a></span><div class="tip">使用 WebGL 中的音频</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
-<span class="next"><a href="webgl-memory.html"></a></span><div class="tip">以 WebGL 为目标平台时的内存注意事项</div>
+<span class="next"><a href="webgl-memory.html"></a></span><div class="tip">Memory in WebGL</div>
 </div>
 </div>
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

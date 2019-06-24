@@ -12,7 +12,7 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="2D 刚体 - Unity Manual">
 <title>2D 刚体 - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/Rigidbody2D.png">
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.4/uploads/Main/Rigidbody2D.png">
 <meta name="description" content="2D 刚体组件将对象置于物理引擎的控制之下。标准刚体组件中的许多熟悉概念都延续到了 2D 刚体；不同之处在于，在 2D 中，对象只能在 XY 平面中移动，并且只能在垂直于该平面的轴上旋转。">
 <meta property="og:description" content="2D 刚体组件将对象置于物理引擎的控制之下。标准刚体组件中的许多熟悉概念都延续到了 2D 刚体；不同之处在于，在 2D 中，对象只能在 XY 平面中移动，并且只能在垂直于该平面的轴上旋转。">
 <meta name="author" content="Unity Technologies">
@@ -31,7 +31,7 @@
       var lang = 'zh_CN';
       var page = 'class-Rigidbody2D';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -63,7 +63,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -92,10 +92,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/class-Rigidbody2D.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/class-Rigidbody2D.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/class-Rigidbody2D.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/class-Rigidbody2D.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/class-Rigidbody2D.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/class-Rigidbody2D.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/class-Rigidbody2D.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/class-Rigidbody2D.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -107,7 +107,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -129,7 +129,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="Unity2D.html">2D</a></li>
 <li><a href="Physics2DReference.html">2D 物理系统参考</a></li>
 <li>2D 刚体</li>
@@ -149,8 +149,8 @@
 <p>2D 刚体组件将对象置于物理引擎的控制之下。标准<a href="http://docs.unity3d.com/Manual/class-Rigidbody.html">刚体</a>组件中的许多熟悉概念都延续到了 2D 刚体；不同之处在于，在 2D 中，对象只能在 XY 平面中移动，并且只能在垂直于该平面的轴上旋转。</p>
 
 <figure>
-<img src="../uploads/Main/Rigidbody2D.png" alt="2D 刚体 (Rigidbody 2D) 组件。此界面在 Unity Editor 中的显示情况根据所选的 Body Type 不同而有差异。请参阅以下的 Body Type 以了解更多信息。">
-<figcaption>2D 刚体 (Rigidbody 2D) 组件。此界面在 Unity Editor 中的显示情况根据所选的 Body Type 不同而有差异。请参阅以下的 <a href="#BodyType">Body Type</a> 以了解更多信息。</figcaption>
+<img src="../uploads/Main/Rigidbody2D.png" alt="The Rigidbody 2D component appears differently in the Unity Editor depending on which Body Type you have selected. See Body Type, below, to learn more.">
+<figcaption>The Rigidbody 2D component appears differently in the Unity Editor depending on which Body Type you have selected. See <a href="#BodyType">Body Type</a>, below, to learn more.</figcaption>
 </figure>
 
 <h2>2D 刚体工作原理</h2>
@@ -226,7 +226,7 @@
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Material</strong></td>
-	<td style="text-align:left;">使用此属性可为连接到特定父 2D 刚体的所有 2D 碰撞体指定公共材质。<br><strong>注意：</strong>2D 碰撞体使用自己的 Material 属性（如果已设置）。如果此处或在 2D 碰撞体中未指定材质，则默认选项为 <strong>None (Physics Material 2D)</strong>。这种情况下使用可在 <a href="class-Physics2DManager.html">Physics 2D Settings</a> 窗口中设置的默认材质。<br>2D 碰撞体使用以下优先级顺序来确定要使用的 <strong>Material</strong> 设置：<br>1. 在 2D 碰撞体上指定的 2D 物理材质。<br>2.在附加的 2D 刚体上指定的 2D 物理材质。<br>在 <a href="class-Physics2DManager.html">Physics 2D Settings</a> 中指定的 2D 物理材质默认材质。<br><strong>提示：</strong>使用此设置确保附加到同一 <strong>Static</strong> Body Type 2D 刚体的所有 2D 碰撞体都可使用同一材质。</td>
+	<td style="text-align:left;">Use this to specify a common material for all Collider 2Ds attached to a specific parent Rigidbody 2D. <br><strong>Note:</strong> A Collider 2D uses its own Material property if it has one set. If there is no Material specified here or in the Collider 2D, the default option is <strong>None (Physics Material 2D)</strong>. This uses a default Material which you can set in the <a href="class-Physics2DManager.html">Physics 2D</a> window. <br>A Collider 2D uses the following order of priority to determine which <strong>Material</strong> setting to use: <br>1. A Physics Material 2D specified on the Collider 2D itself.<br> 2. A Physics Material 2D specified on the attached Rigidbody 2D.<br> A Physics Material 2D default material specified in the <a href="class-Physics2DManager.html">Physics 2D</a> window.<br> <strong>Tip:</strong> Use this to ensure that all Collider 2Ds attached to the same <strong>Static</strong> Body Type Rigidbody 2D can all use the same Material.</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Simulated</strong></td>
@@ -340,7 +340,7 @@
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Material</strong></td>
-	<td style="text-align:left;">使用此属性可为连接到特定父 2D 刚体的所有 2D 碰撞体指定公共材质。<br><strong>注意：</strong>2D 碰撞体使用自己的 Material 属性（如果已设置）。如果此处或在 2D 碰撞体中未指定材质，则默认选项为 <strong>None (Physics Material 2D)</strong>。这种情况下使用可在 <a href="class-Physics2DManager.html">Physics 2D Settings</a> 窗口中设置的默认材质。<br>2D 碰撞体使用以下优先级顺序来确定要使用的 <strong>Material</strong> 设置：<br>1. 在 2D 碰撞体上指定的 2D 物理材质。<br>2.在附加的 2D 刚体上指定的 2D 物理材质。<br>在 <a href="class-Physics2DManager.html">Physics 2D Settings</a> 中指定的 2D 物理材质默认材质。<br><strong>提示：</strong>使用此设置确保附加到同一 <strong>Static</strong> Body Type 2D 刚体的所有 2D 碰撞体都可使用同一材质。</td>
+	<td style="text-align:left;">Use this to specify a common material for all Collider 2Ds attached to a specific parent Rigidbody 2D. <br><strong>Note:</strong> A Collider 2D uses its own Material property if it has one set. If there is no Material specified here or in the Collider 2D, the default option is <strong>None (Physics Material 2D)</strong>. This uses a default Material which you can set in the <a href="class-Physics2DManager.html">Physics 2D</a> window. <br>A Collider 2D uses the following order of priority to determine which <strong>Material</strong> setting to use: <br>1. A Physics Material 2D specified on the Collider 2D itself.<br> 2. A Physics Material 2D specified on the attached Rigidbody 2D.<br> A Physics Material 2D default material specified in the <a href="class-Physics2DManager.html">Physics 2D</a> window.<br> <strong>TIP:</strong> Use this to ensure that all Collider 2Ds attached to the same <strong>Static</strong> Body Type Rigidbody 2D can all use the same Material.</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Simulated</strong></td>
@@ -438,7 +438,7 @@
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Material</strong></td>
-	<td style="text-align:left;">使用此属性可为连接到特定父 2D 刚体的所有 2D 碰撞体指定公共材质。<br><strong>注意：</strong>2D 碰撞体使用自己的 Material 属性（如果已设置）。如果此处或在 2D 碰撞体中未指定材质，则默认选项为 <strong>None (Physics Material 2D)</strong>。这种情况下使用可在 <a href="class-Physics2DManager.html">Physics 2D Settings</a> 窗口中设置的默认材质。<br>2D 碰撞体使用以下优先级顺序来确定要使用的 <strong>Material</strong> 设置：<br>1. 在 2D 碰撞体上指定的 2D 物理材质。<br>2.在附加的 2D 刚体上指定的 2D 物理材质。<br>在 <a href="class-Physics2DManager.html">Physics 2D Settings</a> 中指定的 2D 物理材质默认材质。<br><strong>提示：</strong>使用此设置确保附加到同一 <strong>Static</strong> Body Type 2D 刚体的所有 2D 碰撞体都可使用同一材质。</td>
+	<td style="text-align:left;">Use this to specify a common material for all Collider 2Ds attached to a specific parent Rigidbody 2D. <br><strong>Note:</strong> A Collider 2D uses its own Material property if it has one set. If there is no Material specified here or in the Collider 2D, the default option is <strong>None (Physics Material 2D)</strong>. This uses a default Material which you can set in the <a href="class-Physics2DManager.html">Physics 2D</a> window. <br>A Collider 2D uses the following order of priority to determine which <strong>Material</strong> setting to use: <br>1. A Physics Material 2D specified on the Collider 2D itself.<br> 2. A Physics Material 2D specified on the attached Rigidbody 2D.<br> A Physics Material 2D default material specified in the <a href="class-Physics2DManager.html">Physics 2D</a> window.<br> <strong>TIP:</strong> Use this to ensure that all Collider 2Ds attached to the same <strong>Static</strong> Body Type Rigidbody 2D can all use the same Material.</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Simulated</strong></td>
@@ -515,7 +515,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

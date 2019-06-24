@@ -12,7 +12,7 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="多场景编辑 - Unity Manual">
 <title>多场景编辑 - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/MultiSceneEditingOpenSceneAdditive.png">
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.4/uploads/Main/MultiSceneEditingOpenSceneAdditive.png">
 <meta name="description" content="多场景编辑允许同时在 Editor 中打开多个场景，并简化运行时场景管理。">
 <meta property="og:description" content="多场景编辑允许同时在 Editor 中打开多个场景，并简化运行时场景管理。">
 <meta name="author" content="Unity Technologies">
@@ -31,7 +31,7 @@
       var lang = 'zh_CN';
       var page = 'MultiSceneEditing';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -63,7 +63,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -92,10 +92,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/MultiSceneEditing.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/MultiSceneEditing.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/MultiSceneEditing.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/MultiSceneEditing.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/MultiSceneEditing.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/MultiSceneEditing.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/MultiSceneEditing.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/MultiSceneEditing.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -107,7 +107,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -129,7 +129,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="UnityOverview.html">在 Unity 中操作</a></li>
 <li><a href="AdvancedDevelopment.html">高级开发</a></li>
 <li>多场景编辑</li>
@@ -286,7 +286,7 @@
 
 <h2>烘焙包含多个场景的遮挡剔除数据</h2>
 
-<p>要一次烘焙多个场景的<strong>遮挡剔除数据</strong>，请打开要烘焙的场景，打开遮挡剔除窗口（菜单：__Window__ &gt; <strong>Occlusion Culling__），然后单击 </strong>Bake__ 按钮。遮挡数据保存在 <em>Library/Occlusion</em> 中，并在每个打开的场景中添加对该数据的引用。烘焙遮挡剔除后，应保存受影响的场景，使场景到遮挡的引用持久化。</p>
+<p>To bake <strong>Occlusion Culling data</strong> for multiple Scenes at once, open the Scenes that you want to bake, open the Occlusion Culling window (menu: <strong>Window</strong> &gt; <strong>Rendering</strong> &gt; <strong>Occlusion Culling</strong>) and click the <strong>Bake</strong> button. The Occlusion data is saved into an asset called <em>OcclusionCullingData.asset</em> in a folder matching the name of the current active scene. For example <em>Assets/ActiveSceneName/OcclusionCullingData.asset</em>. A reference to the data is added in each open Scene. After baking the Occlusion Culling, save the Scenes affected to make the Scene-to-occlusion reference persistent.</p>
 
 <p>每当以累加方式加载场景时，如果该场景具有与活动场景相同的遮挡数据引用，则会从遮挡数据中初始化该场景的静态渲染器和入口剔除信息。此后，遮挡剔除系统认为所有静态渲染器和入口都已烘焙到单个场景中。</p>
 
@@ -380,7 +380,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

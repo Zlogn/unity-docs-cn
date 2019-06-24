@@ -12,7 +12,7 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="构建导航网格 - Unity Manual">
 <title>构建导航网格 - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/NavMeshSetupObject.svg">
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.4/uploads/Main/NavMeshSetupObject.svg">
 <meta name="description" content="从关卡几何体创建导航网格的过程称为导航网格烘焙 (NavMesh Baking)。该过程收集所有标记为 Navigation Static 的游戏对象的渲染网格和地形，然后处理它们以创建近似于关卡的可行走表面的导航网格。">
 <meta property="og:description" content="从关卡几何体创建导航网格的过程称为导航网格烘焙 (NavMesh Baking)。该过程收集所有标记为 Navigation Static 的游戏对象的渲染网格和地形，然后处理它们以创建近似于关卡的可行走表面的导航网格。">
 <meta name="author" content="Unity Technologies">
@@ -31,7 +31,7 @@
       var lang = 'zh_CN';
       var page = 'nav-BuildingNavMesh';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -63,7 +63,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -92,10 +92,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/nav-BuildingNavMesh.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/nav-BuildingNavMesh.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/nav-BuildingNavMesh.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/nav-BuildingNavMesh.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/nav-BuildingNavMesh.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/nav-BuildingNavMesh.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/nav-BuildingNavMesh.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/nav-BuildingNavMesh.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -107,7 +107,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -129,7 +129,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="Navigation.html">导航和寻路</a></li>
 <li><a href="nav-Overview.html">导航概述</a></li>
 <li>构建导航网格</li>
@@ -148,7 +148,7 @@
 
 <p>从关卡几何体创建导航网格的过程称为导航网格烘焙 (NavMesh Baking)。该过程收集所有标记为 <a href="StaticObjects.html">Navigation Static</a> 的游戏对象的渲染网格和地形，然后处理它们以创建近似于关卡的可行走表面的导航网格。</p>
 
-<p>在 Unity 中，导航网格生成方式是在 Navigation 窗口（菜单：__Window &gt; Navigation__）中进行处理的。</p>
+<p>In Unity, NavMesh generation is handled from the Navigation window (menu: <strong>Window</strong> &gt; <strong>AI</strong> &gt; <strong>Navigation</strong>). </p>
 
 <p>为场景构建导航网格可以通过 4 个快速步骤完成：</p>
 
@@ -210,7 +210,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

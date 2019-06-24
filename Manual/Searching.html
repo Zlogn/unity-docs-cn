@@ -12,7 +12,7 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="搜索 - Unity Manual">
 <title>搜索 - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/SceneSearchName35.png">
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.4/uploads/Main/SceneSearchName35.jpg">
 <meta name="description" content="处理大型复杂场景时，搜索特定对象会很有用。使用 Unity 中的__搜索__功能，可以过滤出需要查看的对象或一组对象。可按名称、按组件类型搜索资源，在某些情况下，还可按资源_标签_搜索资源（见下文）。可从 Search 下拉菜单中选择搜索模式。">
 <meta property="og:description" content="处理大型复杂场景时，搜索特定对象会很有用。使用 Unity 中的__搜索__功能，可以过滤出需要查看的对象或一组对象。可按名称、按组件类型搜索资源，在某些情况下，还可按资源_标签_搜索资源（见下文）。可从 Search 下拉菜单中选择搜索模式。">
 <meta name="author" content="Unity Technologies">
@@ -31,7 +31,7 @@
       var lang = 'zh_CN';
       var page = 'Searching';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -63,7 +63,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -92,10 +92,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/Searching.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/Searching.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/Searching.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/Searching.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/Searching.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/Searching.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/Searching.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/Searching.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -107,7 +107,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -129,7 +129,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="UnityOverview.html">在 Unity 中操作</a></li>
 <li><a href="UsingTheEditor.html">主要窗口</a></li>
 <li>搜索</li>
@@ -139,7 +139,7 @@
 <span class="prev"><a href="Toolbar.html"></a></span><div class="tip">工具栏</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
-<span class="next"><a href="OtherViews.html"></a></span><div class="tip">其他窗口</div>
+<span class="next"><a href="OtherViews.html"></a></span><div class="tip">Other windows</div>
 </div>
 </div></div>
 <h1>搜索</h1>
@@ -153,8 +153,8 @@
 <p>Scene 和 Hierarchy 视图都有一个搜索框，允许按名称过滤对象。由于这两个视图基本上只是同一组对象的不同表示，因此输入的任何搜索查询都将在两个搜索框中重复并同时应用于两个视图。请注意，正在进行搜索时，两个视图都会略有变化：Scene 视图将以灰色显示过滤出的对象，而 Hierarchy 视图将丢失层级结构信息，并只显示按名称列出的对象：</p>
 
 <figure>
-<img src="../uploads/Main/SceneSearchName35.png" alt="应用搜索过滤后的 Scene 和 Hierarchy 视图。">
-<figcaption>应用搜索过滤后的 Scene 和 Hierarchy 视图。</figcaption>
+<img src="../uploads/Main/SceneSearchName35.jpg" alt="Scene and Hierarchy views with search filtering applied.">
+<figcaption>Scene and Hierarchy views with search filtering applied.</figcaption>
 </figure>
 
 <p>搜索框右侧的小叉号按钮会删除搜索查询并将视图恢复为正常状态。搜索框左侧的菜单允许选择是按名称、按类型还是同时按这两者过滤对象。</p>
@@ -178,13 +178,13 @@
 <span class="prev"><a href="Toolbar.html"></a></span><div class="tip">工具栏</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
-<span class="next"><a href="OtherViews.html"></a></span><div class="tip">其他窗口</div>
+<span class="next"><a href="OtherViews.html"></a></span><div class="tip">Other windows</div>
 </div>
 </div>
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

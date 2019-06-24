@@ -12,9 +12,15 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="玩家游戏对象 - Unity Manual">
 <title>玩家游戏对象 - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/NetworkLocalPlayers.png">
-<meta name="description" content="Unity 的多玩家 HLAPI 系统对玩家游戏对象的处理方式不同于对非玩家游戏对象的处理方式。当新玩家加入游戏时（当新客户端连接到服务器时），该玩家的游戏对象成为该玩家客户端上的&amp;#8220;本地玩家&amp;#8221;游戏对象，并且 Unity 将玩家的连接与玩家的游戏对象相关联。Unity 为每个游戏玩家关联一个玩家游戏对象，并将网络命令路由到这一个游戏对象。一个玩家不能在另一个玩家的游戏对象上调用命令，只能在自己的游戏对象上调用命令。">
-<meta property="og:description" content="Unity 的多玩家 HLAPI 系统对玩家游戏对象的处理方式不同于对非玩家游戏对象的处理方式。当新玩家加入游戏时（当新客户端连接到服务器时），该玩家的游戏对象成为该玩家客户端上的&amp;#8220;本地玩家&amp;#8221;游戏对象，并且 Unity 将玩家的连接与玩家的游戏对象相关联。Unity 为每个游戏玩家关联一个玩家游戏对象，并将网络命令路由到这一个游戏对象。一个玩家不能在另一个玩家的游戏对象上调用命令，只能在自己的游戏对象上调用命令。">
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.4/uploads/Main/NetworkLocalPlayers.png">
+<meta name="description" content="| |
+|&amp;#8212;|
+| Note: UNet is deprecated, and will be removed from Unity in the future. A new system is under development. For more information and next steps see this blog post and the FAQ.|
+Unity 的多玩家 HLAPI 系统对玩家游戏对象的处理方式不同于对非玩家游戏对象的处理方式。当新玩家加入游戏时（当新客户端连接到服务器时），该玩家的游戏对象成为该玩家客户端上的&amp;#8220;本地玩家&amp;#8221;游戏对象，并且 Unity 将玩家的连接与玩家的游戏对象相关联。Unity 为每个游戏玩家关联一个玩家游戏对象，并将网络命令路由到这一个游戏对象。一个玩家不能在另一个玩家的游戏对象上调用命令，只能在自己的游戏对象上调用命令。">
+<meta property="og:description" content="| |
+|&amp;#8212;|
+| Note: UNet is deprecated, and will be removed from Unity in the future. A new system is under development. For more information and next steps see this blog post and the FAQ.|
+Unity 的多玩家 HLAPI 系统对玩家游戏对象的处理方式不同于对非玩家游戏对象的处理方式。当新玩家加入游戏时（当新客户端连接到服务器时），该玩家的游戏对象成为该玩家客户端上的&amp;#8220;本地玩家&amp;#8221;游戏对象，并且 Unity 将玩家的连接与玩家的游戏对象相关联。Unity 为每个游戏玩家关联一个玩家游戏对象，并将网络命令路由到这一个游戏对象。一个玩家不能在另一个玩家的游戏对象上调用命令，只能在自己的游戏对象上调用命令。">
 <meta name="author" content="Unity Technologies">
 <link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
 <link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
@@ -31,7 +37,7 @@
       var lang = 'zh_CN';
       var page = 'UNetPlayers';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -63,7 +69,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -92,10 +98,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/UNetPlayers.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/UNetPlayers.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/UNetPlayers.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/UNetPlayers.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/UNetPlayers.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/UNetPlayers.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/UNetPlayers.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/UNetPlayers.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -107,7 +113,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -129,7 +135,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="UNet.html">多玩家和联网</a></li>
 <li><a href="UNetUsingHLAPI.html">多玩家高级 API</a></li>
 <li><a href="UNetGameObjects.html">联网游戏对象</a></li>
@@ -147,7 +153,10 @@
 <!--BeginSwitchLink--><!--EndSwitchLink-->
 <div class="clear"></div>
 
-<p>Unity 的多玩家 HLAPI 系统对玩家游戏对象的处理方式不同于对非玩家游戏对象的处理方式。当新玩家加入游戏时（当新客户端连接到服务器时），该玩家的游戏对象成为该玩家客户端上的“本地玩家”游戏对象，并且 Unity 将玩家的连接与玩家的游戏对象相关联。Unity 为每个游戏玩家关联一个玩家游戏对象，并将<a href="UNetActions.html">网络命令</a>路由到这一个游戏对象。一个玩家不能在另一个玩家的游戏对象上调用<a href="UNetActions.html">命令</a>，只能在自己的游戏对象上调用命令。</p>
+<p>| |
+|—|
+| <strong>Note</strong>: UNet is deprecated, and will be removed from Unity in the future. A new system is under development. For more information and next steps see this <a href="https://blogs.unity3d.com/2018/08/02/evolving-multiplayer-games-beyond-unet/">blog post</a> and the <a href="https://support.unity3d.com/hc/en-us/articles/360001252086-UNet-Deprecation-FAQ">FAQ</a>.|
+Unity 的多玩家 HLAPI 系统对玩家游戏对象的处理方式不同于对非玩家游戏对象的处理方式。当新玩家加入游戏时（当新客户端连接到服务器时），该玩家的游戏对象成为该玩家客户端上的“本地玩家”游戏对象，并且 Unity 将玩家的连接与玩家的游戏对象相关联。Unity 为每个游戏玩家关联一个玩家游戏对象，并将<a href="UNetActions.html">网络命令</a>路由到这一个游戏对象。一个玩家不能在另一个玩家的游戏对象上调用<a href="UNetActions.html">命令</a>，只能在自己的游戏对象上调用命令。</p>
 
 <p>NetworkBehaviour 类（从该类可创建网络脚本）具有名为 <a href="../ScriptReference/Networking.NetworkBehaviour-isLocalPlayer.html">isLocalPlayer</a> 的属性。在每个客户端的玩家游戏对象上，Unity 在 NetworkBehaviour 脚本上将该属性设置为 true，并调用 <a href="../ScriptReference/Networking.NetworkBehaviour.OnStartLocalPlayer.html">OnStartLocalPlayer()</a> 回调。这意味着每个客户端都像这样设置了一个不同的游戏对象，因为在每个客户端上有一个不同的游戏对象是代表本地玩家的游戏对象。下图显示了两个客户端及其本地玩家。</p>
 
@@ -172,7 +181,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

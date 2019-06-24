@@ -12,7 +12,7 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="网格粒子发射器 (Mesh Particle Emitter)（旧版） - Unity Manual">
 <title>网格粒子发射器 (Mesh Particle Emitter)（旧版） - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/Inspector-MeshPE.png">
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.4/uploads/Main/Inspector-MeshPE.png">
 <meta name="description" content="网格粒子发射器 (Mesh Particle Emitter) 在网格周围发射粒子。粒子从网格表面生成；当您想让粒子以一种复杂的方式与对象相互作用时，这可能是必要的。">
 <meta property="og:description" content="网格粒子发射器 (Mesh Particle Emitter) 在网格周围发射粒子。粒子从网格表面生成；当您想让粒子以一种复杂的方式与对象相互作用时，这可能是必要的。">
 <meta name="author" content="Unity Technologies">
@@ -31,7 +31,7 @@
       var lang = 'zh_CN';
       var page = 'class-MeshParticleEmitter';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -63,7 +63,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -92,10 +92,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/class-MeshParticleEmitter.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/class-MeshParticleEmitter.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/class-MeshParticleEmitter.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/class-MeshParticleEmitter.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/class-MeshParticleEmitter.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/class-MeshParticleEmitter.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/class-MeshParticleEmitter.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/class-MeshParticleEmitter.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -107,7 +107,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -129,7 +129,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="Graphics.html">图形</a></li>
 <li><a href="GraphicsReference.html">图形参考</a></li>
 <li><a href="PartSysReference.html">粒子系统参考</a></li>
@@ -308,15 +308,15 @@
 <p>为发射器启用 <strong>Interpolate Triangles</strong> 将允许在网格的顶点之间生成粒子。默认情况下，此选项处于关闭状态，因此粒子将仅在顶点处生成。</p>
 
 <figure>
-<img src="../uploads/Main/MeshPE-InterpolateOff.png" alt="已关闭 Interpolate Triangles 选项（默认设置）的球体">
-<figcaption>已关闭 Interpolate Triangles 选项（默认设置）的球体</figcaption>
+<img src="../uploads/Main/MeshPE-InterpolateOff.jpg" alt="A sphere with Interpolate Triangles off (the default)">
+<figcaption>A sphere with Interpolate Triangles off (the default)</figcaption>
 </figure>
 
 <p>启用此选项将在顶点处和顶点之间生成粒子，基本上在整个网格表面都会生成粒子（如下所示）。</p>
 
 <figure>
-<img src="../uploads/Main/MeshPE-InterpolateOn.png" alt="已开启 Interpolate Triangles 选项的球体">
-<figcaption>已开启 Interpolate Triangles 选项的球体</figcaption>
+<img src="../uploads/Main/MeshPE-InterpolateOn.jpg" alt="A sphere with Interpolate Triangles on">
+<figcaption>A sphere with Interpolate Triangles on</figcaption>
 </figure>
 
 <p>需要重申的是，即使启用了 __Interpolate Triangles__，仍会在多边形更密集的网格区域生成更密集的粒子。</p>
@@ -326,8 +326,8 @@
 <p>启用 <strong>Systematic</strong> 会使粒子以网格的顶点顺序生成。顶点顺序由 3D 建模应用程序设置。</p>
 
 <figure>
-<img src="../uploads/Main/MeshPE-Systematic.png" alt="一个 MPE 已附加到球体并启用了 Systematic">
-<figcaption>一个 MPE 已附加到球体并启用了 Systematic</figcaption>
+<img src="../uploads/Main/MeshPE-Systematic.jpg" alt="An MPE attached to a sphere with Systematic enabled">
+<figcaption>An MPE attached to a sphere with Systematic enabled</figcaption>
 </figure>
 
 <h2>Normal Velocity</h2>
@@ -361,7 +361,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

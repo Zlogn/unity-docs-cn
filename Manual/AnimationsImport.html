@@ -12,9 +12,9 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="外部来源的动画 - Unity Manual">
 <title>外部来源的动画 - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/AnimationSelectingImportedClip.png">
-<meta name="description" content="外部来源的动画按照与常规 3D 文件相同的方式导入 Unity。这些文件（无论是通用 FBX 文件还是来自 Maya、Cinema 4D、3D Studio Max 等 3D 软件的原生格式）可包含动画数据，这些数据的形式为文件中对象移动的线性录制结果。">
-<meta property="og:description" content="外部来源的动画按照与常规 3D 文件相同的方式导入 Unity。这些文件（无论是通用 FBX 文件还是来自 Maya、Cinema 4D、3D Studio Max 等 3D 软件的原生格式）可包含动画数据，这些数据的形式为文件中对象移动的线性录制结果。">
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.4/uploads/Main/AnimationSelectingImportedClip.png">
+<meta name="description" content="Animation from external sources is imported into Unity in the same way as regular 3D files. These files, whether they&amp;#8217;re generic FBX files or native formats from 3D software such as Autodesk® Maya®, Cinema 4D, Autodesk® 3ds Max®, can contain animation data in the form of a linear recording of the movements of objects within the file.">
+<meta property="og:description" content="Animation from external sources is imported into Unity in the same way as regular 3D files. These files, whether they&amp;#8217;re generic FBX files or native formats from 3D software such as Autodesk® Maya®, Cinema 4D, Autodesk® 3ds Max®, can contain animation data in the form of a linear recording of the movements of objects within the file.">
 <meta name="author" content="Unity Technologies">
 <link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
 <link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
@@ -31,7 +31,7 @@
       var lang = 'zh_CN';
       var page = 'AnimationsImport';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -63,7 +63,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -92,10 +92,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/AnimationsImport.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/AnimationsImport.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/AnimationsImport.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/AnimationsImport.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/AnimationsImport.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/AnimationsImport.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/AnimationsImport.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/AnimationsImport.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -107,7 +107,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -129,7 +129,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="AnimationSection.html">动画</a></li>
 <li><a href="AnimationClips.html">动画剪辑</a></li>
 <li>外部来源的动画</li>
@@ -146,7 +146,7 @@
 <!--BeginSwitchLink--><!--EndSwitchLink-->
 <div class="clear"></div>
 
-<p>外部来源的动画按照与常规 3D 文件相同的方式导入 Unity。这些文件（无论是通用 FBX 文件还是来自 Maya、Cinema 4D、3D Studio Max 等 3D 软件的原生格式）可包含动画数据，这些数据的形式为文件中对象移动的线性录制结果。</p>
+<p>Animation from external sources is imported into Unity in the same way as regular 3D files. These files, whether they’re generic FBX files or native formats from 3D software such as Autodesk® Maya®, Cinema 4D, Autodesk® 3ds Max®, can contain animation data in the form of a linear recording of the movements of objects within the file.</p>
 
 <figure>
 <img src="../uploads/Main/AnimationSelectingImportedClip.png" alt="已导入的 FBX 3D 资源，其中包含标题为Run的动画">
@@ -159,11 +159,11 @@
 
 <p>在其他情况下，您可能拥有一个动画库，这些动画将用于场景中的各种不同模型。例如，许多不同的人形角色可能都使用相同的行走和奔跑动画。在这些情况下，为了预览动画文件，在这些文件中使用简单占位模型是很常见的做法。或者可以使用只有动画数据而没有几何体的动画文件。</p>
 
-<p>导入多个动画时，每个动画可以在项目文件夹中以单独文件形式存在，或者如果先前以连续片段形式从 Motion Builder 或使用 Maya、Max 或其他 3D 包的插件/脚本导出了 FBX 文件，您可以从单个 FBX 文件提取多个动画剪辑。如果您的文件包含了在单个时间轴上排列的多个单独动画，您可能需要执行此操作。例如，长时间的运动捕捉时间轴可能包含几个不同跳跃动作的动画，而您可能希望剪切其中的某些部分以用作单个剪辑而丢弃其余部分。Unity 提供了动画剪切工具来实现此目的；当您在一个时间轴中导入所有动画时，这些工具允许您为每个剪辑选择帧范围。</p>
+<p>When importing multiple animations, the animations can each exist as separate files within your project folder, or you can extract multiple animation clips from a single FBX file if exported as takes from Motion builder or with a plugin / script for Autodesk® Maya®, Autodesk® 3ds Max® or other 3D packages. You might want to do this if your file contains multiple separate animations arranged on a single timeline. For example, a long motion captured timeline might contain the animation for a few different jump motions, and you may want to cut out certain sections of this to use as individual clips and discard the rest. Unity provides animation cutting tools to achieve this when you import all animations in one timeline by allowing you to select the frame range for each clip.</p>
 
 <h2>导入动画文件</h2>
 
-<p>在 Unity 中使用任何动画之前，必须先将其导入项目。Unity 可导入本机 Maya（.mb 或 .ma）、3D Studio Max (.max) 和 Cinema 4D (.c4d) 文件以及通用 FBX 文件（这些文件<a href="HOWTO-exportFBX.html">可从大多数动画包中导出</a>）。</p>
+<p>Before any animation can be used in Unity, it must first be imported into your project. Unity can import native Autodesk® Maya® (.mb or .ma), Autodesk® 3ds Max® (.max) and Cinema 4D (.c4d) files, and also generic FBX files which <a href="HOWTO-exportFBX.html">can be exported from most animation packages</a>.</p>
 
 <p>有关更多信息，请参阅<a href="ImportingAssets.html">导入</a>。</p>
 
@@ -172,7 +172,7 @@
 <p>您可以在 Animation 窗口中查看导入的动画剪辑的关键帧和曲线。有时，如果这些导入的剪辑存在带有大量关键帧的很多骨骼，信息量可能非常复杂。例如，下图是 Animation 窗口中的人形奔跑动画的情况：</p>
 
 <figure>
-<img src="../uploads/Main/AnimationViewingImportedCurves.png" alt="">
+<img src="../uploads/Main/AnimationViewingImportedCurves.jpg" alt="">
 </figure>
 
 <p>为了简化视图，请选择您希望检查的特定骨骼。然后，Animation 窗口仅显示这些骨骼的关键帧或曲线。</p>
@@ -206,7 +206,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

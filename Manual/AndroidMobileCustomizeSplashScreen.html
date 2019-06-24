@@ -12,8 +12,8 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="自定义 Android 启动画面 - Unity Manual">
 <title>自定义 Android 启动画面 - Unity Manual</title>
-<meta name="description" content="如果使用 Unity 个人版来开发项目，则会在游戏加载时显示默认的启动画面。该画面根据 Player Settings 中的 Default Screen Orientation 选项进行定向。无法更改此启动画面。">
-<meta property="og:description" content="如果使用 Unity 个人版来开发项目，则会在游戏加载时显示默认的启动画面。该画面根据 Player Settings 中的 Default Screen Orientation 选项进行定向。无法更改此启动画面。">
+<meta name="description" content="If you have a Unity Personal subscription, a default splash screen displays while your game loads. It is oriented according to the Default Screen Orientation option in the Player settings. You cannot change this splash screen.">
+<meta property="og:description" content="If you have a Unity Personal subscription, a default splash screen displays while your game loads. It is oriented according to the Default Screen Orientation option in the Player settings. You cannot change this splash screen.">
 <meta name="author" content="Unity Technologies">
 <link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
 <link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
@@ -30,7 +30,7 @@
       var lang = 'zh_CN';
       var page = 'AndroidMobileCustomizeSplashScreen';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -62,7 +62,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -91,10 +91,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/AndroidMobileCustomizeSplashScreen.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/AndroidMobileCustomizeSplashScreen.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/AndroidMobileCustomizeSplashScreen.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/AndroidMobileCustomizeSplashScreen.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/AndroidMobileCustomizeSplashScreen.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/AndroidMobileCustomizeSplashScreen.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/AndroidMobileCustomizeSplashScreen.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/AndroidMobileCustomizeSplashScreen.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -106,7 +106,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -128,7 +128,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="PlatformSpecific.html">特定于平台的信息</a></li>
 <li><a href="android.html">Android</a></li>
 <li><a href="android-GettingStarted.html">Android 开发入门</a></li>
@@ -136,7 +136,7 @@
 </ul></div>
 <div class="mb20"><div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
-<span class="prev"><a href="AndroidNativePlugins.html"></a></span><div class="tip">适用于 Android 的原生 (C++) 插件</div>
+<span class="prev"><a href="AndroidJavaSourcePlugins.html"></a></span><div class="tip">Using Java or Kotlin source files as plug-ins</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
 <span class="next"><a href="Android-SinglePassStereoRendering.html"></a></span><div class="tip">Android 单通道立体渲染</div>
@@ -146,9 +146,9 @@
 <!--BeginSwitchLink--><!--EndSwitchLink-->
 <div class="clear"></div>
 
-<p>如果使用 Unity 个人版来开发项目，则会在游戏加载时显示默认的启动画面。该画面根据 <a href="class-PlayerSettings.html">Player Settings</a> 中的 <strong>Default Screen Orientation</strong> 选项进行定向。无法更改此启动画面。</p>
+<p>If you have a Unity Personal subscription, a default splash screen displays while your game loads. It is oriented according to the <strong>Default Screen Orientation</strong> option in the <a href="class-PlayerSettings.html">Player</a> settings. You cannot change this splash screen.</p>
 
-<p>Unity 专业版用户可以更改启动画面。项目中的任何纹理均可用作启动画面。可从 Android <a href="class-PlayerSettings.html">Player Settings</a> 的 Splash Image 部分设置该纹理。还应从以下选项中选择 <strong>Splash scaling</strong> 方法：</p>
+<p>Unity Pro subscription users can change the splash screen. You can use any Texture in the project as a splash screen. You can set the Texture from the <a href="class-PlayerSettings.html">Android Player Splash Image</a> settings. You should also select the <strong>Splash scaling</strong> method from the following options:</p>
 
 <ul>
 <li>
@@ -160,7 +160,7 @@
 </ul>
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
-<span class="prev"><a href="AndroidNativePlugins.html"></a></span><div class="tip">适用于 Android 的原生 (C++) 插件</div>
+<span class="prev"><a href="AndroidJavaSourcePlugins.html"></a></span><div class="tip">Using Java or Kotlin source files as plug-ins</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
 <span class="next"><a href="Android-SinglePassStereoRendering.html"></a></span><div class="tip">Android 单通道立体渲染</div>
@@ -169,7 +169,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

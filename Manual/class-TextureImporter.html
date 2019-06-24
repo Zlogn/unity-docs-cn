@@ -12,7 +12,7 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="纹理 - Unity Manual">
 <title>纹理 - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/TextureImporter55.jpg">
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.4/uploads/Main/TextureImporter2019-1.jpg">
 <meta name="description" content="纹理是覆盖或包裹游戏对象以赋予它们视觉效果的图像或电影文件。本页面将详细介绍用于管理纹理的属性。">
 <meta property="og:description" content="纹理是覆盖或包裹游戏对象以赋予它们视觉效果的图像或电影文件。本页面将详细介绍用于管理纹理的属性。">
 <meta name="author" content="Unity Technologies">
@@ -31,7 +31,7 @@
       var lang = 'zh_CN';
       var page = 'class-TextureImporter';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -63,7 +63,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -92,10 +92,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/class-TextureImporter.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/class-TextureImporter.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/class-TextureImporter.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/class-TextureImporter.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/class-TextureImporter.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/class-TextureImporter.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/class-TextureImporter.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/class-TextureImporter.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -107,7 +107,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -129,7 +129,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="Graphics.html">图形</a></li>
 <li><a href="GraphicsReference.html">图形参考</a></li>
 <li><a href="comp-Textures.html">纹理组件</a></li>
@@ -154,8 +154,8 @@
 <h2>属性</h2>
 
 <figure>
-<img src="../uploads/Main/TextureImporter55.jpg" alt="纹理检视面板 (Texture Inspector) 窗口">
-<figcaption>纹理检视面板 (Texture Inspector) 窗口</figcaption>
+<img src="../uploads/Main/TextureImporter2019-1.jpg" alt="The Texture Inspector window">
+<figcaption>The Texture Inspector window</figcaption>
 </figure>
 
 <p>Inspector 窗口分为两部分：上面的__纹理导入器 (Texture Importer)__ 和下面的__预览 (Preview)__。</p>
@@ -165,6 +165,8 @@
 <p>纹理导入器定义如何将图像从项目的 <em>Assets</em> 文件夹导入 Unity Editor。要访问纹理导入器，请在 Project 窗口中选择图像文件。纹理导入器将在 Inspector 窗口中打开。</p>
 
 <p>请注意，默认情况下会隐藏一些不太常用的属性。在 Inspector 窗口中单击 <strong>Advanced</strong> 即可查看这些属性。</p>
+
+<h3>Texture Type</h3>
 
 <p>纹理导入器中的第一个属性是 <strong>Texture Type</strong>。使用此属性可选择要从源图像文件创建的纹理类型。请参阅有关<a href="TextureTypes.html">纹理类型</a>的文档以了解每种类型的更多相关信息。</p>
 
@@ -220,6 +222,8 @@
 </tr>
 </tbody>
 </table>
+
+<h3>Texture Shape</h3>
 
 <p>纹理导入器中的第二个属性是 <strong>Texture Shape</strong>。使用此属性可选择和定义纹理的形状和结构。</p>
 
@@ -289,6 +293,133 @@
 <tr>
 	<td style="text-align:left;"><strong>Fixup Edge Seams</strong></td>
 	<td style="text-align:left;">仅在选择 <strong>None</strong> 或 <strong>Diffuse</strong> 卷积（过滤）的情况下，此选项才可用。在低端平台上使用此选项作为解决过滤限制（例如在面之间错误过滤的立方体贴图）的解决方法。</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Advanced settings</h3>
+
+<p>The Advanced settings allow you to make finer adjustments to the way Unity handles your Texture. The order and availability of these settings might vary slightly depending on the <strong>Texture Type</strong> you choose.</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性：</strong></th>
+	<th style="text-align:left;"><strong>描述：</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Non Power of 2</strong></td>
+	<td style="text-align:left;">如果纹理具有“非 2 的幂”(NPOT) 尺寸大小，此属性将定义导入时的缩放行为。请参阅<a href="ImportingTextures.html">导入纹理</a>相关文档以了解有关 NPOT 大小的更多信息。默认情况下，此设置为 <strong>None</strong>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    None</td>
+	<td style="text-align:left;">纹理尺寸大小保持不变。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    To nearest</td>
+	<td style="text-align:left;">纹理在导入时缩放到最接近的“2 的幂”尺寸大小。例如，257x511 像素的纹理将缩放为 256x512 像素。请注意，PVRTC 格式要求纹理为正方形（即宽度等于高度），因此最终尺寸大小将升级为 512x512 像素。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    To larger</td>
+	<td style="text-align:left;">纹理在导入时缩放到最大尺寸大小值的“2 的幂”尺寸大小。例如，257x511 像素的纹理将缩放为 512x512 像素。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    To smaller</td>
+	<td style="text-align:left;">纹理在导入时缩放到最小尺寸大小值的“2 的幂”尺寸大小。例如，257x511 像素的纹理将缩放为 256x256 像素。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Read/Write Enabled</strong></td>
+	<td style="text-align:left;">选中此框允许从脚本函数（例如 <a href="../ScriptReference/Texture2D.SetPixels.html">Texture2D.SetPixels</a>、<a href="../ScriptReference/Texture2D.GetPixels.html">Texture2D.GetPixels</a> 和其他 <a href="../ScriptReference/Texture2D.html">Texture2D</a> 函数）访问纹理数据。请注意，此情况下会生成纹理数据的副本，使纹理资源所需的内存量增加一倍，因此只有在绝对必要时才应使用此属性。此属性仅适用于未压缩纹理和 DXT 压缩纹理；无法读取其他类型的压缩纹理。默认情况下会禁用此属性。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Streaming Mip Maps</strong></td>
+	<td style="text-align:left;">Enable this checkbox to use <a href="TextureStreaming.html">Texture Streaming</a> on this Texture. This setting is valid for any Texture in the 3D environment that Unity displays with a Mesh Renderer. Diffuse Textures, normal maps and light maps are all valid for Texture Streaming.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Mip Map Priority</td>
+	<td style="text-align:left;">Use this to set the priority of the mipmap. Unity uses this to determine which mipmaps to prioritize when assigning resources. Higher values represent a higher priority (for example, <strong>3</strong> is a higher priority than <strong>1</strong>). This setting is only available when <strong>Streaming Mip Maps</strong> is enabled.<br><br>The <strong>Mip Map Priority</strong> number is also a mipmap offset for the <strong>Memory Budget </strong>(set in the <a href="class-QualitySettings.html">Quality Settings</a> when <strong>Texture Streaming</strong> is enabled). For example, with a priority of 2, the Texture Streaming system tries to use a mipmap two mip levels higher than Textures with a priority of 0. One mip level higher is 2x in each axis and two levels higher is 4x in each axis, so two mip levels higher results in a texture 16x larger. If it can’t do this, it uses a lower mip level to fit the <strong>Memory Budget</strong>. Negative values are also valid. See <a href="TextureStreaming-API.html">Texture Streaming API</a> for more details.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Generate Mip Maps</strong></td>
+	<td style="text-align:left;">选中此框可禁止生成 Mipmap。Mipmap 是纹理的一系列较小版本，适合纹理在屏幕上非常小时使用。有关 Mipmap 的更多信息，请参阅<a href="ImportingTextures.html">导入纹理</a>文档。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Border Mip Maps</td>
+	<td style="text-align:left;">选中此复选框可避免颜色向外渗透到较低 MIP 级别的边缘。该功能用于光照剪影（见下文）。默认情况下会取消选中此框。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Mip Map Filtering</td>
+	<td style="text-align:left;">有两种 Mipmap 过滤方法可用于优化图像质量。默认选项为 <strong>Box</strong>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <em>Box</em>
+</td>
+	<td style="text-align:left;">这是淡出 Mipmap 的最简单方法。随着尺寸减小，MIP 级别将变得更加平滑。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <em>Kaiser</em>
+</td>
+	<td style="text-align:left;">这是一种随着 Mipmap 的尺寸大小下降而对其应用的锐化算法。如果纹理在远处太模糊，可尝试此选项。（这是一种 Kaiser 窗 (Kaiser Window) 算法，请参阅 <a href="https://en.wikipedia.org/wiki/Kaiser_window">Wikipedia</a> 以了解更多信息。）</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Mip Maps Preserve Coverage</td>
+	<td style="text-align:left;">Enable this checkbox if you want the alpha channel of generated mipmaps to preserve coverage during the alpha test. See <a href="../ScriptReference/TextureImporterSettings-mipMapsPreserveCoverage.html">TextureImporterSettings.mipMapsPreserveCoverage</a> for more information.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Fadeout Mip Maps</td>
+	<td style="text-align:left;">启用此属性可在 MIP 级别递进时使 Mipmap 淡化为灰色。此属性用于细节贴图。最左边的滚动项是第一个开始淡出的 MIP 级别。最右侧的滚动项定义了纹理完全变灰的 MIP 级别。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Wrap Mode</strong></td>
+	<td style="text-align:left;">选择纹理平铺时的行为方式。默认选项为 <strong>Clamp</strong>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Repeat</td>
+	<td style="text-align:left;">Repeats the Texture in tiles.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Clamp</td>
+	<td style="text-align:left;">Stretches the Texture’s edges.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Mirror</td>
+	<td style="text-align:left;">Mirrors the Texture at every integer boundary to create a repeating pattern.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Mirror Once</td>
+	<td style="text-align:left;">Mirrors The texture once, then clamps it to edge pixels.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Per-axis</td>
+	<td style="text-align:left;">Choose this to individually control how Unity wraps Textures at the U axis and V axis.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Filter Mode</strong></td>
+	<td style="text-align:left;">选择纹理在通过 3D 变换拉伸时如何进行过滤。默认选项为 <strong>Point (no filter)</strong>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Point (no filter)</td>
+	<td style="text-align:left;">纹理在靠近时变为块状。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Bilinear</td>
+	<td style="text-align:left;">纹理在靠近时变得模糊。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Trilinear</td>
+	<td style="text-align:left;">与 Bilinear 类似，但纹理也在不同的 MIP 级别之间模糊。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Aniso Level</strong></td>
+	<td style="text-align:left;">以大角度查看纹理时提高纹理质量。适用于地板和地面纹理。有关各向异性过滤的更多信息，请参阅<a href="ImportingTextures.html">导入纹理</a>文档。</td>
 </tr>
 </tbody>
 </table>
@@ -375,7 +506,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

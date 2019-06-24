@@ -12,8 +12,8 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="Unity Cloud Build - Unity Manual">
 <title>Unity Cloud Build - Unity Manual</title>
-<meta name="description" content="Unity Cloud Build 是 Unity 项目的持续集成服务。它在 Unity 服务器上实现自动化的项目编译过程，从而帮助您节省时间。此自动过程可以让您的团队和团队的计算机无需进行耗时的编译过程。它可以帮助您更快地发现问题，与协作者分享编译项目，并更快速地迭代开发版本。">
-<meta property="og:description" content="Unity Cloud Build 是 Unity 项目的持续集成服务。它在 Unity 服务器上实现自动化的项目编译过程，从而帮助您节省时间。此自动过程可以让您的团队和团队的计算机无需进行耗时的编译过程。它可以帮助您更快地发现问题，与协作者分享编译项目，并更快速地迭代开发版本。">
+<meta name="description" content="Unity Cloud Build is part of Unity teams and provides continuous integration services for Unity projects. It helps you save time by automating the process of creating builds on Unity’s servers. This automatic process frees your team and your team’s computers from the time-consuming process of making builds. It helps you catch problems sooner, share builds with your collaborators, and iterate versions of your development more rapidly.">
+<meta property="og:description" content="Unity Cloud Build is part of Unity teams and provides continuous integration services for Unity projects. It helps you save time by automating the process of creating builds on Unity’s servers. This automatic process frees your team and your team’s computers from the time-consuming process of making builds. It helps you catch problems sooner, share builds with your collaborators, and iterate versions of your development more rapidly.">
 <meta name="author" content="Unity Technologies">
 <link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
 <link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
@@ -30,7 +30,7 @@
       var lang = 'zh_CN';
       var page = 'UnityCloudBuild';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -62,7 +62,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -91,10 +91,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/UnityCloudBuild.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/UnityCloudBuild.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/UnityCloudBuild.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/UnityCloudBuild.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/UnityCloudBuild.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/UnityCloudBuild.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/UnityCloudBuild.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/UnityCloudBuild.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -106,7 +106,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -128,7 +128,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="UnityServices.html">Unity 服务</a></li>
 <li>Unity Cloud Build</li>
 </ul></div>
@@ -144,17 +144,16 @@
 <!--BeginSwitchLink--><!--EndSwitchLink-->
 <div class="clear"></div>
 
-<p>Unity Cloud Build 是 Unity 项目的<a href="UnityCloudBuildContinuousIntegration.html">持续集成</a>服务。它在 Unity 服务器上实现自动化的项目编译过程，从而帮助您节省时间。此自动过程可以让您的团队和团队的计算机无需进行耗时的编译过程。它可以帮助您更快地发现问题，与协作者分享编译项目，并更快速地迭代开发版本。</p>
+<p>Unity Cloud Build is part of <a href="https://unity3d.com/teams">Unity teams</a> and provides <a href="UnityCloudBuildContinuousIntegration.html">continuous integration</a> services for Unity projects. It helps you save time by automating the process of creating builds on Unity’s servers. This automatic process frees your team and your team’s computers from the time-consuming process of making builds. It helps you catch problems sooner, share builds with your collaborators, and iterate versions of your development more rapidly.</p>
 
 <p>Unity Cloud Build 可针对多个平台编译您的项目，并支持许多主流的<a href="UnityCloudBuildVcs.html">版本控制系统</a>。请参阅<a href="UnityCloudBuildSupportedPlatforms.html">支持的平台</a>以了解更多信息。</p>
 
 <p>请在以下页面上查找有关 Unity Cloud Build 的其他信息：</p>
 
 <ul>
-<li><p><a href="http://unity3d.com/build">Unity Cloud Build 主页</a></p></li>
-<li><p><a href="https://build.cloud.unity3d.com/support/faq/">Unity Cloud Build：常见问题</a></p></li>
-<li><p><a href="https://support.unity3d.com/hc/en-us/sections/201104819-Cloud-Build">Unity Cloud Build：支持知识库</a></p></li>
-<li><p><a href="https://unity3d.com/learn/tutorials/topics/cloud-build-0">教程：Unity Cloud Build 入门</a></p></li>
+<li><a href="https://build.cloud.unity3d.com/support/faq/">Unity Cloud Build：常见问题</a></li>
+<li><a href="https://support.unity3d.com/hc/en-us/sections/201104819-Cloud-Build">Unity Cloud Build：支持知识库</a></li>
+<li><a href="https://unity3d.com/learn/tutorials/topics/cloud-build-0">教程：Unity Cloud Build 入门</a></li>
 </ul>
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
@@ -167,7 +166,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

@@ -12,7 +12,7 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="Build Settings - Unity Manual">
 <title>Build Settings - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/BuildSettings.png">
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.4/uploads/Main/BuildSettings.png">
 <meta name="description" content="The Build Settings window allows you to choose your target platform, adjust settings for your build, and start the build process. To access the Build Settings window, select File &gt; Build Settings&amp;#8230; . Once you have specified your build settings, you can click Build to create your build, or click the Build And Run to create and run your build on the platform you have specified.">
 <meta property="og:description" content="The Build Settings window allows you to choose your target platform, adjust settings for your build, and start the build process. To access the Build Settings window, select File &gt; Build Settings&amp;#8230; . Once you have specified your build settings, you can click Build to create your build, or click the Build And Run to create and run your build on the platform you have specified.">
 <meta name="author" content="Unity Technologies">
@@ -31,7 +31,7 @@
       var lang = 'zh_CN';
       var page = 'BuildSettings';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -63,7 +63,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -92,10 +92,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/BuildSettings.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/BuildSettings.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/BuildSettings.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/BuildSettings.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/BuildSettings.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/BuildSettings.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/BuildSettings.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/BuildSettings.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -107,7 +107,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -129,7 +129,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="UnityOverview.html">在 Unity 中操作</a></li>
 <li><a href="EditorFeatures.html">编辑器功能</a></li>
 <li>Build Settings</li>
@@ -217,6 +217,10 @@
 	<td style="text-align:left;">All CPU devices for Linux</td>
 </tr>
 <tr>
+	<td style="text-align:left;">Server Build</td>
+	<td style="text-align:left;">Build the Player for server use and with no visual elements (headless) without the need for any command line options. When enabled, Unity builds managed scripts with the UNITY_SERVER define, which enables you to write server-specific code for your applications. You can also build to the Windows version as a console app so that <code>stdin</code> and <code>stdout</code> are accessible (Unity logs go to <code>stdout</code> by default).</td>
+</tr>
+<tr>
 	<td style="text-align:left;">Copy PDB files</td>
 	<td style="text-align:left;">(Windows only) Include Microsoft program database (PDB) files in the built Standalone Player. PDB files contain application debugging information that is useful for debugging, but may increase the size of your Player. This setting is disabled by default.</td>
 </tr>
@@ -270,49 +274,7 @@
 
 <h3>Android</h3>
 
-<table>
-<colgroup>
-<col style="text-align:left;">
-<col style="text-align:left;">
-</colgroup>
-
-<thead>
-<tr>
-	<th style="text-align:left;">Option</th>
-	<th style="text-align:left;">Purpose</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-	<td style="text-align:left;">Texture Compression</td>
-	<td style="text-align:left;">Choose from the following texture compression formats:<br><strong>Don’t override</strong><br><strong>DXT (Tegra)</strong><br><strong>PVRTC (PowerVR)</strong><br><strong>ATC (Adreno)</strong><br><strong>ETC (default)</strong><br><strong>ETC2 (GLES 3.0)</strong><br><strong>ASTC</strong><br>For advice on using these formats, see <a href="android-GettingStarted.html#compression">Getting started with Android development</a>.</td>
-</tr>
-<tr>
-	<td style="text-align:left;">ETC2 fallback</td>
-	<td style="text-align:left;">For Android devices that don’t support ETC2, override the default ETC2 texture decompression by choosing from 32 or 16 bit format, or 32 bit format with half the resolution.</td>
-</tr>
-<tr>
-	<td style="text-align:left;">Build System</td>
-</tr>
-<tr>
-	<td style="text-align:left;">        Internal (Default)</td>
-	<td style="text-align:left;">Generate the output package (APK) using the internal Unity build process, based on Android SDK utilities.</td>
-</tr>
-<tr>
-	<td style="text-align:left;">        Gradle (New)</td>
-	<td style="text-align:left;">Generate the output package (APK) using the Gradle build system. Supports direct Build and Run and exporting the project to a directory. This is the preferred option for exporting a project, as Gradle is the native format for Android Studio.</td>
-</tr>
-<tr>
-	<td style="text-align:left;">        ADT (Legacy)</td>
-	<td style="text-align:left;">Export the project in ADT (eclipse) format. The output package (APK) can be built in eclipse or Android Studio. This project type is no longer supported by Google and is considered obsolete.</td>
-</tr>
-<tr>
-	<td style="text-align:left;">SDKs for App Stores</td>
-	<td style="text-align:left;">Select which third party app stores to integrate with. To include an integration, click <strong>Add</strong> next to an App Store name. The Unity Package Manager automatically downloads and includes the relevant integration package.</td>
-</tr>
-</tbody>
-</table>
+<p>For information on Android build settings, see <a href="android-BuildProcess.html">Building apps for Android</a>.</p>
 
 <h3>WebGL</h3>
 
@@ -334,6 +296,7 @@
 
 <table>
 <colgroup>
+<col style="text-align:left;">
 <col style="text-align:left;">
 <col style="text-align:left;">
 </colgroup>
@@ -364,7 +327,7 @@
 </tr>
 <tr>
 	<td style="text-align:left;" colspan="2">Compression Method</td>
-	<td style="text-align:left;">Compress the data in your Project when building the Player. This includes <a href="AssetTypes.html">Assets</a>, <a href="CreatingScenes.html">Scenes</a>, <a href="class-PlayerSettings.html">Player Settings</a> and <a href="GICache.html">GI data</a>. Choose between the following methods:</td>
+	<td style="text-align:left;">Compress the data in your Project when building the Player. This includes <a href="AssetTypes.html">Assets</a>, <a href="CreatingScenes.html">Scenes</a>, <a href="class-PlayerSettings.html">Player</a> settings and <a href="GICache.html">GI data</a>. Choose between the following methods:</td>
 </tr>
 <tr>
 	<td style="text-align:left;"></td>
@@ -387,10 +350,11 @@
 <hr>
 
 <ul>
-<li><p><span class="page-edit">• 2017–08–24 Page amended with no <a href="DocumentationEditorialReview.html">editorial review</a>
-</span><br></p></li>
+<li><p><span class="page-edit">2018–09–18 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
 <li><p><span class="page-history">Xiaomi build target added in <a href="https://docs.unity3d.com/2017.2/Documentation/Manual/30_search.html?q=newin20172">2017.2</a> <span class="search-words">NewIn20172</span></span></p></li>
 <li><p><span class="page-history">在 <a href="https://docs.unity3d.com/2017.3/Documentation/Manual/30_search.html?q=newin20173">2017.3</a> 中停止了 Tizen 支持 <span class="search-words">NewIn20173</span></span></p></li>
+<li><p><span class="page-history">Server Build option added for Standalone Player Build Settings in Unity <a href="https://docs.unity3d.com/2018.3/Documentation/Manual/30_search.html?q=newin20183">2018.3</a> <span class="search-words">NewIn20183</span></span></p></li>
 </ul>
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
@@ -403,7 +367,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

@@ -12,8 +12,8 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="Shadowmask 模式 - Unity Manual">
 <title>Shadowmask 模式 - Unity Manual</title>
-<meta name="description" content="Shadowmask 模式是由场景中所有混合光源共用的一种光照模式。要将 Mixed lighting 设置为 Shadowmask，请打开 Lighting 窗口（菜单：__Window__ &gt; Lighting &gt; Settings__），单击 Scene__ 选项卡，导航至 Mixed Lighting__，然后将 Lighting Mode__ 设置为 Shadowmask。">
-<meta property="og:description" content="Shadowmask 模式是由场景中所有混合光源共用的一种光照模式。要将 Mixed lighting 设置为 Shadowmask，请打开 Lighting 窗口（菜单：__Window__ &gt; Lighting &gt; Settings__），单击 Scene__ 选项卡，导航至 Mixed Lighting__，然后将 Lighting Mode__ 设置为 Shadowmask。">
+<meta name="description" content="Shadowmask mode is a lighting mode shared by all Mixed Lights in a Scene. To set Mixed lighting to Shadowmask, open the Lighting window (menu: Window &gt; Rendering &gt; Lighting Settings), click the Scene tab, navigate to Mixed Lighting and set the Lighting Mode to Shadowmask.">
+<meta property="og:description" content="Shadowmask mode is a lighting mode shared by all Mixed Lights in a Scene. To set Mixed lighting to Shadowmask, open the Lighting window (menu: Window &gt; Rendering &gt; Lighting Settings), click the Scene tab, navigate to Mixed Lighting and set the Lighting Mode to Shadowmask.">
 <meta name="author" content="Unity Technologies">
 <link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
 <link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
@@ -30,7 +30,7 @@
       var lang = 'zh_CN';
       var page = 'LightMode-Mixed-ShadowmaskMode';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -62,7 +62,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -91,10 +91,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/LightMode-Mixed-ShadowmaskMode.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/LightMode-Mixed-ShadowmaskMode.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/LightMode-Mixed-ShadowmaskMode.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/LightMode-Mixed-ShadowmaskMode.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/LightMode-Mixed-ShadowmaskMode.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/LightMode-Mixed-ShadowmaskMode.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/LightMode-Mixed-ShadowmaskMode.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/LightMode-Mixed-ShadowmaskMode.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -106,7 +106,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -128,7 +128,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="Graphics.html">图形</a></li>
 <li><a href="GraphicsOverview.html">图形概述</a></li>
 <li><a href="LightingOverview.html">光照</a></li>
@@ -149,9 +149,9 @@
 <!--BeginSwitchLink--><!--EndSwitchLink-->
 <div class="clear"></div>
 
-<p>Shadowmask 模式是由场景中所有混合光源共用的一种光照模式。要将 Mixed lighting 设置为 Shadowmask，请打开 Lighting 窗口（菜单：__Window__ &gt; <strong>Lighting</strong> &gt; <strong>Settings__），单击 </strong>Scene__ 选项卡，导航至 <strong>Mixed Lighting__，然后将 </strong>Lighting Mode__ 设置为 <strong>Shadowmask</strong>。</p>
+<p>Shadowmask mode is a lighting mode shared by all Mixed Lights in a Scene. To set Mixed lighting to Shadowmask, open the Lighting window (menu: <strong>Window</strong> &gt; <strong>Rendering</strong> &gt; <strong>Lighting Settings</strong>), click the <strong>Scene tab</strong>, navigate to <strong>Mixed Lighting</strong> and set the <strong>Lighting Mode</strong> to <strong>Shadowmask</strong>. </p>
 
-<p>此外，还需要从 <strong>Quality Settings</strong> 中选择所需的 Shadowmask 模式（菜单：__Edit__ &gt; <strong>Project Settings</strong> &gt; __Quality__）：</p>
+<p>You also need to select the desired Shadowmask mode to use from the <strong>Quality</strong> settings (menu: <strong>Edit</strong> &gt; <strong>Project Settings</strong>, then select the <strong>Quality</strong> category): </p>
 
 <ul>
 <li>
@@ -180,7 +180,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

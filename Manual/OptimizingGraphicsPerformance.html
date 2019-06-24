@@ -30,7 +30,7 @@
       var lang = 'zh_CN';
       var page = 'OptimizingGraphicsPerformance';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -62,7 +62,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -91,10 +91,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/OptimizingGraphicsPerformance.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/OptimizingGraphicsPerformance.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/OptimizingGraphicsPerformance.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/OptimizingGraphicsPerformance.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/OptimizingGraphicsPerformance.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/OptimizingGraphicsPerformance.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/OptimizingGraphicsPerformance.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/OptimizingGraphicsPerformance.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -106,7 +106,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -128,7 +128,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="Graphics.html">图形</a></li>
 <li><a href="GraphicsOverview.html">图形概述</a></li>
 <li>优化图形性能</li>
@@ -138,7 +138,7 @@
 <span class="prev"><a href="Example-CreatingaBillboardPlane.html"></a></span><div class="tip">示例 - 创建四边形</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
-<span class="next"><a href="DrawCallBatching.html"></a></span><div class="tip">DrawCallBatching</div>
+<span class="next"><a href="DrawCallBatching.html"></a></span><div class="tip">绘制调用批处理</div>
 </div>
 </div></div>
 <h1>优化图形性能</h1>
@@ -230,7 +230,7 @@
 
 <p>避免组合距离足够远而需要受到不同像素光照影响的网格。使用像素光照时，每个网格必须渲染多次，因为只要发生像素光照就要进行渲染。如果组合两个相距很远的网格，则会增加组合对象的有效大小。照射该组合对象任何部分的所有像素光照在渲染期间都要考虑在内，因此需要创建的渲染 pass 的数量可能增加。通常情况下，为渲染组合对象而必须创建的 pass 数为<strong>每个单独对象的 pass 数之和</strong>，因此进行网格组合并不会获得任何好处。</p>
 
-<p>在渲染过程中，Unity 会查找网格周围的所有光源，并计算出哪些光源对网格的影响最大。使用<a href="class-QualitySettings.html">质量设置 (Quality Settings)</a> 可修改多少个光源用于像素光照以及多少个用于顶点光照。每个光源根据它与网格的距离以及它的光照强度来计算其重要性；纯粹从游戏背景而言，有些光源比另一些光源更重要。鉴于此原因，每个光源都有 <strong>Render Mode</strong> 设置，可设置为 <strong>Important</strong> 或 <strong>Not Important__；标记为 </strong>Not Important__ 的光源具有较低的渲染开销。</p>
+<p>During rendering, Unity finds all lights surrounding a mesh and calculates which of those lights affect it most. The settings on the <a href="class-QualitySettings.html">Quality</a> window are used to modify how many of the lights end up as pixel lights, and how many as vertex lights. Each light calculates its importance based on how far away it is from the mesh and how intense its illumination is - and some lights are more important than others purely from the game context. For this reason, every light has a <strong>Render Mode</strong> setting which can be set to <strong>Important</strong> or <strong>Not Important</strong>; lights marked as <strong>Not Important</strong> have a lower rendering overhead.</p>
 
 <p><strong>示例</strong>：假设有一个驾驶游戏，玩家的汽车在黑暗中行驶，前照灯已打开。前照灯可能是游戏中视觉上最重要的光源，因此它们的 <strong>Render Mode</strong> 应设置为 <strong>Important</strong>。游戏中可能还有其他不太重要的光源，比如其他汽车的尾灯或远处的灯柱，这些光源不能通过像素光照来大幅改善视觉效果。这种情况下，可放心地将这些光源的 <strong>Render Mode</strong> 设置为 __Not Important__，从而避免将渲染能力浪费在无用之处。</p>
 
@@ -321,13 +321,13 @@
 <span class="prev"><a href="Example-CreatingaBillboardPlane.html"></a></span><div class="tip">示例 - 创建四边形</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
-<span class="next"><a href="DrawCallBatching.html"></a></span><div class="tip">DrawCallBatching</div>
+<span class="next"><a href="DrawCallBatching.html"></a></span><div class="tip">绘制调用批处理</div>
 </div>
 </div>
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

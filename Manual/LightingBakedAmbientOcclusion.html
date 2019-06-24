@@ -12,7 +12,7 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="烘焙环境光遮挡 - Unity Manual">
 <title>烘焙环境光遮挡 - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/BakedAO56.png">
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.4/uploads/Main/BakedAO56.png">
 <meta name="description" content="环境光遮挡 (Ambient occlusion, AO) 可估算环境光照（不是来自特定方向的光照）照射到表面上某一点的光照的情况。它使彼此接近的折痕、孔和表面变暗。这些区域将遮挡（阻挡）环境光，因此它们看起来较暗。">
 <meta property="og:description" content="环境光遮挡 (Ambient occlusion, AO) 可估算环境光照（不是来自特定方向的光照）照射到表面上某一点的光照的情况。它使彼此接近的折痕、孔和表面变暗。这些区域将遮挡（阻挡）环境光，因此它们看起来较暗。">
 <meta name="author" content="Unity Technologies">
@@ -31,7 +31,7 @@
       var lang = 'zh_CN';
       var page = 'LightingBakedAmbientOcclusion';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -63,7 +63,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -92,10 +92,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/LightingBakedAmbientOcclusion.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/LightingBakedAmbientOcclusion.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/LightingBakedAmbientOcclusion.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/LightingBakedAmbientOcclusion.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/LightingBakedAmbientOcclusion.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/LightingBakedAmbientOcclusion.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/LightingBakedAmbientOcclusion.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/LightingBakedAmbientOcclusion.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -107,7 +107,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -129,7 +129,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="Graphics.html">图形</a></li>
 <li><a href="GraphicsOverview.html">图形概述</a></li>
 <li><a href="LightingOverview.html">光照</a></li>
@@ -152,9 +152,9 @@
 
 <p>仅使用预计算实时 GI 时（请参阅有关<a href="UsingPrecomputedLighting.html">使用预计算光照</a>的文档），间接光照的部分不会捕获精细细节或动态对象。我们建议使用实时环境光遮挡后期效果，它具有更多细节，可以生成更高质量的光照。</p>
 
-<p>要查看和启用烘焙 AO，请打开 <strong>Lighting</strong> 窗口（菜单：__Window__ &gt; <strong>Lighting__），然后找到 </strong>Baked GI__ 部分。勾选 <strong>Baked GI</strong> 复选框（如果未选中），然后勾选 <strong>Ambient Occlusion</strong> 复选框以启用烘焙 AO。</p>
+<p>To view and enable baked AO, open the <strong>Lighting</strong> window (menu: <strong>Window</strong> &gt; <strong>Rendering</strong> &gt; <strong>Lighting Settings</strong>) and navigate to the <strong>Baked GI</strong> section. Tick the <strong>Baked GI</strong> checkbox if it is unchecked, then tick the <strong>Ambient Occlusion</strong> checkbox to enable baked AO.</p>
 
-<p>要查看和启用烘焙 AO，请打开 <strong>Lighting</strong> 窗口（菜单：__Window__ &gt; <strong>Lighting__），然后导航到 </strong>Mixed Lighting__ 部分。勾选 <strong>Baked Global Illumination</strong> 复选框（如果未选中），然后在 <strong>Lightmapping Settings</strong> 中勾选 <strong>Ambient Occlusion</strong> 复选框以启用烘焙 AO。</p>
+<p>To view and enable baked AO, open the <strong>Lighting</strong> window (menu: <strong>Window</strong> &gt; <strong>Rendering</strong> &gt; <strong>Lighting Settings</strong>) and navigate to the <strong>Mixed Lighting</strong> section. Tick the <strong>Baked Global Illumination</strong> checkbox if it is unchecked, then in <strong>Lightmapping Settings</strong> tick the <strong>Ambient Occlusion</strong> checkbox to enable baked AO.</p>
 
 <figure>
 <img src="../uploads/Main/BakedAO56.png" alt="">
@@ -203,7 +203,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

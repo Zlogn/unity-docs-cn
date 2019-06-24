@@ -12,8 +12,8 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content=".NET 配置文件支持 - Unity Manual">
 <title>.NET 配置文件支持 - Unity Manual</title>
-<meta name="description" content="Unity 支持许多 .NET 配置文件。每个配置文件为 C# 代码提供不同的 API 表面来与 .NET 类库交互。可在 Player Settings（选择 Edit &gt; Project Settings &gt; Player__）中更改 .NET 配置文件，为此需要使用 Other Settings__ 部分的 Api Compatibility Level 选项。">
-<meta property="og:description" content="Unity 支持许多 .NET 配置文件。每个配置文件为 C# 代码提供不同的 API 表面来与 .NET 类库交互。可在 Player Settings（选择 Edit &gt; Project Settings &gt; Player__）中更改 .NET 配置文件，为此需要使用 Other Settings__ 部分的 Api Compatibility Level 选项。">
+<meta name="description" content="Unity supports a number of .NET profiles. Each profile provides a different API surface for C# code which interacts with the .NET class libraries. You can change the .NET Profile in the Player settings (go to Edit &gt; Project Settings, then select the Player category) using the Api Compatibility Level option in the Other Settings panel.">
+<meta property="og:description" content="Unity supports a number of .NET profiles. Each profile provides a different API surface for C# code which interacts with the .NET class libraries. You can change the .NET Profile in the Player settings (go to Edit &gt; Project Settings, then select the Player category) using the Api Compatibility Level option in the Other Settings panel.">
 <meta name="author" content="Unity Technologies">
 <link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
 <link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
@@ -30,7 +30,7 @@
       var lang = 'zh_CN';
       var page = 'dotnetProfileSupport';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -62,7 +62,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -91,10 +91,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/dotnetProfileSupport.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/dotnetProfileSupport.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/dotnetProfileSupport.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/dotnetProfileSupport.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/dotnetProfileSupport.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/dotnetProfileSupport.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/dotnetProfileSupport.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/dotnetProfileSupport.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -106,7 +106,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -128,14 +128,14 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="ScriptingSection.html">脚本</a></li>
 <li><a href="ScriptingConcepts.html">脚本概述</a></li>
 <li>.NET 配置文件支持</li>
 </ul></div>
 <div class="mb20"><div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
-<span class="prev"><a href="ScriptCompilationAssemblyDefinitionFiles.html"></a></span><div class="tip">脚本编译和程序集定义文件</div>
+<span class="prev"><a href="ManagedCodeStripping.html"></a></span><div class="tip">Managed code stripping</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
 <span class="next"><a href="dotnetProfileAssemblies.html"></a></span><div class="tip">引用其他类库程序集</div>
@@ -145,7 +145,7 @@
 <!--BeginSwitchLink--><!--EndSwitchLink-->
 <div class="clear"></div>
 
-<p>Unity 支持许多 .NET 配置文件。每个配置文件为 C# 代码提供不同的 API 表面来与 .NET 类库交互。可在 Player Settings（选择 <strong>Edit</strong> &gt; <strong>Project Settings</strong> &gt; <strong>Player__）中更改 .NET 配置文件，为此需要使用 </strong>Other Settings__ 部分的 <strong>Api Compatibility Level</strong> 选项。</p>
+<p>Unity supports a number of .NET profiles. Each profile provides a different API surface for C# code which interacts with the .NET class libraries. You can change the .NET Profile in the <strong>Player</strong> settings (go to <strong>Edit</strong> &gt; <strong>Project Settings</strong>, then select the <strong>Player</strong> category) using the <strong>Api Compatibility Level</strong> option in the <strong>Other Settings</strong> panel.</p>
 
 <h2>旧版脚本运行时</h2>
 
@@ -217,6 +217,14 @@
 <li>有限支持表示，如果使用的来自 .NET Framework 的所有 API 都存在于 .NET Standard 2.0 配置文件中，则 Unity 支持该配置。但是，.NET Framework API 是 .NET Standard 2.0 配置文件的超集，因此有些 API 不可用。</li>
 </ul>
 
+<h2>Transport Layer Security (TLS) 1.2</h2>
+
+<p>From 2018.2, Unity provides full TLS 1.2 support on all platforms except WebGL. It does this via the UnityWebRequest API and all .NET 4.x APIs.</p>
+
+<p>Certificate verification is done automatically via the platform specific certificate store if available. Where access to the certificate store is not possible, Unity uses an embedded root certificate store.</p>
+
+<p>TLS support for .NET 3.5 and below varies per platform and there are no guarantees on which features are supported.</p>
+
 <hr>
 
 <ul>
@@ -226,7 +234,7 @@
 </ul>
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
-<span class="prev"><a href="ScriptCompilationAssemblyDefinitionFiles.html"></a></span><div class="tip">脚本编译和程序集定义文件</div>
+<span class="prev"><a href="ManagedCodeStripping.html"></a></span><div class="tip">Managed code stripping</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
 <span class="next"><a href="dotnetProfileAssemblies.html"></a></span><div class="tip">引用其他类库程序集</div>
@@ -235,7 +243,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

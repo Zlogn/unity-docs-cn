@@ -30,7 +30,7 @@
       var lang = 'zh_CN';
       var page = 'script-StandaloneInputModule';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -62,7 +62,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -91,10 +91,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/script-StandaloneInputModule.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/script-StandaloneInputModule.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/script-StandaloneInputModule.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/script-StandaloneInputModule.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/script-StandaloneInputModule.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/script-StandaloneInputModule.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/script-StandaloneInputModule.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/script-StandaloneInputModule.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -106,7 +106,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -128,7 +128,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="ScriptingSection.html">脚本</a></li>
 <li><a href="EventSystem.html">事件系统</a></li>
 <li>事件系统参考</li>
@@ -150,7 +150,7 @@
 
 <p>当鼠标/输入设备移动时，该模块将指针事件发送到组件，并使用<a href="../ScriptReference/UI.GraphicRaycaster.html">图形射线投射器 (Graphics Raycaster)</a>和<a href="../ScriptReference/EventSystems.PhysicsRaycaster.html">物理射线投射器 (Physics Raycaster)</a> 来计算给定指针设备当前指向的元素。您可以配置这些射线投射器来检测或忽略场景的某些部分，从而满足您的要求。</p>
 
-<p>该模块会发送 Move 事件和 Submit/Cancel 事件来响应通过输入管理器跟踪的输入。对于键盘和控制器输入均是如此。可在模块的检视面板中配置跟踪的轴和键。</p>
+<p>The module sends move events and submit / cancel events in response to Input tracked via the <a href="class-InputManager.html">Input</a> window. This works for both keyboard and controller input. The tracked axis and keys can be configured in the module’s inspector.</p>
 
 <h2>属性</h2>
 
@@ -194,7 +194,7 @@
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Force Module Active</strong></td>
-	<td style="text-align:left;">勾选此复选框可强制该__独立输入模块 (Standalone Input Module)__ 处于活动状态。</td>
+	<td style="text-align:left;">Enable this property to force this <strong>Standalone Input Module</strong> to be active.</td>
 </tr>
 </tbody>
 </table>
@@ -212,7 +212,7 @@
 <p>该模块的流程如下</p>
 
 <ul>
-<li>如果输入了输入管理器中的有效轴，则向所选对象发送 Move 事件</li>
+<li>Send a Move event to the selected object if a valid axis from the <a href="class-InputManager.html">Input</a> window is entered</li>
 <li>如果按下了 Submit 或 Cancel 按钮，则向所选对象发送 Submit 或 Cancel 事件</li>
 <li>处理鼠标输入
 
@@ -259,7 +259,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

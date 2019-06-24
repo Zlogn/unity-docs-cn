@@ -12,7 +12,7 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="使用动画事件 - Unity Manual">
 <title>使用动画事件 - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/AnimationEditorEventLine.png">
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.4/uploads/Main/AnimationEditorEventLine.png">
 <meta name="description" content="您可以使用动画事件增加动画剪辑的实用性。动画事件允许您在时间轴中的指定点调用对象脚本中的函数。">
 <meta property="og:description" content="您可以使用动画事件增加动画剪辑的实用性。动画事件允许您在时间轴中的指定点调用对象脚本中的函数。">
 <meta name="author" content="Unity Technologies">
@@ -31,7 +31,7 @@
       var lang = 'zh_CN';
       var page = 'animeditor-AnimationEvents';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -63,7 +63,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -92,10 +92,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/animeditor-AnimationEvents.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/animeditor-AnimationEvents.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/animeditor-AnimationEvents.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/animeditor-AnimationEvents.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/animeditor-AnimationEvents.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/animeditor-AnimationEvents.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/animeditor-AnimationEvents.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/animeditor-AnimationEvents.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -107,7 +107,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -129,7 +129,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="AnimationSection.html">动画</a></li>
 <li><a href="AnimationClips.html">动画剪辑</a></li>
 <li><a href="AnimationEditorGuide.html">Animation 窗口指南</a></li>
@@ -191,13 +191,15 @@ public void PrintFloat (float theValue) {
 
 <p>该示例需要一个包含 <code>PrintEvent()</code> 函数的小脚本。此函数打印一条调试消息，其中包含一个字符串（“called at:”）和时间：</p>
 
-<pre><code>// 此 C# 函数可由动画事件调用
+<pre><code>// This C# function can be called by an Animation Event
 using UnityEngine;
 using System.Collections;
 
 
-public class ExampleClass : MonoBehaviour {
-    public void PrintEvent(string s) {
+public class ExampleClass : MonoBehaviour 
+{
+    public void PrintEvent(string s) 
+    {
         Debug.Log("PrintEvent: " + s + " called at: " + Time.time);
     }
 }
@@ -207,7 +209,7 @@ public class ExampleClass : MonoBehaviour {
 
 <p>在 Unity 中，创建立方体游戏对象（菜单：__GameObject__ &gt; <strong>3D Object</strong> &gt; __Cube__）。要将新脚本文件添加到该立方体，请将文件从 Project 窗口拖放到 Inspector 窗口。</p>
 
-<p>选择立方体，然后打开 Animation 窗口（菜单：__Window__ &gt; __Animation__）。为 x 坐标设置__位置__曲线。</p>
+<p>Select the Cube and then open the Animation window (menu: <strong>Window</strong> &gt; <strong>Animation</strong> &gt; <strong>Animation</strong> or use ctrl+6). Set a <strong>Position</strong> curve for the x coordinate.</p>
 
 <figure>
 <img src="../uploads/Main/AnimationEventExample.png" alt="Animation 窗口">
@@ -215,6 +217,13 @@ public class ExampleClass : MonoBehaviour {
 </figure>
 
 <p>接下来，设置 x 坐标的动画，增加到大约 0.4 秒，然后在 1 秒内恢复到零，再随后在大约 0.8 秒处创建动画事件。按 Play 即可运行动画。</p>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2018–08–24 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+</ul>
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
 <span class="prev"><a href="animeditor-MultipleParts.html"></a></span><div class="tip">具有多个移动部件的对象</div>
@@ -226,7 +235,7 @@ public class ExampleClass : MonoBehaviour {
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

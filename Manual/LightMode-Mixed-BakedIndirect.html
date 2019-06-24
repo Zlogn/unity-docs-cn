@@ -12,8 +12,8 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="Baked Indirect 模式 - Unity Manual">
 <title>Baked Indirect 模式 - Unity Manual</title>
-<meta name="description" content="Baked Indirect 模式是由场景中所有__混合光源__共用的一种光照模式。要将 Mixed lighting 设置为 Baked Indirect__，请打开 Lighting 窗口（菜单：__Window &gt; Lighting &gt; Settings__），单击 Scene__ 选项卡，导航至 Mixed Lighting__，然后将 Lighting Mode__ 设置为 Baked Indirect。请参阅混合光照相关文档以了解有关此光照模式的更多信息，并参阅光照模式相关文档以了解有关其他可用模式的更多信息。">
-<meta property="og:description" content="Baked Indirect 模式是由场景中所有__混合光源__共用的一种光照模式。要将 Mixed lighting 设置为 Baked Indirect__，请打开 Lighting 窗口（菜单：__Window &gt; Lighting &gt; Settings__），单击 Scene__ 选项卡，导航至 Mixed Lighting__，然后将 Lighting Mode__ 设置为 Baked Indirect。请参阅混合光照相关文档以了解有关此光照模式的更多信息，并参阅光照模式相关文档以了解有关其他可用模式的更多信息。">
+<meta name="description" content="Baked Indirect mode is a lighting mode shared by all Mixed Lights in a Scene. To set Mixed lighting to Baked Indirect, open the Lighting window (menu: Window &gt; Rendering &gt; Lighting Settings), click the Scene tab, navigate to Mixed Lighting and set the Lighting Mode to Baked Indirect. See documentation on Mixed lighting to learn more about this lighting mode, and see documentation on Light modes to learn more about the other modes available.">
+<meta property="og:description" content="Baked Indirect mode is a lighting mode shared by all Mixed Lights in a Scene. To set Mixed lighting to Baked Indirect, open the Lighting window (menu: Window &gt; Rendering &gt; Lighting Settings), click the Scene tab, navigate to Mixed Lighting and set the Lighting Mode to Baked Indirect. See documentation on Mixed lighting to learn more about this lighting mode, and see documentation on Light modes to learn more about the other modes available.">
 <meta name="author" content="Unity Technologies">
 <link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
 <link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
@@ -30,7 +30,7 @@
       var lang = 'zh_CN';
       var page = 'LightMode-Mixed-BakedIndirect';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -62,7 +62,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -91,10 +91,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/LightMode-Mixed-BakedIndirect.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/LightMode-Mixed-BakedIndirect.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/LightMode-Mixed-BakedIndirect.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/LightMode-Mixed-BakedIndirect.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/LightMode-Mixed-BakedIndirect.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/LightMode-Mixed-BakedIndirect.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/LightMode-Mixed-BakedIndirect.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/LightMode-Mixed-BakedIndirect.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -106,7 +106,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -128,7 +128,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="Graphics.html">图形</a></li>
 <li><a href="GraphicsOverview.html">图形概述</a></li>
 <li><a href="LightingOverview.html">光照</a></li>
@@ -149,9 +149,9 @@
 <!--BeginSwitchLink--><!--EndSwitchLink-->
 <div class="clear"></div>
 
-<p><strong>Baked Indirect</strong> 模式是由场景中所有__混合光源__共用的一种光照模式。要将 Mixed lighting 设置为 <strong>Baked Indirect__，请打开 Lighting 窗口（菜单：__Window</strong> &gt; <strong>Lighting</strong> &gt; <strong>Settings__），单击 </strong>Scene__ 选项卡，导航至 <strong>Mixed Lighting__，然后将 </strong>Lighting Mode__ 设置为 <strong>Baked Indirect</strong>。请参阅<a href="LightMode-Mixed.html">混合光照</a>相关文档以了解有关此光照模式的更多信息，并参阅<a href="LightModes.html">光照模式</a>相关文档以了解有关其他可用模式的更多信息。</p>
+<p><strong>Baked Indirect</strong> mode is a lighting mode shared by all <strong>Mixed Lights</strong> in a Scene. To set Mixed lighting to <strong>Baked Indirect</strong>, open the Lighting window (menu: <strong>Window</strong> &gt; <strong>Rendering</strong> &gt; <strong>Lighting Settings</strong>), click the <strong>Scene</strong> tab, navigate to <strong>Mixed Lighting</strong> and set the <strong>Lighting Mode</strong> to <strong>Baked Indirect</strong>. See documentation on <a href="LightMode-Mixed.html">Mixed lighting</a> to learn more about this lighting mode, and see documentation on <a href="LightModes.html">Light modes</a> to learn more about the other modes available. </p>
 
-<p>对于设置为 <strong>Baked Indirect</strong> 模式的光源，Unity 仅预先计算间接光照，不执行阴影预计算。阴影在__阴影距离 (Shadow Distance)<strong>（菜单：__Edit</strong> &gt; <strong>Project Settings</strong> &gt; <strong>Quality</strong> &gt; <strong>Shadows__）内是完全实时的。换句话说，__Baked Indirect</strong> 光照行为类似于带有额外间接光照但超出__阴影距离__后没有阴影的<a href="LightMode-Realtime.html">实时光源</a>。您可以使用<a href="PostProcessing-Fog.html">后期处理雾效</a>之类的效果来遮挡超过该距离的缺失阴影。</p>
+<p>For Lights that are set to <strong>Baked Indirect</strong> mode, Unity only precomputes indirect lighting, and does not carry out shadow pre-computations. Shadows are fully real-time within the <strong>Shadow Distance</strong> (menu: <strong>Edit</strong> &gt; <strong>Settings</strong> , then select the <strong>Quality</strong> category, and navigate to the <strong>Shadows</strong> section). In other words, <strong>Baked Indirect</strong> Lights behave like <a href="LightMode-Realtime.html">Realtime Lights</a> with additional indirect lighting, but with no shadows beyond the <strong>Shadow Distance</strong>. You can use effects like the <a href="PostProcessing-Fog.html">Post-processing fog effect</a> to obscure the missing shadows past that distance.</p>
 
 <p>适合使用 <strong>Baked Indirect</strong> 模式的一个很好的例子是，您想要在与走廊相连的房间内构建一个室内射击游戏或冒险游戏。此情况下的观察距离是有限的，因此可见的一切对象通常都应该在__阴影距离__内。此模式对于构建有雾的室外场景也很有用，因为您可以使用雾来隐藏远处缺失的阴影。</p>
 
@@ -243,7 +243,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

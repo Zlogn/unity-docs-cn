@@ -12,7 +12,7 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="数据透视图 (Data Explorer) - Unity Manual">
 <title>数据透视图 (Data Explorer) - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/UnityAnalyticsDataExplorer1.png">
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.4/uploads/Main/UnityAnalyticsDataExplorer1.png">
 <meta name="description" content="使用 Data Explorer 可以构建 Unity Analytics 指标和事件的相关报告。Data Explorer 报告可显示所选的指标和自定义事件如何随时间变化。">
 <meta property="og:description" content="使用 Data Explorer 可以构建 Unity Analytics 指标和事件的相关报告。Data Explorer 报告可显示所选的指标和自定义事件如何随时间变化。">
 <meta name="author" content="Unity Technologies">
@@ -31,7 +31,7 @@
       var lang = 'zh_CN';
       var page = 'UnityAnalyticsDataExplorer';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -63,7 +63,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -92,10 +92,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/UnityAnalyticsDataExplorer.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/UnityAnalyticsDataExplorer.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/UnityAnalyticsDataExplorer.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/UnityAnalyticsDataExplorer.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/UnityAnalyticsDataExplorer.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/UnityAnalyticsDataExplorer.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/UnityAnalyticsDataExplorer.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/UnityAnalyticsDataExplorer.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -107,7 +107,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -129,7 +129,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="UnityServices.html">Unity 服务</a></li>
 <li><a href="UnityAnalytics.html">Unity Analytics</a></li>
 <li><a href="UnityAnalyticsDashboard.html">Analytics Dashboard</a></li>
@@ -137,10 +137,10 @@
 </ul></div>
 <div class="mb20"><div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
-<span class="prev"><a href="UnityAnalyticsDashbaordOverview.html"></a></span><div class="tip">总览 (Overview) 选项卡</div>
+<span class="prev"><a href="UnityAnalyticsDashbaordOverview.html"></a></span><div class="tip">Overview page </div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
-<span class="next"><a href="UnityAnalyticsFunnelAnalyzer.html"></a></span><div class="tip">Funnel Analyzer 选项卡</div>
+<span class="next"><a href="UnityAnalyticsFunnelAnalyzer.html"></a></span><div class="tip">Funnel Analyzer page </div>
 </div>
 </div></div>
 <h1>数据透视图 (Data Explorer)</h1>
@@ -150,19 +150,21 @@
 <p>使用 Data Explorer 可以构建 Unity Analytics 指标和事件的相关报告。Data Explorer 报告可显示所选的指标和自定义事件如何随时间变化。</p>
 
 <figure>
-<img src="../uploads/Main/UnityAnalyticsDataExplorer1.png" alt="Data Explorer 选项卡中的一个报告显示了一段时间内的 MAU">
-<figcaption>Data Explorer 选项卡中的一个报告显示了一段时间内的 MAU</figcaption>
+<img src="../uploads/Main/UnityAnalyticsDataExplorer1.png" alt="A report in the Data Explorer page showing MAU over time">
+<figcaption>A report in the Data Explorer page showing MAU over time</figcaption>
 </figure>
 
 <h2>新建报告</h2>
 
 <p>要创建 Data Explorer 报告：</p>
 
-<p>1.导航至项目的 Analytics Dashboard。
-2.单击 <strong>Data Explorer</strong> 选项卡。
+<ol>
+<li>Navigate to the Analytics dashboard for your project.</li>
+<li>Click <strong>Data Explorer</strong>.
 3.单击所需数据类型旁边的 + 按钮，将 <strong>Metrics</strong>、<strong>Custom Events</strong> 和 <strong>Ad Metrics</strong> 添加到报告。（对于未使用 Unity Ads 的项目，Ad Metrics 选项是禁用状态。）
 <img src="../uploads/Main/UnityAnalyticsDataExplorer2.png" alt="">
-4.根据需要设置日期范围和图表类型。请参阅<a href="#ReportOptions">报告选项</a>以了解更多信息。</p>
+4.根据需要设置日期范围和图表类型。请参阅<a href="#ReportOptions">报告选项</a>以了解更多信息。</li>
+</ol>
 
 <p><strong>注意</strong>：默认报告包含单个指标。您可以更改此项的指标类型和细分段。（要删除此项，必须先添加第二项：不能删除报告中的最后一个数据项。）</p>
 
@@ -178,10 +180,13 @@
 
 <p>要复制现有的 Data Explorer 报告：</p>
 
-<p>1.导航至项目的 Analytics Dashboard。
-2.单击 <strong>Data Explorer</strong> 选项卡。
+<ol>
+<li>Navigate to your Analytics dashboard for your project.</li>
+<li>Click <strong>Data Explorer</strong>.
 3.单击 <strong>Saved Reports</strong> 下拉列表并在列表中选择报告名称。
-<img src="../uploads/Main/UnityAnalyticsDataExplorer3.png" alt=""></p>
+<img src="../uploads/Main/UnityAnalyticsDataExplorer3.png" alt="">
+</li>
+</ol>
 
 <p>4.根据需要调整日期范围、图表类型或其他选项。请参阅<a href="#ReportOptions">报告选项</a>以了解更多信息。
 5.单击 <strong>New Report</strong> 按钮。
@@ -191,13 +196,15 @@
 
 <p>要下载包含报告数据的逗号分隔值文件 (CSV)：</p>
 
-<p>1.导航至项目的 Analytics Dashboard。
-2.单击 <strong>Data Explorer</strong> 选项卡。
+<ol>
+<li>Navigate to your Analytics dashboard for your project.</li>
+<li>Click <strong>Data Explorer</strong>.
 3.加载保存的报告或新建报告。
 4.根据需要调整日期范围或其他选项。请参阅<a href="#ReportOptions">报告选项</a>以了解更多信息。
-单击 <strong>CSV</strong> 按钮可下载当前所示报告的数据。</p>
+单击 <strong>CSV</strong> 按钮可下载当前所示报告的数据。</li>
+</ol>
 
-<p><strong>注意：</strong>下载 CSV 可以精确地导出您在图表/表格中看到的内容。如果已订阅 Unity Pro，还可以从 <a href="UnityAnalyticsRawDataExport.html">Raw Data Export</a> 选项卡或者通过 Raw Data Export REST API 以原始形式下载所有 Analytics 数据。</p>
+<p><strong>Note:</strong> CSV download exports precisely what you see in the chart/table. If you have a Unity Pro subscription, you can also download all of your Analytics data in raw form from the <a href="UnityAnalyticsRawDataExport.html">Raw Data Export</a> page or through the Raw Data Export REST API.</p>
 
 <p><a name="ReportOptions"></a> </p>
 
@@ -338,16 +345,16 @@
 </ul>
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
-<span class="prev"><a href="UnityAnalyticsDashbaordOverview.html"></a></span><div class="tip">总览 (Overview) 选项卡</div>
+<span class="prev"><a href="UnityAnalyticsDashbaordOverview.html"></a></span><div class="tip">Overview page </div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
-<span class="next"><a href="UnityAnalyticsFunnelAnalyzer.html"></a></span><div class="tip">Funnel Analyzer 选项卡</div>
+<span class="next"><a href="UnityAnalyticsFunnelAnalyzer.html"></a></span><div class="tip">Funnel Analyzer page </div>
 </div>
 </div>
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

@@ -30,7 +30,7 @@
       var lang = 'zh_CN';
       var page = 'googlevr_resources';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -62,7 +62,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -91,10 +91,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/googlevr_resources.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/googlevr_resources.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/googlevr_resources.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/googlevr_resources.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/googlevr_resources.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/googlevr_resources.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/googlevr_resources.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/googlevr_resources.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -106,7 +106,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -128,7 +128,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="XR.html">XR</a></li>
 <li><a href="XR-SDK_overviews.html">XR SDK</a></li>
 <li><a href="googlevr_sdk_overview.html">Google VR</a></li>
@@ -188,6 +188,10 @@
 	<td style="text-align:left;">我正在尝试构建以 iOS 为目标的 Cardboard 项目，但 Xcode 报告了链接器错误。</td>
 	<td style="text-align:left;">Google 通过 Cocoapods 库管理系统来分发适用于 iOS 的 Cardboard 原生开发工具包 (NDK)。Unity 与 Cocoapods 管理器中特定版本的 Cardboard NDK 集成，并使用该 NDK 创建您的 XCode 项目。生成的项目与标准 Unity 项目的生成方式不同。Cocoapods 创建一个包含 Unity 项目的 XCode 包装工作空间，并创建一个用于 Cardboard NDK 库及其依赖项的项目。请始终确保打开和/或使用该工作空间而不仅仅是项目本身，从而避免由于缺少 Cocoapods 中的库而导致链接器错误。</td>
 </tr>
+<tr>
+	<td style="text-align:left;">Requesting Android Permissions</td>
+	<td style="text-align:left;">Unity sets the SkipPermissionsDialog manifest entry to true when you build an application targeting Cardboard or Daydream to minimize the chance of the user experience being disrupted by dropping out of VR. If your Cardboard or Daydream app needs “<a href="https://developer.android.com/guide/topics/permissions/overview#normal-dangerous">dangerous permissions</a>”, you must request them at run time. See <strong>Runtime permissions in Android 6.0 (Marshmallow)</strong>, in the <a href="android-manifest.html">Android Manifest</a> section, and <a href="android-RequestingPermissions.html">Requesting Permissions</a> for more information.</td>
+</tr>
 </tbody>
 </table>
 
@@ -211,7 +215,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

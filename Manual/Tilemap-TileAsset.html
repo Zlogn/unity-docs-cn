@@ -12,9 +12,9 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="瓦片资源 - Unity Manual">
 <title>瓦片资源 - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/Tilemap-TileAsset-0.png">
-<meta name="description" content="通常，瓦片实际上是排列在瓦片地图上的精灵。在 Unity 的实现中，我们实际采用一种引用精灵的中间资源。因此，我们能够以多种方式扩展瓦片本身，为瓦片和瓦片地图创建一个强大而灵活的系统。">
-<meta property="og:description" content="通常，瓦片实际上是排列在瓦片地图上的精灵。在 Unity 的实现中，我们实际采用一种引用精灵的中间资源。因此，我们能够以多种方式扩展瓦片本身，为瓦片和瓦片地图创建一个强大而灵活的系统。">
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.4/uploads/Main/2D_Tile_Asset.png">
+<meta name="description" content="Tiles are Assets that are arranged on Tilemaps to construct a 2D environment. Each Tile references a selected Sprite, which is then rendered at the Tile&amp;#8217;s location on the Tilemap Grid.">
+<meta property="og:description" content="Tiles are Assets that are arranged on Tilemaps to construct a 2D environment. Each Tile references a selected Sprite, which is then rendered at the Tile&amp;#8217;s location on the Tilemap Grid.">
 <meta name="author" content="Unity Technologies">
 <link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
 <link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
@@ -31,7 +31,7 @@
       var lang = 'zh_CN';
       var page = 'Tilemap-TileAsset';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -63,7 +63,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -92,10 +92,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/Tilemap-TileAsset.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/Tilemap-TileAsset.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/Tilemap-TileAsset.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/Tilemap-TileAsset.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/Tilemap-TileAsset.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/Tilemap-TileAsset.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/Tilemap-TileAsset.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/Tilemap-TileAsset.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -107,7 +107,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -129,7 +129,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="Unity2D.html">2D</a></li>
 <li><a href="class-Tilemap.html">Tilemap</a></li>
 <li>瓦片资源</li>
@@ -146,12 +146,18 @@
 <!--BeginSwitchLink--><!--EndSwitchLink-->
 <div class="clear"></div>
 
-<p>通常，瓦片实际上是排列在瓦片地图上的精灵。在 Unity 的实现中，我们实际采用一种引用精灵的中间资源。因此，我们能够以多种方式扩展瓦片本身，为瓦片和瓦片地图创建一个强大而灵活的系统。</p>
-
-<h2>属性</h2>
+<p><strong>Tiles</strong> are <strong>Assets</strong> that are arranged on <strong>Tilemaps</strong> to construct a 2D environment. Each Tile references a selected <strong>Sprite</strong>, which is then rendered at the Tile’s location on the <a href="class-Grid.html">Tilemap Grid</a>.</p>
 
 <figure>
-<img src="../uploads/Main/Tilemap-TileAsset-0.png" alt="">
+<img src="../uploads/Main/2D_Tile_Asset.png" alt="Tile Asset icon">
+<figcaption>Tile Asset icon</figcaption>
+</figure>
+
+<h2>Asset properties</h2>
+
+<figure>
+<img src="../uploads/Main/2D-TileAsset-InspectorWindow.png" alt="Inspector window">
+<figcaption>Inspector window</figcaption>
 </figure>
 
 <table>
@@ -169,16 +175,32 @@
 
 <tbody>
 <tr>
+	<td style="text-align:left;"><strong>Preview</strong></td>
+	<td style="text-align:left;">Displays a visual preview of the Tile with the selected <strong>Sprite</strong>.</td>
+</tr>
+<tr>
 	<td style="text-align:left;"><strong>Sprite</strong></td>
-	<td style="text-align:left;">此瓦片资源使用的精灵</td>
+	<td style="text-align:left;">Select the Sprite texture to be rendered on this Tile. Click the circle icon to the right to open the object picker window to select from the available Sprite Assets, or drag a Sprite directly onto this box.</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Color</strong></td>
-	<td style="text-align:left;">用于为材质着色</td>
+	<td style="text-align:left;">Tints the Tiles placed on this Tilemap with the selected Color. When set to white, the Tiles are rendered with no tint.</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Collider Type</strong></td>
-	<td style="text-align:left;">None、Sprite 或 Grid</td>
+	<td style="text-align:left;">Defines the shape of the Collider generated for the Tile.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    None</td>
+	<td style="text-align:left;">No Collider is generated.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Sprite</td>
+	<td style="text-align:left;">The Collider shape is generated based on the selected <strong>Sprite’s</strong> outline.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Grid</td>
+	<td style="text-align:left;">The Collider shape is based on a cell of the <strong>Tilemap</strong>. The shape of a cell depends on the <a href="class-Grid.html">Cell Layout</a> selected for the Tilemap.</td>
 </tr>
 </tbody>
 </table>
@@ -186,8 +208,7 @@
 <hr>
 
 <ul>
-<li><span class="page-edit">2017–09–06 Page published with limited <a href="DocumentationEditorialReview.html">editorial review</a>
-</span></li>
+<li><span class="page-history">Tilemaps added in <a href="https://docs.unity3d.com/2017.2/Documentation/Manual/30_search.html?q=newin20172">2017.2</a> <span class="search-words">NewIn20172</span></span></li>
 </ul>
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
@@ -200,7 +221,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

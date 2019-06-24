@@ -30,7 +30,7 @@
       var lang = 'zh_CN';
       var page = 'Coroutines';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -62,7 +62,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -91,10 +91,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/Coroutines.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/Coroutines.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/Coroutines.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/Coroutines.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/Coroutines.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/Coroutines.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/Coroutines.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/Coroutines.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -106,7 +106,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -128,7 +128,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="ScriptingSection.html">脚本</a></li>
 <li><a href="ScriptingConcepts.html">脚本概述</a></li>
 <li>协程</li>
@@ -147,8 +147,10 @@
 
 <p>调用函数时，函数将运行到完成状态，然后返回。这实际上意味着在函数中发生的任何动作都必须在单帧更新内发生；函数调用不能用于包含程序性动画或随时间推移的一系列事件。例如，假设需要逐渐减少对象的 Alpha（不透明度）值，直至对象变得完全不可见。</p>
 
-<pre><code>void Fade() {
-    for (float f = 1f; f &gt;= 0; f -= 0.1f) {
+<pre><code>void Fade() 
+{
+    for (float f = 1f; f &gt;= 0; f -= 0.1f) 
+    {
         Color c = renderer.material.color;
         c.a = f;
         renderer.material.color = c;
@@ -163,8 +165,10 @@
 
 <p>协程就像一个函数，能够暂停执行并将控制权返还给 Unity，然后在下一帧继续执行。在 C# 中，声明协程的方式如下：</p>
 
-<pre><code>IEnumerator Fade() {
-    for (float f = 1f; f &gt;= 0; f -= 0.1f) {
+<pre><code>IEnumerator Fade() 
+{
+    for (float f = 1f; f &gt;= 0; f -= 0.1f) 
+    {
         Color c = renderer.material.color;
         c.a = f;
         renderer.material.color = c;
@@ -176,69 +180,37 @@
 
 <p>此协程本质上是一个用返回类型 IEnumerator 声明的函数，并在主体中的某个位置包含 yield return 语句。yield return 行是暂停执行并随后在下一帧恢复的点。要将协程设置为运行状态，必须使用 <a href="../ScriptReference/MonoBehaviour.StartCoroutine.html">StartCoroutine</a> 函数：</p>
 
-<pre><code>void Update() {
-    if (Input.GetKeyDown("f")) {
+<pre><code>void Update()
+{
+    if (Input.GetKeyDown("f")) 
+    {
         StartCoroutine("Fade");
     }
 }
-
-</code></pre>
-
-<p>在 UnityScript 中，情况稍微简单一些。包含 yield 语句的任何函数都视为协程，并且无需显式声明 IEnumerator 返回类型：</p>
-
-<pre><code>function Fade() {
-    for (var f = 1.0; f &gt;= 0; f -= 0.1) {
-        var c = renderer.material.color;
-        c.a = f;
-        renderer.material.color = c;
-        yield;
-    }
-}
-
-</code></pre>
-
-<p>此外，为了在 UnityScript 中启动协程，可直接调用协程，就像是普通函数一样：</p>
-
-<pre><code>function Update() {
-    if (Input.GetKeyDown("f")) {
-        Fade();
-    }
-}
-
 </code></pre>
 
 <p>您会注意到 Fade 函数中的循环计数器能够在协程的生命周期内保持正确值。实际上，在 yield 语句之间可以正确保留任何变量或参数。</p>
 
 <p>默认情况下，协程将在执行 yield 后的帧上恢复，但也可以使用 <a href="../ScriptReference/WaitForSeconds.html">WaitForSeconds</a> 来引入时间延迟：</p>
 
-<pre><code>IEnumerator Fade() {
-    for (float f = 1f; f &gt;= 0; f -= 0.1f) {
+<pre><code>IEnumerator Fade() 
+{
+    for (float f = 1f; f &gt;= 0; f -= 0.1f) 
+    {
         Color c = renderer.material.color;
         c.a = f;
         renderer.material.color = c;
         yield return new WaitForSeconds(.1f);
     }
 }
-
-</code></pre>
-
-<p>在 UnityScript 中：</p>
-
-<pre><code>function Fade() {
-    for (var f = 1.0; f &gt;= 0; f -= 0.1) {
-        var c = renderer.material.color;
-        c.a = f;
-        renderer.material.color = c;
-        yield WaitForSeconds(0.1);
-    }
-}
-
 </code></pre>
 
 <p>可通过这样的协程在一段时间内传播效果，但也可将其作为一种有用的优化。游戏中的许多任务需要定期执行，最容易想到的方法是将任务包含在 Update 函数中。但是，通常情况下，每秒将多次调用该函数。不需要以这样的频繁程度重复任务时，可以将其放在协程中来进行定期更新，而不是每一帧都更新。这方面的一个示例可能是在附近有敌人时向玩家发出的警报。此代码可能如下所示：</p>
 
-<pre><code>function ProximityCheck() {
-    for (int i = 0; i &lt; enemies.Length; i++) {
+<pre><code>function ProximityCheck() 
+{
+    for (int i = 0; i &lt; enemies.Length; i++)
+    {
         if (Vector3.Distance(transform.position, enemies[i].transform.position) &lt; dangerDistance) {
                 return true;
         }
@@ -246,18 +218,18 @@
     
     return false;
 }
-
 </code></pre>
 
 <p>如果有很多敌人，那么每帧都调用此函数可能会带来很大开销。但是，可以使用协程，每十分之一秒调用一次：</p>
 
-<pre><code>IEnumerator DoCheck() {
-    for(;;) {
+<pre><code>IEnumerator DoCheck() 
+{
+    for(;;) 
+    {
         ProximityCheck;
         yield return new WaitForSeconds(.1f);
     }
 }
-
 </code></pre>
 
 <p>这将大大减少所进行的检查次数，而不会对游戏运行过程产生任何明显影响。</p>
@@ -274,7 +246,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

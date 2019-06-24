@@ -12,7 +12,7 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="室外光照和场景设置 - Unity Manual">
 <title>室外光照和场景设置 - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/BelievableVisualsSkyMaterial.png">
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.4/uploads/Main/BelievableVisualsSkyMaterial.png">
 <meta name="description" content="在此阶段，您应该拥有已正确设置纹理的网格以及一个组合场景（具有经过适当色调映射的 Unity 渲染设置）。但该场景仍然需要适当的光照设置。本部分中的建议假定您已使用__实时 GI（全局光照）__策略设置场景，然后使用实时光源进行了照亮以获得即时反馈。烘焙时也适用相同的建议和光照原则。">
 <meta property="og:description" content="在此阶段，您应该拥有已正确设置纹理的网格以及一个组合场景（具有经过适当色调映射的 Unity 渲染设置）。但该场景仍然需要适当的光照设置。本部分中的建议假定您已使用__实时 GI（全局光照）__策略设置场景，然后使用实时光源进行了照亮以获得即时反馈。烘焙时也适用相同的建议和光照原则。">
 <meta name="author" content="Unity Technologies">
@@ -31,7 +31,7 @@
       var lang = 'zh_CN';
       var page = 'BestPracticeMakingBelievableVisuals6';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -63,7 +63,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -92,10 +92,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/BestPracticeMakingBelievableVisuals6.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/BestPracticeMakingBelievableVisuals6.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/BestPracticeMakingBelievableVisuals6.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/BestPracticeMakingBelievableVisuals6.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/BestPracticeMakingBelievableVisuals6.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/BestPracticeMakingBelievableVisuals6.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/BestPracticeMakingBelievableVisuals6.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/BestPracticeMakingBelievableVisuals6.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -107,7 +107,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -129,7 +129,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="BestPracticeGuides.html">最佳实践指南</a></li>
 <li><a href="BestPracticeMakingBelievableVisuals.html">在 Unity 中制作可信的视觉效果</a></li>
 <li>室外光照和场景设置</li>
@@ -163,7 +163,7 @@
 
 <h2>环境光照</h2>
 
-<p>室外光照的主要组成之一是环境光照，也称为半球光照或天光。夜间天空的光照贡献微乎其微，而白昼天空的光照贡献非常大。环境光照设置位于 Lighting 选项卡下方 (<strong>Window</strong> &gt; <strong>Lighting</strong> &gt; <strong>Settings</strong> &gt; <strong>Environment</strong>)。</p>
+<p>One of the main components in outdoor lighting is Environment lighting, which is also referred to as hemisphere lighting or skylight. Night sky has minimal contribution, while daytime sky has very bright contribution. Environment lighting settings can be found under the Lighting tab (<strong>Window</strong> &gt; <strong>Rendering</strong> &gt; <strong>Lighting Settings</strong>).</p>
 
 <p>由于具有简单性和易用性，程序化天空盒材质优于 HDRI 立方体贴图。</p>
 
@@ -203,7 +203,7 @@
 
 <p>1.要确保所有相关网格都影响实时 GI 或烘焙，请选择场景中的游戏对象，然后在 Inspector 窗口的 <strong>Static</strong> 下拉菜单中启用 <strong>Lightmap Static</strong> 和 __Reflection Probes__：</p>
 
-<pre><code>![](../uploads/Main/BelievableVisualsStaticDropdown.png) 
+<pre><code>![](../uploads/Main/BelievableVisualsStaticDropdown.jpg)
 
 **注意**：通常应将此设置应用于所有大型静态网格。
 </code></pre>
@@ -313,7 +313,7 @@
 <hr>
 
 <ul>
-<li><span class="page-edit">2018–03–21 Page published with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+<li><span class="page-edit">2018–08–21 Page published with limited <a href="DocumentationEditorialReview.html">editorial review</a>
 </span></li>
 <li><span class="page-history">在 Unity 2017.3 中添加了制作可信视觉效果最佳实践指南</span></li>
 </ul>
@@ -328,7 +328,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

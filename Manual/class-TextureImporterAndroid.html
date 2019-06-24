@@ -12,7 +12,7 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="Android 2D 纹理覆盖 - Unity Manual">
 <title>Android 2D 纹理覆盖 - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/TextureImporterOverride.png">
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.4/uploads/Main/TextureImporterOverride.png">
 <meta name="description" content="本页面将详细介绍 Android 特有的__纹理覆盖 (Texture Overrides)__。可在此处找到常规纹理覆盖的说明。">
 <meta property="og:description" content="本页面将详细介绍 Android 特有的__纹理覆盖 (Texture Overrides)__。可在此处找到常规纹理覆盖的说明。">
 <meta name="author" content="Unity Technologies">
@@ -31,7 +31,7 @@
       var lang = 'zh_CN';
       var page = 'class-TextureImporterAndroid';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -63,7 +63,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -92,10 +92,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/class-TextureImporterAndroid.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/class-TextureImporterAndroid.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/class-TextureImporterAndroid.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/class-TextureImporterAndroid.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/class-TextureImporterAndroid.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/class-TextureImporterAndroid.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/class-TextureImporterAndroid.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/class-TextureImporterAndroid.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -107,7 +107,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -129,14 +129,14 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="PlatformSpecific.html">特定于平台的信息</a></li>
 <li><a href="android.html">Android</a></li>
 <li>Android 2D 纹理覆盖</li>
 </ul></div>
 <div class="mb20"><div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
-<span class="prev"><a href="class-PlayerSettingsAndroid.html"></a></span><div class="tip">Android Player Settings</div>
+<span class="prev"><a href="class-PlayerSettingsAndroid.html"></a></span><div class="tip">Player settings for the Android platform</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
 <span class="next"><a href="android-gradle-overview.html"></a></span><div class="tip">Gradle for Android</div>
@@ -302,17 +302,17 @@
 
 <p>如果安装应用程序的设备不支持已使用的纹理压缩格式，Unity 会在应用程序运行时将纹理解压缩为 RGBA 32 并与压缩纹理一起存储在设备的内存中。这将导致加载时间增加和内存使用量增加，因为 Unity 必须解压缩纹理并存储两个版本的纹理（压缩和未压缩）。这也会对渲染性能产生很大影响，尤其是在较旧较慢的设备上。</p>
 
-<p>除非是面向特定硬件（如 Nvidia Tegra），否则请使用 ETC2 压缩。ETC2 支持带有和不带 Alpha 通道的纹理，并且受到所有 OpenGL ES 3 设备的支持。要避免软件解压缩，请在 Player Settings 窗口中将最低图形 API 设置为 OpenGL ES 3，方法是从图形 API 列表中删除 OpenGL ES 2 并将 Minimum API Level 设置为 18+。</p>
+<p>Use ETC2 compression unless you are targeting specific hardware (like Nvidia Tegra). ETC2 supports Textures with and without an alpha channel and is supported by all OpenGL ES 3 devices. To avoid software decompression, set the minimum graphics API to OpenGL ES 3 in the <a href="class-PlayerSettingsAndroid.html">Android Player</a> settings by removing OpenGL ES 2 from the <strong>Graphics APIs</strong> list and setting the <strong>Minimum API Level</strong> to 18+. </p>
 
 <figure>
 <img src="../uploads/Main/PlayerSettingsWindow.png" alt="">
 </figure>
 
-<p>若要以 OpenGL ES 2 和 OpenGL ES 3 设备为目标设备，可创建两个不同的 APK，方法是首先构建面向 OpenGL ES 3 的 APK（如上所示），然后通过从 PlayerSettings 窗口的 Graphics API 部分中删除 OpenGL ES 2 和 Vulcan 来构建面向 OpenGL ES 2 的 APK。然后，可将这两个 APK 发布到 Google Play 应用商店。当用户下载应用程序时，Google Play 应用商店会自动为其设备安装最相关的 APK。有关发布多个 APK 文件的更多信息，请参阅 Android 开发者文档的<a href="https://developer.android.com/google/play/publishing/multiple-apks.html">发布多个 APK (Publishing Multiple APKs)</a> 和 <a href="https://developer.android.com/google/play/filters.html">Google Play 应用商店 APK 过滤 (Google Play Store APK filtering)</a> 部分。</p>
+<p>To target OpenGL ES 2 and OpenGL ES 3 devices, you can create two different APKs by first building an APK targeting OpenGL ES 3, as shown above, and then building an APK targeting OpenGL ES 2 by removing OpenGL ES 2 and Vulcan from the <strong>Graphics APIs</strong> section of the <strong>Player</strong> settings. You can then publish both of these APKs to the Google Play Store. When a user downloads your app, the Google Play Store will automatically install the most relevant APK for their device. For more information about publishing multiple APK files, see Android Developer documentation on <a href="https://developer.android.com/google/play/publishing/multiple-apks.html">Publishing Multiple APKs</a> and <a href="https://developer.android.com/google/play/filters.html">Google Play Store APK filtering</a>.</p>
 
 <p>在构建面向 OpenGL ES 2 的 APK 时，可使用 ETC1 纹理压缩。</p>
 
-<p>面向 OpenGL ES2 的 APK 的纹理压缩格式可采用 ETC1。Unity 可将 ETC1 用于带有 Alpha 的纹理，但前提是这些纹理放置在<a href="https://docs.unity3d.com/Manual/SpritePacker.html">图集</a>上（通过指定打包标签）并且构建目标为 Android。若要选择这样做，请勾选纹理的“Compress using ETC1”复选框。在后台，Unity 会将生成的图集拆分为两个纹理，每个纹理都带有 Alpha 通道，然后将它们组合在渲染管线的最后部分中。</p>
+<p>The Texture compression format for OpenGL ES2-targeted APK can be ETC1. Unity can use ETC1 for Textures with Alpha, provided they are placed on an <a href="https://docs.unity3d.com/Manual/SpritePacker.html">Atlas</a> (by specifying the packing tag) and the build is for Android. You can opt in for this by setting the <strong>Compress using ETC1</strong> checkbox for the Texture. Under the hood Unity splits the resulting atlas into two Textures, each without alpha and then combine them in the final parts of the render-pipeline.</p>
 
 <p>如果确实要在纹理中存储 Alpha 通道，请使用所有硬件供应商都支持的 RGBA16 位压缩格式。</p>
 
@@ -326,7 +326,7 @@
 </ul>
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
-<span class="prev"><a href="class-PlayerSettingsAndroid.html"></a></span><div class="tip">Android Player Settings</div>
+<span class="prev"><a href="class-PlayerSettingsAndroid.html"></a></span><div class="tip">Player settings for the Android platform</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
 <span class="next"><a href="android-gradle-overview.html"></a></span><div class="tip">Gradle for Android</div>
@@ -335,7 +335,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

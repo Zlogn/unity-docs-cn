@@ -12,7 +12,7 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="全局光照 UV - Unity Manual">
 <title>全局光照 UV - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/LightingGiUvs-0.jpg">
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.4/uploads/Main/LightingGiUvs-0.jpg">
 <meta name="description" content="有两套 GI 光照贴图：__烘焙 (Baked)__ 和__实时 (Realtime)__。决定要使用哪套光照贴图取决于您使用的是环境光照还是特定光源：">
 <meta property="og:description" content="有两套 GI 光照贴图：__烘焙 (Baked)__ 和__实时 (Realtime)__。决定要使用哪套光照贴图取决于您使用的是环境光照还是特定光源：">
 <meta name="author" content="Unity Technologies">
@@ -31,7 +31,7 @@
       var lang = 'zh_CN';
       var page = 'LightingGiUvs';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -63,7 +63,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -92,10 +92,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/LightingGiUvs.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/LightingGiUvs.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/LightingGiUvs.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/LightingGiUvs.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/LightingGiUvs.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/LightingGiUvs.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/LightingGiUvs.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/LightingGiUvs.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -107,7 +107,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -129,7 +129,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="Graphics.html">图形</a></li>
 <li><a href="GraphicsOverview.html">图形概述</a></li>
 <li><a href="LightingOverview.html">光照</a></li>
@@ -141,7 +141,7 @@
 <span class="prev"><a href="MetaPass.html"></a></span><div class="tip">材质属性和 GI 系统</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
-<span class="next"><a href="LightingGiUvs-ImportingFromMaya.html"></a></span><div class="tip">将 UV 从 Maya 导入到 Unity</div>
+<span class="next"><a href="LightingGiUvs-ImportingFromMaya.html"></a></span><div class="tip">Importing UVs from Autodesk® Maya® to Unity</div>
 </div>
 </div></div>
 <h1>全局光照 UV</h1>
@@ -151,7 +151,7 @@
 <p>有两套 GI 光照贴图：__烘焙 (Baked)__ 和__实时 (Realtime)__。决定要使用哪套光照贴图取决于您使用的是环境光照还是特定光源：</p>
 
 <ul>
-<li><p><a href="GlobalIllumination.html">Global illumination</a>（环境光照）可以设置为 <strong>Realtime</strong> 或 <strong>Baked</strong>。选择 <strong>Window</strong> &gt; <strong>Lighting__，然后从 </strong>Ambient GI__ 下拉菜单中选择一个选项。</p></li>
+<li><p><a href="GlobalIllumination.html">Global illumination</a> (environment lighting) can be set to <strong>Realtime</strong> or <strong>Baked</strong>. Go to <strong>Window</strong> &gt; <strong>Rendering</strong> &gt; <strong>Lighting Settings</strong> and choose an option from the <strong>Ambient GI</strong> drop-down menu.</p></li>
 <li><p><a href="class-Light.html">Lights</a> 可以设置为 <strong>Realtime</strong>、<strong>Baked</strong> 或 <strong>Mixed</strong>。前往 Inspector 窗口，然后从 <strong>Baking</strong> 下拉菜单中选择一个选项。</p></li>
 <li><p>材质包含发光控件，这些控件可以设置为 <strong>Realtime</strong> 或 <strong>Baked</strong>。请参阅有关<a href="StandardShaderMaterialParameterEmission.html">标准着色器材质发光参数</a>的文档以了解更多信息。</p></li>
 </ul>
@@ -189,7 +189,7 @@
 
 <h2>可视化 UV</h2>
 
-<p>能够查看正在使用的 UV 非常重要，Unity 有一个可视化工具来帮助您执行此操作。首先，打开 Lighting 窗口（菜单：__Window__ &gt; <strong>Lighting__），然后勾选底部的 </strong>Auto__ 复选框。这可确保您的烘焙和预计算是最新的，并输出查看 UV 所需的数据。等待该过程完成（对于大型或复杂的场景，这可能需要一些时间）。</p>
+<p>It is important to be able to view the UVs that are being used, and Unity has a visualization tool to help you with this. First, open the Lighting window (menu: <strong>Window</strong> &gt; <strong>Rendering</strong> &gt; <strong>Lighting Settings</strong>) and tick the <strong>Auto</strong> checkbox at the bottom. This ensures that your bake and precompute are up-to-date, and outputs the data that is needed to view the UVs. Wait for the process to finish (this can take some time for large or complex Scenes).</p>
 
 <h3>可视化实时 UV</h3>
 
@@ -221,7 +221,7 @@
 
 <ul>
 <li>选择一个实例。</li>
-<li>打开 Lighting 窗口（菜单：__Window__ &gt; <strong>Lighting__），然后选择 </strong>Object __选项卡。</li>
+<li>Open the Lighting window (menu: <strong>Window</strong> &gt; <strong>Rendering</strong> &gt; <strong>Lighting Settings</strong>) and select the <strong>Object </strong>tab.</li>
 <li>在 <strong>Preview</strong> 区域中，从下拉选单中选择 <strong>Baked Intensity</strong>。</li>
 </ul>
 
@@ -259,13 +259,13 @@
 <span class="prev"><a href="MetaPass.html"></a></span><div class="tip">材质属性和 GI 系统</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
-<span class="next"><a href="LightingGiUvs-ImportingFromMaya.html"></a></span><div class="tip">将 UV 从 Maya 导入到 Unity</div>
+<span class="next"><a href="LightingGiUvs-ImportingFromMaya.html"></a></span><div class="tip">Importing UVs from Autodesk® Maya® to Unity</div>
 </div>
 </div>
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

@@ -12,7 +12,7 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="传统游戏输入 - Unity Manual">
 <title>传统游戏输入 - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/InputSelector.png">
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.4/uploads/Main/InputSelector.jpg">
 <meta name="description" content="Unity 支持键盘、游戏杆和游戏手柄输入。">
 <meta property="og:description" content="Unity 支持键盘、游戏杆和游戏手柄输入。">
 <meta name="author" content="Unity Technologies">
@@ -31,7 +31,7 @@
       var lang = 'zh_CN';
       var page = 'ConventionalGameInput';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -63,7 +63,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -92,10 +92,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/ConventionalGameInput.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/ConventionalGameInput.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/ConventionalGameInput.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/ConventionalGameInput.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/ConventionalGameInput.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/ConventionalGameInput.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/ConventionalGameInput.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/ConventionalGameInput.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -107,7 +107,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -129,7 +129,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="UnityOverview.html">在 Unity 中操作</a></li>
 <li><a href="CreatingGameplay.html">创建游戏玩法</a></li>
 <li><a href="Input.html">输入</a></li>
@@ -149,11 +149,11 @@
 
 <p>Unity 支持键盘、游戏杆和游戏手柄输入。</p>
 
-<p>可以在 <strong>Input Manager</strong> 中创建虚拟轴和按钮，而最终用户可以在友好的屏幕配置对话框中配置键盘输入。</p>
+<p>Virtual axes and buttons can be created on the <a href="class-InputManager.html">Input</a> window, and end users can configure Keyboard input in a nice screen configuration dialog.</p>
 
 <figure>
-<img src="../uploads/Main/InputSelector.png" alt="注意：这是旧版图像。此 Input Selector 图像的日期可追溯到 2005 年 Unity Editor 的最早版本。GooBall 是 Unity Technologies 发布的一款游戏。">
-<figcaption>注意：这是旧版图像。此 Input Selector 图像的日期可追溯到 2005 年 Unity Editor 的最早版本。<a href="https://en.wikipedia.org/wiki/GooBall">GooBall</a> 是 Unity Technologies 发布的一款游戏。</figcaption>
+<img src="../uploads/Main/InputSelector.jpg" alt="NOTE: This is a legacy image. This Input Selector image dates back to the very earliest versions of the Unity Editor in 2005. GooBall was a Unity Technologies game.">
+<figcaption>NOTE: This is a legacy image. This Input Selector image dates back to the very earliest versions of the Unity Editor in 2005. <a href="https://en.wikipedia.org/wiki/GooBall">GooBall</a> was a Unity Technologies game.</figcaption>
 </figure>
 
 <p>可以设置游戏杆、游戏手柄、键盘和鼠标，然后通过一个简单的脚本接口访问它们。通常会使用轴和按钮来模仿游戏主机控制器。也可以访问键盘上的按键。</p>
@@ -177,7 +177,7 @@
 
 <h3>添加新的输入轴</h3>
 
-<p>如果要添加新的虚拟轴，请选择 <strong>Edit &gt; Project Settings &gt; Input</strong> 菜单。还可以在此处更改每个轴的设置。</p>
+<p>If you want to add new virtual axes go to the <strong>Edit</strong> &gt; <strong>Project Settings</strong> menu, then select the <strong>Input</strong> category. Here you can also change the settings of each axis.</p>
 
 <figure>
 <img src="../uploads/Main/InputAxis.png" alt="">
@@ -305,6 +305,8 @@
 </code></pre>
 
 <p>另外请注意，可以使用 KeyCode 枚举参数来访问键。</p>
+
+<p>​ </p>
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
 <span class="prev"><a href="Input.html"></a></span><div class="tip">输入</div>
@@ -316,7 +318,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

@@ -30,7 +30,7 @@
       var lang = 'zh_CN';
       var page = 'CollidersOverview';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -62,7 +62,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -91,10 +91,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/CollidersOverview.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/CollidersOverview.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/CollidersOverview.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/CollidersOverview.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/CollidersOverview.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/CollidersOverview.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/CollidersOverview.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/CollidersOverview.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -106,7 +106,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -128,7 +128,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="PhysicsSection.html">物理系统</a></li>
 <li><a href="PhysicsOverview.html">物理系统概述</a></li>
 <li>碰撞体</li>
@@ -167,7 +167,9 @@
 
 <p>脚本系统可以使用 <code>OnCollisionEnter</code> 函数检测何时发生碰撞并启动操作。但是，也可以直接使用物理引擎检测碰撞体何时进入另一个对象的空间而不会产生碰撞。配置为__触发器__（使用 <strong>Is Trigger</strong> 属性）的碰撞体不会表现为实体对象，只会允许其他碰撞体穿过。当碰撞体进入其空间时，触发器将在触发器对象的脚本上调用 <code>OnTriggerEnter</code> 函数。</p>
 
-<h2>对碰撞采取的脚本操作</h2>
+<p><a name="CollisionCallbacks"></a></p>
+
+<h2>Collision callbacks for scripts</h2>
 
 <p>发生碰撞时，物理引擎会在附加到相关对象的所有脚本上调用特定名称的函数。可以在这些函数中放置所需的任何代码来响应碰撞事件。例如，当汽车撞到障碍物时，可以播放碰撞音效。</p>
 
@@ -382,7 +384,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

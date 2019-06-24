@@ -12,7 +12,7 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="方向光阴影 - Unity Manual">
 <title>方向光阴影 - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/DirShadowAliasing.jpg">
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.4/uploads/Main/DirShadowAliasing.jpg">
 <meta name="description" content="方向光通常模拟太阳光，单个光源即可照亮整个场景。这意味着阴影贴图通常会同时覆盖场景的大部分，而这使得阴影容易受到称为&amp;#8220;透视锯齿&amp;#8221;的问题的影响。透视锯齿是指靠近摄像机的阴影贴图像素看起来比那些更远的像素更大块。">
 <meta property="og:description" content="方向光通常模拟太阳光，单个光源即可照亮整个场景。这意味着阴影贴图通常会同时覆盖场景的大部分，而这使得阴影容易受到称为&amp;#8220;透视锯齿&amp;#8221;的问题的影响。透视锯齿是指靠近摄像机的阴影贴图像素看起来比那些更远的像素更大块。">
 <meta name="author" content="Unity Technologies">
@@ -31,7 +31,7 @@
       var lang = 'zh_CN';
       var page = 'DirLightShadows';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -63,7 +63,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -92,10 +92,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/DirLightShadows.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/DirLightShadows.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/DirLightShadows.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/DirLightShadows.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/DirLightShadows.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/DirLightShadows.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/DirLightShadows.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/DirLightShadows.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -107,7 +107,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -129,7 +129,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="Graphics.html">图形</a></li>
 <li><a href="GraphicsOverview.html">图形概述</a></li>
 <li><a href="LightingOverview.html">光照</a></li>
@@ -174,7 +174,7 @@
 <img src="../uploads/Main/ShadMapCascadeDiagram.svg" alt="">
 </figure>
 
-<p>阴影贴图大小的这些分阶段缩减做法称为<strong>级联阴影贴图</strong>（有时称为“平行拆分阴影贴图”）。您可以从 <a href="class-QualitySettings.html">Quality Settings</a> 中为指定的质量级别设置零个、两个或四个级联。</p>
+<p>These staged reductions in shadow map size are known as <strong>cascaded shadow maps</strong> (sometimes called “Parallel Split Shadow Maps”). From the <a href="class-QualitySettings.html">Quality</a> window, you can set zero, two or four cascades for a given quality level.</p>
 
 <figure>
 <img src="../uploads/Main/ShadCascadeQualSettings.png" alt="">
@@ -189,7 +189,7 @@
 
 <h2>阴影距离</h2>
 
-<p>对象距离摄像机越远，对象的阴影就越不明显；它们在屏幕上看起来更小，而且远处对象通常不是人们关注的焦点。Unity 通过在 <a href="class-QualitySettings.html">Quality Settings</a> 中提供 <em>Shadow Distance</em> 属性，让您利用此效果。超出此距离（相对于摄像机）的对象根本不投射阴影，而接近此距离的对象的阴影将逐渐淡出。</p>
+<p>Shadows from objects tend to become less noticeable the farther the objects are from the camera; they appear smaller onscreen and also, distant objects are usually not the focus of attention. Unity lets you take advantage of this effect by providing a <em>Shadow Distance</em> property in the <a href="class-QualitySettings.html">Quality</a> window. Objects beyond this distance (from the camera) cast no shadows at all, while the shadows from objects approaching this distance gradually fade out.</p>
 
 <p>应将阴影距离设置得尽可能短以帮助提高渲染性能。这种方法会奏效的原因是远处对象根本不需要渲染到阴影贴图中。此外，移除远处阴影后，场景通常看起来更好。正确设置阴影距离对于移动平台上的性能尤为重要，因为移动平台不支持阴影级联。如果当前摄像机远平面小于阴影距离，Unity 将使用摄像机远平面而不是阴影距离。</p>
 
@@ -231,7 +231,7 @@
 
 <p>在此情况下，只有蓝色三角形的一个顶点位于近裁剪面背后并被钳制到此处。但是，这会改变三角形的形状，并可能产生不正确的阴影。</p>
 
-<p>您可以从 <a href="class-QualitySettings.html">Quality Settings</a> 中调整 <strong>Shadow Near Plane Offset</strong> 属性以避免发生此问题。这将拉回近裁剪面。但是，如果将此值设置得非常高，最终会引入阴影暗斑，因为它会提高阴影贴图需要在光照方向上覆盖的范围。或者，您也可以细分有问题的阴影投射三角形。请参阅<a href="ShadowOverview.html">阴影概述</a>中的 <strong>Bias</strong> 部分以了解更多信息。</p>
+<p>You can tweak the <strong>Shadow Near Plane Offset</strong> property from the <a href="class-QualitySettings.html">Quality</a> window to avoid this problem. This pulls back the near clip plane. However, setting this value very high eventually introduces shadow acne, because it raises the range that the shadow map needs to cover in the light direction. Alternatively, you can also tesselate the problematic shadow casting triangles. See the <strong>bias</strong> section in <a href="ShadowOverview.html">Shadow Overview</a> for more information.</p>
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
 <span class="prev"><a href="ShadowOverview.html"></a></span><div class="tip">阴影</div>
@@ -243,7 +243,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

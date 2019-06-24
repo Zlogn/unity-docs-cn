@@ -30,7 +30,7 @@
       var lang = 'zh_CN';
       var page = 'xr_input';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -62,7 +62,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -91,10 +91,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/xr_input.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/xr_input.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/xr_input.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/xr_input.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/xr_input.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/xr_input.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/xr_input.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/xr_input.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -106,7 +106,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -128,7 +128,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="XR.html">XR</a></li>
 <li>Unity XR 输入</li>
 </ul></div>
@@ -145,6 +145,351 @@
 <div class="clear"></div>
 
 <p>本部分将介绍用于在虚拟现实、增强现实和混合现实应用程序中进行交互的所有 Unity 支持的输入设备。</p>
+
+<h2>XR input mappings</h2>
+
+<p>You can access XR input features via the legacy input axis and button indices. This table outlines what each feature maps to on each platform. For information about how to use the button/joystick axes, see documentation on <a href="https://docs.unity3d.com/Manual/ConventionalGameInput.html">Conventional game input</a>.</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">Feature Usage</th>
+	<th style="text-align:left;">FeatureType</th>
+	<th style="text-align:left;">Legacy Input Index [L/R]</th>
+	<th style="text-align:left;">WMR</th>
+	<th style="text-align:left;">Oculus</th>
+	<th style="text-align:left;">GearVR</th>
+	<th style="text-align:left;">Daydream</th>
+	<th style="text-align:left;">OpenVR (Full)</th>
+	<th style="text-align:left;">Vive</th>
+	<th style="text-align:left;">OpenVR (Oculus)</th>
+	<th style="text-align:left;">OpenVR (WMR)</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">Primary2DAxis</td>
+	<td style="text-align:left;">2D Axis</td>
+	<td style="text-align:left;">[(1,2)/(4,5)]</td>
+	<td style="text-align:left;">Joystick</td>
+	<td style="text-align:left;">Joystick</td>
+	<td style="text-align:left;">Joystick</td>
+	<td style="text-align:left;">触控板</td>
+	<td style="text-align:left;">[Trackpad/Joystick]</td>
+	<td style="text-align:left;">触控板</td>
+	<td style="text-align:left;">Joystick</td>
+	<td style="text-align:left;">Joystick</td>
+</tr>
+<tr>
+	<td style="text-align:left;">触发器</td>
+	<td style="text-align:left;">Axis</td>
+	<td style="text-align:left;">[9/10]</td>
+	<td style="text-align:left;">触发器</td>
+	<td style="text-align:left;">触发器</td>
+	<td style="text-align:left;">触发器</td>
+	<td style="text-align:left;">触发器</td>
+	<td style="text-align:left;">触发器</td>
+	<td style="text-align:left;">触发器</td>
+	<td style="text-align:left;">触发器</td>
+	<td style="text-align:left;">触发器</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Grip</td>
+	<td style="text-align:left;">Axis</td>
+	<td style="text-align:left;">[11/12]</td>
+	<td style="text-align:left;">Grip</td>
+	<td style="text-align:left;">Grip</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">Grip</td>
+	<td style="text-align:left;">Grip</td>
+	<td style="text-align:left;">Grip</td>
+	<td style="text-align:left;">Grip</td>
+	<td style="text-align:left;">Grip</td>
+</tr>
+<tr>
+	<td style="text-align:left;">IndexTouch</td>
+	<td style="text-align:left;">Axis</td>
+	<td style="text-align:left;">[13/14]</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">Index - Near Touch</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+</tr>
+<tr>
+	<td style="text-align:left;">ThumbTouch</td>
+	<td style="text-align:left;">Axis</td>
+	<td style="text-align:left;">[15/16]</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">Thumb - Near Touch</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+</tr>
+<tr>
+	<td style="text-align:left;">Secondary2DAxis</td>
+	<td style="text-align:left;">2DAxis</td>
+	<td style="text-align:left;">[(17,18)/(19,20)]</td>
+	<td style="text-align:left;">触控板</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">触控板</td>
+</tr>
+<tr>
+	<td style="text-align:left;">IndexFinger</td>
+	<td style="text-align:left;">Axis</td>
+	<td style="text-align:left;">[21/22]</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">Index</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+</tr>
+<tr>
+	<td style="text-align:left;">MiddleFinger</td>
+	<td style="text-align:left;">Axis</td>
+	<td style="text-align:left;">[23/24]</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">Middle</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+</tr>
+<tr>
+	<td style="text-align:left;">RingFinger</td>
+	<td style="text-align:left;">Axis</td>
+	<td style="text-align:left;">[25/26]</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">Ring</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+</tr>
+<tr>
+	<td style="text-align:left;">PinkyFinger</td>
+	<td style="text-align:left;">Axis</td>
+	<td style="text-align:left;">[27/28]</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">Pinky</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+</tr>
+<tr>
+	<td style="text-align:left;">CombinedTrigger</td>
+	<td style="text-align:left;">Axis</td>
+	<td style="text-align:left;">[3/3]</td>
+	<td style="text-align:left;">CombinedTrigger</td>
+	<td style="text-align:left;">Combined Trigger</td>
+	<td style="text-align:left;">Combined Trigger</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">Combined Trigger</td>
+	<td style="text-align:left;">Combined Trigger</td>
+	<td style="text-align:left;">Combined Trigger</td>
+	<td style="text-align:left;"></td>
+</tr>
+<tr>
+	<td style="text-align:left;">PrimaryButton</td>
+	<td style="text-align:left;">Button</td>
+	<td style="text-align:left;">[2/0]</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">[X/A]</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">App</td>
+	<td style="text-align:left;">Primary</td>
+	<td style="text-align:left;">Primary</td>
+	<td style="text-align:left;">Primary [Y/B]</td>
+	<td style="text-align:left;">Menu</td>
+</tr>
+<tr>
+	<td style="text-align:left;">PrimaryTouch</td>
+	<td style="text-align:left;">Button</td>
+	<td style="text-align:left;">[12/10]</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">[X/A] - Touch</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+</tr>
+<tr>
+	<td style="text-align:left;">SecondaryButton</td>
+	<td style="text-align:left;">Button</td>
+	<td style="text-align:left;">[3/1]</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">[Y/B]</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">Alternate</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">Alternate [B/A]</td>
+	<td style="text-align:left;"></td>
+</tr>
+<tr>
+	<td style="text-align:left;">SecondaryTouch</td>
+	<td style="text-align:left;">Button</td>
+	<td style="text-align:left;">[13/11]</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">[Y/B] - Touch</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+</tr>
+<tr>
+	<td style="text-align:left;">GripButton</td>
+	<td style="text-align:left;">Button</td>
+	<td style="text-align:left;">[4/5]</td>
+	<td style="text-align:left;">Grip - Press</td>
+	<td style="text-align:left;">Grip - Press</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">Grip - Press</td>
+	<td style="text-align:left;">Grip - Press</td>
+	<td style="text-align:left;">Grip - Press</td>
+	<td style="text-align:left;">Grip - Press</td>
+	<td style="text-align:left;">Grip</td>
+</tr>
+<tr>
+	<td style="text-align:left;">TriggerButton</td>
+	<td style="text-align:left;">Button</td>
+	<td style="text-align:left;">[14/15]</td>
+	<td style="text-align:left;">Trigger - Press</td>
+	<td style="text-align:left;">Index - Touch</td>
+	<td style="text-align:left;">Trigger - Press</td>
+	<td style="text-align:left;">Trigger - Press</td>
+	<td style="text-align:left;">Trigger - Press</td>
+	<td style="text-align:left;">Trigger - Press</td>
+	<td style="text-align:left;">Trigger - Touch</td>
+	<td style="text-align:left;">Trigger-Press</td>
+</tr>
+<tr>
+	<td style="text-align:left;">MenuButton</td>
+	<td style="text-align:left;">Button</td>
+	<td style="text-align:left;">[6/7]</td>
+	<td style="text-align:left;">Menu</td>
+	<td style="text-align:left;">Start (6)</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+</tr>
+<tr>
+	<td style="text-align:left;">Primary2DAxisClick</td>
+	<td style="text-align:left;">Button</td>
+	<td style="text-align:left;">[8/9]</td>
+	<td style="text-align:left;">Joystick - Click</td>
+	<td style="text-align:left;">Thumbstick - Click</td>
+	<td style="text-align:left;">Touchpad - Click</td>
+	<td style="text-align:left;">Touchpad - Click</td>
+	<td style="text-align:left;">StickOrPad - Press</td>
+	<td style="text-align:left;">StickOrPad - Press</td>
+	<td style="text-align:left;">StickOrPad - Press</td>
+	<td style="text-align:left;">Touchpad - Click</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Primary2DAxisTouch</td>
+	<td style="text-align:left;">Button</td>
+	<td style="text-align:left;">[16/17]</td>
+	<td style="text-align:left;">Touchpad - Click</td>
+	<td style="text-align:left;">Thumbstick - Touch</td>
+	<td style="text-align:left;">Touchpad - Touch</td>
+	<td style="text-align:left;">Touchpad - Touch</td>
+	<td style="text-align:left;">StickOrPad - Touch</td>
+	<td style="text-align:left;">StickOrPad - Touch</td>
+	<td style="text-align:left;">StickOrPad - Touch</td>
+	<td style="text-align:left;">Touchpad - Touch</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Thumbrest</td>
+	<td style="text-align:left;">Button</td>
+	<td style="text-align:left;">[18/19]</td>
+	<td style="text-align:left;">Touchpad - Touch</td>
+	<td style="text-align:left;">ThumbRest - Touch</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"></td>
+</tr>
+</tbody>
+</table>
+
+<h2>XR Input through Legacy Input System</h2>
+
+<p>You can poll XR input features via the legacy input system, using the appropriate legacy input indices from the table above. Create an axis mapping in <strong>Edit</strong> &gt; <strong>Settings</strong> &gt; <strong>Input</strong> to add the appropriate mapping from the input name to the axis index for the platform device’s feature. The button or axis value can be retrieved with <a href="https://docs.unity3d.com/ScriptReference/Input.GetAxis.html">Input.GetAxis</a> or <a href="https://docs.unity3d.com/ScriptReference/Input.GetButton.html">Input.GetButton</a> by passing in the now-mapped axis or button name.</p>
+
+<h2>Haptics</h2>
+
+<p>You can retrieve input devices for any currently tracked <a href="https://docs.unity3d.com/ScriptReference/XR.XRNode.html">XRNode</a>. If there is a valid input device at a tracked XRNode, Unity can route haptic data to the corresponding input device to provide the wearer with immersive feedback. Unity can send haptic data either as a simple impulse with amplitude and duration, or as a buffer of data. </p>
+
+<p>Not all platforms support all types of haptics, but you can query a device for haptic capabilities. The following example gets an input device for the right hand, checks to see if the device is capable of haptics, and then plays back an impulse if it is capable:</p>
+
+<pre><code>InputDevice device = InputDevices.GetDeviceAtXRNode(XRNode.RightHand);
+HapticCapabilities capabilities;
+if(device.TryGetHapticCapabilities(out capabilities))
+{
+    if(capabilities.supportsImpulse)
+    {
+        uint channel = 0;
+        float amplitude = 0.5f;
+        float duration = 1.0f;
+        device.SendHapticImpulse(channel, amplitude, duration);
+    }
+}
+</code></pre>
+
+<p><strong>Note:</strong> this code example uses the <code>UnityEngine.XR</code> namespace.</p>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2018–10–15 Page published with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+</ul>
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
 <span class="prev"><a href="SpatialMappingTroubleshooting.html"></a></span><div class="tip">空间映射常见问题故障排除</div>
@@ -156,7 +501,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

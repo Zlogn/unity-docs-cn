@@ -30,7 +30,7 @@
       var lang = 'zh_CN';
       var page = 'StereoscopicRendering';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -62,7 +62,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -91,10 +91,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/StereoscopicRendering.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/StereoscopicRendering.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/StereoscopicRendering.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/StereoscopicRendering.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/StereoscopicRendering.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/StereoscopicRendering.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/StereoscopicRendering.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/StereoscopicRendering.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -106,7 +106,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -128,7 +128,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="Graphics.html">图形</a></li>
 <li><a href="GraphicsHowTos.html">图形操作方法</a></li>
 <li>如何进行立体渲染</li>
@@ -150,48 +150,25 @@
 <p>最低要求为：</p>
 
 <ul>
-<li>Windows 8.1。</li>
-<li>Unity Pro 4.5。</li>
-<li>支持 Direct X 11 的显卡。</li>
-<li>需要安装具备立体支持功能的显卡驱动程序，并且您需要使用双 DVI 或 DisplayPort 线缆，单 DVI 不能满足要求。</li>
+<li>Windows 10</li>
+<li>Graphic card that supports DirectX 11.</li>
+<li>The graphics card driver needs to be set up with stereo support, and you need to use a dual DVI or DisplayPort cable; a single DVI is not enough.</li>
 </ul>
 
-<p>Player Settings 中的 Stereoscopic 复选框只能用于 DirectX11.1 的立体 3D 支持。目前不使用 AMD 的四缓冲区扩展。确保<a href="https://code.msdn.microsoft.com/windowsapps/Direct3D-111-Simple-Stereo-9b2b61aa">此示例</a>在您的机器上有效。立体支持在全屏模式和窗口化模式下均有效。</p>
+<p>The Stereoscopic checkbox in the <strong>Player</strong> settings is strictly for DirectX 11.1’s stereoscopic 3d support. It doesn’t currently use AMD’s quad buffer extension. Make sure that <a href="https://code.msdn.microsoft.com/windowsapps/Direct3D-111-Simple-Stereo-9b2b61aa">this sample</a> works on your machine. Stereo support works both in fullscreen and windowed mode.</p>
 
 <p>启动游戏时，按住 Shift 可调出分辨率对话框。如果检测到支持 Stereo3D 的显示器，分辨率对话框中将显示相应的复选框。Camera 上有几个与 API 相关的选项：stereoEnabled、stereoSeparation 和 stereoConvergence。请使用这几个选项来调整效果。在场景中只需要一个摄像机，两只眼睛的渲染是由这些参数来处理的。</p>
 
-<p>请注意，目前此复选框不适用于 Oculus（或目前所知的其他 VR 头盔）。</p>
+<p>Note that this checkbox is not for VR headsets.
+​ </p>
 
 <p>1.使用<a href="https://code.msdn.microsoft.com/windowsapps/Direct3D-111-Simple-Stereo-9b2b61aa">此示例</a>检查您的设置。
-2.在 Player Setting 中选中 Stereoscopic Rendering 复选框和 Use Direct3D 11 复选框。
+2. Check the Stereoscopic Rendering and Use Direct3D 11 checkboxes in the <strong>Player</strong> settings.
 3.发布为 32 位和 64 位应用程序。
 4.以单摄像机和双摄像机进行尝试。
-5.启动应用程序时按住 Shift 可在分辨率对话框中看到 Stereo 3D 复选框。根据项目的播放器设置，分辨率对话框可能被禁止或者始终被启用。</p>
+5. Hold Shift when launching the application to see Stereo 3D checkbox in the resolution dialog. The resolution dialog might be suppressed or always enabled depending on the Project’s <strong>Player</strong> settings. </p>
 
 <p>注意：目前，如果将 Unity 设置为在线性颜色空间中渲染，则会破坏立体渲染。这似乎是 Direct3D 的局限性。似乎还有一个问题：如果您启用了某些实时阴影（在前向渲染中），则 <code>camera.stereoconvergence</code> 参数完全不起作用。在延迟光照中，您将获得一些阴影，但左右眼之间不一致。</p>
-
-<h2>Oculus 的立体渲染</h2>
-
-<p>可从 <a href="https://developer.oculus.com/downloads/">Oculus 站点</a>获取面向 Oculus 的 Unity 免费集成。您可以使用 Unity 4.6 以上的版本和 Oculus 集成包将所有 VR 内容部署到 Rift。</p>
-
-<p>入门：将 Unity 4 Oculus 集成包导入到 Unity 中，然后打开演示场景，便可以开始工作了。</p>
-
-<p>该版本支持 Windows、Mac、Linux 和 Gear VR，可通过纯 C# 封装器来完全访问 LibOVR。</p>
-
-<p>功能包括：</p>
-
-<ul>
-<li>高质量的编辑器内 VR 预览</li>
-<li>简单的定向到 Rift 渲染</li>
-<li>LibOVR/VRLib 中的镜头矫正、TimeWarp 和动态预测</li>
-<li>针对驾驶舱、UI 等的分层摄像机支持</li>
-<li>针对 XInput 控制器的跨平台支持</li>
-<li>在所有世界比例下均提供一致的 IPD 和头部模型，确保舒适度</li>
-<li>通过 DK2 延迟测试器进行动态预测</li>
-<li>用于运动、跟踪器访问和 Rift 状态的实用程序</li>
-</ul>
-
-<p>另请参阅 <a href="http://static.oculus.com/sdk-downloads/documents/OculusUnityIntegrationGuide_0.4.3.pdf">Oculus Unity 集成指南 (Oculus Unity Integration Guide)</a>。</p>
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
 <span class="prev"><a href="HOWTO-importObject.html"></a></span><div class="tip">从 3D 建模软件导入模型</div>
@@ -203,7 +180,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

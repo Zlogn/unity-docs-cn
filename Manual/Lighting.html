@@ -12,7 +12,7 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="光源类型 - Unity Manual">
 <title>光源类型 - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/PointLightDiagram.svg">
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.4/uploads/Main/PointLightDiagram.svg">
 <meta name="description" content="本部分详细介绍在 Unity 中创建光源的多种不同方法。">
 <meta property="og:description" content="本部分详细介绍在 Unity 中创建光源的多种不同方法。">
 <meta name="author" content="Unity Technologies">
@@ -31,7 +31,7 @@
       var lang = 'zh_CN';
       var page = 'Lighting';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -63,7 +63,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -92,10 +92,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/Lighting.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/Lighting.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/Lighting.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/Lighting.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/Lighting.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/Lighting.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/Lighting.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/Lighting.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -107,7 +107,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -129,7 +129,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="Graphics.html">图形</a></li>
 <li><a href="GraphicsOverview.html">图形概述</a></li>
 <li><a href="LightingOverview.html">光照</a></li>
@@ -176,8 +176,8 @@
 <p>聚光灯通常用于人造光源，例如手电筒、汽车前照灯和探照灯。通过脚本或动画控制方向，移动的聚光灯将照亮场景的一小块区域并产生舞台风格的光照效果。</p>
 
 <figure>
-<img src="../uploads/Main/Light-Spot.png" alt="场景中的聚光灯的效果">
-<figcaption>场景中的聚光灯的效果</figcaption>
+<img src="../uploads/Main/Light-Spot.jpg" alt="Effect of a Spot Light in the scene">
+<figcaption>Effect of a Spot Light in the scene</figcaption>
 </figure>
 
 <h2>方向光</h2>
@@ -191,8 +191,8 @@
 <p>方向光代表来自游戏世界范围之外位置的大型远处光源。在逼真的场景中，方向光可用于模拟太阳或月亮。在抽象的游戏世界中，要为对象添加令人信服的阴影，而无需精确指定光源的来源，方向光是一种很有用的方法。</p>
 
 <figure>
-<img src="../uploads/Main/Light-Direct.png" alt="场景中的方向光的效果">
-<figcaption>场景中的方向光的效果</figcaption>
+<img src="../uploads/Main/Light-Direct.jpg" alt="Effect of a Directional Light in the scene">
+<figcaption>Effect of a Directional Light in the scene</figcaption>
 </figure>
 
 <p>默认情况下，每个新的 Unity 场景都包含一个方向光。在 Unity 5 中，此光源已关联到 Lighting 面板的 Environment Lighting 部分定义的程序化天空系统中 (Lighting &gt; Scene &gt; Skybox)。您可以更改此设置，方法是删除默认的方向光并创建新光源，或者直接通过“Sun”参数 (Lighting &gt; Scene &gt; Sun) 指定不同游戏对象。</p>
@@ -250,7 +250,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

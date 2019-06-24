@@ -12,6 +12,7 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="Unity Integrations - Unity Manual">
 <title>Unity Integrations - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.4/uploads/Main/CreateIntegration.png">
 <meta name="description" content="Unity Integrations 允许在开发工作流程中将以下 Unity 服务连接到非 Unity 工具：">
 <meta property="og:description" content="Unity Integrations 允许在开发工作流程中将以下 Unity 服务连接到非 Unity 工具：">
 <meta name="author" content="Unity Technologies">
@@ -30,7 +31,7 @@
       var lang = 'zh_CN';
       var page = 'UnityIntegrations';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -62,7 +63,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -91,10 +92,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/UnityIntegrations.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/UnityIntegrations.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/UnityIntegrations.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/UnityIntegrations.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/UnityIntegrations.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/UnityIntegrations.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/UnityIntegrations.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/UnityIntegrations.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -106,7 +107,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -128,13 +129,13 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="UnityServices.html">Unity 服务</a></li>
 <li>Unity Integrations</li>
 </ul></div>
 <div class="mb20"><div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
-<span class="prev"><a href="UnityCloudDiagnostics.html"></a></span><div class="tip">UnityCloudDiagnostics</div>
+<span class="prev"><a href="UnityCloudDiagnostics.html"></a></span><div class="tip">Unity Cloud Diagnostics</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
 <span class="next"><a href="UnityMultiplayerService.html"></a></span><div class="tip">Multiplayer 服务</div>
@@ -147,45 +148,62 @@
 <p>Unity Integrations 允许在开发工作流程中将以下 Unity 服务连接到非 Unity 工具：</p>
 
 <ul>
-<li><p>Collaborate</p></li>
-<li><p>Bug Reports (Alpha)</p></li>
+<li><a href="UnityCloudBuild.html">Cloud Build</a></li>
+<li><a href="https://unitytech.github.io/clouddiagnostics/">Cloud Diagnostics</a></li>
+<li><a href="UnityCollaborate.html">Collaborate</a></li>
 </ul>
+
+<p>To add an Integration, you must be an Owner or Manager on the Project. For information on assigning roles, see the Members &amp; Groups section of <a href="OrgsManagingyourOrganization.html">Managing your Organization</a>.</p>
 
 <p>Unity Integrations 支持以下非 Unity 工具：</p>
 
 <ul>
-<li><p>Webhooks：用户定义的回调，允许 Unity 将 POST 请求发送到外部服务。</p></li>
-<li><p>Discord：通过 Discord 定义的 Webhook 向您团队的 Discord 通道发送通知。</p></li>
-<li><p>Slack：通过 Slack 定义的 Webhook 向您团队的 Slack 通道发送通知。</p></li>
-<li><p>JIRA（仅限 Collaborate）：对 JIRA 中的现有问题添加注释。例如，在 Collaborate 中发布更改时可随时添加问题的注释。</p></li>
+<li>
+<a href="#webhooks">Webhooks</a>: A user-defined callback that allows Unity to send POST requests to an external service.</li>
+<li>
+<a href="#discord">Discord</a>: Send notifications to your team’s Discord channel through a Discord-defined webhook.</li>
+<li>
+<a href="#slack">Slack</a>: Send notifications to your team’s Slack channel through a Slack-defined webhook.</li>
+<li>
+<a href="#email">Email</a>: Send notifications to your team by Email.</li>
+<li>
+<a href="#jira">JIRA</a>: Create or update JIRA tickets using a JIRA-defined webhook.</li>
 </ul>
 
-<h2>添加集成</h2>
+<h2>Integration limits</h2>
 
-<p>要为工作流程添加集成，请执行以下操作：</p>
+<p>Unity Personal limits users to one Integration for all events, but multiple Unity services can use that Integration. <a href="https://unity3d.com/teams">Unity Teams</a>, <a href="https://store.unity.com/products/unity-plus">Plus</a>, and <a href="https://store.unity.com/products/unity-pro">Pro</a> users can have up to 100 Integrations. If your Unity Teams, Pro, or Plus subscription expires, Unity keeps all of your current Integrations, but automatically disables them. If this happens, you can still sign into the Unity Services Dashboard and enable a single Integration.</p>
 
-<p>1.登录 <a href="https://developer.cloud.unity3d.com">Unity Services Dashboard</a>。</p>
+<h2>Adding an Integration</h2>
 
-<p>2.选择要添加集成的项目。</p>
+<p>To add an Integration to your workflow:</p>
 
-<p>3.在左侧导航栏中，单击 <strong>Settings__，然后单击 </strong>Integrations (Beta)__。</p>
+<ol>
+<li>Sign in to the <a href="https://developer.cloud.unity3d.com/">Unity Services Dashboard</a>.</li>
+<li>Select the Project that you want to add an Integration to.</li>
+<li>In the left navigation bar, select <strong>Settings</strong> &gt; <strong>Integrations</strong>.</li>
+<li>The integrations dashboard appears. Click the <strong>NEW INTEGRATION</strong> button.<br><br><img src="../uploads/Main/CreateIntegration.png" alt="Creating a new Integration in the Developer Dashboard.">
+</li>
+<li>Select the Integration you want to enable.</li>
+<li>Select the event(s) that you want to trigger the Integration, then click the <strong>NEXT</strong> button.</li>
+<li>Configure the Integration options. These options vary depending on the Integration selected, and are described in detail in the sections below.</li>
+</ol>
 
-<p>4.单击 <strong>NEW INTEGRATION</strong> 按钮。</p>
+<figure>
+<img src="../uploads/Main/NewIntegration.png" alt="Configuring a new tool to Integrate.">
+<figcaption>Configuring a new tool to Integrate.</figcaption>
+</figure>
 
-<p>5.在 <strong>New Integration</strong> 对话框中：</p>
+<p><a name="webhooks"></a></p>
 
-<pre><code>1.选择要添加集成的 Unity 服务，然后单击 __NEXT__ 按钮。
+<h2>Webhook Integrations</h2>
 
-2.选择要促使集成执行操作的事件，然后单击 __NEXT__ 按钮。
+<p>To configure a webhook Integration, supply the following information:</p>
 
-3.选择要集成的程序，然后单击 __NEXT__ 按钮以配置该集成。
-</code></pre>
-
-<p>如果选择 Webhook 或 JIRA 集成，则会打开 <strong>Configure options</strong> 步骤。否则，将打开所选工具的配置屏幕。</p>
-
-<h3>Webhook 集成</h3>
-
-<p>要配置 Webhook 集成，必须提供以下信息：</p>
+<figure>
+<img src="../uploads/Main/WebhookIntegration.png" alt="Webhook configuration settings.">
+<figcaption>Webhook configuration settings.</figcaption>
+</figure>
 
 <table>
 <colgroup>
@@ -195,15 +213,15 @@
 
 <thead>
 <tr>
-	<th style="text-align:left;">参数</th>
-	<th style="text-align:left;">描述</th>
+	<th style="text-align:left;"><strong>Parameter</strong></th>
+	<th style="text-align:left;"><strong>描述</strong></th>
 </tr>
 </thead>
 
 <tbody>
 <tr>
 	<td style="text-align:left;">Display Name</td>
-	<td style="text-align:left;">用于标识集成列表中的集成的名称。</td>
+	<td style="text-align:left;">A name to identify the Integration in the Integrations list.</td>
 </tr>
 <tr>
 	<td style="text-align:left;">Webhook URL</td>
@@ -219,19 +237,88 @@
 </tr>
 <tr>
 	<td style="text-align:left;">Disable SSL/TLS Verification</td>
-	<td style="text-align:left;">仅在必要时才设置此选项。</td>
-</tr>
-<tr>
-	<td style="text-align:left;">验证 SSL/TLS 证书有助于确保数据安全发送。</td>
+	<td style="text-align:left;">Tick this checkbox to disable verification of SSL/TLS security certificates. <br> Verifying SSL/TLS certificates helps ensure that your data is sent securely to the above Webhook URL. Turning this option on is not recommended, so only do this if you absolutely know what you’re doing.</td>
 </tr>
 </tbody>
 </table>
 
-<h3>Jira 集成</h3>
+<p><a name="discord"></a></p>
 
-<p>在 Collaborate 中发布更改时，可使用 Unity JIRA 集成为现有问题添加注释。</p>
+<h2>Discord Integrations</h2>
 
-<p>要配置 JIRA 集成，必须提供以下信息：</p>
+<p>To configure Discord Integrations, Unity calls an app that uses the Discord API to register a webhook to a Discord channel. If you do not have a Discord server, see <a href="https://support.discordapp.com/hc/en-us/articles/204849977-How-do-I-create-a-server-">How do I create a server?</a> in the Discord documentation. </p>
+
+<p><strong>Important</strong>: You must enable webhooks on the account with which you are integrating.</p>
+
+<p>要完成配置，请执行以下操作：</p>
+
+<ol>
+<li>Create a new Discord integration and select its events.</li>
+<li>Click the <strong>NEXT</strong> button. Sign in on the Discord login screen.</li>
+<li>The <strong>CONNECT TO DISCORD</strong> dialog screen appears.<br><br><img src="../uploads/Main/DiscordIntegration.png" alt="Configuring a Discord Integration.">
+</li>
+<li>From the <strong>Select a server</strong> drop-down menu, select your Discord server.</li>
+<li>From the <strong>Select a channel</strong> menu, select a channel to post notifications to.</li>
+<li>Click the <strong>Authorize</strong> button.</li>
+</ol>
+
+<p><a name="slack"></a></p>
+
+<h2>Slack Integrations</h2>
+
+<p>To configure Slack Integrations, Unity calls an app that uses the Slack API to register a webhook to a Slack channel. </p>
+
+<p>After creating a new Slack integration and configuring the events that you want to appear, you must authorize Unity to access your Slack server.</p>
+
+<figure>
+<img src="../uploads/Main/SlackIntegration.png" alt="Authorizing Unity to connect to your Slack server.">
+<figcaption>Authorizing Unity to connect to your Slack server.</figcaption>
+</figure>
+
+<p>If you do not have a Slack server, see <a href="https://get.slack.help/hc/en-us/articles/206845317-Create-a-Slack-workspace">Create a Slack workspace</a> in the Slack documentation.</p>
+
+<p>要完成配置，请执行以下操作：</p>
+
+<p>1.登录 Slack 帐户。
+2.在应用程序的右上角，选择 Slack 工作空间。
+3. From the <strong>Post to</strong> drop-down menu, select the Slack channel to post notifications to.
+4. Click the <strong>Authorize</strong> button.</p>
+
+<p><a name="email"></a></p>
+
+<h2>Email Integrations</h2>
+
+<p>Email Integrations notify team members when specified events for your Project occur. </p>
+
+<ol>
+<li>Create an email integration from the dashboard to view the events menu.</li>
+<li>Select the events for which you want to receive email notifications, then click the <strong>NEXT</strong> button.<br><br><strong>Note</strong>: Cloud Build handles email notification settings separately. You can configure them by clicking the <strong><em>here</em></strong> link at the bottom of the events menu.</li>
+<li>Select the team members for whom you’d like notifications to be sent.</li>
+<li>Select <strong>Send email to new team members</strong> if you’d like team members that you add in the future to automatically receive the emails that other team members receive.</li>
+</ol>
+
+<figure>
+<img src="../uploads/Main/EmailIntegration.png" alt="Configuring email Integrations.">
+<figcaption>Configuring email Integrations.</figcaption>
+</figure>
+
+<p><a name="jira"></a></p>
+
+<h2>JIRA Integrations</h2>
+
+<p>The Unity JIRA Integration allows you to interact with JIRA as follows:</p>
+
+<ul>
+<li>Cloud Diagnostics: Create a new issue when you receive a report. Unity creates the issue with one of the following labels: unity-user-report, unity-crash-report, or unity-exception-report. You must have permission to create an issue and modify the label column for these Integrations to work.</li>
+<li>Collaborate: Add a comment to an existing issue when you publish a change in Collaborate.</li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/JIRAIntegration.png" alt="Configuring a JIRA Integration.">
+<figcaption>Configuring a JIRA Integration.</figcaption>
+</figure>
+
+<p>To configure a JIRA Integration for Collaborate or Cloud Diagnostics, you must supply the following information:</p>
 
 <table>
 <colgroup>
@@ -241,19 +328,19 @@
 
 <thead>
 <tr>
-	<th style="text-align:left;">参数</th>
-	<th style="text-align:left;">描述</th>
+	<th style="text-align:left;"><strong>Parameter</strong></th>
+	<th style="text-align:left;"><strong>描述</strong></th>
 </tr>
 </thead>
 
 <tbody>
 <tr>
 	<td style="text-align:left;">Display Name</td>
-	<td style="text-align:left;">用于标识集成列表中的集成的名称。</td>
+	<td style="text-align:left;">A name to identify the Integration in the Integrations list.</td>
 </tr>
 <tr>
 	<td style="text-align:left;">JIRA Site URL</td>
-	<td style="text-align:left;">JIRA 实例的 URL。</td>
+	<td style="text-align:left;">The URL of your JIRA instance.</td>
 </tr>
 <tr>
 	<td style="text-align:left;">JIRA Username</td>
@@ -261,66 +348,66 @@
 </tr>
 <tr>
 	<td style="text-align:left;">JIRA REST API Token</td>
-	<td style="text-align:left;">用于验证向 JIRA 服务器发送的集成请求的 API 令牌。有关如何创建令牌的说明，请参阅 Atlassian 的文档。</td>
+	<td style="text-align:left;">The API token to authenticate Integration requests to your JIRA server. For instructions on how to create a token, see <a href="https://confluence.atlassian.com/cloud/api-tokens-938839638.html">Atlassian’s documentation</a>.</td>
 </tr>
 </tbody>
 </table>
 
-<p>配置 JIRA 集成后，在 Collaborate 中进行更改时，可通过在提交消息中引用问题标识来更新 JIRA 问题。例如，通过“I fixed the crashes caused by ISS–42”向问题“ISS–42”添加发布详情。</p>
+<p>After you have entered the information for your JIRA instance, you must supply the following additional information for Cloud Diagnostics:</p>
 
-<h3>Discord 集成</h3>
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
 
-<p>为了配置 Discord 集成，Unity 会调用一个应用程序以使用 Discord API 将 Webhook 注册到 Discord 通道。如果您没有 Discord 服务器，请参阅 Discord 文档：<a href="https://support.discordapp.com/hc/en-us/articles/204849977-How-do-I-create-a-server-">如何创建服务器？(How do I create a server?)</a>。</p>
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Parameter</strong></th>
+	<th style="text-align:left;"><strong>描述</strong></th>
+</tr>
+</thead>
 
-<p>要完成配置，请执行以下操作：</p>
+<tbody>
+<tr>
+	<td style="text-align:left;">Create Issues In This Project</td>
+	<td style="text-align:left;">Select the project in which to create the issues.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Mark Incoming Issues As</td>
+	<td style="text-align:left;">Select the type of issue to log the report as.</td>
+</tr>
+</tbody>
+</table>
 
-<p>1.登录 Discord 帐户。</p>
+<p>When you make changes in Collaborate, update JIRA-associated issues by referencing the issue key in your commit message. For example, “I fixed the crashes caused by ISS–42” adds publish details to issue “ISS–42”.</p>
 
-<p>2.从 <strong>Select a server</strong> 下拉菜单中选择您的 Discord 服务器。</p>
+<h2>Managing existing Integrations</h2>
 
-<p>3.从 <strong>Select a channel</strong> 菜单选择要将通知发动到的通道。</p>
+<p>To manage existing Integrations:</p>
 
-<p>4.单击 <strong>Authorize</strong> 按钮。</p>
+<ol>
+<li>Sign in to the <a href="https://developer.cloud.unity3d.com/">Unity Services Dashboard</a>.</li>
+<li>Select the Project with the Integration you want to edit.</li>
+<li>In the left navigation column, select <strong>Settings</strong> &gt; <strong>Integrations</strong>.</li>
+</ol>
 
-<h3>Slack 集成</h3>
-
-<p>为了配置 Slack 集成，Unity 会调用一个应用程序以使用 Slack API 将 Webhook 注册到 Slack 通道。如果您没有 Slack 服务器，请参阅 Slack 文档：<a href="https://get.slack.help/hc/en-us/articles/206845317-Create-a-Slack-workspace">创建 Slack 工作空间 (Create a Slack workspace)</a>。</p>
-
-<p>要完成配置，请执行以下操作：</p>
-
-<p>1.登录 Slack 帐户。</p>
-
-<p>2.在应用程序的右上角，选择 Slack 工作空间。</p>
-
-<p>3.从 <strong>Post to</strong> 下拉菜单中，选择要将通知发动到的 Slack 通道。</p>
-
-<p>4.单击 <strong>Authorize</strong> 按钮。</p>
-
-<h2>编辑集成</h2>
-
-<p>要编辑现有集成，请执行以下操作：</p>
-
-<p>1.登录 <a href="https://developer.cloud.unity3d.com">Unity Services Dashboard</a>。</p>
-
-<p>2.选择要编辑集成的项目。</p>
-
-<p>3.在左侧导航栏中，单击 <strong>Settings__，然后单击 </strong>Integrations (Beta)__。</p>
-
-<p>4.单击要修改的集成旁边的 <strong>EDIT</strong>。</p>
-
-<p>可进行的编辑类型取决于具体集成。对于 Slack 和 Discord 集成，可以更新显示名称或删除集成。</p>
-
-<p>对于 Webhook 和 JIRA 集成，可以修改创建集成时提供的任意配置参数。</p>
-
-<hr>
+<p>To edit or delete an existing Integration, click <strong>EDIT</strong> next to the Integration you want to modify. The types of edits you can make depend on the Integration:</p>
 
 <ul>
-<li><span class="page-edit">2018–05–02 Page published with <a href="DocumentationEditorialReview.html">editorial review</a>
-</span></li>
+<li>For Slack and Discord Integrations, you can update the display name or delete the Integration.</li>
+<li>For webhook and JIRA Integrations, you can modify any of the configuration parameters that you supplied when you created them.</li>
 </ul>
+
+<p>To enable or disable an existing Integration, click the <strong>Status</strong> toggle to enable or disable the Integration.</p>
+
+<figure>
+<img src="../uploads/Main/EditIntegrations.png" alt="Managing Integrations in the Developer Dashboard.">
+<figcaption>Managing Integrations in the Developer Dashboard.</figcaption>
+</figure>
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
-<span class="prev"><a href="UnityCloudDiagnostics.html"></a></span><div class="tip">UnityCloudDiagnostics</div>
+<span class="prev"><a href="UnityCloudDiagnostics.html"></a></span><div class="tip">Unity Cloud Diagnostics</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
 <span class="next"><a href="UnityMultiplayerService.html"></a></span><div class="tip">Multiplayer 服务</div>
@@ -329,7 +416,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

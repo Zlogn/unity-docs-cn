@@ -12,7 +12,7 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="Google VR 快速入门指南 - Unity Manual">
 <title>Google VR 快速入门指南 - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/cardboard_settings.jpg">
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.4/uploads/Main/cardboard_settings.jpg">
 <meta name="description" content="本部分将帮助您快速开始使用 Unity 开发 Google VR 应用程序。有关开发 Google VR 内容的大量其他说明，请访问 Google VR 开发者网站。">
 <meta property="og:description" content="本部分将帮助您快速开始使用 Unity 开发 Google VR 应用程序。有关开发 Google VR 内容的大量其他说明，请访问 Google VR 开发者网站。">
 <meta name="author" content="Unity Technologies">
@@ -31,7 +31,7 @@
       var lang = 'zh_CN';
       var page = 'googlevr_quick_start';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -63,7 +63,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -92,10 +92,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/googlevr_quick_start.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/googlevr_quick_start.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/googlevr_quick_start.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/googlevr_quick_start.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/googlevr_quick_start.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/googlevr_quick_start.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/googlevr_quick_start.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/googlevr_quick_start.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -107,7 +107,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -129,7 +129,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="XR.html">XR</a></li>
 <li><a href="XR-SDK_overviews.html">XR SDK</a></li>
 <li><a href="googlevr_sdk_overview.html">Google VR</a></li>
@@ -224,7 +224,7 @@ ii ) 目标平台为 iOS 时，请确保通过 __Unity 安装程序__安装 Unit
 
 <p>要确保 Unity 使用正确的 APK，并仅在升级到最新版 Android 的设备上运行，必须更改 <strong>Minimum API Level</strong>。</p>
 
-<p>要进行此操作，请选择 <strong>Player Settings</strong> 并导航到 <strong>Other Settings</strong>。在 <strong>Identification</strong> 下，使用 <strong>Minimum API Level</strong> 下拉选单将其设置为列表中的最新 API。</p>
+<p>To do this, go to the <strong>Player Settings</strong> and navigate to <strong>Other Settings</strong>. Under <strong>Identification</strong>, use the <strong>Minimum API Level</strong> drop-down to set it to the latest API in the list.</p>
 
 <p>仅在目标为 Cardboard 时，才应将 <strong>Target API Level</strong> 设置为 API 级别 21 或更高级别。如果目标为 Daydream，则需要 24 或更高级别。默认情况下，此属性使用已安装的最高级别。有关 Android API 级别的更多信息，请参阅 <a href="class-PlayerSettingsAndroid.html">Android PlayerSettings</a> 的文档。</p>
 
@@ -286,8 +286,11 @@ ii ) 目标平台为 iOS 时，请确保通过 __Unity 安装程序__安装 Unit
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Enable Protected Memory</strong></td>
-	<td style="text-align:left;">使用 Asynchronous Video Reprojection 时，为受 DRM 保护的内容启用内存保护。仅当选择了 <strong>Enable Video Surface</strong> 的情况下才会显示此选项。想了解更多相关信息，请参阅 <a href="VRDevices-GoogleVRVideoAsyncReprojection.html">Asynchronous Video Reprojection</a>
-</td>
+	<td style="text-align:left;">Enables memory protection for DRM protected content when using Asynchronous Video Reprojection. This option only appears if <strong>Enable Video Surface</strong> has been selected. For more information, see <a href="VRDevices-GoogleVRVideoAsyncReprojection.html">Asynchronous Video Reprojection</a>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Positional Head Tracking</strong></td>
+	<td style="text-align:left;">Allows you to specify the minimum level of head tracking you need support for. For more information, see <a href="../ScriptReference/XR.Daydream.SupportedHeadTracking.html">VRDaydream.SupportedHeadTracking</a>.</td>
 </tr>
 </tbody>
 </table>
@@ -296,7 +299,7 @@ ii ) 目标平台为 iOS 时，请确保通过 __Unity 安装程序__安装 Unit
 
 <p>要确保 Unity 使用正确的 APK，并仅在升级到最新版 Android 的设备上运行，必须更改 <strong>Minimum API Level</strong>。</p>
 
-<p>要进行此操作，请在 Player Settings 中导航到 <strong>Other Settings</strong>。在 <strong>Identification</strong> 下，使用 <strong>Minimum API Level</strong> 下拉选单将其设置为列表中的最新 API。</p>
+<p>To do this in the Player Settings, navigate to <strong>Other Settings</strong>. Under <strong>Identification</strong>, use the <strong>Minimum API Level</strong> drop-down to set it to the latest API in the list. </p>
 
 <p>如果目标是 Daydream，则 <strong>Target API Level</strong> 应设置为 API 级别 24。默认情况下，此属性使用已安装的最高级别。有关 Android API 级别的更多信息，请参阅 <a href="class-PlayerSettingsAndroid.html">Android PlayerSettings</a> 的文档。</p>
 
@@ -308,6 +311,7 @@ ii ) 目标平台为 iOS 时，请确保通过 __Unity 安装程序__安装 Unit
 <li><p><span class="page-edit">2018–03–27 Page published with <a href="DocumentationEditorialReview.html">editorial review</a>
 </span></p></li>
 <li><p><span class="page-history">在 2017.3 版中更新了有关 Unity XR API 的 Google VR 文档</span></p></li>
+<li><p><span class="page-history">Positional head tracking added to Daydream-specific settings in 2017.3</span></p></li>
 </ul>
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
@@ -320,7 +324,7 @@ ii ) 目标平台为 iOS 时，请确保通过 __Unity 安装程序__安装 Unit
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

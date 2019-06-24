@@ -12,9 +12,9 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="色差 (Chromatic Aberration) - Unity Manual">
 <title>色差 (Chromatic Aberration) - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/PostProcessing-ChromaticAberration-0.jpg">
-<meta name="description" content="本页的效果描述是指在后期处理堆栈中找到的默认效果。">
-<meta property="og:description" content="本页的效果描述是指在后期处理堆栈中找到的默认效果。">
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.4/uploads/Main/PostProcessing-ChromaticAberration-1.jpg">
+<meta name="description" content="The Chromatic Aberration effect mimics the effect a real-world camera produces when its lens fails to join all colors to the same point. The resulting effect creates &amp;#8220;fringes&amp;#8221; of color along boundaries that separate dark and light parts of the image.">
+<meta property="og:description" content="The Chromatic Aberration effect mimics the effect a real-world camera produces when its lens fails to join all colors to the same point. The resulting effect creates &amp;#8220;fringes&amp;#8221; of color along boundaries that separate dark and light parts of the image.">
 <meta name="author" content="Unity Technologies">
 <link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
 <link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
@@ -31,7 +31,7 @@
       var lang = 'zh_CN';
       var page = 'PostProcessing-ChromaticAberration';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -63,7 +63,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -92,10 +92,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/PostProcessing-ChromaticAberration.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/PostProcessing-ChromaticAberration.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/PostProcessing-ChromaticAberration.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/PostProcessing-ChromaticAberration.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/PostProcessing-ChromaticAberration.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/PostProcessing-ChromaticAberration.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/PostProcessing-ChromaticAberration.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/PostProcessing-ChromaticAberration.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -107,7 +107,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -129,7 +129,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="Graphics.html">图形</a></li>
 <li><a href="GraphicsOverview.html">图形概述</a></li>
 <li><a href="PostProcessingOverview.html">后期处理概述</a></li>
@@ -137,24 +137,17 @@
 </ul></div>
 <div class="mb20"><div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
-<span class="prev"><a href="PostProcessing-UserLut.html"></a></span><div class="tip">用户 LUT</div>
+<span class="prev"><a href="PostProcessing-Bloom.html"></a></span><div class="tip">泛光 (Bloom)</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
-<span class="next"><a href="PostProcessing-Grain.html"></a></span><div class="tip">颗粒</div>
+<span class="next"><a href="PostProcessing-ColorGrading.html"></a></span><div class="tip">颜色分级 (Color Grading)</div>
 </div>
 </div></div>
 <h2>色差 (Chromatic Aberration)</h2>
 
-<p>本页的效果描述是指在后期处理堆栈中找到的默认效果。</p>
+<p>The <strong>Chromatic Aberration</strong> effect mimics the effect a real-world camera produces when its lens fails to join all colors to the same point. The resulting effect creates “fringes” of color along boundaries that separate dark and light parts of the image.</p>
 
-<p>在摄影中，色差是由于摄像机镜头未能将所有颜色会聚到同一个点而产生的结果。它沿着图像明暗分隔边界显示为“条纹”。</p>
-
-<p>色差效果用于复现这种摄像机缺陷，此外还经常用于产生艺术效果，如摄像机碰撞或中毒效果。该实现方案支持红/蓝和绿/紫边纹以及通过输入纹理支持用户定义的颜色边纹。</p>
-
-<figure>
-<img src="../uploads/Main/PostProcessing-ChromaticAberration-0.jpg" alt="具有色差的场景">
-<figcaption>具有色差的场景</figcaption>
-</figure>
+<p>Common uses for Chromatic Aberration include artistic effects such as camera impact, or intoxication effects. Unity provides support for red/blue and green/purple fringing, and you can define fringing colors by using an input texture.</p>
 
 <figure>
 <img src="../uploads/Main/PostProcessing-ChromaticAberration-1.jpg" alt="没有色差的场景">
@@ -162,93 +155,31 @@
 </figure>
 
 <figure>
-<img src="../uploads/Main/PostProcessing-ChromaticAberration-2.png" alt="色差 (Chromatic Aberration) 的 UI">
-<figcaption>色差 (Chromatic Aberration) 的 UI</figcaption>
+<img src="../uploads/Main/PostProcessing-ChromaticAberration-0.jpg" alt="具有色差的场景">
+<figcaption>具有色差的场景</figcaption>
 </figure>
 
-<h3>属性</h3>
-
-<table>
-<colgroup>
-<col style="text-align:left;">
-<col style="text-align:left;">
-</colgroup>
-
-<thead>
-<tr>
-	<th style="text-align:left;"><strong>属性：</strong></th>
-	<th style="text-align:left;"><strong>功能：</strong></th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-	<td style="text-align:left;"><strong>Intensity</strong></td>
-	<td style="text-align:left;">色差强度。</td>
-</tr>
-<tr>
-	<td style="text-align:left;"><strong>Spectral Texture</strong></td>
-	<td style="text-align:left;">用于自定义边纹颜色的纹理（留空时将使用默认值）</td>
-</tr>
-</tbody>
-</table>
-
-<h3>优化</h3>
-
-<ul>
-<li>降低 <strong>Intensity</strong>
-</li>
-</ul>
-
-<h3>详细信息</h3>
-
-<p>性能取决于 <strong>Intensity</strong> 值（此值越高，渲染速度越慢，因为它需要更多样本来渲染平滑的色差）。</p>
-
-<p>色差使用 <strong>Spectral Texture</strong> 输入进行自定义边缘处理。通过<a href="PostProcessing-Stack.html">后期处理栈</a>提供了四个示例光谱纹理：</p>
-
-<ul>
-<li><p>红/蓝（默认值）</p></li>
-<li><p>蓝/红</p></li>
-<li><p>绿/紫</p></li>
-<li><p>紫/绿</p></li>
-</ul>
-
-<p>可以在任何图像编辑软件中创建自定义光谱纹理。__光谱纹理__分辨率不受约束，但建议尽可能小（例如提供 3x1 纹理）。</p>
-
-<p>通过手动将输入纹理的 <strong>Filter Mode</strong> 设置为 <strong>Point (no filter)</strong>，可实现不太平滑的效果。</p>
-
-<figure>
-<img src="../uploads/Main/PostProcessing-ChromaticAberration-3.jpg" alt="场景使用与上面示例相同的色差，但 Filter Mode 设置为 Point">
-<figcaption>场景使用与上面示例相同的色差，但 Filter Mode 设置为 Point</figcaption>
-</figure>
-
-<h3>要求</h3>
-
-<ul>
-<li>Shader Model 3</li>
-</ul>
-
-<p>请参阅<a href="GraphicsEmulation.html">图形硬件功能和仿真</a>页面，查看更多详细信息和兼容硬件列表。</p>
+<p>For further information on how to use Chromatic Aberration in Unity, see the <a href="https://docs.unity3d.com/Packages/com.unity.postprocessing@2.1/manual/Chromatic-Aberration.html">Chromatic Aberration</a> documentation in the Post-Processing package.</p>
 
 <hr>
 
 <ul>
-<li><p><span class="page-edit"> 2017–05–24 Page published with no <a href="DocumentationEditorialReview.html">editorial review</a>
+<li><p><span class="page-edit"> 2019–05–07 Page published with <a href="DocumentationEditorialReview.html">editorial review</a>
 </span></p></li>
 <li><p><span class="page-history">5.6 中的新功能</span></p></li>
 </ul>
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
-<span class="prev"><a href="PostProcessing-UserLut.html"></a></span><div class="tip">用户 LUT</div>
+<span class="prev"><a href="PostProcessing-Bloom.html"></a></span><div class="tip">泛光 (Bloom)</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
-<span class="next"><a href="PostProcessing-Grain.html"></a></span><div class="tip">颗粒</div>
+<span class="next"><a href="PostProcessing-ColorGrading.html"></a></span><div class="tip">颜色分级 (Color Grading)</div>
 </div>
 </div>
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

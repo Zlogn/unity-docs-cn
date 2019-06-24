@@ -30,7 +30,7 @@
       var lang = 'zh_CN';
       var page = 'OrgsManagingyourOrganization';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -62,7 +62,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -91,10 +91,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/OrgsManagingyourOrganization.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/OrgsManagingyourOrganization.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/OrgsManagingyourOrganization.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/OrgsManagingyourOrganization.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/OrgsManagingyourOrganization.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/OrgsManagingyourOrganization.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/OrgsManagingyourOrganization.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/OrgsManagingyourOrganization.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -106,7 +106,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -128,7 +128,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="UnityServices.html">Unity 服务</a></li>
 <li><a href="OrgsUnityOrganizations.html">Unity Organizations</a></li>
 <li>管理您的组织</li>
@@ -204,10 +204,11 @@
 <p><strong>注意：</strong>组织管理员也可以分配成员角色。但是，他们只能分配用户 (User) 或访客 (Guest) 角色。</p>
 
 <ul>
-<li><p>__所有者__可在其组织的所有订阅中访问所有项目的所有设置。所有者是唯一可以访问该组织的支付方式、发票和账单数据的用户。</p></li>
-<li><p>__管理员__可在其组织的所有订阅中访问所有项目的大部分设置。管理员可添加用户，访问变现数据，执行所有者可以执行的几乎所有操作。但是，他们无法查看组织的账单和信用卡信息。</p></li>
-<li><p>__用户__可以读取和查看除变现数据之外的所有组织数据和 Services 数据。他们无法编辑组织数据和 Services 数据。</p></li>
-<li><p>__访客__是不属于组织且直接添加到项目的用户。访客无权访问组织数据。他们可以查看与项目相关的所有 Services 数据（变现数据除外），并可以占用订阅中的席位。</p></li>
+<li>__所有者__可在其组织的所有订阅中访问所有项目的所有设置。所有者是唯一可以访问该组织的支付方式、发票和账单数据的用户。</li>
+<li>__管理员__可在其组织的所有订阅中访问所有项目的大部分设置。管理员可添加用户，访问变现数据，执行所有者可以执行的几乎所有操作。但是，他们无法查看组织的账单和信用卡信息。</li>
+<li>__用户__可以读取和查看除变现数据之外的所有组织数据和 Services 数据。他们无法编辑组织数据和 Services 数据。</li>
+<li>
+<strong>Guests</strong> are members of your Organization that have no permissions to view data within the Organization. The Guest role allows you to assign vendors and contractors a Teams Advanced seat in the Organization that allows them to use the Collaboration service. Guests only have permission to access the specific project to which they are assigned.</li>
 </ul>
 
 <p>所有组织成员都可以访问该组织的所有项目。</p>
@@ -221,6 +222,8 @@
 5.从显示的列表中选择组织用户，或输入尚未添加到组织的用户的电子邮件地址。</p>
 
 <p>如果指定的用户没有 Unity Teams 席位，Unity 会自动为其分配一个席位。如果不希望用户使用 Unity Teams 进行项目协作，请取消选中 <strong>Also assign a Unity Teams Seat to this user</strong> 复选框。想了解更多 Unity Teams 的相关信息，请参阅<a href="OrgsWorkingwithUnityTeams.html">使用 Unity Teams</a>。</p>
+
+<p>For information on allowing Organization members to work a Project, see <a href="UnityCollaborateAddingTeammates.html">Adding team members to your Unity Project</a>.</p>
 
 <p><strong>注意</strong>：由于 Services 是基于每个项目启用的，而每个项目都与组织绑定，因此只有该组织的所有者可以为组织关联的项目启用和禁用 Services。无论订阅层级或席位如何，都需要组织内的某些角色或权限才能使用 Services 功能或查看 Unity Services Dashboard 上的相关数据。</p>
 
@@ -269,7 +272,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

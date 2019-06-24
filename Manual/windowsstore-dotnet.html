@@ -12,8 +12,8 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="通用 Windows 平台：.NET 脚本后端 - Unity Manual">
 <title>通用 Windows 平台：.NET 脚本后端 - Unity Manual</title>
-<meta name="description" content=".NET 脚本后端使用 Microsofts .NET 来支持脚本。与其他 Unity 平台不同，通用 Windows 平台不使用 .NET 3.5 类库配置文件，而是使用 .NET 4.5 的子集。这是由于 Windows 应用商店认证要求。这意味着，该平台与其他平台相比具有一些不兼容性，例如不同的插件模型以及 Unity 通常使用的 .NET 3.5 配置文件中存在的许多缺失类型。">
-<meta property="og:description" content=".NET 脚本后端使用 Microsofts .NET 来支持脚本。与其他 Unity 平台不同，通用 Windows 平台不使用 .NET 3.5 类库配置文件，而是使用 .NET 4.5 的子集。这是由于 Windows 应用商店认证要求。这意味着，该平台与其他平台相比具有一些不兼容性，例如不同的插件模型以及 Unity 通常使用的 .NET 3.5 配置文件中存在的许多缺失类型。">
+<meta name="description" content="The .NET scripting backend uses Microsoft&amp;#8217;s .NET to power scripting. Universal Windows Platform uses a subset of .NET 4.5. This is due to Windows Store certification requirements. This means that the platform has some incompatibilities compared to other platforms, such as a different plugin model and many missing types.">
+<meta property="og:description" content="The .NET scripting backend uses Microsoft&amp;#8217;s .NET to power scripting. Universal Windows Platform uses a subset of .NET 4.5. This is due to Windows Store certification requirements. This means that the platform has some incompatibilities compared to other platforms, such as a different plugin model and many missing types.">
 <meta name="author" content="Unity Technologies">
 <link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
 <link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
@@ -30,7 +30,7 @@
       var lang = 'zh_CN';
       var page = 'windowsstore-dotnet';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -62,7 +62,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -91,10 +91,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/windowsstore-dotnet.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/windowsstore-dotnet.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/windowsstore-dotnet.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/windowsstore-dotnet.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/windowsstore-dotnet.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/windowsstore-dotnet.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/windowsstore-dotnet.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/windowsstore-dotnet.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -106,7 +106,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -128,7 +128,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="PlatformSpecific.html">特定于平台的信息</a></li>
 <li><a href="Windows.html">Windows</a></li>
 <li><a href="WindowsStore.html">通用 Windows 平台</a></li>
@@ -147,12 +147,18 @@
 <!--BeginSwitchLink--><!--EndSwitchLink-->
 <div class="clear"></div>
 
-<p>.NET 脚本后端使用 Microsofts .NET 来支持脚本。与其他 Unity 平台不同，通用 Windows 平台不使用 .NET 3.5 类库配置文件，而是使用 .NET 4.5 的子集。这是由于 Windows 应用商店认证要求。这意味着，该平台与其他平台相比具有一些不兼容性，例如不同的插件模型以及 Unity 通常使用的 .NET 3.5 配置文件中存在的许多缺失类型。</p>
+<p>The .NET scripting backend uses Microsoft’s .NET to power scripting. Universal Windows Platform uses a subset of .NET 4.5. This is due to Windows Store certification requirements. This means that the platform has some incompatibilities compared to other platforms, such as a different plugin model and many missing types.</p>
+
+<p><strong>Note</strong>: The .NET scripting backend is deprecated and will be removed in a future release of Unity. We recommend switching to the <a href="https://docs.unity3d.com/Manual/IL2CPP.html">IL2CPP scripting backend</a>.</p>
 
 <hr>
 
-<p><span class="page-edit">• 2017–05–16 Page amended with no <a href="DocumentationEditorialReview.html">editorial review</a>
-</span><br></p>
+<ul>
+<li><p><span class="page-edit">2018–08–03Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span><br></p></li>
+<li><p><span class="page-history">.NET scripting backend deprecated in <a href="https://docs.unity3d.com/2018.2/Documentation/Manual/30_search.html?q=newin20182">2018.2</a> <span class="search-words">NewIn20182</span></span></p></li>
+<li><p><span class="page-history">.NET 3.5 scripting runtime deprecated in 2018.3</span></p></li>
+</ul>
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
 <span class="prev"><a href="windowsstore-scriptingbackends.html"></a></span><div class="tip">脚本后端</div>
@@ -164,7 +170,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

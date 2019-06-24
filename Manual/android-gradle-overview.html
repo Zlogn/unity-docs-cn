@@ -12,7 +12,7 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="Gradle for Android - Unity Manual">
 <title>Gradle for Android - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/gradlebuildsettings.png">
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.4/uploads/Main/gradlebuildsettings.png">
 <meta name="description" content="Gradle 是一种可自动执行许多构建过程的 Android 构建系统。这种自动化意味着不太可能发生许多常见的构建错误。最值得注意的是，在 Unity 中，该系统可减少 DEX（Dalvik 可执行文件格式）文件中的方法引用数量，这意味着可降低遇到 DEX 限制问题的可能性。但是，由于 Gradle 与默认的 Unity Android 构建系统之间存在差异，一些现有项目可能很难转换为 Gradle。">
 <meta property="og:description" content="Gradle 是一种可自动执行许多构建过程的 Android 构建系统。这种自动化意味着不太可能发生许多常见的构建错误。最值得注意的是，在 Unity 中，该系统可减少 DEX（Dalvik 可执行文件格式）文件中的方法引用数量，这意味着可降低遇到 DEX 限制问题的可能性。但是，由于 Gradle 与默认的 Unity Android 构建系统之间存在差异，一些现有项目可能很难转换为 Gradle。">
 <meta name="author" content="Unity Technologies">
@@ -31,7 +31,7 @@
       var lang = 'zh_CN';
       var page = 'android-gradle-overview';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -63,7 +63,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -92,10 +92,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/android-gradle-overview.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/android-gradle-overview.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/android-gradle-overview.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/android-gradle-overview.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/android-gradle-overview.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/android-gradle-overview.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/android-gradle-overview.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/android-gradle-overview.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -107,7 +107,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -129,7 +129,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="PlatformSpecific.html">特定于平台的信息</a></li>
 <li><a href="android.html">Android</a></li>
 <li>Gradle for Android</li>
@@ -173,9 +173,9 @@
 
 <h2>提供自定义的 build.gradle 模板</h2>
 
-<p>要在 Unity 中构建 APK 时使用您自己的 build.gradle 文件，请选中 <a href="class-PlayerSettingsAndroid.html">Player Settings</a> 下的 Custom Gradle Template 复选框。
-这样便会生成一个默认的 mainTemplate.gradle，而您可以对其进行编辑。此模板包含几个将由 Unity 构建过程填入的变量，例如 <code>**TARGETSDKVERSION**</code>，通常不需要理会这些变量。
-您也可以通过相同的方式在 Plugins 目录中提供一个 settingsTemplate.gradle（但目前没有自动方式来执行此操作），从而使用您自己的 settings.gradle。此文件负责包含您的库项目，因此除非您还想覆盖该过程，否则此文件至少应包含以下行：</p>
+<p>To use your own build.gradle file when building the APK from Unity, enable the <strong>Custom Gradle Template</strong> property on the <a href="class-PlayerSettingsAndroid.html">Player</a> window.
+This generates a default <code>mainTemplate.gradle</code> file for you, which you can edit. This template contains several variables that are completed] by the Unity build process, such as <code>**TARGETSDKVERSION**</code>. You would normally leave these alone.
+You can also use your own <code>settings.gradle</code> file by providing a <code>settingsTemplate.gradle</code> file in your Plugins directory in the same way (although there is currently no automatic way to do this). This file is responsible for including your library projects, so unless you want to also override that process, the file should at least contain this line: </p>
 
 <p><code>**INCLUDES**</code></p>
 
@@ -183,7 +183,7 @@
 
 <h3>模板变量</h3>
 
-<p>可在 mainTemplate.gradle 文件中使用以下变量：</p>
+<p>These variables can be used in the <code>mainTemplate.gradle</code> file:</p>
 
 <table>
 <colgroup>
@@ -255,13 +255,17 @@
 	<td style="text-align:left;"><strong>DIR_UNITYPROJECT</strong></td>
 	<td style="text-align:left;">Unity 项目的目录。</td>
 </tr>
+<tr>
+	<td style="text-align:left;"><strong>MINSDKVERSION</strong></td>
+	<td style="text-align:left;">Minimum API version (for example, 25).</td>
+</tr>
 </tbody>
 </table>
 
 <h3>缩小</h3>
 
-<p>可在 <a href="class-PlayerSettingsAndroid.html">Player Settings</a> Minify 下激活 <strong>Proguard Minification</strong>。
-请注意，proguard 会很容易移除实际需要的代码，因此通常需要小心配置此过程。作为起点，可使用相同设置下的 User Proguard File 复选框来生成自定义的 proguard.txt。</p>
+<p>You can activate <strong>Proguard Minification</strong> under the <strong>Minify</strong> setting on the <a href="class-PlayerSettingsAndroid.html">Player</a> window.
+Note that proguard can easily strip out code that is actually needed, so often this process needs to be configured carefully. You can generate a custom <code>proguard.txt</code> file by enabling the <strong>User Proguard File</strong> setting under the same settings as a starting point. </p>
 
 <p>请参阅 <a href="https://www.guardsquare.com/en/proguard/manual/usage">ProGuard 手册</a>以了解有关 Proguard 的更多信息。</p>
 
@@ -293,7 +297,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

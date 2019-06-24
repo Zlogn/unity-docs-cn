@@ -12,7 +12,7 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="布料 - Unity Manual">
 <title>布料 - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/Inspector-Cloth.png">
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.4/uploads/Main/Inspector-Cloth.png">
 <meta name="description" content="布料 (Cloth) 组件与带蒙皮的网格渲染器 (Skinned Mesh Renderer) 协同工作，从而提供基于物理的面料模拟解决方案。此组件是专为角色服装设计的，仅对蒙皮网格有效。如果向非蒙皮网格中添加 Cloth 组件，则 Unity 会删除非蒙皮网格并添加蒙皮网格。">
 <meta property="og:description" content="布料 (Cloth) 组件与带蒙皮的网格渲染器 (Skinned Mesh Renderer) 协同工作，从而提供基于物理的面料模拟解决方案。此组件是专为角色服装设计的，仅对蒙皮网格有效。如果向非蒙皮网格中添加 Cloth 组件，则 Unity 会删除非蒙皮网格并添加蒙皮网格。">
 <meta name="author" content="Unity Technologies">
@@ -31,7 +31,7 @@
       var lang = 'zh_CN';
       var page = 'class-Cloth';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -63,7 +63,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -92,10 +92,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/class-Cloth.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/class-Cloth.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/class-Cloth.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/class-Cloth.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/class-Cloth.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/class-Cloth.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/class-Cloth.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/class-Cloth.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -107,7 +107,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -129,7 +129,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="PhysicsSection.html">物理系统</a></li>
 <li><a href="Physics3DReference.html">3D 物理系统参考</a></li>
 <li>布料</li>
@@ -285,8 +285,8 @@
 </table>
 
 <figure>
-<img src="../uploads/Main/Inspector-Cloth2.png" alt="在带蒙皮的网格渲染器上使用的布料约束工具。">
-<figcaption>在带蒙皮的网格渲染器上使用的布料约束工具。</figcaption>
+<img src="../uploads/Main/Inspector-Cloth2.jpg" alt="The Cloth Constraints Tool being used on a Skinned Mesh Renderer.">
+<figcaption>The Cloth Constraints Tool being used on a Skinned Mesh Renderer.</figcaption>
 </figure>
 
 <p>更改每个顶点的值时可使用两种模式：</p>
@@ -299,8 +299,8 @@
 <p>在这两种模式下，为 <strong>Max Distance</strong> 和 <strong>Surface Penetration</strong> 赋值时，Scene 视图中的可视化表示都会自动更新。</p>
 
 <figure>
-<img src="../uploads/Main/ClothContraintsPaint.png" alt="绘画模式下的布料约束工具">
-<figcaption>绘画模式下的布料约束工具</figcaption>
+<img src="../uploads/Main/ClothContraintsPaint.jpg" alt="The Cloth Constraints Tool in Paint mode">
+<figcaption>The Cloth Constraints Tool in Paint mode</figcaption>
 </figure>
 
 <h3>自碰撞和互碰撞</h3>
@@ -418,15 +418,17 @@
 <figcaption>正在绘制的粒子为蓝色</figcaption>
 </figure>
 
+<p><a name="intercollision"></a></p>
+
 <h4>布料互碰撞</h4>
 
 <p>可使用与指定自碰撞粒子相同的方式（如上所述）为互碰撞指定粒子。与自碰撞一样，可以指定一组用于互碰撞的粒子。</p>
 
-<p>要启用互碰撞行为，请打开 PhysicsManager Inspector (<strong>Edit</strong> &gt; <strong>Project Settings</strong> &gt; <strong>Physics</strong>)，并在 <strong>Cloth InterCollision</strong> 部分将 <strong>Distance</strong> 和 <strong>Stiffness</strong> 设置为非零值：</p>
+<p>To enable intercollision behavior, open the <strong>Physics</strong> settings (from the main menu in Unity: <strong>Edit</strong> &gt; <strong>Project Settings</strong>, then select the <strong>Physics</strong> category) and set <strong>Distance</strong> and <strong>Stiffness</strong> to non-zero values in the <strong>Cloth InterCollision</strong> section:</p>
 
 <figure>
-<img src="../uploads/Main/ClothInspectorIntercollisionSettings.png" alt="正在绘制的粒子为蓝色">
-<figcaption>正在绘制的粒子为蓝色</figcaption>
+<img src="../uploads/Main/ClothInspectorIntercollisionSettings.png" alt="Enable intercollision behavior in the Physics settings">
+<figcaption>Enable intercollision behavior in the Physics settings</figcaption>
 </figure>
 
 <p>布料互碰撞的 <strong>Distance</strong> 和 <strong>Stiffness</strong> 属性与以上描述的自碰撞的 Distance 和 Stiffness 属性功能相同。</p>
@@ -455,7 +457,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

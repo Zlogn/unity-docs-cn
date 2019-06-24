@@ -12,7 +12,7 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="RenderDoc 集成 - Unity Manual">
 <title>RenderDoc 集成 - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/RenderDocRuntimeLoad.png">
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.4/uploads/Main/RenderDocRuntimeLoad.jpg">
 <meta name="description" content="Editor 支持启动集成的 RenderDoc 图形调试器并进行捕获，从而进行详细的帧自检和调试。">
 <meta property="og:description" content="Editor 支持启动集成的 RenderDoc 图形调试器并进行捕获，从而进行详细的帧自检和调试。">
 <meta name="author" content="Unity Technologies">
@@ -31,7 +31,7 @@
       var lang = 'zh_CN';
       var page = 'RenderDocIntegration';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -63,7 +63,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -92,10 +92,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/RenderDocIntegration.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/RenderDocIntegration.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/RenderDocIntegration.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/RenderDocIntegration.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/RenderDocIntegration.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/RenderDocIntegration.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/RenderDocIntegration.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/RenderDocIntegration.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -107,7 +107,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -129,7 +129,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="UnityOverview.html">在 Unity 中操作</a></li>
 <li><a href="EditorFeatures.html">编辑器功能</a></li>
 <li>RenderDoc 集成</li>
@@ -159,8 +159,8 @@
 <p>如果检测到 RenderDoc 安装，则在加载 Editor 之后的任何时间，均可右键单击 <a href="GameView.html">Game 视图</a>或 <a href="UsingTheSceneView.html">Scene 视图</a>的选项卡，然后单击“Load RenderDoc”选项。这样就会重新加载图形设备，因此必须保存所有更改，但随后 RenderDoc 将可以直接捕获而无需重新启动 Editor 或构建独立平台播放器。</p>
 
 <figure>
-<img src="../uploads/Main/RenderDocRuntimeLoad.png" alt="在运行时加载 RenderDoc">
-<figcaption>在运行时加载 RenderDoc</figcaption>
+<img src="../uploads/Main/RenderDocRuntimeLoad.jpg" alt="Loading RenderDoc at runtime">
+<figcaption>Loading RenderDoc at runtime</figcaption>
 </figure>
 
 <p><strong>注意：</strong>也可以照常通过 RenderDoc 启动 Editor，或者传递 -load-renderdoc 命令行选项以从启动中加载 RenderDoc。</p>
@@ -177,8 +177,8 @@
 <p>按此按钮将触发捕获视图的下一帧渲染。如果尚未打开 RenderDoc 工具 UI，则会启动一个新实例来显示捕获，如果已在运行，则最新的捕获将自动显示在其中。从此处可以使用该工具打开捕获结果并进行调试。</p>
 
 <figure>
-<img src="../uploads/Main/RenderDocCaptureList.png" alt="RenderDoc 中列出的帧捕获结果">
-<figcaption>RenderDoc 中列出的帧捕获结果</figcaption>
+<img src="../uploads/Main/RenderDocCaptureList.jpg" alt="List of frame captures in RenderDoc">
+<figcaption>List of frame captures in RenderDoc</figcaption>
 </figure>
 
 <h2>包含着色器调试信息</h2>
@@ -199,7 +199,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

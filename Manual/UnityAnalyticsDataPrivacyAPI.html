@@ -30,7 +30,7 @@
       var lang = 'zh_CN';
       var page = 'UnityAnalyticsDataPrivacyAPI';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -62,7 +62,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -91,10 +91,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/UnityAnalyticsDataPrivacyAPI.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/UnityAnalyticsDataPrivacyAPI.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/UnityAnalyticsDataPrivacyAPI.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/UnityAnalyticsDataPrivacyAPI.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/UnityAnalyticsDataPrivacyAPI.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/UnityAnalyticsDataPrivacyAPI.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/UnityAnalyticsDataPrivacyAPI.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/UnityAnalyticsDataPrivacyAPI.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -106,7 +106,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -128,7 +128,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="UnityServices.html">Unity 服务</a></li>
 <li><a href="UnityAnalytics.html">Unity Analytics</a></li>
 <li><a href="UnityAnalyticsDataPrivacy.html">Unity Analytics 和欧盟一般数据保护条例 (GDPR)</a></li>
@@ -150,20 +150,18 @@
 
 <p>NAMESPACE: <code>UnityEngine.Analytics</code></p>
 
-<pre><code>    public class DataPrivacy
+<pre><code>    public class DataPrivacy 
 </code></pre>
 
 <p>The <code>DataPrivacy</code> class automatically fetches the player’s data privacy status and configures the Analytics service accordingly.</p>
 
-<p>Use the <code>FetchPrivacyUrl()</code> function to fetch the the URL of the player’s personal data management page. Open the URL to give the player the option to manage their data privacy settings.</p>
+<p>使用 <code>FetchPrivacyUrl()</code> 函数来获取玩家个人数据管理页面的 URL。打开该 URL 即可为玩家提供管理其数据隐私设置的选项。</p>
 
-<p>This page details three functions:</p>
+<p>This page details the following functions:</p>
 
 <ul>
 <li>
-<a href="#init">Initialize()</a> - Prepares the Data Privacy API for use.</li>
-<li>
-<a href="#optout">FetchOptOutStatus(Action&lt;bool&gt;)</a> - Fetches the player’s current opt-out status and configures the Unity Analytics service.</li>
+<a href="#init">Initialize()</a> - Prepares the Data Privacy API for use (for Unity 5.1 or earlier).</li>
 <li>
 <a href="#privacyurl">FetchPrivacyUrl(Action&lt;String&gt;, Action&lt;String&gt;)</a> - Gets the URL of the player’s personal data management page.</li>
 </ul>
@@ -172,89 +170,51 @@
 
 <h2>Initialize()</h2>
 
-<p>Prepares the Data Privacy API for use.</p>
+<p>准备 Data Privacy API 以供使用。</p>
 
 <h3>Declaration</h3>
 
-<pre><code>    public static void Initialize()
+<pre><code>    public static void Initialize() 
 </code></pre>
 
-<h3>Details</h3>
+<h3>详细信息</h3>
 
 <p>This function creates a hidden GameObject and adds an instance of the <code>DataPrivacy</code> class to it as a component.</p>
 
 <p>On Unity 5.1 or earlier, call <code>Initialize()</code> early in your application startup (ideally, right after you call <code>UnityAnalytics.StartSDK (projectId)</code>. Newer versions of Unity call <code>Initialize()</code> automatically. </p>
 
-<p><a name="optout"></a></p>
-
-<h2>FetchOptOutStatus(Action&lt;bool&gt;)</h2>
-
-<p>Fetches the player’s current opt-out status and configures the Unity Analytics service.</p>
-
-<h3>Declaration</h3>
-
-<pre><code>    public static void FetchOptOutStatus(Action&lt;bool&gt; optOutAction = null)
-</code></pre>
-
-<h3>Parameters</h3>
-
-<ul>
-<li>[optional] <code>Action&lt;bool&gt; optOutAction</code> — The Action object to invoke when Unity has fetched the player’s opt-out status. The boolean parameter passed to your Action is <code>true</code> if the player has opted out of personal data collection, and <code>false</code> if they have not.</li>
-</ul>
-
-<h3>Details</h3>
-
-<p>The function configures the Analytics service as appropriate for the player’s data collection choices. Unity caches the status for use when the player’s computer or device is offline.</p>
-
-<p>Unity calls <code>FetchOptOutStatus()</code> automatically when your game launches. You should also call the function when the player returns to your app after closing the data privacy management URL, to immediately apply any changes they made while on that page.</p>
-
-<p>You can also use <code>FetchOptOutStatus()</code> and pass an <code>Action&lt;bool&gt;</code> function parameter to get a player’s opt-out choice. The plug-in invokes the <code>optOutAction</code> function you provide when the network fetch request is complete. The boolean argument passed to your action is <code>true</code> when the player has opted out and <code>false</code>, if they have not. If the network request for the player’s status fails, Unity calls your <code>optOutAction</code> function with the cached value (or <code>false</code>, if the status has never been set).</p>
-
-<pre><code>    void OnOptOutStatus(bool optOut)
-    {
-        if(optOut)
-        {
-            Debug.Log("Player has opted-out of personal data collection.");
-        }
-    }
-
-    // ...
-    DataPrivacy.FetchOptOutStatus(OnOptOutStatus);
-</code></pre>
-
 <p><a name="privacyurl"></a></p>
 
 <h2>FetchPrivacyUrl(Action&lt;String&gt;, Action&lt;String&gt;)</h2>
 
-<p>Gets the URL of the player’s personal data management page.</p>
+<p>获取玩家个人数据管理页面的 URL。</p>
 
 <h3>Declaration</h3>
 
-<pre><code>    public static void FetchPrivacyUrl(Action&lt;string&gt; success, Action&lt;string&gt; failure = null)
+<pre><code>    public static void FetchPrivacyUrl(Action&lt;string&gt; success, Action&lt;string&gt; failure = null) 
 </code></pre>
 
 <h3>Parameters</h3>
 
 <ul>
-<li><p><code>Action&lt;String&gt; success</code> — The Action object to invoke when the URL is successfully retrieved. The string passed to the Action contains the URL.</p></li>
-<li><p>[optional] <code>Action&lt;String&gt; failure</code> — The Action object to invoke when Unity cannot retrieve the URL. The string passed to the Action contains the reason for the failure.</p></li>
+<li><p><code>Action&lt;String&gt; success</code> — 成功检索到该 URL 时要调用的 Action 对象。传递给 Action 的字符串包含该 URL。</p></li>
+<li><p>[optional] <code>Action&lt;String&gt; failure</code> — Unity 无法检索该 URL 时要调用的 Action 对象。传递给 Action 的字符串包含失败原因。</p></li>
 </ul>
 
-<h3>Details</h3>
+<h3>详细信息</h3>
 
-<p>Open the URL passed to your <code>success</code> function in a browser or webview to give the player the opportunity to manage their data protection options. Use <code>Application.OpenURL()</code> to open the page.</p>
+<p>Open the URL passed to your <code>success</code> function in a browser or webview to give the player the opportunity to manage their data protection options. You can use <code>Application.OpenURL()</code> to open the page.</p>
 
-<p>The URL is valid for a short period of time. Always fetch the URL immediately before opening it.</p>
-
-<p>Call <code>FetchOptOutStatus()</code> after the player returns to your game to apply any changes immediately. Otherwise, Unity applies any changes to data collection the next time the player launches your game.</p>
+<p>该 URL 在短时间内有效。务必在打开 URL 之前即时获取 URL。</p>
 
 <hr>
 
 <ul>
-<li><span class="page-edit">2018–05–18 Page published with limited <a href="DocumentationEditorialReview.html">editorial review</a>
-</span></li>
-<li><span class="page-history">Removed Editor menu command for inserting the Data Privacy button. Added the Data Privacy Button prefab.</span></li>
-<li><span class="page-history">New feature in Unity 2018.1</span></li>
+<li><p><span class="page-edit">2018–11–05 Page published with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">Removed Editor menu command for inserting the Data Privacy button. Added the Data Privacy Button prefab.</span></p></li>
+<li><p><span class="page-history">New feature in Unity 2018.1.</span></p></li>
+<li><p><span class="page-history">Removed FetchOptOutStatus function in 2018.3.</span></p></li>
 </ul>
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
@@ -267,7 +227,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

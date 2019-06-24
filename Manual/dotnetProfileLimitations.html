@@ -30,7 +30,7 @@
       var lang = 'zh_CN';
       var page = 'dotnetProfileLimitations';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -62,7 +62,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -91,10 +91,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/dotnetProfileLimitations.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/dotnetProfileLimitations.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/dotnetProfileLimitations.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/dotnetProfileLimitations.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/dotnetProfileLimitations.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/dotnetProfileLimitations.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/dotnetProfileLimitations.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/dotnetProfileLimitations.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -106,7 +106,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -128,7 +128,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="ScriptingSection.html">脚本</a></li>
 <li><a href="ScriptingConcepts.html">脚本概述</a></li>
 <li>稳定脚本运行时：已知限制</li>
@@ -138,7 +138,7 @@
 <span class="prev"><a href="dotnetProfileAssemblies.html"></a></span><div class="tip">引用其他类库程序集</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
-<span class="next"><a href="GenericFunctions.html"></a></span><div class="tip">通用函数</div>
+<span class="next"><a href="GenericFunctions.html"></a></span><div class="tip">Generic Functions</div>
 </div>
 </div></div>
 <h1>稳定脚本运行时：已知限制</h1>
@@ -153,12 +153,15 @@
 
 <p>要减少代码大小的增加幅度，请执行以下操作：</p>
 
-<p>1.尽可能选择最小的 .NET 配置文件（请参阅 <a href="dotnetProfileSupport.html">.NET 配置文件支持</a>）。.NET Standard 2.0 配置文件大小大约只有 .NET 4.x 配置文件的一半，因此请尽可能使用 .NET Standard 2.0 配置文件。
-1.在 Unity Editor 的 Player Settings（选择 <strong>Edit</strong> &gt; <strong>Project Settings</strong> &gt; <strong>Player__）中，启用 </strong>Strip Engine Code__。此选项会静态分析项目中的托管代码，并删除所有未使用的代码。<strong>注意</strong>：只有 IL2CPP 脚本后端才附带此选项。</p>
+<p>1.尽可能选择最小的 .NET 配置文件（请参阅 <a href="dotnetProfileSupport.html">.NET 配置文件支持</a>）。.NET Standard 2.0 配置文件大小大约只有 .NET 4.x 配置文件的一半，因此请尽可能使用 .NET Standard 2.0 配置文件。</p>
 
-<h2>传输层安全性 (TLS)</h2>
+<ol>
+<li>
+<p>Enable <strong>Strip Engine Code</strong> in the Unity Editor <strong>Player</strong> settings (go to <strong>Edit</strong> &gt; <strong>Project Settings</strong>, then select the <strong>Player</strong> category). This option statically analyzes the managed code in the Project, and removes any unused code. </p>
 
-<p>新版 Mono 具有针对若干平台的 TLS 1.2 支持。Unity 支持 .NET 类库中的 TLS 1.0，而 TLS 仅对 Mac 独立平台播放器有效。在需要全面 TLS 支持的情况下，请使用 <a href="UnityWebRequest.html">UnityWebRequest</a> 或特定于平台的本机解决方案。Unity 正积极致力于在 Unity 支持的所有平台上为所有 .NET 类库 API 添加 TLS 1.2 支持。</p>
+<p><strong>Note</strong>: This option is only available with the IL2CPP scripting backend.</p>
+</li>
+</ol>
 
 <hr>
 
@@ -171,13 +174,13 @@
 <span class="prev"><a href="dotnetProfileAssemblies.html"></a></span><div class="tip">引用其他类库程序集</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
-<span class="next"><a href="GenericFunctions.html"></a></span><div class="tip">通用函数</div>
+<span class="next"><a href="GenericFunctions.html"></a></span><div class="tip">Generic Functions</div>
 </div>
 </div>
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

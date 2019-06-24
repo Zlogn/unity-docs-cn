@@ -12,7 +12,7 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="Animation 选项卡 - Unity Manual">
 <title>Animation 选项卡 - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/classAnimationClip-Inspector.png">
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.4/uploads/Main/classAnimationClip-Inspector.png">
 <meta name="description" content="__动画剪辑__是 Unity 动画的最小构成元素。它们代表了一个单独的运动，例如 RunLeft、Jump 或 Crawl，并且可通过各种方式进行操作和组合，从而产生生动的效果（请参阅动画状态机（Animation State Machines）、Animator Controller 或混合树（Blend Trees））。
 您可以从导入的 FBX 数据中选择动画剪辑。">
 <meta property="og:description" content="__动画剪辑__是 Unity 动画的最小构成元素。它们代表了一个单独的运动，例如 RunLeft、Jump 或 Crawl，并且可通过各种方式进行操作和组合，从而产生生动的效果（请参阅动画状态机（Animation State Machines）、Animator Controller 或混合树（Blend Trees））。
@@ -33,7 +33,7 @@
       var lang = 'zh_CN';
       var page = 'class-AnimationClip';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -65,7 +65,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -94,10 +94,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/class-AnimationClip.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/class-AnimationClip.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/class-AnimationClip.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/class-AnimationClip.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/class-AnimationClip.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/class-AnimationClip.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/class-AnimationClip.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/class-AnimationClip.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -109,7 +109,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -131,7 +131,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="ImportingAssets.html">导入</a></li>
 <li><a href="class-FBXImporter.html">Model Import Settings 窗口</a></li>
 <li>Animation 选项卡</li>
@@ -203,7 +203,7 @@
 </tr>
 <tr>
 	<td style="text-align:left;" colspan="2"><strong>Bake Animations</strong></td>
-	<td style="text-align:left;">烘焙通过反向动力学 (IK) 或模拟 (Simulation) 创建的动画以便推进运动关键帧。<br><br>仅可用于 Maya、3ds Max 和 Cinema 4D 文件。</td>
+	<td style="text-align:left;">Bake animations created using IK or Simulation to forward kinematic keyframes. <br><br>Only available for Autodesk® Maya®, Autodesk® 3ds Max® and Cinema 4D files.</td>
 </tr>
 <tr>
 	<td style="text-align:left;" colspan="2"><strong>Resample Curves</strong></td>
@@ -318,7 +318,7 @@
 </tr>
 <tr>
 	<td style="text-align:left;" colspan="2"><img src="../uploads/Main/classAnimationClip-Name.png" alt="源剪辑的名称"></td>
-	<td style="text-align:left;">源文件中的剪辑，用作此动画剪辑的源。<br><br>此属性定义了在 Motionbuilder、Maya 和其他 3D 包中提取的一组动画。Unity 可以将这些内容导入为单个剪辑。您可以<a href="Splittinganimations.html">从整个文件或从帧子集创建它们</a>。</td>
+	<td style="text-align:left;">The take in the source file to use as a source for this animation clip. <br><br>This is what defines a set of animation as separated in Motionbuilder, Autodesk® Maya® and other 3D packages. Unity can import these takes as individual clips. You can <a href="Splittinganimations.html">create them from the whole file or from a subset of frames</a>.</td>
 </tr>
 <tr>
 	<td style="text-align:left;" colspan="3"><strong><em>B 区域（时间轴特性）</em></strong></td>
@@ -571,7 +571,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

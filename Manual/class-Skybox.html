@@ -12,7 +12,7 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="天空盒 (Skybox) - Unity Manual">
 <title>天空盒 (Skybox) - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/Inspector-Skybox.png">
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.4/uploads/Main/Inspector-Skybox.jpg">
 <meta name="description" content="__天空盒__是整个场景的封装器，可显示几何体之外的世界。">
 <meta property="og:description" content="__天空盒__是整个场景的封装器，可显示几何体之外的世界。">
 <meta name="author" content="Unity Technologies">
@@ -31,7 +31,7 @@
       var lang = 'zh_CN';
       var page = 'class-Skybox';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -63,7 +63,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -92,10 +92,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/class-Skybox.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/class-Skybox.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/class-Skybox.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/class-Skybox.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/class-Skybox.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/class-Skybox.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/class-Skybox.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/class-Skybox.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -107,7 +107,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -129,7 +129,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="Graphics.html">图形</a></li>
 <li><a href="GraphicsReference.html">图形参考</a></li>
 <li><a href="comp-RenderingGroup.html">渲染组件</a></li>
@@ -150,7 +150,7 @@
 <p>__天空盒__是整个场景的封装器，可显示几何体之外的世界。</p>
 
 <figure>
-<img src="../uploads/Main/Inspector-Skybox.png" alt="">
+<img src="../uploads/Main/Inspector-Skybox.jpg" alt="">
 </figure>
 
 <h2>属性</h2>
@@ -192,14 +192,14 @@
 
 <p>天空盒围绕整个场景渲染，以给人一种远处地平线有复杂风景的印象。在内部，天空盒在所有不透明对象之后渲染；用于渲染天空盒的网格可以是具有六个纹理的盒体，也可以是曲面细分的球体。</p>
 
-<p>要实现天空盒，必须创建天空盒材质。然后，使用 Window &gt; Lighting 菜单项，并在 Scene 选项卡上将您的天空盒材质指定为 Skybox，即可将天空盒添加到场景中。</p>
+<p>To implement a Skybox create a skybox material. Then add it to the scene by using the <strong>Window</strong> &gt; <strong>Rendering</strong> &gt; <strong>Lighting Settings</strong> menu item and specifying your skybox material as the Skybox on the Scene tab.</p>
 
 <p>如果要覆盖默认的天空盒，将天空盒__组件__添加到摄像机非常有用。例如，如果您有一款分屏游戏使用两个摄像机，您可能希望第二个摄像机使用不同的天空盒。要将 Skybox 组件添加到摄像机，请通过单击突出显示该摄像机，然后选择 <strong>Component &gt; Rendering &gt; Skybox</strong>。</p>
 
 <p>如果要创建新的天空盒，请<a href="HOWTO-UseSkybox.html">参考此指南</a>。</p>
 
 <figure>
-<img src="../uploads/Main/SkyboxWindow.png" alt="">
+<img src="../uploads/Main/SkyboxWindow.jpg" alt="">
 </figure>
 
 <h2>提示</h2>
@@ -219,7 +219,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

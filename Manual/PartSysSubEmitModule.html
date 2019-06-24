@@ -12,7 +12,7 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="Sub Emitters 模块 - Unity Manual">
 <title>Sub Emitters 模块 - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/PartSysSubEmitInsp.png">
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.4/uploads/Main/PartSysSubEmitInsp.png">
 <meta name="description" content="在此模块中可设置子发射器。这些子发射器是在粒子生命周期的某些阶段在粒子位置处创建的附加粒子发射器。">
 <meta property="og:description" content="在此模块中可设置子发射器。这些子发射器是在粒子生命周期的某些阶段在粒子位置处创建的附加粒子发射器。">
 <meta name="author" content="Unity Technologies">
@@ -31,7 +31,7 @@
       var lang = 'zh_CN';
       var page = 'PartSysSubEmitModule';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -63,7 +63,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -92,10 +92,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/PartSysSubEmitModule.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/PartSysSubEmitModule.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/PartSysSubEmitModule.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/PartSysSubEmitModule.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/PartSysSubEmitModule.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/PartSysSubEmitModule.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/PartSysSubEmitModule.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/PartSysSubEmitModule.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -107,7 +107,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -129,7 +129,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="Graphics.html">图形</a></li>
 <li><a href="GraphicsReference.html">图形参考</a></li>
 <li><a href="PartSysReference.html">粒子系统参考</a></li>
@@ -197,10 +197,13 @@
 
 <p>此外，还可使用 <strong>Inherit</strong> 选项将属性从父粒子转移到每个新创建的粒子。可转移属性包括大小、旋转、颜色和生命周期。要控制速度的继承方式，请在子发射器系统上配置 <a href="PartSysInheritVelocity.html">Inherit Velocity</a> 模块。</p>
 
+<p>It is also possible to configure a probability that a sub-emitter event will trigger, by setting the <strong>Emit Probability</strong> property. A value of 1 guarantees that the event will trigger, whereas lower values reduce the probability.</p>
+
 <ul>
 <li><p><span class="page-edit">2018–03–28 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
 </span></p></li>
 <li><p><span class="page-history">在 <a href="https://docs.unity3d.com/2018.1/Documentation/Manual/30_search.html?q=newin20181">2018.1</a> 版中的 Sub Emitters 模块的条件列表中添加了“Trigger”和“Manual”条件 <span class="search-words">NewIn20181</span></span></p></li>
+<li><p><span class="page-history">Emit Probabilily property added to particle Sub Emitters Module in <a href="https://docs.unity3d.com/2018.3/Documentation/Manual/30_search.html?q=newin20183">2018.3</a> <span class="search-words">NewIn20183</span></span></p></li>
 </ul>
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
@@ -213,7 +216,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

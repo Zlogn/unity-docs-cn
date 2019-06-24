@@ -30,7 +30,7 @@
       var lang = 'zh_CN';
       var page = 'script-Serialization';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -62,7 +62,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -91,10 +91,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/script-Serialization.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/script-Serialization.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/script-Serialization.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/script-Serialization.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/script-Serialization.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/script-Serialization.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/script-Serialization.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/script-Serialization.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -106,7 +106,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -128,7 +128,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="ScriptingSection.html">脚本</a></li>
 <li><a href="ScriptingConcepts.html">脚本概述</a></li>
 <li>脚本序列化</li>
@@ -285,7 +285,7 @@ class Trouble
 
 <p>重新加载脚本时，Unity 会在所有加载的脚本中序列化并存储所有变量。重新加载脚本后，Unity 会将它们恢复为序列化前的原始值。</p>
 
-<p>重新加载脚本时，Unity 会恢复满足序列化要求的所有变量（包括私有变量），即使变量没有 <a href="../ScriptReference/SerializeField.html">SerializeField</a> 属性也是如此。在某些情况下，需要特意防止恢复私有变量：例如，如果您希望从脚本重新加载后引用为 null。在这种情况下，请使用 <a href="../ScriptReference/NonSerializable.html">NonSerializable</a> 属性。</p>
+<p>When reloading scripts, Unity restores all variables - including private variables - that fulfill the requirements for serialization, even if a variable has no <a href="../ScriptReference/SerializeField.html">SerializeField</a> attribute. In some cases, you specifically need to prevent private variables from being restored: For example, if you want a reference to be null after reloading from scripts. In this case, use the <a href="../ScriptReference/NonSerialized.html">NonSerialized</a> attribute.</p>
 
 <p>Unity 绝不会恢复静态变量，因此对于重新加载脚本后需要保留的状态，不要使用静态变量。
 <br><br></p>
@@ -305,7 +305,7 @@ class Trouble
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

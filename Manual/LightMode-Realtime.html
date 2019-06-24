@@ -12,7 +12,7 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="实时光照 - Unity Manual">
 <title>实时光照 - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/LightMode-Realtime-0.png">
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.4/uploads/Main/LightMode-Realtime-0.png">
 <meta name="description" content="实时光源是 Mode 属性设置为 Realtime 的光源组件。">
 <meta property="og:description" content="实时光源是 Mode 属性设置为 Realtime 的光源组件。">
 <meta name="author" content="Unity Technologies">
@@ -31,7 +31,7 @@
       var lang = 'zh_CN';
       var page = 'LightMode-Realtime';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -63,7 +63,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -92,10 +92,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/LightMode-Realtime.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/LightMode-Realtime.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/LightMode-Realtime.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/LightMode-Realtime.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/LightMode-Realtime.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/LightMode-Realtime.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/LightMode-Realtime.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/LightMode-Realtime.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -107,7 +107,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -129,7 +129,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="Graphics.html">图形</a></li>
 <li><a href="GraphicsOverview.html">图形概述</a></li>
 <li><a href="LightingOverview.html">光照</a></li>
@@ -153,13 +153,13 @@
 
 <p>对于需要更改属性或在游戏过程中通过脚本生成的光源，请使用 <strong>Realtime</strong> 模式。Unity 在运行时每帧计算并更新这些光源的光照。这些光源不会因为玩家所采取的动作或场景中发生的事件而更改。例如，您可以将这些光源设置为打开和关闭（如闪烁光源），更改其变换（如带着穿过暗室的火炬），或更改其视觉属性（如颜色和强度）。</p>
 
-<p>实时光源在静态和动态游戏对象上产生光照并投射逼真的阴影。这些光源在__阴影距离 (Shadow Distance)<strong>（在 </strong>Edit__ &gt; <strong>Project Settings</strong> &gt; <strong>Quality</strong> 中定义）内投射阴影。</p>
+<p>Real-time Lights illuminate and cast realistic shadows on both static and dynamic GameObjects. They cast shadows up to the <strong>Shadow Distance</strong> (defined in <strong>Edit</strong> &gt; <strong>Project Settings</strong>, then select the <strong>Quality</strong> category). </p>
 
 <p>还可将实时光源与__实时全局光照__（__实时 GI__）组合在一起，从而为静态和动态游戏对象提供间接光照。</p>
 
 <h2>实时光照与实时 GI 结合使用</h2>
 
-<p>实时光照与__实时 GI__ 的组合是 Unity 中最灵活且逼真的光照方案。要启用实时 GI，请打开 <a href="GlobalIllumination.html">Lighting 窗口</a>（菜单：__Window__ &gt; <strong>Lighting</strong> &gt; <strong>Settings__），然后勾选 </strong>Realtime Global Illumination__。</p>
+<p>The combination of real-time lighting with <strong>Realtime GI</strong> is the most flexible and realistic lighting option in Unity. To enable Realtime GI, open the <a href="GlobalIllumination.html">Lighting window</a> (menu: <strong>Window</strong> &gt; <strong>Rendering</strong> &gt; <strong>Lighting Settings</strong>) and tick <strong>Realtime Global Illumination</strong>.</p>
 
 <p>When <strong>Realtime GI</strong> is enabled, real-time Lights contribute indirect lighting into the Scene, as well as direct lighting. Use this combination for light sources which change slowly and have a high visual impact on your Scene, such as the sun moving across the sky, or a slowly pulsating light in a closed corridor. You don’t need to use <strong>Realtime GI</strong> for Lights that change quickly, or for special effects, because the latency of the system does not make it worth the overhead. </p>
 
@@ -181,7 +181,7 @@
 
 <p>对于实时光源（即 <strong>Mode</strong> 设置为 <strong>Realtime</strong> 的光源组件），不会预先计算从表面到光源的最后一段发射光线（或路径段）。这意味着光源可在场景中移动，并改变颜色和强度等视觉属性。请参阅<a href="../uploads/ExpertGuides/Using_Enlighten_with_Unity.pdf">在 Unity 中使用 Enlighten (Using Enlighten in Unity)</a> 的相关文档，了解有关路径段的更多信息。</p>
 
-<p>如果光源也投射阴影，则场景中的动态和静态游戏对象都会渲染到光源的<a href="Shadows.html">阴影贴图</a>中。此阴影贴图由静态和动态游戏对象的<a href="Shaders.html">材质着色器</a>进行采样，以便它们相互投射实时阴影。<strong>阴影距离 (Shadow Distance)</strong>（菜单：__Edit__ &gt; <strong>Project Settings</strong> &gt; <strong>Quality</strong> &gt; __Shadows__）控制阴影开始淡出和完全消失的最大距离，从而影响性能和图像质量。</p>
+<p>If the Light also casts shadows, both dynamic and static GameObjects in the Scene are rendered into the Light’s <a href="Shadows.html">shadow map</a>. This shadow map is sampled by the <a href="Shaders.html">Material Shaders</a> of both static and dynamic GameObjects, so that they cast real-time shadows on each other. The <strong>Shadow Distance</strong> (menu: <strong>Edit</strong> &gt; <strong>Project Settings</strong>, then select the <strong>Quality</strong> category, and navigate to the <strong>Shadows</strong> section) controls the maximum distance at which shadows start to fade out and disappear entirely, which in turn affects performance and image quality. </p>
 
 <p>如果未启用__实时 GI__，则实时光源仅计算动态和静态游戏对象上的直接光照。如果启用__实时 GI__，则 Unity 将使用 Enlighten 预先计算静态游戏对象的表面到表面光路。</p>
 
@@ -217,7 +217,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

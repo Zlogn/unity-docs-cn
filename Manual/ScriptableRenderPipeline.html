@@ -10,11 +10,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="twitter:card" content="summary">
-<meta property="og:title" content="Scriptable Render Pipeline# - Unity Manual">
-<title>Scriptable Render Pipeline# - Unity Manual</title>
-<meta name="description" content="The Scriptable Render Pipeline (SRP) is an alternative to the Unity built-in pipeline.
+<meta property="og:title" content="Scriptable Render Pipeline - Unity Manual">
+<title>Scriptable Render Pipeline - Unity Manual</title>
+<meta name="description" content="The Scriptable Render Pipeline (SRP) is an alternative to the Unity built-in render pipeline.
 With the SRP, you can control and tailor rendering via C# scripts. This way, you can either slightly modify or completely build and customize the render pipeline to your needs.">
-<meta property="og:description" content="The Scriptable Render Pipeline (SRP) is an alternative to the Unity built-in pipeline.
+<meta property="og:description" content="The Scriptable Render Pipeline (SRP) is an alternative to the Unity built-in render pipeline.
 With the SRP, you can control and tailor rendering via C# scripts. This way, you can either slightly modify or completely build and customize the render pipeline to your needs.">
 <meta name="author" content="Unity Technologies">
 <link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
@@ -32,7 +32,7 @@ With the SRP, you can control and tailor rendering via C# scripts. This way, you
       var lang = 'zh_CN';
       var page = 'ScriptableRenderPipeline';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -64,7 +64,7 @@ With the SRP, you can control and tailor rendering via C# scripts. This way, you
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -93,10 +93,10 @@ With the SRP, you can control and tailor rendering via C# scripts. This way, you
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/ScriptableRenderPipeline.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/ScriptableRenderPipeline.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/ScriptableRenderPipeline.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/ScriptableRenderPipeline.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/ScriptableRenderPipeline.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/ScriptableRenderPipeline.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/ScriptableRenderPipeline.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/ScriptableRenderPipeline.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -108,7 +108,7 @@ With the SRP, you can control and tailor rendering via C# scripts. This way, you
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -130,9 +130,9 @@ With the SRP, you can control and tailor rendering via C# scripts. This way, you
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="Graphics.html">图形</a></li>
-<li>Scriptable Render Pipeline#</li>
+<li>Scriptable Render Pipeline</li>
 </ul></div>
 <div class="mb20"><div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
@@ -146,20 +146,22 @@ With the SRP, you can control and tailor rendering via C# scripts. This way, you
 <!--BeginSwitchLink--><!--EndSwitchLink-->
 <div class="clear"></div>
 
-<p>The Scriptable Render Pipeline (SRP) is an alternative to the Unity <a href="SL-RenderPipeline.html">built-in pipeline</a>.
+<p>The Scriptable Render Pipeline (SRP) is an alternative to the Unity <a href="SL-RenderPipeline.html">built-in render pipeline</a>.
 With the SRP, you can control and tailor rendering via C# scripts. This way, you can either slightly modify or completely build and customize the render pipeline to your needs.</p>
 
 <p>The SRP gives you more granularity and customization options than the built-in Unity render pipeline. And you can use one of the pre-built SRPs to target your specific needs.</p>
 
-<p>Using an SRP is different from using the built-in Unity render pipeline. For example, the pre-built SRPs come with a new Shader library, because the built-in Unity Shaders do not work with SRPs.</p>
+<p>Using an SRP is different from using the built-in Unity render pipeline. For example, the pre-built SRPs come with a new Shader library. This is because the Lit shaders from the built-in render pipeline, and custom Lit shaders, do not work with SRPs. You can upgrade the built-in Lit shaders to both LWRP and HDRP.</p>
+
+<p><strong>Note:</strong> This is a preview feature and is subject to change. Any scripts that use this feature may need updating in a future release. Do not rely on this feature for full-scale production until it is no longer in preview.</p>
 
 <h2>Pre-built SRPs</h2>
 
 <p>Unity has built two Scriptable Render Pipelines that use the SRP framework: the High Definition Render Pipeline (HDRP) and the Lightweight Render Pipeline (LWRP). Each render pipeline targets a specific set of use-case scenarios and hardware needs. The pre-built render pipelines are available as templates for new Projects.</p>
 
-<p>Both of these render pipelines are delivered as packages, and include the <a href="https://github.com/Unity-Technologies/ScriptableRenderPipeline/wiki/Shader-Graph">Shader Graph</a> and <a href="https://github.com/Unity-Technologies/PostProcessing/wiki">Post Processing</a> packages.</p>
+<p>Both of these render pipelines are delivered as packages via the Package Manager window in Unity. They both include the <a href="https://github.com/Unity-Technologies/ScriptableRenderPipeline/wiki/Shader-Graph">Shader Graph</a> and <a href="https://github.com/Unity-Technologies/PostProcessing/wiki">Post-processing</a> packages. </p>
 
-<p><strong>Note:</strong> Projects made using HDRP are not compatible with the Lightweight Render Pipeline or the built-in Unity rendering pipeline. Before you start development, you must decide which render pipeline to use in your Project. </p>
+<p><strong>Note:</strong> LWRP and HDRP are not compatible with each other, and neither is compatible with the built-in Render Pipeline. Before you start development, you must decide which render pipeline to use in your Project. </p>
 
 <h3>High Definition Render Pipeline</h3>
 
@@ -179,9 +181,9 @@ With the SRP, you can control and tailor rendering via C# scripts. This way, you
 
 <p>The Lightweight Render Pipeline is available via two templates: LWRP and LWRP-VR. The LWRP-VR comes with pre-enabled settings specifically for VR. </p>
 
-<p><strong>Note:</strong> Built-in and custom Lit Shaders do not work with the Lightweight Render Pipeline. Instead, LWRP has a new set of standard shaders. If you upgrade a current Project to LWRP, you can upgrade built-in shaders to the new ones.</p>
+<p><strong>Note:</strong> Built-in and custom Lit Shaders do not work with the Lightweight Render Pipeline. Instead, LWRP has a new set of standard Shaders. If you upgrade a current Project to LWRP, you can upgrade built-in Shaders to the new ones.</p>
 
-<p>Fore more information on LWRP, see the <a href="https://github.com/Unity-Technologies/ScriptableRenderPipeline/wiki/Lightweight-Render-PipelineOverview">LWRP overview on the SRP GitHub Wiki.</a></p>
+<p>To see the latest documentation for LWRP, go to Package Manager in Unity, navigate to the Lightweight Render Pipeline package, and click <strong>View Documentation</strong>. </p>
 
 <h2>Setting up a Scriptable Render Pipeline</h2>
 
@@ -212,22 +214,22 @@ If you want to use one of the pre-built SRPs in a new or current Project, contin
 
 <ol>
 <li>In Unity, open your Project.</li>
-<li>In the Unity menu bar, go to <strong>Window &gt; Package Manager</strong> to open the <strong>Package Manager</strong> window.</li>
+<li>In the Unity menu bar, go to <strong>Window</strong> &gt; <strong>Package Manager</strong> to open the <strong>Package Manager</strong> window.</li>
 <li>Select the <strong>All</strong> tab. This tab displays the list of available packages for the version of Unity that you are currently running.</li>
 <li>Select the render pipeline that you want to use from the list of packages. In the top right corner of the window, click <strong>Install</strong>. This installs the render pipeline directly in to your Project.</li>
 </ol>
 
 <h3>Configuring and using a pre-built render pipeline</h3>
 
-<p>Before you can use either of the pre-built render pipelines, you must create a Render Pipeline Asset and add it to your Project settings. The following sections explain how to create the SRP Asset and how to add it to a HDRP or LWRP.</p>
+<p>Before you can use either of the pre-built render pipelines, you <em>must</em> create a Render Pipeline Asset and add it to your Project settings. The following sections explain how to create the SRP Asset and how to add it to an HDRP or LWRP.</p>
 
 <h4>Creating Scriptable Render Pipeline Assets</h4>
 
-<p>To properly use your chosen SRP, you must create a Scriptable Render Pipeline Asset.</p>
+<p>To properly use your chosen SRP, you <em>must</em> create a Scriptable Render Pipeline Asset.</p>
 
-<p>The Scriptable Render Pipeline Asset controls the global rendering quality settings of your Project and creates the rendering pipeline instance. The rendering pipeline instance contains intermediate resources and the render pipeline implementation.</p>
+<p>The Scriptable Render Pipeline Asset controls the global rendering <a href="class-QualitySettings.html">Quality</a> settings of your Project and creates the rendering pipeline instance. The rendering pipeline instance contains intermediate resources and the render pipeline implementation.</p>
 
-<p>You can create multiple Pipeline Assets to store settings for different platforms or for different testing environments.</p>
+<p>You can create multiple Pipeline Assets to store settings for different platforms or for different testing environments. </p>
 
 <p>To create a Render Pipeline Asset:</p>
 
@@ -237,15 +239,17 @@ If you want to use one of the pre-built SRPs in a new or current Project, contin
 <li>Select either <strong>High Definition</strong> or <strong>Lightweight</strong>, depending on your needs. Click <strong>Render Pipeline/Pipeline Asset</strong>.</li>
 </ol>
 
+<p><strong>Note:</strong> HDRP and LWRP are not compatible with each other, because they use different lighting models. Your Project must use one or the other. You can, however, use different Assets with the same render pipeline. This means that you can test different settings using different Assets by swapping between them, instead of changing individual settings.</p>
+
 <h4>Configuring and using HDRP</h4>
 
 <p>To use HDRP, you must edit your Project’s <strong>Player</strong> and <strong>Graphics</strong> settings as follows:</p>
 
 <ol>
-<li>In the Editor, go to <strong>Edit</strong> &gt; <strong>Project Settings &gt; Player</strong>. In the <strong>Color Space</strong> dropdown, select <strong>Linear</strong>. HDRP does not support Gamma lighting.</li>
+<li>In the Editor, go to <strong>Edit</strong> &gt; <strong>Project Settings</strong>, then select the <strong>Player</strong> category. Select <strong>Linear</strong> from the <strong>Color Space</strong> dropdown menu. HDRP does not support Gamma lighting.</li>
 <li>In the Project window, navigate to a directory outside of the <em>Scriptable Render Pipeline</em> folder.</li>
 <li>Right-click the Project window, and select <strong>Create &gt; Render Pipeline &gt; High Definition &gt; Render Pipeline</strong>.</li>
-<li>Navigate to <strong>Edit &gt; Project Settings &gt; Graphics</strong>.</li>
+<li>Navigate to <strong>Edit &gt; Project Settings</strong>, then select the <strong>Graphics</strong> category.</li>
 <li>In the <strong>Render Pipeline Settings</strong> field, add the High Definition Render Pipeline Asset you created earlier.</li>
 </ol>
 
@@ -258,11 +262,11 @@ If you want to use one of the pre-built SRPs in a new or current Project, contin
 <ol>
 <li>In the Project window, navigate to a directory outside of the <em>Scriptable Render Pipeline</em> folder.</li>
 <li>Right-click in the Project window, and select <strong>Create &gt; Render Pipeline &gt; Lightweight &gt; Pipeline Asset</strong>.</li>
-<li>Navigate to <strong>Edit &gt; Project Settings &gt; Graphics</strong>.</li>
-<li>In the _<em>Render Pipeline Settings</em> field, add the Lightweight Render Pipeline Asset you created earlier.</li>
+<li>Navigate to <strong>Edit &gt; Project Settings</strong>, then select the <strong>Graphics</strong> category.</li>
+<li>In the <strong>Render Pipeline Settings</strong> field, add the Lightweight Render Pipeline Asset you created earlier.</li>
 </ol>
 
-<p><strong>Tip:</strong> Always store your new Render Pipeline Asset outside of the <em>Scriptable Render Pipeline</em> folder. This ensures that your Lightweight settings are not lost when merging new changes from the SRP GitHub repository.</p>
+<p><strong>Tip:</strong> Always store your new Lightweight Render Pipeline Asset outside of the <em>Scriptable Render Pipeline</em> folder. This ensures that your Lightweight settings are not lost when merging new changes from the SRP GitHub repository.</p>
 
 <p><a name="custom"></a></p>
 
@@ -281,16 +285,16 @@ If you want to use one of the pre-built SRPs in a new or current Project, contin
 
 <pre><code>    
 {
-
+    
    "dependencies": {
        "com.unity.postprocessing": "file:../ScriptableRenderPipeline/com.unity.postprocessing",
-
+    
        "com.unity.render-pipelines.core": "file:../ScriptableRenderPipeline/com.unity.render-pipelines.core",
-
+    
        "com.unity.shadergraph": "file:../ScriptableRenderPipeline/com.unity.shadergraph",
-
+    
        "com.unity.render-pipelines.lightweight": "file:../ScriptableRenderPipeline/com.unity.render-pipelines.lightweight"
-
+    
    }
 }
 </code></pre>
@@ -301,9 +305,9 @@ If you want to use one of the pre-built SRPs in a new or current Project, contin
 <hr>
 
 <ul>
-<li><p><span class="page-edit">2018–07–03 Page published with <a href="DocumentationEditorialReview.html">editorial review</a>
+<li><p><span class="page-edit">2018–12–12 Page amended with <a href="DocumentationEditorialReview.html">editorial review</a>
 </span></p></li>
-<li><p><span class="page-history">Scriptable Render Pipline added in <a href="https://docs.unity3d.com/2018.1/Documentation/Manual/30_search.html?q=newin2018">2018.1</a> <span class="search-words">NewIn20181</span></span></p></li>
+<li><p><span class="page-history">Preview of Scriptable Render Pipeline added in <a href="https://docs.unity3d.com/2018.1/Documentation/Manual/30_search.html?q=newin2018">2018.1</a> <span class="search-words">NewIn20181</span></span></p></li>
 </ul>
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
@@ -316,7 +320,7 @@ If you want to use one of the pre-built SRPs in a new or current Project, contin
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

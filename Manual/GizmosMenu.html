@@ -12,7 +12,7 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="Gizmos 菜单 - Unity Manual">
 <title>Gizmos 菜单 - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/GizmosMenu1.png">
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.4/uploads/Main/GizmosMenu1.png">
 <meta name="description" content="Scene 视图和 Game 视图都有 Gizmos 菜单。单击 Scene 视图或 Game 视图的工具栏中的 Gizmos 按钮，即可访问 Gizmos 菜单。">
 <meta property="og:description" content="Scene 视图和 Game 视图都有 Gizmos 菜单。单击 Scene 视图或 Game 视图的工具栏中的 Gizmos 按钮，即可访问 Gizmos 菜单。">
 <meta name="author" content="Unity Technologies">
@@ -31,7 +31,7 @@
       var lang = 'zh_CN';
       var page = 'GizmosMenu';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -63,7 +63,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -92,10 +92,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/GizmosMenu.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/GizmosMenu.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/GizmosMenu.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/GizmosMenu.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/GizmosMenu.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/GizmosMenu.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/GizmosMenu.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/GizmosMenu.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -107,7 +107,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -129,10 +129,10 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="UnityOverview.html">在 Unity 中操作</a></li>
 <li><a href="UsingTheEditor.html">主要窗口</a></li>
-<li><a href="UsingTheSceneView.html">Scene 视图</a></li>
+<li><a href="UsingTheSceneView.html">The Scene view</a></li>
 <li>Gizmos 菜单</li>
 </ul></div>
 <div class="mb20"><div class="nextprev clear">
@@ -185,7 +185,7 @@
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Selection Outline</strong></td>
-	<td style="text-align:left;">选中 <strong>Selection Outline</strong> 可以通过彩色轮廓来显示所选的游戏对象。如果所选的游戏对象超出 Scene 视图的边缘，则会裁剪轮廓以便沿用窗口的边缘。要更改 Selection Outline 的颜色，请选择 <strong>Unity</strong> &gt; <strong>Preferences</strong> &gt; <strong>Colors__，然后更改 </strong>Selected Outline__ 设置。<br><br>此选项仅在 Scene 视图的 Gizmos 菜单中可用；无法在 Game 视图的 Gizmos 菜单中启用该选项。<br><br>请参阅下面的 <a href="#SelectionOutlineWire">Selection Outline 和 Selection Wire</a> 以查看图像以及更多信息。</td>
+	<td style="text-align:left;">Check <strong>Selection Outline</strong> to display selected GameObjects with a colored outline, and their children with a different colored outline. By default, Unity highlights the selected GameObject in orange, and child GameObjects in blue.<br><br><strong>NOTE:</strong> This option is only available in the Scene view Gizmos menu; you cannot enable it in the Game view Gizmos menu. <br><br>See <a href="#SelectionOutlineWire">Selection Outline and Selection Wire</a>, below, for images and further information.</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Selection Wire</strong></td>
@@ -255,13 +255,22 @@
 
 <h3>Selection Outline</h3>
 
-<p>启用 <strong>Selection Outline</strong> 后，在 Scene 视图或 Hierarchy 窗口中选择游戏对象时，将在 Scene 视图中的该游戏对象周围显示橙色轮廓：</p>
+<p>When <strong>Selection Outline</strong> is enabled, an outline appears around selected GameObjects and their child GameObjects. By default, Unity outlines selected GameObjects in orange, and child GameObjects in blue. You can change these colors in the Unity preferences (see <a href="#SelectionColors">Selection Colors</a>, below).</p>
 
 <figure>
-<img src="../uploads/Main/GameObjectSelectedOutline.jpg" alt="">
+<img src="../uploads/Main/GameObjectSelectedOutline.jpg" alt="Selecting a GameObject (the large ladybug) outlines it in orange, and outlines its child GameObjects (the smaller ladybugs) in blue.">
+<figcaption>Selecting a GameObject (the large ladybug) outlines it in orange, and outlines its child GameObjects (the smaller ladybugs) in blue.</figcaption>
 </figure>
 
-<p>如果所选的游戏对象占据了大部分 Scene 视图并延伸到窗口边缘之外，则 Selection Outline 将沿窗口边缘显示：</p>
+<p>When you select a GameObject, Unity outlines all of its child GameObjects (and their child GameObjects, and so on), but does not outline parent GameObjects (or their parent GameObjects, and so on).</p>
+
+<figure>
+<img src="../uploads/Main/GameObjectSelectedOutlineParentChild.jpg" alt="Selecting the medium ladybug highlights it in orange, and highlights its child GameObject (the small ladybug) in blue, but does not highlight its parent GameObject (the large ladybug). ">
+<figcaption>Selecting the medium ladybug highlights it in orange, and highlights its child GameObject (the small ladybug) in blue, but does not highlight its parent GameObject (the large ladybug).
+</figcaption>
+</figure>
+
+<p>If selected GameObjects extend beyond the edges of the Scene view, the selection outline runs along the edge of the window:</p>
 
 <figure>
 <img src="../uploads/Main/GameObjectSelectedBeyondEdges.png" alt="">
@@ -275,9 +284,23 @@
 <img src="../uploads/Main/GameObjectSelectedWire.jpg" alt="">
 </figure>
 
+<p><a name="SelectionColors"></a></p>
+
 <h3>选择颜色</h3>
 
-<p>可为选择线框设置自定义颜色；要执行此操作，选择 <strong>Unity</strong> &gt; <strong>Preferences</strong> &gt; <strong>Colors__，然后更改 </strong>Selected Outline__ 设置以改变 <strong>Selection Outline__，或者更改 </strong>Selected Wireframe__ 以改变 <strong>Selection Wire</strong> 设置。</p>
+<p>You can set custom colors for selection wireframes. </p>
+
+<ol>
+<li>Go to <strong>Unity &gt; Preferences</strong> (macOS) or <strong>Edit &gt; Preferences</strong> (Windows) to open the <a href="Preferences.html">Preferences</a> editor.</li>
+<li>On the colors tab, change one or more of the following colors:
+
+<ul>
+<li>(A) <strong>Selected Children Outline</strong>: outline color for selected GameObjects’ children.</li>
+<li>(B) <strong>Selected Outline</strong>: outline color for selected GameObjects.</li>
+<li>(C) <strong>Wireframe Selected</strong>: outline color for selected GameObjects’ wireframes.</li>
+</ul>
+</li>
+</ol>
 
 <figure>
 <img src="../uploads/Main/GameObjectSelectedCustomColors.jpg" alt="">
@@ -313,6 +336,14 @@
 <p>勾选 <strong>Gizmo</strong> 列中的复选框可以选择 Editor 是否为特定组件类型绘制辅助图标图形。例如，碰撞体具有预定义的线框辅助图标来显示其形状，而摄像机具有辅助图标来显示<a href="UnderstandingFrustum.html">视锥体</a>。自有的脚本可以绘制适合自身用途的自定义辅助图标；应实现 <a href="../ScriptReference/MonoBehaviour.OnDrawGizmos.html">OnDrawGizmos</a> 或 <a href="../ScriptReference/MonoBehaviour.OnDrawGizmosSelected.html">OnDrawGizmosSelected</a> 来执行此操作。取消选中此列中的复选框可以关闭这些辅助图标。</p>
 
 <p><strong>注意</strong>：如果列表中的项具有图标而没有辅助图标，则此列中没有它的复选框。</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2018–10–08 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">Selection outline for child GameObjects added in <a href="https://docs.unity3d.com/2018.X/Documentation/Manual/30_search.html?q=newin2018X">2018.3</a> <span class="search-words">NewIn2018X</span></span></p></li>
+</ul>
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
 <span class="prev"><a href="ViewModes.html"></a></span><div class="tip">Scene 视图控制栏</div>
@@ -324,7 +355,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

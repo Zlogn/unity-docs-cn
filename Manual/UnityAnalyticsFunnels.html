@@ -12,7 +12,7 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="漏斗图 - Unity Manual">
 <title>漏斗图 - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/UnityAnalyticsFunnels1.png">
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.4/uploads/Main/UnityAnalyticsFunnels1.png">
 <meta name="description" content="漏斗图有助于跟踪玩家是否在游戏内完成线性活动序列。漏斗图可显示玩家完成该序列的每一步以及完成整个序列的百分比。用漏斗图跟踪的常见序列包括：">
 <meta property="og:description" content="漏斗图有助于跟踪玩家是否在游戏内完成线性活动序列。漏斗图可显示玩家完成该序列的每一步以及完成整个序列的百分比。用漏斗图跟踪的常见序列包括：">
 <meta name="author" content="Unity Technologies">
@@ -31,7 +31,7 @@
       var lang = 'zh_CN';
       var page = 'UnityAnalyticsFunnels';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -63,7 +63,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -92,10 +92,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/UnityAnalyticsFunnels.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/UnityAnalyticsFunnels.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/UnityAnalyticsFunnels.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/UnityAnalyticsFunnels.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/UnityAnalyticsFunnels.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/UnityAnalyticsFunnels.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/UnityAnalyticsFunnels.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/UnityAnalyticsFunnels.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -107,7 +107,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -129,7 +129,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="UnityServices.html">Unity 服务</a></li>
 <li><a href="UnityAnalytics.html">Unity Analytics</a></li>
 <li>漏斗图</li>
@@ -170,9 +170,12 @@
 
 <p>在分发要包含在漏斗图中的标准事件和自定义事件的至少一个实例并等待处理这些事件之后，请按照以下步骤在 Analytics Dashboard 上创建漏斗图规则：</p>
 
-<p>1.在 Unity Analytics Dashboard 上，单击 <strong>Funnel Analyzer</strong> 选项卡。
+<ol>
+<li>On the Unity Analytics dashboard, click <strong>Funnel Analyzer</strong>.
 2.单击 <strong>Create Funnel</strong>。
- <img src="../uploads/Main/UnityAnalyticsFunnels1.png" alt=""></p>
+ <img src="../uploads/Main/UnityAnalyticsFunnels1.png" alt="">
+</li>
+</ol>
 
 <p>3.输入漏斗图的 <strong>Name__（名称）或 </strong>Description__（描述，这是可选字段）。
 4.对于要跟踪和分析的事件的线性序列中的每一步：
@@ -187,7 +190,7 @@
 
 <h2>阅读 Funnel Analyzer 报告</h2>
 
-<p>Analytics Dashboard 的 <strong>Funnel Analyzer</strong> 选项卡会列出已创建的漏斗图。</p>
+<p>The <strong>Funnel Analyzer</strong> page of your Analytics Dashboard lists the funnels that you have created. </p>
 
 <figure>
 <img src="../uploads/Main/UnityAnalyticsFunnels2.png" alt="">
@@ -246,7 +249,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

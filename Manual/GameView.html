@@ -12,7 +12,7 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="Game 视图 - Unity Manual">
 <title>Game 视图 - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/GameView.png">
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.4/uploads/Main/GameView.jpg">
 <meta name="description" content="从游戏中的摄像机渲染 Game 视图。该视图代表最终发布的游戏。需要使用一个或多个摄像机来控制玩家在玩游戏时实际看到的内容。有关摄像机的更多信息，请查看摄像机组件页面。">
 <meta property="og:description" content="从游戏中的摄像机渲染 Game 视图。该视图代表最终发布的游戏。需要使用一个或多个摄像机来控制玩家在玩游戏时实际看到的内容。有关摄像机的更多信息，请查看摄像机组件页面。">
 <meta name="author" content="Unity Technologies">
@@ -31,7 +31,7 @@
       var lang = 'zh_CN';
       var page = 'GameView';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -63,7 +63,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -92,10 +92,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/GameView.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/GameView.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/GameView.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/GameView.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/GameView.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/GameView.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/GameView.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/GameView.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -107,7 +107,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -129,7 +129,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="UnityOverview.html">在 Unity 中操作</a></li>
 <li><a href="UsingTheEditor.html">主要窗口</a></li>
 <li>Game 视图</li>
@@ -147,7 +147,7 @@
 <div class="clear"></div>
 
 <figure>
-<img src="../uploads/Main/GameView.png" alt="">
+<img src="../uploads/Main/GameView.jpg" alt="">
 </figure>
 
 <p>从游戏中的摄像机渲染 Game 视图。该视图代表最终发布的游戏。需要使用一个或多个摄像机来控制玩家在玩游戏时实际看到的内容。有关摄像机的更多信息，请查看<a href="class-Camera.html">摄像机组件页面</a>。</p>
@@ -170,47 +170,48 @@
 <colgroup>
 <col style="text-align:left;">
 <col style="text-align:left;">
+<col style="text-align:left;">
 </colgroup>
 
 <thead>
 <tr>
-	<th style="text-align:left;"><strong><em>按钮：</em></strong></th>
-	<th style="text-align:left;"><strong><em>功能：</em></strong></th>
+	<th style="text-align:left;" colspan="2"><strong>Button</strong></th>
+	<th style="text-align:left;"><strong>功能</strong></th>
 </tr>
 </thead>
 
 <tbody>
 <tr>
-	<td style="text-align:left;"><strong>显示屏</strong></td>
+	<td style="text-align:left;" colspan="2"><strong>Display</strong></td>
 	<td style="text-align:left;">如果场景中有多个摄像机，可单击此按钮从摄像机列表中进行选择。默认情况下，此按钮设置为 <strong>Display 1</strong>。（可以在摄像机模块中的 <strong>Target Display</strong> 下拉菜单下将显示分配给摄像机。）</td>
 </tr>
 <tr>
-	<td style="text-align:left;"><strong>Aspect</strong></td>
+	<td style="text-align:left;" colspan="2"><strong>Aspect</strong></td>
 	<td style="text-align:left;">可选择不同值来测试游戏在具有不同宽高比的显示器上的显示效果。默认情况下，此设置为 <strong>Free Aspect</strong>。</td>
 </tr>
 <tr>
-	<td style="text-align:left;">    <em>Low Resolution Aspect Ratios</em>
-</td>
-	<td style="text-align:left;">如果要模拟更旧显示屏的像素密度，请选中此框：选择宽高比后，此功能会降低 Game 视图的分辨率。Game 视图位于非 Retina 显示屏上时，此复选框始终处于启用状态。<br>（仅当 Editor 在 macOS 上运行时，此复选框才可见。）</td>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Low Resolution Aspect Ratios</strong></td>
+	<td style="text-align:left;">Check this box if you want to emulate the pixel density of older displays: This reduces the resolution of the Game view when an aspect ratio is selected. It is always enabled when the Game view is on a non-Retina display.</td>
 </tr>
 <tr>
-	<td style="text-align:left;"><strong>Scale 滑动条</strong></td>
+	<td style="text-align:left;" colspan="2"><strong>Scale 滑动条</strong></td>
 	<td style="text-align:left;">向右滚动可放大并更详细地检查游戏屏幕的区域。设备分辨率高于 Game 视图窗口大小的情况下，该滚动条还可缩小视图以查看整个屏幕。在游戏停止或暂停时，也可以使用滚轮和鼠标中键来执行此操作。</td>
 </tr>
 <tr>
-	<td style="text-align:left;"><strong>Maximize on Play</strong></td>
+	<td style="text-align:left;" colspan="2"><strong>Maximize on Play</strong></td>
 	<td style="text-align:left;">单击按钮启用：进入播放模式时，使用此按钮可使 Game 视图最大化（Editor 窗口的 100%）以便进行全屏预览。</td>
 </tr>
 <tr>
-	<td style="text-align:left;"><strong>Mute audio</strong></td>
+	<td style="text-align:left;" colspan="2"><strong>Mute audio</strong></td>
 	<td style="text-align:left;">单击按钮启用：进入播放模式时，使用此按钮可将任何游戏内的音频静音。</td>
 </tr>
 <tr>
-	<td style="text-align:left;"><strong>Stats</strong></td>
+	<td style="text-align:left;" colspan="2"><strong>Stats</strong></td>
 	<td style="text-align:left;">单击此按钮可以切换 Statistics 覆盖层，其中包含有关游戏音频和图形的<a href="RenderingStatistics.html">渲染统计信息</a>。这对于在播放模式下监控游戏性能非常有用。</td>
 </tr>
 <tr>
-	<td style="text-align:left;"><strong>Gizmos</strong></td>
+	<td style="text-align:left;" colspan="2"><strong>Gizmos</strong></td>
 	<td style="text-align:left;">单击此按钮可切换<a href="GizmosMenu.html">辅助图标</a>的可见性。要在播放模式下仅查看某些类型的辅助图标，请单击 <strong>Gizmos</strong> 一词旁边的下拉箭头，然后仅选中要查看的辅助图标类型的复选框。（请参阅以下的辅助图标选项。）</td>
 </tr>
 </tbody>
@@ -231,6 +232,14 @@
 <p>__Warn if No Cameras Rendering__：此选项默认为启用状态：如果没有摄像机渲染到屏幕，会显示警告。这对于诊断意外删除或禁用摄像机等问题非常有用。除非故意不使用摄像机来渲染游戏，否则应将此选项保持启用状态。</p>
 
 <p>__Clear Every Frame in Edit Mode__：此选项默认为启用状态：在游戏未播放时，会每帧清除 Game 视图。这可以防止在配置游戏时出现拖尾效果。除非在未处于播放模式时依赖于前一帧的内容，否则应将此选项保持启用状态。</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2018–04–25 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history"><strong>Low Resolution Aspect Ratios</strong> Game view option available on Windows from <a href="https://docs.unity3d.com/2018.2/Documentation/Manual/30_search.html?q=newin20182">2018.2</a> <span class="search-words">NewIn20182</span></span></p></li>
+</ul>
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
 <span class="prev"><a href="GizmosMenu.html"></a></span><div class="tip">Gizmos 菜单</div>
@@ -242,7 +251,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

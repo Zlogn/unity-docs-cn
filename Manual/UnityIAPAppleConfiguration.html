@@ -30,7 +30,7 @@
       var lang = 'zh_CN';
       var page = 'UnityIAPAppleConfiguration';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -62,7 +62,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -91,10 +91,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/UnityIAPAppleConfiguration.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/UnityIAPAppleConfiguration.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/UnityIAPAppleConfiguration.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/UnityIAPAppleConfiguration.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/UnityIAPAppleConfiguration.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/UnityIAPAppleConfiguration.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/UnityIAPAppleConfiguration.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/UnityIAPAppleConfiguration.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -106,7 +106,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -128,7 +128,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="UnityServices.html">Unity 服务</a></li>
 <li><a href="UnityIAP.html">﻿Unity IAP</a></li>
 <li><a href="UnityIAPSettingUp.html">设置 Unity IAP</a></li>
@@ -195,7 +195,7 @@
 
 <p>2.选择<a href="UnityIAPDefiningProducts.html">商品类型</a>。</p>
 
-<pre><code>![](../uploads/Main/IAPAppleImage5.png) 
+<pre><code>![](../uploads/Main/IAPAppleImage5.jpg)
 </code></pre>
 
 <p>3.指定商品标识符 (Product Identifier)，并根据要求填写其他字段。</p>
@@ -204,7 +204,7 @@
 
 **注意：**面向多个 Apple 设备组时（例如，同时在 iOS 和 Mac 上发布），Apple 要求对每个不同的设备组使用不同的唯一商品标识符。使用 [Unity IAP 的 Purchasing.IDs](http://docs.unity3d.com/ScriptReference/Purchasing.IDs-ctor.html) 类并将一对多映射的商品 ID 定义为特定于商店的标识符，然后在初始化 IAP 时传入该映射。
 
-![](../uploads/Main/IAPAppleImage6.png) 
+![](../uploads/Main/IAPAppleImage6.jpg)
 </code></pre>
 
 <p>4.结果：</p>
@@ -230,7 +230,7 @@
 
 <p>3.使用 Unity 为您的游戏编译 Xcode 项目。</p>
 
-<pre><code>**注意：**确保 Unity 中的 Bundle Identifier (Build Settings &amp;gt; iOS &amp;gt; Settings ...&amp;gt; Other Settings &amp;gt; Bundle Identifier) 与 iTunes Connect 中使用的标识符匹配。
+<pre><code>**NOTE:** Ensure the Bundle Identifier in Unity (**Edit** &amp;gt; **Project Settings**, then select the **Other Settings** category, and navigate to the **Bundle Identifier** section) matches that used in iTunes Connect.
 </code></pre>
 
 <p>4.然后，在游戏的 Xcode 项目中，确保 Team (Project Navigator &gt; 您的游戏目标平台 &gt; General &gt; Identity &gt; Team) 设置为您的 Apple 开发者帐户的团队。</p>
@@ -256,7 +256,9 @@
 
 <h4>对于 Mac</h4>
 
-<p>1.发布到 Mac 台式机时，请在 Unity 的 Mac Player Settings 中选择 <strong>Mac App Store Validation</strong>。</p>
+<ol>
+<li>When building a desktop Mac build, select <strong>Mac App Store Validation</strong> within Unity’s Mac <strong>Player</strong> settings.</li>
+</ol>
 
 <p>2.完成应用程序的编译后，请使用您的 Bundle ID 和版本字符串来更新应用程序的 <code>info.plist</code> 文件。右键单击 .app 文件，然后单击 __Show Package Contents__，找到 <code>info.plist</code> 文件，并将 <code>CFBundleIdentifier</code> 字符串更新为应用程序的 Bundle ID。</p>
 
@@ -287,7 +289,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

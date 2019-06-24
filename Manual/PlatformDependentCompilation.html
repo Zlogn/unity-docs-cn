@@ -12,7 +12,7 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="平台相关的编译 - Unity Manual">
 <title>平台相关的编译 - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/BuildSettings.png">
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.4/uploads/Main/BuildSettings.png">
 <meta name="description" content="Unity 包括名为__平台相关的编译 (Platform Dependent Compilation)__ 的功能。此功能包括一些预处理器指令，可让您对脚本进行分区，从而为受支持平台之一专门编译和执行一段代码。">
 <meta property="og:description" content="Unity 包括名为__平台相关的编译 (Platform Dependent Compilation)__ 的功能。此功能包括一些预处理器指令，可让您对脚本进行分区，从而为受支持平台之一专门编译和执行一段代码。">
 <meta name="author" content="Unity Technologies">
@@ -31,7 +31,7 @@
       var lang = 'zh_CN';
       var page = 'PlatformDependentCompilation';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -63,7 +63,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -92,10 +92,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/PlatformDependentCompilation.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/PlatformDependentCompilation.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/PlatformDependentCompilation.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/PlatformDependentCompilation.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/PlatformDependentCompilation.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/PlatformDependentCompilation.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/PlatformDependentCompilation.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/PlatformDependentCompilation.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -107,7 +107,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -129,14 +129,14 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="ScriptingSection.html">脚本</a></li>
 <li><a href="ScriptingConcepts.html">脚本概述</a></li>
 <li>平台相关的编译</li>
 </ul></div>
 <div class="mb20"><div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
-<span class="prev"><a href="UnderstandingAutomaticMemoryManagement.html"></a></span><div class="tip">了解自动内存管理</div>
+<span class="prev"><a href="UnderstandingAutomaticMemoryManagement.html"></a></span><div class="tip">Understanding Automatic Memory Management</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
 <span class="next"><a href="ScriptCompileOrderFolders.html"></a></span><div class="tip">特殊文件夹和脚本编译顺序</div>
@@ -321,6 +321,10 @@
 
 <tbody>
 <tr>
+	<td style="text-align:left;"><strong>CSHARP_7_3_OR_NEWER</strong></td>
+	<td style="text-align:left;">Defined when building scripts with support for C# 7.3 or newer.</td>
+</tr>
+<tr>
 	<td style="text-align:left;"><strong>ENABLE_MONO</strong></td>
 	<td style="text-align:left;">用于 Mono 的脚本后端 #define。</td>
 </tr>
@@ -343,6 +347,10 @@
 <tr>
 	<td style="text-align:left;"><strong>NET_2_0_SUBSET</strong></td>
 	<td style="text-align:left;">在 Mono 和 IL2CPP 上根据 .NET 2.0 Subset API 兼容性级别构建脚本时定义。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>NET_LEGACY</strong></td>
+	<td style="text-align:left;">Defined when building scripts against .NET 2.0 or .NET 2.0 Subset API compatibility level on Mono and IL2CPP.</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>NET_4_6</strong></td>
@@ -378,27 +386,7 @@
 
 <p>创建脚本并复制/粘贴以下代码：</p>
 
-<pre><code>// JS
-function Awake() {
-  #if UNITY_EDITOR
-    Debug.Log("Unity Editor");
-  #endif
-    
-  #if UNITY_IPHONE
-    Debug.Log("Iphone");
-  #endif
-
-  #if UNITY_STANDALONE_OSX
-    Debug.Log("Stand Alone OSX");
-  #endif
-
-  #if UNITY_STANDALONE_WIN
-    Debug.Log("Stand Alone Windows");
-  #endif    
-}
-
-
-// C#
+<pre><code>// C#
 using UnityEngine;
 using System.Collections;
 
@@ -423,8 +411,6 @@ public class PlatformDefines : MonoBehaviour {
 
   }          
 }
-
-
 </code></pre>
 
 <p>要测试代码，请单击 <strong>Play Mode</strong>。通过在 Unity 控制台中检查相关消息来确认代码是否正常工作，具体取决于选择的平台；例如，如果选择 __iOS__，则消息“Iphone”设置为显示在控制台中。</p>
@@ -481,10 +467,6 @@ public class PlatformDefines : MonoBehaviour {
 	<td style="text-align:left;">C#（播放器和 Editor 脚本）</td>
 	<td style="text-align:left;">&lt;项目路径&gt;/Assets/mcs.rsp</td>
 </tr>
-<tr>
-	<td style="text-align:left;">UnityScript</td>
-	<td style="text-align:left;">&lt;项目路径&gt;/Assets/us.rsp</td>
-</tr>
 </tbody>
 </table>
 
@@ -494,15 +476,15 @@ public class PlatformDefines : MonoBehaviour {
 
 <p><strong>注意</strong></p>
 
-<p>如果只想修改全局 #define 指令，请使用 <a href="class-PlayerSettings.html">Player Settings</a> 中的 <strong>Scripting Define Symbols__，因为此选项涵盖了所有编译器。如果选择 </strong>.rsp__ 文件，则需要为 Unity 使用的每个编译器提供一个文件，并且您不知道何时使用一个或另一个编译器。</p>
+<p>If you want to modify only global #define directives, use <strong>Scripting Define Symbols</strong> in <a href="class-PlayerSettings.html">Player</a> settings, because this covers all the compilers. If you choose the <strong>.rsp</strong> files instead, you need to provide one file for every compiler Unity uses.</p>
 
-<p>包含在 Editor 安装文件夹中的 <strong>mcs</strong> 应用程序的“Help”部分中描述了 <strong>.rsp</strong> 文件的使用方法。可通过运行 <code>mcs -help</code> 获取更多信息。</p>
+<p>The use of <strong>.rsp</strong> files is described in the ‘Help’ section of the <strong>mcs</strong> application, which is included in the Editor installation folder. You can get more information by running <code>mcs -help</code>. </p>
 
 <p>请注意，<strong>.rsp</strong> 文件需要与正在调用的编译器匹配。例如：</p>
 
 <ul>
-<li>以任何播放器或 Editor 为目标时，__mcs__ 与 <code>mcs.rsp</code> 一起使用，</li>
-<li>以 MS 编译器为目标时，__csc__ 与 <code>csc.rsp</code> 一起使用，等等</li>
+<li>when targeting the .NET 3.5 Equivalent (deprecated) scripting runtime version, <strong>mcs</strong> is used with <code>mcs.rsp</code>, and</li>
+<li>when targeting the .NET 4.x Eqivalent scripting runtime version compiler, <strong>csc</strong> is used with <code>csc.rsp</code>.</li>
 </ul>
 
 <hr>
@@ -514,7 +496,7 @@ public class PlatformDefines : MonoBehaviour {
 </ul>
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
-<span class="prev"><a href="UnderstandingAutomaticMemoryManagement.html"></a></span><div class="tip">了解自动内存管理</div>
+<span class="prev"><a href="UnderstandingAutomaticMemoryManagement.html"></a></span><div class="tip">Understanding Automatic Memory Management</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
 <span class="next"><a href="ScriptCompileOrderFolders.html"></a></span><div class="tip">特殊文件夹和脚本编译顺序</div>
@@ -523,7 +505,7 @@ public class PlatformDefines : MonoBehaviour {
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

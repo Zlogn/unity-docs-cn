@@ -12,7 +12,7 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="高动态范围渲染 - Unity Manual">
 <title>高动态范围渲染 - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/Camera-HDR.svg">
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.4/uploads/Main/Camera-HDR.svg">
 <meta name="description" content="在标准渲染中，像素的红色、绿色和蓝色值均由 0 到 1 范围内的分数表示，其中 0 表示零强度，1 表示显示设备的最大强度。虽然这很容易使用，但它并不能准确反映在现实生活场景中光照的运作方式。人眼倾向于适应局部光照条件，因此在光线昏暗的房间中看起来是白色的物体实际上可能还不如在强烈日光下看起来是灰色的物体明亮。此外，眼睛对昏暗范围的亮度差异比对明朗范围的亮度差异更敏感。">
 <meta property="og:description" content="在标准渲染中，像素的红色、绿色和蓝色值均由 0 到 1 范围内的分数表示，其中 0 表示零强度，1 表示显示设备的最大强度。虽然这很容易使用，但它并不能准确反映在现实生活场景中光照的运作方式。人眼倾向于适应局部光照条件，因此在光线昏暗的房间中看起来是白色的物体实际上可能还不如在强烈日光下看起来是灰色的物体明亮。此外，眼睛对昏暗范围的亮度差异比对明朗范围的亮度差异更敏感。">
 <meta name="author" content="Unity Technologies">
@@ -31,7 +31,7 @@
       var lang = 'zh_CN';
       var page = 'HDR';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -63,7 +63,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -92,10 +92,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/HDR.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/HDR.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/HDR.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/HDR.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/HDR.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/HDR.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/HDR.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/HDR.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -107,7 +107,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -129,7 +129,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="Graphics.html">图形</a></li>
 <li><a href="GraphicsOverview.html">图形概述</a></li>
 <li>高级渲染功能</li>
@@ -137,7 +137,7 @@
 </ul></div>
 <div class="mb20"><div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
-<span class="prev"><a href="PostProcessingWritingEffects.html"></a></span><div class="tip">编写后期处理效果</div>
+<span class="prev"><a href="PostProcessing-Vignette.html"></a></span><div class="tip">渐晕</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
 <span class="next"><a href="HDRColorPicker.html"></a></span><div class="tip">HDR 拾色器</div>
@@ -159,20 +159,20 @@
 <img src="../uploads/Main/Camera-HDR.svg" alt="">
 </figure>
 
-<p>当 HDR 处于激活状态时，场景将渲染为 HDR 图像缓冲区，该缓冲区可以容纳 0 到 1 范围之外的像素值。然后，该缓冲区由后期处理效果使用，例如<a href="PostProcessing-Stack.html">后期处理栈</a>中的<a href="PostProcessing-Bloom.html">泛光 (Bloom)</a> 效果。HDR 图像随后被转换为标准低动态范围 (LDR) 图像以便发送给显示设备。这通常通过色调映射（属于<a href="PostProcessing-ColorGrading.html">颜色分级</a>管线的一部分）来完成。转换为 LDR 必须在后期处理管线中的某个时刻进行，但如果之后有可能应用只针对 LDR 的后期处理效果，所以可能不是最后一步。为方便起见，一些后期处理效果可以在应用 HDR 效果后自动转换为 LDR（请参阅下面的“脚本”部分）。</p>
+<p>当 HDR 处于激活状态时，场景将渲染为 HDR 图像缓冲区，该缓冲区可以容纳 0 到 1 范围之外的像素值。然后，该缓冲区由后期处理效果使用，例如<a href="PostProcessing-Stack">后期处理栈</a>中的<a href="PostProcessing-Bloom.html">泛光 (Bloom)</a> 效果。HDR 图像随后被转换为标准低动态范围 (LDR) 图像以便发送给显示设备。这通常通过色调映射（属于<a href="PostProcessing-ColorGrading.html">颜色分级</a>管线的一部分）来完成。转换为 LDR 必须在后期处理管线中的某个时刻进行，但如果之后有可能应用只针对 LDR 的后期处理效果，所以可能不是最后一步。为方便起见，一些后期处理效果可以在应用 HDR 效果后自动转换为 LDR（请参阅下面的“脚本”部分）。</p>
 
 <h3>色调映射</h3>
 
-<p>色调映射是指将 HDR 值映射回 LDR 范围的过程。有许多不同的技术，但对一个项目有益的技术对于另一个项目来说可能并非最佳选择。<a href="PostProcessing-Stack.html">后期处理栈</a>中已经包含了多种色调映射技术。要使用这些技术，可从 <a href="https://www.assetstore.unity3d.com/en/#!/content/83912">Asset Store</a> 下载<strong>后期处理栈 (Post-processing stack)</strong>。可在<a href="PostProcessing-ColorGrading.html">颜色分级</a>文档中找到色调映射类型的详细描述。</p>
+<p>色调映射是指将 HDR 值映射回 LDR 范围的过程。有许多不同的技术，但对一个项目有益的技术对于另一个项目来说可能并非最佳选择。<a href="PostProcessing-Stack">后期处理栈</a>中已经包含了多种色调映射技术。要使用这些技术，可从 <a href="https://www.assetstore.unity3d.com/en/#!/content/83912">Asset Store</a> 下载<strong>后期处理栈 (Post-processing stack)</strong>。可在<a href="PostProcessing-ColorGrading.html">颜色分级</a>文档中找到色调映射类型的详细描述。</p>
 
 <figure>
-<img src="../uploads/Main/WithoutTonemap.png" alt="在 HDR 中渲染的异常明亮的场景。如果不执行色调映射，大部分像素会看起来超出范围。">
-<figcaption>在 HDR 中渲染的异常明亮的场景。如果不执行色调映射，大部分像素会看起来超出范围。</figcaption>
+<img src="../uploads/Main/WithoutTonemap.jpg" alt="An exceptionally bright scene rendered in HDR. Without tonemapping, most pixels seem out of range.">
+<figcaption>An exceptionally bright scene rendered in HDR. Without tonemapping, most pixels seem out of range.</figcaption>
 </figure>
 
 <figure>
-<img src="../uploads/Main/WithTonemap.png" alt="与上面相同的场景。但这一次，色调映射将大多数强度映射到了更合理的区间内。请注意，自适应色调映射甚至可以在上图和此图之间进行混合，从而模拟捕获介质（例如眼睛、摄像机）的自适应特性。">
-<figcaption>与上面相同的场景。但这一次，色调映射将大多数强度映射到了更合理的区间内。请注意，自适应色调映射甚至可以在上图和此图之间进行混合，从而模拟捕获介质（例如眼睛、摄像机）的自适应特性。</figcaption>
+<img src="../uploads/Main/WithTonemap.jpg" alt="The same scene as above. But this time, tonemapping is bringing most intensities into a more plausible range. Note that adaptive tonemapping can even blend between above and this image thus simulating the adaptive nature of capturing media (e.g. eyes, cameras).">
+<figcaption>The same scene as above. But this time, tonemapping is bringing most intensities into a more plausible range. Note that adaptive tonemapping can even blend between above and this image thus simulating the adaptive nature of capturing media (e.g. eyes, cameras).</figcaption>
 </figure>
 
 <h2>HDR 的优点</h2>
@@ -203,14 +203,14 @@
 
 <h3>脚本</h3>
 
-<p>可向后期处理效果脚本中添加 <strong>ImageEffectTransformsToLDR</strong> 属性以表明目标缓冲区应在 LDR 中，而非在 HDR 中。从本质上讲，这意味着脚本可以在应用其 HDR 后期处理效果后自动转换为 LDR。有关更多详细信息，请参阅<a href="PostProcessingWritingEffects.html">编写后期处理效果</a>。</p>
+<p>可向后期处理效果脚本中添加 <strong>ImageEffectTransformsToLDR</strong> 属性以表明目标缓冲区应在 LDR 中，而非在 HDR 中。从本质上讲，这意味着脚本可以在应用其 HDR 后期处理效果后自动转换为 LDR。有关更多详细信息，请参阅<a href="PostProcessingWritingEffects">编写后期处理效果</a>。</p>
 
 <h2>另请参阅</h2>
 
 <p><a href="HDRColorPicker.html">HDR 拾色器</a>。</p>
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
-<span class="prev"><a href="PostProcessingWritingEffects.html"></a></span><div class="tip">编写后期处理效果</div>
+<span class="prev"><a href="PostProcessing-Vignette.html"></a></span><div class="tip">渐晕</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
 <span class="next"><a href="HDRColorPicker.html"></a></span><div class="tip">HDR 拾色器</div>
@@ -219,7 +219,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

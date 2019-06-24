@@ -12,7 +12,7 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="版本控制集成 - Unity Manual">
 <title>版本控制集成 - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/EditorVersionControlSettings.png">
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.4/uploads/Main/EditorVersionControlSettings.png">
 <meta name="description" content="Unity 可集成 Perforce 和 Plastic SCM 等版本控制系统。请参阅这些页面了解所选择的版本控制系统的具体信息。">
 <meta property="og:description" content="Unity 可集成 Perforce 和 Plastic SCM 等版本控制系统。请参阅这些页面了解所选择的版本控制系统的具体信息。">
 <meta name="author" content="Unity Technologies">
@@ -31,7 +31,7 @@
       var lang = 'zh_CN';
       var page = 'Versioncontrolintegration';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -63,7 +63,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -92,10 +92,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/Versioncontrolintegration.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/Versioncontrolintegration.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/Versioncontrolintegration.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/Versioncontrolintegration.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/Versioncontrolintegration.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/Versioncontrolintegration.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/Versioncontrolintegration.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/Versioncontrolintegration.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -107,7 +107,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -129,7 +129,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="UnityOverview.html">在 Unity 中操作</a></li>
 <li><a href="EditorFeatures.html">编辑器功能</a></li>
 <li><a href="VersionControl.html">版本控制</a></li>
@@ -157,7 +157,7 @@
 
 <p>1.使用所选客户端在计算机上设置或同步工作空间（请参阅 <a href="plasticSCMIntegration.html">Plastic SCM 集成指南</a>或 <a href="perForceIntegration.html">Perforce 集成指南</a>以获取此步骤的帮助）。
 1.将现有项目复制到工作空间，或启动 Unity 并在工作空间中创建新项目。
-1.打开项目并选择 <strong>Edit</strong> &gt; <strong>Project Settings</strong> &gt; <strong>Editor</strong>。
+1. Open the project and go to <strong>Edit</strong> &gt; <strong>Project Settings</strong>, then select the <strong>Editor</strong> category.
 1.在 <strong>Version Control</strong> 下，根据所选的版本控制系统选择__模式 (Mode)__。
  <img src="../uploads/Main/EditorVersionControlSettings.png" alt=""></p>
 
@@ -279,7 +279,7 @@
 
 <h2>版本控制窗口</h2>
 
-<p>可以从__版本控制窗口__ (<strong>Window &gt; Version Control</strong>) 中查看位于变更列表中的文件。该窗口停靠在 Editor 中的 Inspector 旁边：</p>
+<p>You can overview the files in your changelist from the <strong>Version Control Window</strong> (<strong>Window</strong> &gt; <strong>Asset Management</strong> &gt; <strong>Version Control</strong>). It is shown here docked next to Inspector in the editor:</p>
 
 <figure>
 <img src="../uploads/Main/VersionControlWindowOutgoingChanges.png" alt="">
@@ -419,7 +419,7 @@
 
 <h2>使用其他版本控制系统</h2>
 
-<p>要使用 Unity 不支持的版本控制系统，请在 <a href="class-EditorManager.html">Editor Settings</a> 中选择 <strong>MetaData</strong> 作为版本控制的 <strong>Mode</strong>。这样一来，即可使用您选择的版本控制系统来管理这些资源的源资源和元数据。要了解与此相关更多信息，请参阅关于<a href="ExternalVersionControlSystemSupport.html">外部版本控制系统</a>的文档。</p>
+<p>To work with a version control system unsupported by Unity, select <strong>MetaData</strong> as the <strong>Mode</strong> for Version Control in the <a href="class-EditorManager.html">Editor</a> window. This allows you to manage the source Assets and metadata for those Assets with a version control system of your choice. For more on this, see documentation on <a href="ExternalVersionControlSystemSupport.html">External Version Control Systems</a>.</p>
 
 <hr>
 
@@ -439,7 +439,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

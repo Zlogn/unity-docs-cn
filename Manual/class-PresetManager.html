@@ -12,9 +12,9 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="Preset Manager - Unity Manual">
 <title>Preset Manager - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/PresetSetAsDefault.png">
-<meta name="description" content="使用预设可以指定新组件和资源的默认属性。无法设定设置管理器 (Settings Managers) 的默认属性。">
-<meta property="og:description" content="使用预设可以指定新组件和资源的默认属性。无法设定设置管理器 (Settings Managers) 的默认属性。">
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.4/uploads/Main/PresetSetAsDefault.png">
+<meta name="description" content="Use Presets to specify default properties for new components and Asset importers. You cannot set the default properties for Project settings, Preferences settings or native Assets such as Materials, Animations or SpriteSheets.">
+<meta property="og:description" content="Use Presets to specify default properties for new components and Asset importers. You cannot set the default properties for Project settings, Preferences settings or native Assets such as Materials, Animations or SpriteSheets.">
 <meta name="author" content="Unity Technologies">
 <link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
 <link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
@@ -31,7 +31,7 @@
       var lang = 'zh_CN';
       var page = 'class-PresetManager';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -63,7 +63,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -92,10 +92,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/class-PresetManager.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/class-PresetManager.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/class-PresetManager.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/class-PresetManager.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/class-PresetManager.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/class-PresetManager.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/class-PresetManager.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/class-PresetManager.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -107,7 +107,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -129,7 +129,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="UnityOverview.html">在 Unity 中操作</a></li>
 <li><a href="EditorFeatures.html">编辑器功能</a></li>
 <li><a href="comp-ManagerGroup.html">Project Settings</a></li>
@@ -137,23 +137,23 @@
 </ul></div>
 <div class="mb20"><div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
-<span class="prev"><a href="class-MonoManager.html"></a></span><div class="tip">Script Execution Order 设置</div>
+<span class="prev"><a href="class-MonoManager.html"></a></span><div class="tip">Script Execution Order</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
-<span class="next"><a href="NetworkEmulation.html"></a></span><div class="tip">网络仿真</div>
+<span class="next"><a href="VisualStudioIntegration.html"></a></span><div class="tip">Visual Studio C# 集成</div>
 </div>
 </div></div>
 <h1>Preset Manager</h1>
 <!--BeginSwitchLink--><!--EndSwitchLink-->
 <div class="clear"></div>
 
-<p>使用<a href="Presets.html">预设</a>可以指定新组件和资源的默认属性。无法设定设置管理器 (Settings Managers) 的默认属性。</p>
+<p>Use <a href="Presets.html">Presets</a> to specify default properties for new components and Asset importers. You cannot set the default properties for Project settings, Preferences settings or native Assets such as Materials, Animations or SpriteSheets.</p>
 
-<p>将组件添加到游戏对象或者将新资源添加到项目时，Unity 使用默认的预设来设置新项的属性。默认预设会覆盖 Unity 出厂默认设置。</p>
+<p>When you add a component to a GameObject or a new Asset to your Project, Unity uses a default Preset to set the properties of the new item. Default Presets override the Unity factory default settings.</p>
 
-<p>使用 <a href="UsingTheInspector.html"><strong>Inspector</strong></a> 窗口的组件上下文菜单中的 <strong>Reset</strong> 命令时，Unity 也会使用默认预设。</p>
+<p>Unity also uses default Presets when you use the <strong>Reset</strong> command in the Component Context Menu in the <a href="UsingTheInspector.html">Inspector</a> window.</p>
 
-<p>向场景添加新游戏对象时，对于<a href="class-Transform.html">变换组件</a>，Unity 不会使用默认预设中的位置。在这种情况下，默认位置是 <a href="UsingTheSceneView.html"><strong>Scene</strong></a> 视图的中间位置。使用 <strong>Reset</strong> 命令可以应用该位置以及变换组件的默认预设中的旋转和缩放。</p>
+<p>For <a href="class-Transform.html">Transform components</a>, Unity does not use the position in a default Preset when you add a new GameObject to a scene. In this case, the default position is the middle of the <a href="UsingTheSceneView.html">Scene</a> view. Use the <strong>Reset</strong> command to apply the position, as well as the rotation and scale, of a default Preset for a Transform.</p>
 
 <h2>指定要用于默认设置的预设</h2>
 
@@ -176,13 +176,15 @@
 
 <p>1.如果项目中还没有用于默认设置的预设，请<a href="Presets.html">创建一个</a>。</p>
 
-<p>2.通过选择 <strong>Edit &gt; Project Settings &gt; Preset Manager</strong> 来打开 Preset Manager。</p>
+<ol>
+<li>Open the Preset Manager by choosing <strong>Edit &gt; Project Settings</strong>, then selecting the <strong>Preset Manager</strong> category.</li>
+</ol>
 
 <p>3.单击 <strong>+</strong> 并选择要与默认预设一起使用的项。<br>所选项的默认预设将显示在 <strong>Preset Manager</strong> 列表中。</p>
 
 <figure>
-<img src="../uploads/Main/PresetManagerSetDefault.png" alt="例如，单击 + 并选择 CrouchImporter 可将其指定为导入模型的默认设置">
-<figcaption>例如，单击 <strong>+</strong> 并选择 CrouchImporter 可将其指定为导入模型的默认设置</figcaption>
+<img src="../uploads/Main/PresetManagerSetDefault.png" alt="Click + and select CrouchImporter to specify it as the default for imported Models">
+<figcaption>Click + and select CrouchImporter to specify it as the default for imported Models</figcaption>
 </figure>
 
 <p>将某个预设从 <strong>Project</strong> 窗口中拖放到 <strong>Preset Manager</strong> 可以添加新的默认预设或更改现有的默认预设。</p>
@@ -191,12 +193,14 @@
 
 <p>使用 <strong>Preset Manager</strong> 可以更改默认预设。还可以将某个预设从 <strong>Project</strong> 窗口中拖放到 <strong>Preset Manager</strong> 来更改现有默认预设。</p>
 
-<p>有两种方法可以删除默认预设：使用 <strong>Preset Manager</strong> 或使用 <a href="UsingTheInspector.html"><strong>Inspector</strong></a> 窗口。</p>
+<p>There are two ways to remove a default Preset: from <strong>Preset Manager</strong> or from the <a href="UsingTheInspector.html">Inspector</a> window.</p>
 
 <p>要在 <strong>Preset Manager</strong> 中更改默认预设，请执行以下操作：</p>
 
-<p>1.通过选择 <strong>Edit &gt; Project Settings &gt; Preset Manager</strong> 来打开 Preset Manager。
-2.单击对象类型的默认预设旁边的下拉菜单来选择预设。<br>选定的预设将成为新的默认预设。</p>
+<ol>
+<li>Open the Preset Manager by choosing <strong>Edit &gt; Project Settings</strong>, then selecting the <strong>Preset Manager</strong> category.
+2.单击对象类型的默认预设旁边的下拉菜单来选择预设。<br>选定的预设将成为新的默认预设。</li>
+</ol>
 
 <p>要在 <strong>Inspector</strong> 中删除默认预设，请执行以下操作：</p>
 
@@ -205,25 +209,31 @@
 
 <p>要在 <strong>Preset Manager</strong> 中删除默认预设，请执行以下操作：</p>
 
-<p>1.通过选择 <strong>Edit &gt; Project Settings &gt; Preset Manager</strong> 来打开 Preset Manager。
+<ol>
+<li>Open the Preset Manager by choosing <strong>Edit &gt; Project Settings</strong>, then select the <strong>Preset Manager</strong> category.
 2.从默认预设的列表中选择要删除的默认预设。
-3.单击 <strong>-</strong> 来删除选定的默认预设。</p>
+3.单击 <strong>-</strong> 来删除选定的默认预设。</li>
+</ol>
 
-<p><span class="page-edit"> 2017–03–27 Page published with limited <a href="DocumentationEditorialReview.html">editorial review</a>
-</span>
-<span class="page-history"><a href="https://docs.unity3d.com/2018.1/Documentation/Manual/30_search.html?q=newin20181">2018.1</a> 中的新功能 <span class="search-words">NewIn20181</span></span></p>
+<hr>
+
+<ul>
+<li><span class="page-edit"> 2017–03–27 Page published with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+<li><span class="page-history"><a href="https://docs.unity3d.com/2018.1/Documentation/Manual/30_search.html?q=newin20181">2018.1</a> 中的新功能 <span class="search-words">NewIn20181</span></span></li>
+</ul>
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
-<span class="prev"><a href="class-MonoManager.html"></a></span><div class="tip">Script Execution Order 设置</div>
+<span class="prev"><a href="class-MonoManager.html"></a></span><div class="tip">Script Execution Order</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
-<span class="next"><a href="NetworkEmulation.html"></a></span><div class="tip">网络仿真</div>
+<span class="next"><a href="VisualStudioIntegration.html"></a></span><div class="tip">Visual Studio C# 集成</div>
 </div>
 </div>
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

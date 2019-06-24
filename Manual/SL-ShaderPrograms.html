@@ -30,7 +30,7 @@
       var lang = 'zh_CN';
       var page = 'SL-ShaderPrograms';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -62,7 +62,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -91,10 +91,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/SL-ShaderPrograms.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/SL-ShaderPrograms.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/SL-ShaderPrograms.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/SL-ShaderPrograms.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/SL-ShaderPrograms.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/SL-ShaderPrograms.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/SL-ShaderPrograms.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/SL-ShaderPrograms.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -106,7 +106,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -128,7 +128,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="Graphics.html">图形</a></li>
 <li><a href="GraphicsReference.html">图形参考</a></li>
 <li><a href="SL-Reference.html">着色器参考</a></li>
@@ -203,6 +203,12 @@
 <strong>#pragma enable_d3d11_debug_symbols</strong> - 为针对 DirectX 11 编译的着色器生成调试信息，这将允许您通过 Visual Studio 2012（或更高版本）图形调试器来调试着色器。</li>
 <li>
 <strong>#pragma hardware_tier_variants</strong> <em>渲染器名称</em> - 为每个可以运行所选渲染器的硬件层生成每个编译着色器的<a href="SL-MultipleProgramVariants.html">多个着色器硬件变体</a>。请参阅下文中的_渲染器_以了解详细信息。</li>
+<li>
+<strong>#pragma hlslcc_bytecode_disassembly</strong> - embed disassembled HLSLcc bytecode into translated shader.</li>
+<li>
+<strong>#pragma disable_fastmath</strong> - enables precise IEEE 754 rules, mostly involving NaN handling (currently only affects Metal platform).</li>
+<li>
+<strong>#pragma glsl_es2</strong> - When set in a GLSL shader, generate a GLSL ES 1.0(OpenGL ES 2.0), even when the shader target is OpenGL ES 3.</li>
 </ul>
 
 <p>每个代码片段必须至少包含一个顶点程序和一个片元程序。因此，<strong>#pragma vertex</strong> 和 <strong>#pragma fragment</strong> 指令是必需的。</p>
@@ -235,9 +241,9 @@
 <li>
 <strong>ps4</strong> - PlayStation 4</li>
 <li>
-<strong>psp2</strong> - PlayStation Vita</li>
-<li>
 <strong>n3ds</strong> - Nintendo 3DS</li>
+<li>
+<strong>wiiu</strong> - Nintendo Wii U</li>
 </ul>
 
 <p>例如，以下行仅会将着色器编译到 D3D11 模式：</p>
@@ -280,7 +286,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

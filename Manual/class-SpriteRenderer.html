@@ -12,7 +12,7 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="精灵渲染器 (Sprite Renderer) - Unity Manual">
 <title>精灵渲染器 (Sprite Renderer) - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/2D_SpriteRenderer_1.png">
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.4/uploads/Main/2D_SpriteRenderer_1.png">
 <meta name="description" content="The Sprite Renderer component renders the Sprite and controls how it visually appears in a Scene for both 2D and 3D projects.">
 <meta property="og:description" content="The Sprite Renderer component renders the Sprite and controls how it visually appears in a Scene for both 2D and 3D projects.">
 <meta name="author" content="Unity Technologies">
@@ -31,7 +31,7 @@
       var lang = 'zh_CN';
       var page = 'class-SpriteRenderer';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -63,7 +63,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -92,10 +92,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/class-SpriteRenderer.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/class-SpriteRenderer.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/class-SpriteRenderer.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/class-SpriteRenderer.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/class-SpriteRenderer.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/class-SpriteRenderer.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/class-SpriteRenderer.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/class-SpriteRenderer.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -107,7 +107,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -129,7 +129,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="Unity2D.html">2D</a></li>
 <li><a href="Sprites.html">精灵</a></li>
 <li>精灵渲染器 (Sprite Renderer)</li>
@@ -232,7 +232,7 @@
 </tr>
 <tr>
 	<td style="text-align:left;">   None</td>
-	<td style="text-align:left;">The Sprite Renderer does not interact with any Sprite Mask in the Scene. This is the default option.</td>
+	<td style="text-align:left;">The Sprite Renderer does not interact with any Sprite Masks in the Scene. This is the default option.</td>
 </tr>
 <tr>
 	<td style="text-align:left;">   Visible Inside Mask</td>
@@ -240,7 +240,7 @@
 </tr>
 <tr>
 	<td style="text-align:left;">   Visible Outside Mask</td>
-	<td style="text-align:left;">The Sprite is visible outside the Sprite Mask, but not inside it. The Sprite Mask hides the sections of the Sprite it overlays.</td>
+	<td style="text-align:left;">The Sprite is visible outside of the Sprite Mask, but not inside it. The Sprite Mask hides the sections of the Sprite it overlays.</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Sprite Sort Point</strong></td>
@@ -290,16 +290,15 @@
 <figcaption><strong>Orthographic Camera:</strong> Side view (top) and Game view (bottom)</figcaption>
 </figure>
 
-<p>By default, a Sprite’s <strong>Sort Point</strong> is set to its <em>Center</em>, and Unity measures the distance between the camera’s Transform position and the <em>Center</em> of the Sprite to determine their render order. </p>
+<p>By default, a Sprite’s <strong>Sort Point</strong> is set to its <strong>Center</strong>, and Unity measures the distance between the camera’s Transform position and the Center of the Sprite to determine their render order. </p>
 
-<p>To set to a different <strong>Sort Point</strong> from the <em>Center</em>, select the <strong>Pivot</strong> option. Edit the Sprite’s <em>Pivot</em> position in the <a href="https://docs.unity3d.com/Manual/SpriteEditor.html">Sprite Editor</a>.</p>
+<p>To set to a different <strong>Sort Point</strong> from the Center, select the <strong>Pivot</strong> option. Edit the Sprite’s Pivot position in the <a href="https://docs.unity3d.com/Manual/SpriteEditor.html">Sprite Editor</a>.</p>
 
 <hr>
 
 <ul>
-<li><p><span class="page-edit">2018–10–05 Page amended with <a href="DocumentationEditorialReview.html">editorial review</a>
-</span></p></li>
-<li><p><span class="page-history">Ability to sort Sprite-based renderers using the pivot position added in <a href="https://docs.unity3d.com/2017.3/Documentation/Manual/30_search.html?q=newin20173">2017.3</a> <span class="search-words">NewIn20173</span></span></p></li>
+<li><span class="page-edit">2018–10–05 Added definition for new functionality.</span></li>
+<li><span class="page-history">Ability to sort Sprite-based renderers using the pivot position added in <a href="https://docs.unity3d.com/2017.3/Documentation/Manual/30_search.html?q=newin20173">2017.3</a> <span class="search-words">New in 2017.3</span></span></li>
 </ul>
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
@@ -312,7 +311,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

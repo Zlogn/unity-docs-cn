@@ -12,7 +12,7 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="粒子系统 (Particle System) 主模块 - Unity Manual">
 <title>粒子系统 (Particle System) 主模块 - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/PartSysPartSysInsp.png">
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.4/uploads/Main/PartSysPartSysInsp.png">
 <meta name="description" content="Particle System 模块包含影响整个系统的全局属性。大多数这些属性用于控制新创建的粒子的初始状态。要展开和折叠主模块，请单击 Inspector 窗口中的 Particle System 栏。">
 <meta property="og:description" content="Particle System 模块包含影响整个系统的全局属性。大多数这些属性用于控制新创建的粒子的初始状态。要展开和折叠主模块，请单击 Inspector 窗口中的 Particle System 栏。">
 <meta name="author" content="Unity Technologies">
@@ -31,7 +31,7 @@
       var lang = 'zh_CN';
       var page = 'PartSysMainModule';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -63,7 +63,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -92,10 +92,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/PartSysMainModule.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/PartSysMainModule.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/PartSysMainModule.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/PartSysMainModule.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/PartSysMainModule.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/PartSysMainModule.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/PartSysMainModule.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/PartSysMainModule.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -107,7 +107,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -129,7 +129,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="Graphics.html">图形</a></li>
 <li><a href="GraphicsReference.html">图形参考</a></li>
 <li><a href="PartSysReference.html">粒子系统参考</a></li>
@@ -222,7 +222,7 @@
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Gravity Modifier</strong></td>
-	<td style="text-align:left;">缩放 Physics Manager 中设置的重力值。值为零会关闭重力。</td>
+	<td style="text-align:left;">Scales the gravity value set in the <a href="class-PhysicsManager.html">Physics</a> window. A value of zero switches gravity off.</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Simulation Space</strong></td>
@@ -234,7 +234,7 @@
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Delta Time</strong></td>
-	<td style="text-align:left;">在 <strong>Scaled</strong> 和 <strong>Unscaled</strong> 之间进行选择，其中的 <strong>Scaled</strong> 使用时间管理器 (Time Manager) 中的 <strong>Time Scale</strong> 值，而 <strong>Unscaled</strong> 将忽略该值。此属性对于出现在暂停菜单 (Pause Menu) 上的粒子系统非常有用。</td>
+	<td style="text-align:left;">Choose between <strong>Scaled</strong> and <strong>Unscaled</strong>, where <strong>Scaled</strong> uses the <strong>Time Scale</strong> value in the <a href="class-TimeManager.html">Time</a> window, and <strong>Unscaled</strong> ignores it. This is useful for Particle Systems that appear on a Pause Menu, for example.</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Scaling Mode</strong></td>
@@ -276,6 +276,42 @@
 	<td style="text-align:left;">    Callback</td>
 	<td style="text-align:left;">将 OnParticleSystemStopped 回调发送给附加到游戏对象的任何脚本。</td>
 </tr>
+<tr>
+	<td style="text-align:left;"><strong>Culling Mode</strong></td>
+	<td style="text-align:left;">Choose whether to pause Particle System simulation when particles are offscreen. Culling when offscreen is most efficient, but you may want to continue simulation for off-one effects.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Automatic</td>
+	<td style="text-align:left;">Looping systems use <strong>Pause</strong>, and all other system use <strong>Always Simulate</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Pause And Catch-up</td>
+	<td style="text-align:left;">The system stops simulating while offscreen. When re-entering the view, the simulation performs a large step to reach the point where it would have been had it not paused. In complex systems, this option can cause performance spikes.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Pause</td>
+	<td style="text-align:left;">The system stops simulating while offscreen.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Always Simulate</td>
+	<td style="text-align:left;">The system processes its simulation on each frame, regardless of whether it is on screen or not. This can be useful for one-shot effects such as fireworks, where during the simulation would be obvious.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Ring Buffer Mode</strong></td>
+	<td style="text-align:left;">Keeps particles alive until they reach the <strong>Max Particles</strong> count, at which point new particles recycle the oldest ones, instead of removing particles when their lifetimes elapse.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Disabled</td>
+	<td style="text-align:left;">Disable <strong>Ring Buffer Mode</strong>, so the system removes particles when their lifetime elapses.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Pause Until Replaced</td>
+	<td style="text-align:left;">Pauses old particles at the end of their lifetime until the <strong>Max Particle</strong> limit is reached, at which point the system recycles them, so they reappear as new particles.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Loop Until Replaced</td>
+	<td style="text-align:left;">At the end of their lifetime, particles rewind back to the specified proportion of their lifetime until the <strong>Max Particle</strong> limit is reached, at which point the system recycles them, so they reappear as new particles.</td>
+</tr>
 </tbody>
 </table>
 
@@ -287,8 +323,6 @@
 
 <p>所有粒子系统都使用 <strong>Physics</strong> 设置中指定的相同重力矢量。Gravity Multiplier 值可用于缩放重力，或者如果设置为零则将其关闭。</p>
 
-<p><strong>Simulation Space</strong> 属性确定粒子是随粒子系统父对象移动、随自定义对象移动还是在游戏世界中独立移动。例如，像云，软管和喷火器这样的系统需要独立于其父游戏对象进行设置，因为即使生成它们的对象移动，它们往往也会留下在世界空间中持续存在的轨迹。另一方面，如果使用粒子在两个电极之间产生火花，则粒子应该随父对象一起移动。有关粒子如何跟随粒子变换的更高级控制方式，请参阅 <a href="PartSysInheritVelocity.html">Inherit Velocity 模块</a>相关文档。</p>
-
 <p><a name="scaling"></a> </p>
 
 <h2>非均匀粒子缩放</h2>
@@ -297,15 +331,22 @@
 
 <p>您可以在粒子系统__主__模块中设置粒子的初始大小，并使用 <strong>Size over Lifetime</strong> 模块中的 <strong>Separate Axes</strong> 选项设置粒子在其生命周期内的大小。此外，还可使用 <strong>Size by Speed</strong> 模块中的 <strong>Separate Axes</strong> 选项设置粒子的大小与其速度的关系。</p>
 
+<h2>Simulation Space</h2>
+
+<p><strong>Simulation Space</strong> 属性确定粒子是随粒子系统父对象移动、随自定义对象移动还是在游戏世界中独立移动。例如，像云，软管和喷火器这样的系统需要独立于其父游戏对象进行设置，因为即使生成它们的对象移动，它们往往也会留下在世界空间中持续存在的轨迹。另一方面，如果使用粒子在两个电极之间产生火花，则粒子应该随父对象一起移动。有关粒子如何跟随粒子变换的更高级控制方式，请参阅 <a href="PartSysInheritVelocity.html">Inherit Velocity 模块</a>相关文档。</p>
+
+<p>When set to Custom, particles no longer move relative to their own Transform component. Instead, they all move relative to the movement of the specified Transform component. The Particle System uses the Custom Transform to calculate emitter velocity, which the Inherit Velocity module and <strong>Rate over Distance</strong> property of the Emission module use to control particle velocity and emission.</p>
+
 <p><br> </p>
 
 <hr>
 
 <ul>
-<li><p><span class="page-edit">2017–05–31 Page amended with <a href="DocumentationEditorialReview.html">editorial review</a>
+<li><p><span class="page-edit">2018–11–02 Page amended with <a href="DocumentationEditorialReview.html">editorial review</a>
 </span></p></li>
 <li><p><span class="page-history">在 Unity <a href="../Manual/30_search.html?q=newin20171">2017.1</a> 中添加了 Simulation Speed、Delta Time 和 Emitter Velocity <span class="search-words">NewIn20171</span></span></p></li>
 <li><p><span class="page-history">在 Unity <a href="../Manual/30_search.html?q=newin20172">2017.2</a> 中添加了 Stop Action 粒子系统属性 <span class="search-words">NewIn20172</span></span></p></li>
+<li><p><span class="page-history">Culling Mode and Ring Buffer Mode properties added to Particle System in <a href="../Manual/30_search.html?q=newin20183">2018.3</a> <span class="search-words">NewIn20183</span></span></p></li>
 </ul>
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
@@ -318,7 +359,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

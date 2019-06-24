@@ -12,7 +12,7 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="导入 - Unity Manual">
 <title>导入 - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/ProjectFileStructure.png">
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.4/uploads/Main/ProjectFileStructure.png">
 <meta name="description" content="若要将在 Unity 外部创建的资源导入 Unity 项目，可以将文件直接导出到项目下的 Assets 文件夹中，或将其复制到该文件夹中。对于许多常见格式，可以将源文件直接保存到项目的 Assets 文件夹中，Unity 可以读取它。Unity会检测到被更新的文件并重新导入。">
 <meta property="og:description" content="若要将在 Unity 外部创建的资源导入 Unity 项目，可以将文件直接导出到项目下的 Assets 文件夹中，或将其复制到该文件夹中。对于许多常见格式，可以将源文件直接保存到项目的 Assets 文件夹中，Unity 可以读取它。Unity会检测到被更新的文件并重新导入。">
 <meta name="author" content="Unity Technologies">
@@ -31,7 +31,7 @@
       var lang = 'zh_CN';
       var page = 'ImportingAssets';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -63,7 +63,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -92,10 +92,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/ImportingAssets.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/ImportingAssets.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/ImportingAssets.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/ImportingAssets.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/ImportingAssets.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/ImportingAssets.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/ImportingAssets.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/ImportingAssets.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -107,7 +107,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -129,7 +129,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li>导入</li>
 </ul></div>
 <div class="mb20"><div class="nextprev clear">
@@ -137,7 +137,7 @@
 <span class="prev"><a href="UpgradeGuide3435.html"></a></span><div class="tip">升级到 Unity 3.5</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
-<span class="next"><a href="ImportingModelFiles.html"></a></span><div class="tip">模型导入工作流程</div>
+<span class="next"><a href="ImportingModelFiles.html"></a></span><div class="tip">Importing Models</div>
 </div>
 </div></div>
 <h1>导入</h1>
@@ -158,8 +158,8 @@
 <p>Unity 会在文件添加到 Assets 文件夹时自动检测到这些文件，或在修改文件时检测到修改。将任何资源放入 Assets 文件夹时，该资源将显示在 __Project 视图__中。</p>
 
 <figure>
-<img src="../uploads/Main/ProjectBrowser.png" alt="Project 窗口显示 Unity 导入到项目中的资源">
-<figcaption>Project 窗口显示 Unity 导入到项目中的资源</figcaption>
+<img src="../uploads/Main/ProjectBrowser.jpg" alt="The Project Window shows Assets that Unity imported into your Project">
+<figcaption>The Project Window shows Assets that Unity imported into your Project</figcaption>
 </figure>
 
 <p>将计算机中（从 Mac 上的 Finder 或 Windows 上的资源管理器）的文件拖入 Unity 的 Project 窗口，Unity 会将该文件<em>复制</em>到 Assets 文件夹中，然后它将显示在 Project 窗口中。</p>
@@ -224,13 +224,13 @@
 <span class="prev"><a href="UpgradeGuide3435.html"></a></span><div class="tip">升级到 Unity 3.5</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
-<span class="next"><a href="ImportingModelFiles.html"></a></span><div class="tip">模型导入工作流程</div>
+<span class="next"><a href="ImportingModelFiles.html"></a></span><div class="tip">Importing Models</div>
 </div>
 </div>
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

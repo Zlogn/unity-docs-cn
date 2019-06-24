@@ -36,7 +36,7 @@
       var lang = 'zh_CN';
       var page = 'SL-ShaderCompileTargets';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -68,7 +68,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -97,10 +97,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/SL-ShaderCompileTargets.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/SL-ShaderCompileTargets.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/SL-ShaderCompileTargets.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/SL-ShaderCompileTargets.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/SL-ShaderCompileTargets.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/SL-ShaderCompileTargets.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/SL-ShaderCompileTargets.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/SL-ShaderCompileTargets.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -112,7 +112,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -134,7 +134,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="Graphics.html">图形</a></li>
 <li><a href="GraphicsReference.html">图形参考</a></li>
 <li><a href="SL-Reference.html">着色器参考</a></li>
@@ -160,9 +160,10 @@
 
 <p><strong>注意</strong>：使用更高的着色器编译目标可能会阻止着色器在较旧的 GPU 或平台上运行。</p>
 
-<p>应使用 <code>#pragma target</code> <em>名称</em> 指令来支持编译目标。例如：</p>
+<p>Indicate the compilation target by using the <code>#pragma target</code> <em>name</em> directive or the more specific <code>#pragma require</code> <em>feature …</em> directive. For example:</p>
 
-<pre><code># pragma target 3.5
+<pre><code>#pragma target 3.5
+#pragma require integers 2darray instancing
 </code></pre>
 
 <h2>默认编译目标</h2>
@@ -179,7 +180,7 @@
 
 <p>例如，Unity 在 Metal 图形上支持曲面细分着色器，但 Metal 不支持几何着色器。使用 <code>#pragma target 5.0</code> 仍有效，只要您不使用几何着色器。</p>
 
-<h2>支持的 #pragma 目标名称</h2>
+<h2>Supported ‘#pragma target’ names</h2>
 
 <p>以下是支持的着色器模型列表，其中包含大致增加的功能集（在某些情况下对于平台/GPU 的要求更高）：</p>
 
@@ -210,7 +211,7 @@
 <li>OpenGL ES 3.0 功能（D3D 平台上的 DX10 SM4.0，只是没有几何着色器）。</li>
 <li>在 DX11 9.x (WinPhone) 和 OpenGL ES 2.0 上不支持。</li>
 <li>在 DX11+、OpenGL 3.2+、OpenGL ES 3+、Metal、Vulkan 和 PS4/XB1 游戏主机上支持。</li>
-<li>着色器、纹理数组等中的本机整数运算。</li>
+<li>Native integer operations in shaders, texture arrays and so on.</li>
 </ul>
 
 <h4>#pragma target 4.0</h4>
@@ -228,7 +229,7 @@
 <li>OpenGL ES 3.1 功能（D3D 平台上的 DX11 SM5.0，只是没有曲面细分着色器）。</li>
 <li>在早于 SM5.0 的 DX11、早于 4.3 的 OpenGL（即 Mac）和 OpenGL ES 2.0/3.0 上不支持。</li>
 <li>在 DX11+ SM5.0、OpenGL 4.3+、OpenGL ES 3.1、Metal、Vulkan 和 PS4/XB1 游戏主机上支持。</li>
-<li>有计算着色器、随机访问纹理写入、原子等。没有几何着色器和曲面细分着色器。</li>
+<li>Has compute shaders, random access texture writes, atomics and so on. No geometry or tessellation shaders.</li>
 </ul>
 
 <h4>#pragma target 4.6（或 gl4.1）</h4>
@@ -249,6 +250,74 @@
 </ul>
 
 <p>请注意，所有 OpenGL 类平台（包括移动平台）都被视为“支持着色器模型 3.0”。WP8/WinRT 平台（DX11 功能级别 9.x）被视为仅支持着色器模型 2.5。</p>
+
+<h2>Supported ‘#pragma require’ names</h2>
+
+<p>List of supported feature names for the <code>#pragma require</code> directive:</p>
+
+<ul>
+<li>
+<code>interpolators10</code>: At least 10 vertex-to-fragment interpolators (“varyings”) are available.</li>
+<li>
+<code>interpolators15</code>: At least 15 vertex-to-fragment interpolators (“varyings”) are available.</li>
+<li>
+<code>interpolators32</code>: At least 32 vertex-to-fragment interpolators (“varyings”) are available.</li>
+<li>
+<code>mrt4</code>: Multiple Render Targets, at least 4.</li>
+<li>
+<code>mrt8</code>: Multiple Render Targets, at least 8.</li>
+<li>
+<code>derivatives</code>: Pixel shader derivative instructions (ddx/ddy).</li>
+<li>
+<code>samplelod</code>: Explicit texture LOD sampling (tex2Dlod / SampleLevel).</li>
+<li>
+<code>fragcoord</code>: Pixel location (XY on screen, ZW depth in clip space) input in pixel shader.</li>
+<li>
+<code>integers</code>: Integers are an actual data type, including bit/shift operations.</li>
+<li>
+<code>2darray</code>: 2D texture arrays (Texture2DArray).</li>
+<li>
+<code>cubearray</code>: Cubemap arrays (CubemapArray).</li>
+<li>
+<code>instancing</code>: SV_InstanceID input system value.</li>
+<li>
+<code>geometry</code>: DX10 geometry shaders.</li>
+<li>
+<code>compute</code>: Compute shaders, structured buffers, atomic operations.</li>
+<li>
+<code>randomwrite</code>: “random write” (UAV) textures.</li>
+<li>
+<code>tesshw</code>: GPU support for hardware tessellation, but not necessarily tessellation shader stages (e.g. Metal supports tessellation, but not via shader stages).</li>
+<li>
+<code>tessellation</code>: Tessellation hull/domain shader stages.</li>
+<li>
+<code>msaatex</code>: Ability to access multi-sampled textures (Texture2DMS in HLSL).</li>
+<li>
+<code>sparsetex</code>: Sparse textures with residency info (“Tier2” support in D3D terms; CheckAccessFullyMapped HLSL function). Note that currently this is only implemented on DX11/12.</li>
+<li>
+<code>framebufferfetch</code>: Framebuffer fetch – ability to read input pixel color in the pixel shader.</li>
+</ul>
+
+<p>The broad <code>#pragma target</code> directives are shorthands for the requirements above, and they correspond to:</p>
+
+<ul>
+<li>
+<code>2.5</code>: derivatives</li>
+<li>
+<code>3.0</code>: 2.5 + interpolators10 + samplelod + fragcoord</li>
+<li>
+<code>3.5</code>: 3.0 + interpolators15 + mrt4 + integers + 2darray + instancing</li>
+<li>
+<code>4.0</code>: 3.5 + geometry</li>
+<li>
+<code>5.0</code>: 4.0 + compute + randomwrite + tesshw + tessellation</li>
+<li>
+<code>4.5</code>: 3.5 + compute + randomwrite</li>
+<li>
+<code>4.6</code>: 4.0 + cubearray + tesshw + tessellation</li>
+</ul>
+
+<p>Note that in Direct3D terms shader model 4.0 also implies “mrt8”; and shader model 5.0 implies “interpolators32” and “cubearray”. However, these are not guaranteed to be available on many mobile platforms. So for backwards compatibility with existing shaders, writing #pragma target 4.0 does not automatically require 8 MRTs support; and writing #pragma target 5.0 does not require 32 interpolators nor cubemap arrays.</p>
 
 <h2>另请参阅</h2>
 
@@ -278,7 +347,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

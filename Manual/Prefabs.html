@@ -12,9 +12,9 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="预制件 - Unity Manual">
 <title>预制件 - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/PrefabWithOverride.png">
-<meta name="description" content="通过添加组件并将其属性设置为适当的值，可以方便地在场景中构建游戏对象。但是，当有一个像 NPC、道具或景物之类的对象在场景中多次重复使用时，这种方法会产生问题。简单复制对象肯定会产生重复项，但所有这些项都是可以独立编辑的。通常会希望特定对象的所有实例具有相同的属性，因此在场景中编辑一个对象时，不希望对所有副本重复执行相同的编辑。">
-<meta property="og:description" content="通过添加组件并将其属性设置为适当的值，可以方便地在场景中构建游戏对象。但是，当有一个像 NPC、道具或景物之类的对象在场景中多次重复使用时，这种方法会产生问题。简单复制对象肯定会产生重复项，但所有这些项都是可以独立编辑的。通常会希望特定对象的所有实例具有相同的属性，因此在场景中编辑一个对象时，不希望对所有副本重复执行相同的编辑。">
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.4/uploads/Main/PrefabsIntroScene.png">
+<meta name="description" content="Unity’s Prefab system allows you to create, configure, and store a GameObject complete with all its components, property values, and child GameObjects as a reusable Asset. The Prefab Asset acts as a template from which you can create new Prefab instances in the Scene.">
+<meta property="og:description" content="Unity’s Prefab system allows you to create, configure, and store a GameObject complete with all its components, property values, and child GameObjects as a reusable Asset. The Prefab Asset acts as a template from which you can create new Prefab instances in the Scene.">
 <meta name="author" content="Unity Technologies">
 <link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
 <link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
@@ -31,7 +31,7 @@
       var lang = 'zh_CN';
       var page = 'Prefabs';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -63,7 +63,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -92,10 +92,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/Prefabs.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/Prefabs.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/Prefabs.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/Prefabs.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/Prefabs.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/Prefabs.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/Prefabs.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/Prefabs.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -107,7 +107,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -129,60 +129,67 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="UnityOverview.html">在 Unity 中操作</a></li>
 <li><a href="CreatingGameplay.html">创建游戏玩法</a></li>
-<li><a href="GameObjects.html">游戏对象</a></li>
 <li>预制件</li>
 </ul></div>
 <div class="mb20"><div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
-<span class="prev"><a href="StaticObjects.html"></a></span><div class="tip">静态游戏对象</div>
+<span class="prev"><a href="Saving.html"></a></span><div class="tip">保存工作</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
-<span class="next"><a href="InstantiatingPrefabs.html"></a></span><div class="tip">在运行时实例化预制件</div>
+<span class="next"><a href="CreatingPrefabs.html"></a></span><div class="tip">Creating Prefabs</div>
 </div>
 </div></div>
 <h1>预制件</h1>
 <!--BeginSwitchLink--><!--EndSwitchLink-->
 <div class="clear"></div>
 
-<p>通过添加组件并将其属性设置为适当的值，可以方便地在场景中构建游戏对象。但是，当有一个像 NPC、道具或景物之类的对象在场景中多次重复使用时，这种方法会产生问题。简单复制对象肯定会产生重复项，但所有这些项都是可以独立编辑的。通常会希望特定对象的所有实例具有相同的属性，因此在场景中编辑一个对象时，不希望对所有副本重复执行相同的编辑。</p>
-
-<p>幸运的是，Unity 有一种__预制件__资源类型，可用于存储游戏对象 (GameObject) 对象以及配套的组件和属性。预制件充当模板，在此模板的基础之上可以创建场景中的新对象实例。对预制件资源所做的任何编辑都会立即反映在由该预制件生成的所有实例中，但也可以单独_重写_每个实例的组件和设置。</p>
-
-<p><strong>注意：</strong>将资源文件（如网格）拖动到场景中时将创建新的对象实例，并且在更改原始资源时所有此类实例都将更改。但是，尽管行为在表面上很相似，但资源不是预制件，因此无法向其添加组件或使用下面描述的其他预制件功能。</p>
-
-<h2>使用预制件</h2>
-
-<p>若要创建预制件，可选择 __Asset &gt; Create Prefab__，然后将场景中的对象拖到出现的“空”预制件资源上。然后，如果将另一个游戏对象拖到预制件上，系统将询问是否要将当前游戏对象替换为新游戏对象。只需将预制件资源从 Project 视图拖动到 Scene 视图，即可创建预制件的实例。作为预制件实例创建的对象将以蓝色文本显示在 Hierarchy 视图中。（普通对象以黑色文本显示。）</p>
-
-<p>如上所述，对预制件资源本身的更改将反映在所有实例中，但也可以单独修改单个实例。例如，当想要创建几个类似的 NPC 但希望引入一些变化来使它们更逼真时，这很有用。为了明确区分已重写的属性，此类属性在 Inspector 中的名称标签将以粗体显示。（当一个全新的组件添加到预制件实例时，其_所有_属性都将以粗体显示。）</p>
-
 <figure>
-<img src="../uploads/Main/PrefabWithOverride.png" alt="一个预制件实例上的网格渲染器 (Mesh Renderer) 组件已重写Cast Shadows属性">
-<figcaption>一个预制件实例上的网格渲染器 (Mesh Renderer) 组件已重写“Cast Shadows”属性</figcaption>
+<img src="../uploads/Main/PrefabsIntroScene.png" alt="">
 </figure>
 
-<p>还可以使用脚本在运行时创建预制件的实例。请参阅有关<a href="InstantiatingPrefabs.html">实例化预制件</a>的手册页以了解更多详细信息。</p>
+<p>Unity’s <strong>Prefab</strong> system allows you to create, configure, and store a GameObject complete with all its components, property values, and child GameObjects as a reusable Asset. The Prefab Asset acts as a template from which you can create new Prefab instances in the Scene. </p>
 
-<h2>从实例中编辑预制件</h2>
+<p>When you want to reuse a GameObject configured in a particular way – like a non-player character (NPC), prop or piece of scenery – in multiple places in your Scene, or across multiple Scenes in your Project, you should convert it to a Prefab. This is better than simply copying and pasting the GameObject, because the Prefab system allows you to automatically keep all the copies in sync.</p>
 
-<p>预制件实例的 Inspector 中有三个按钮对于普通对象而言是没有的：_Select<em>、</em>Revert_ 和 <em>Apply</em>。</p>
+<p>Any edits that you make to a Prefab Asset are automatically reflected in the instances of that Prefab, allowing you to easily make broad changes across your whole Project without having to repeatedly make the same edit to every copy of the Asset.</p>
 
-<p><em>Select</em> 按钮选择用于生成实例的预制件资源。这样可以编辑主预制件，从而更改其所有实例。但是，还可以使用 <em>Apply</em> 按钮将实例中重写的值保存回原始预制件（出于显而易见的原因，修改的变换位置值将排除在外）。这种方式可以通过任何单个实例来有效编辑所有实例（重写更改值的实例除外），这是进行全局更改的一种非常快捷方便的方法。如果尝试重写属性后决定还是使用默认值，则可以使用 <em>Revert</em> 按钮重新让实例向其预制件看齐。</p>
+<p>You can <a href="NestedPrefabs.html">nest Prefabs</a> inside other Prefabs to create complex hierachies of objects that are easy to edit at multiple levels.</p>
+
+<p>However, this does not mean all Prefab instances have to be identical. You can <a href="PrefabInstanceOverrides.html">override</a> settings on individual prefab instances if you want some instances of a Prefab to differ from others. You can also create <a href="PrefabVariants.html">variants</a> of Prefabs which allow you to group a set of overrides together into a meaningful variation of a Prefab.</p>
+
+<p>You should also use Prefabs when you want to <a href="InstantiatingPrefabs.html">instantiate GameObjects at runtime</a> that did not exist in your Scene at the start - for example, to make powerups, special effects, projectiles, or NPCs appear at the right moments during gameplay.</p>
+
+<p>Some common examples of Prefab use include:</p>
+
+<ul>
+<li><p>Environmental Assets - for example a certain type of tree used multiple times around a level (as seen in the screenshot above).</p></li>
+<li><p>Non-player characters (NPCs) - for example a certain type of robot may appear in your game multiple times, across multiple levels. They may differ (using <em>overrides</em>) in the speed they move, or the sound they make.</p></li>
+<li><p>Projectiles - for example a pirate’s cannon might instantiate a cannonball Prefab each time it is fired.</p></li>
+<li><p>The player’s main character - the player prefab might be placed at the starting point on each level (separate Scenes) of your game.</p></li>
+</ul>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2018–07–31 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">Updated to include improved prefab features - Nested Prefabs and Prefab Variants added in <a href="https://docs.unity3d.com/2018.3/Documentation/Manual/30_search.html?q=newin20183">2018.3</a> <span class="search-words">NewIn20183</span></span></p></li>
+</ul>
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
-<span class="prev"><a href="StaticObjects.html"></a></span><div class="tip">静态游戏对象</div>
+<span class="prev"><a href="Saving.html"></a></span><div class="tip">保存工作</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
-<span class="next"><a href="InstantiatingPrefabs.html"></a></span><div class="tip">在运行时实例化预制件</div>
+<span class="next"><a href="CreatingPrefabs.html"></a></span><div class="tip">Creating Prefabs</div>
 </div>
 </div>
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

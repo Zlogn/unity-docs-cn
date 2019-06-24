@@ -12,9 +12,9 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="创建瓦片地图 (Tilemap) - Unity Manual">
 <title>创建瓦片地图 (Tilemap) - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/CreatingTilemaps-6.png">
-<meta name="description" content="从 GameObject 菜单中，找到 2D Object__，然后选择 Tilemap__。">
-<meta property="og:description" content="从 GameObject 菜单中，找到 2D Object__，然后选择 Tilemap__。">
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.4/uploads/Main/Tilemap_choices.png">
+<meta name="description" content="Create a default Tilemap, from the GameObject menu (menu: GameObject &gt; 2D Object &gt; Tilemap). For the Hexagonal and Isometric Tilemap options, please refer to the documentation on their respective pages.">
+<meta property="og:description" content="Create a default Tilemap, from the GameObject menu (menu: GameObject &gt; 2D Object &gt; Tilemap). For the Hexagonal and Isometric Tilemap options, please refer to the documentation on their respective pages.">
 <meta name="author" content="Unity Technologies">
 <link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
 <link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
@@ -31,7 +31,7 @@
       var lang = 'zh_CN';
       var page = 'Tilemap-CreatingTilemaps';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -63,7 +63,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -92,10 +92,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/Tilemap-CreatingTilemaps.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/Tilemap-CreatingTilemaps.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/Tilemap-CreatingTilemaps.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/Tilemap-CreatingTilemaps.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/Tilemap-CreatingTilemaps.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/Tilemap-CreatingTilemaps.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/Tilemap-CreatingTilemaps.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/Tilemap-CreatingTilemaps.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -107,7 +107,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -129,7 +129,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="Unity2D.html">2D</a></li>
 <li><a href="class-Tilemap.html">Tilemap</a></li>
 <li>创建瓦片地图 (Tilemap)</li>
@@ -139,96 +139,62 @@
 <span class="prev"><a href="Tilemap-CreatingTiles.html"></a></span><div class="tip">创建瓦片</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
-<span class="next"><a href="Tilemap-Palette.html"></a></span><div class="tip">Tilemap Palette</div>
+<span class="next"><a href="Tilemap-Palette.html"></a></span><div class="tip">Tile Palette</div>
 </div>
 </div></div>
 <h1>创建瓦片地图 (Tilemap)</h1>
 <!--BeginSwitchLink--><!--EndSwitchLink-->
 <div class="clear"></div>
 
-<p>从 <strong>GameObject</strong> 菜单中，找到 <strong>2D Object__，然后选择 </strong>Tilemap__。</p>
+<p>Create a default <strong>Tilemap</strong>, from the GameObject menu (menu: <strong>GameObject &gt; 2D Object &gt; Tilemap</strong>). For the <a href="Tilemap-Hexagonal.html">Hexagonal</a> and <a href="Tilemap-Isometric.html">Isometric</a> Tilemap options, please refer to the documentation on their respective pages.</p>
 
-<p>随即将在场景中创建一个带有子游戏对象的新游戏对象。此游戏对象的名称为 <strong>Grid</strong>。Grid 游戏对象决定了子 Tilemap 的布局。</p>
+<figure>
+<img src="../uploads/Main/Tilemap_choices.png" alt="">
+</figure>
+
+<p>After selecting the <strong>Tilemap</strong> option, a new <a href="class-Grid.html">Grid</a> GameObject is created with a child <strong>Tilemap</strong> GameObject in the scene. The Grid GameObject determines the layout of its child Tilemaps.</p>
 
 <figure>
 <img src="../uploads/Main/CreatingTilemaps-6.png" alt="">
 </figure>
 
-<p>子游戏对象的名称为 <strong>Tilemap</strong>。该游戏对象由 Tilemap 组件和 Tilemap Renderer 组件组成。Tilemap 游戏对象是绘制瓦片的地方。</p>
+<p>The child Tilemap is comprised of a <strong>Tilemap</strong> component and <a href="class-TilemapRenderer.html">Tilemap Renderer</a> component. The Tilemap GameObject is where the Tiles are <a href="Tilemap-Painting.html">painted on</a>.</p>
 
 <figure>
 <img src="../uploads/Main/CreatingTilemaps-7.png" alt="">
 </figure>
 
-<p>要创建要用作“层”的其他 Tilemap，请选择 Grid 游戏对象或 Tilemap 游戏对象，然后在菜单中选择 <strong>GameObject</strong> &gt; <strong>2D Object</strong> &gt; <strong>Tilemaps__，或右键单击所选的游戏对象并单击 </strong>2D Object__ &gt; <strong>Tilemap</strong>。</p>
+<p>Create additional Tilemaps by selecting the Grid GameObject or the Tilemap GameObject, and then go to the menu: <strong>GameObject</strong> &gt; <strong>2D Object</strong> &gt; <strong>Tilemaps</strong>, or right-click on the selected GameObject and go to <strong>2D Object</strong> &gt; <strong>Tilemap</strong></p>
 
 <figure>
 <img src="../uploads/Main/CreatingTilemaps-8.png" alt="">
 </figure>
 
-<p>随即会将一个名为 <strong>Tilemap (1)</strong> 的新游戏对象添加到所选游戏对象的层级视图中。在这个新的游戏对象上也可以绘制瓦片。</p>
+<p>A Tilemap GameObject is then created and added to the Hierarchy as a child of the parent Grid GameObject, even if the sibling Tilemap GameObject was orignially selected.</p>
 
 <figure>
 <img src="../uploads/Main/CreatingTilemaps-9.png" alt="">
 </figure>
 
-<h2>调整 Tilemap 的网格</h2>
-
-<p>选择 Grid 游戏对象。在 Inspector 中调整 Grid 组件中的值。</p>
-
-<figure>
-<img src="../uploads/Main/CreatingTilemaps-10.png" alt="">
-</figure>
-
-<table>
-<colgroup>
-<col style="text-align:left;">
-<col style="text-align:left;">
-</colgroup>
-
-<thead>
-<tr>
-	<th style="text-align:left;">属性</th>
-	<th style="text-align:left;">功能</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-	<td style="text-align:left;"><strong>Cell Size</strong></td>
-	<td style="text-align:left;">网格中每个单元格的大小</td>
-</tr>
-<tr>
-	<td style="text-align:left;"><strong>Cell Gap</strong></td>
-	<td style="text-align:left;">网格中各个单元格之间的间隙大小</td>
-</tr>
-<tr>
-	<td style="text-align:left;"><strong>Cell Swizzle</strong></td>
-	<td style="text-align:left;">将单元格位置重排到其他轴。例如：在 XZY 模式下，交换 Y 和 Z 坐标来使输入 Y 坐标映射到 Z，反之亦然。</td>
-</tr>
-</tbody>
-</table>
-
-<p>网格中的更改会影响所有具有瓦片地图 (Tilemap)、瓦片地图渲染器 (Tilemap Renderer) 和瓦片地图 2D 碰撞体 (Tilemap Collider 2D) 组件的子层游戏对象。</p>
+<p>Once the Tilemap(s) are created, adjust the <a href="class-Grid.html">Grid</a> property settings to adjust the properties of its Tilemap children. Changes in the parent Grid GameObject affect all child GameObjects with the Tilemap, Tilemap Renderer and <a href="class-TilemapCollider">Tilemap Collider 2D</a> components.</p>
 
 <hr>
 
 <ul>
-<li><span class="page-edit">2017–09–06 Page published with limited <a href="DocumentationEditorialReview.html">editorial review</a>
-</span></li>
+<li><span class="page-history">Tilemaps added in <a href="https://docs.unity3d.com/2017.2/Documentation/Manual/30_search.html?q=newin20172">2017.2</a> <span class="search-words">NewIn20172</span></span></li>
 </ul>
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
 <span class="prev"><a href="Tilemap-CreatingTiles.html"></a></span><div class="tip">创建瓦片</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
-<span class="next"><a href="Tilemap-Palette.html"></a></span><div class="tip">Tilemap Palette</div>
+<span class="next"><a href="Tilemap-Palette.html"></a></span><div class="tip">Tile Palette</div>
 </div>
 </div>
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

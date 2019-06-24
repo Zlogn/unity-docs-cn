@@ -10,10 +10,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="twitter:card" content="summary">
-<meta property="og:title" content="模型导入工作流程 - Unity Manual">
-<title>模型导入工作流程 - Unity Manual</title>
-<meta name="description" content="注意：此工作流假定已经有需要导入的模型文件。如果还没有文件，可先阅读有关如何导出 FBX 文件的指南，再从 3D 建模软件导出文件。有关如何从 3D 建模软件导出人形 (Humanoid) 动画的指南，请参阅人形资源准备。">
-<meta property="og:description" content="注意：此工作流假定已经有需要导入的模型文件。如果还没有文件，可先阅读有关如何导出 FBX 文件的指南，再从 3D 建模软件导出文件。有关如何从 3D 建模软件导出人形 (Humanoid) 动画的指南，请参阅人形资源准备。">
+<meta property="og:title" content="Importing Models - Unity Manual">
+<title>Importing Models - Unity Manual</title>
+<meta name="description" content="Model files can contain a variety of data, such as character and terrain Meshes, Animation Rigs and Clips, as well as Materials and Textures. Most likely, your file does not contain all of these elements at once, but you can follow any portion of the workflow that you need to:">
+<meta property="og:description" content="Model files can contain a variety of data, such as character and terrain Meshes, Animation Rigs and Clips, as well as Materials and Textures. Most likely, your file does not contain all of these elements at once, but you can follow any portion of the workflow that you need to:">
 <meta name="author" content="Unity Technologies">
 <link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
 <link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
@@ -30,7 +30,7 @@
       var lang = 'zh_CN';
       var page = 'ImportingModelFiles';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -62,7 +62,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -91,10 +91,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/ImportingModelFiles.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/ImportingModelFiles.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/ImportingModelFiles.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/ImportingModelFiles.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/ImportingModelFiles.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/ImportingModelFiles.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/ImportingModelFiles.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/ImportingModelFiles.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -106,7 +106,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -128,9 +128,9 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="ImportingAssets.html">导入</a></li>
-<li>模型导入工作流程</li>
+<li>Importing Models</li>
 </ul></div>
 <div class="mb20"><div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
@@ -140,26 +140,51 @@
 <span class="next"><a href="ConfiguringtheAvatar.html"></a></span><div class="tip">导入人形动画</div>
 </div>
 </div></div>
-<h1>模型导入工作流程</h1>
+<h1>Importing Models</h1>
 <!--BeginSwitchLink--><!--EndSwitchLink-->
 <div class="clear"></div>
 
-<p><strong>注意：</strong>此工作流假定已经有需要导入的模型文件。如果还没有文件，可先阅读<a href="HOWTO-exportFBX.html">有关如何导出 FBX 文件的指南</a>，再从 3D 建模软件导出文件。有关如何从 3D 建模软件导出<em>人形 (Humanoid)</em> 动画的指南，请参阅<a href="UsingHumanoidChars.html">人形资源准备</a>。</p>
+<p>Model files can contain a variety of data, such as character and terrain Meshes, Animation Rigs and Clips, as well as Materials and Textures. Most likely, your file does not contain all of these elements at once, but you can follow any portion of the workflow that you need to:</p>
 
-<p>模型文件可包含各种数据，例如角色网格、动画骨架和剪辑以及材质和纹理。最有可能的情况是，文件未同时包含所有这些元素，但可以根据需要按照本工作流程的任何部分进行操作。</p>
+<ol>
+<li><a href="#project">Select the file in the Project view to see the Import Settings window</a></li>
+<li><a href="#model">Set any Model-specific or general importer options</a></li>
+<li>
+<a href="#rigs">Set up options for importing Rigs and Animation</a> (not available for SpeedTree Models)</li>
+<li><a href="#materials">Dealing with Materials and Textures</a></li>
+<li><a href="#drag">Drag the file into Unity</a></li>
+</ol>
 
-<p><strong>访问 Import Settings 窗口</strong></p>
+<blockquote>
+<p><strong>Note:</strong> This workflow assumes you already have a Model file to import. If you don’t have a file already, you can read the <a href="HOWTO-exportFBX.html">guidelines on how to export an FBX file</a> before exporting it from your 3D modeling software. For guidelines on how to export <em>Humanoid</em> animation from your 3D modeling software, see <a href="UsingHumanoidChars.html">Humanoid Asset preparation</a>.</p>
+</blockquote>
 
-<p>无论要从模型文件中提取哪种数据，始终以相同的方式开始：
-1.打开 <strong>Project</strong> 窗口和 <strong>Inspector__，确保能同时看到这两个界面。
-2.从 </strong>Project__ 窗口的 <strong>Asset</strong> 文件夹中选择要导入的__模型__文件。<strong>Inspector</strong> 中将打开 <strong>Import Settings</strong> 窗口，其中默认显示 <strong>Model 选项卡</strong>。</p>
+<p><a name="project"></a></p>
 
-<p><strong>设置模型特有的选项和常规导入器选项</strong></p>
+<h2>Accessing the Import Settings window</h2>
 
-<p>随后可在 <a href="FBXImporter-Model.html">Model 选项卡</a>上设置这些选项：</p>
+<p>无论要从模型文件中提取哪种数据，始终以相同的方式开始：</p>
+
+<p>1.打开 <strong>Project</strong> 窗口和 __Inspector__，确保能同时看到这两个界面。</p>
+
+<ol>
+<li>
+<p>Select the <strong>Model</strong> file you want to import from the <strong>Asset</strong> folder in the <strong>Project</strong> window. </p>
+
+<p>The <strong>Import Settings</strong> window opens in the <strong>Inspector</strong> showing the <strong>Model tab</strong> by default.</p>
+</li>
+</ol>
+
+<p><a name="model"></a></p>
+
+<h2>Setting Model-specific and general importer options</h2>
+
+<p>The options that are available for SpeedTree Models vs. other Models are very different. For example, the <a href="SpeedTreeImporter-Model.html">SpeedTree Model tab</a> provides options mostly for setting up transitions between LOD levels. </p>
+
+<p>Character and animated Models provide more diverse options on <a href="FBXImporter-Model.html">their Model tab</a>, which allow you to:</p>
 
 <ul>
-<li>使用 <strong>Scale Factor</strong>、<strong>Use File Scale</strong> 或 <strong>File Scale</strong> 属性可调整 Unity 对单位的解释。例如，3ds Max 使用 1 个单位表示 10 厘米，而 Unity 使用 1 个单位表示 1 米。</li>
+<li>Use the <strong>Scale Factor</strong> and <strong>Convert Units</strong> properties to adjust how Unity interprets units. For example, 3ds Max uses 1 unit to represent 10 centimeters, whereas Unity uses 1 unit to represent 1 meter.</li>
 <li>使用 <strong>Mesh Compression</strong>、<strong>Read/Write Enabled</strong>、<strong>Optimize Mesh</strong>、<strong>Keep Quads</strong>、<strong>Index Format</strong> 或 <strong>Weld Vertices</strong> 属性可减少资源并节省内存。</li>
 <li>如果模型文件来自 Maya 或 3ds Max，或者任何其他支持变形目标动画的 3D 建模应用程序，则可以启用 <strong>Import BlendShapes</strong> 选项。</li>
 <li>可为环境几何形状启用 <strong>Generate Colliders</strong> 选项。</li>
@@ -169,7 +194,9 @@
 <li>可使用 <strong>Normals</strong>、<strong>Normals Mode</strong>、<strong>Tangents</strong> 或 <strong>Smoothing Angle</strong> 选项来控制 Unity 如何处理模型中的法线 (Normals) 和切线 (Tangents)。</li>
 </ul>
 
-<p><strong>设置骨架和动画的导入选项</strong></p>
+<p><a name="rigs"></a></p>
+
+<h2>Setting options for importing Rigs and Animation</h2>
 
 <p>如果文件包含动画数据，可遵循使用 <a href="FBXImporter-Rig.html">Rig 选项卡</a>设置骨架并使用 <a href="class-AnimationClip.html">Animation 选项卡</a>提取或定义动画剪辑的准则。人形和通用（非人形）动画类型的工作流程不同，因为 Unity 要求人形类型有非常具体的骨骼结构，但对于通用类型只需了解哪个骨骼是根节点：</p>
 
@@ -178,15 +205,24 @@
 <li><a href="GenericAnimations.html">通用类型工作流程</a></li>
 </ul>
 
-<p><strong>处理材质和纹理</strong></p>
+<blockquote>
+<p><strong>Note:</strong> SpeedTree Models have neither a <strong>Rig</strong> nor an <strong>Animation</strong> tab.</p>
+</blockquote>
+
+<p><a name="materials"></a></p>
+
+<h2>Dealing with Materials and Textures</h2>
 
 <p>如果文件包含__材质__或__纹理__，可定义它们的处理方式：</p>
 
 <p>1.单击 <strong>Import Settings</strong> 窗口中的 <a href="FBXImporter-Materials.html">Materials 选项卡</a>。
 2.启用 <strong>Import Materials</strong> 选项。<strong>Materials</strong> 选项卡中显示多个选项，包括 <strong>Location</strong> 选项，该选项的值决定了应显示的其他选项。
-3.选择 <strong>Use Embedded Materials</strong> 选项<a href="FBXImporter-Materials.html#Embedded">将导入的材质保持在导入的资源中</a>。</p>
+3.选择 <strong>Use Embedded Materials</strong> 选项<a href="FBXImporter-Materials.html#Embedded">将导入的材质保持在导入的资源中</a>。
+4. When you have finished setting the options, click the <strong>Apply</strong> button at the bottom of the <strong>Import Settings</strong> window to save them or click the <strong>Revert</strong> button to cancel.</p>
 
-<p>设置完这些选项后，请单击 <strong>Import Settings</strong> 窗口底部的 <strong>Apply</strong> 按钮来保存这些设置，也可单击 <strong>Revert</strong> 按钮取消设置。</p>
+<p><a name="drag"></a></p>
+
+<h2>Drag the file into Unity</h2>
 
 <p>最后，可将文件导入场景中：</p>
 
@@ -198,7 +234,7 @@
 <hr>
 
 <ul>
-<li><span class="page-edit"> 2018–04–25 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+<li><span class="page-edit"> 2019–01–18 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
 </span></li>
 </ul>
 <div class="nextprev clear">
@@ -212,7 +248,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

@@ -12,9 +12,9 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="减小构建的文件大小 - Unity Manual">
 <title>减小构建的文件大小 - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/FileSizeOptimization.png">
-<meta name="description" content="将构建的应用程序的文件大小保持在最低限度非常重要，尤其是对于移动设备或施加了大小限制的应用商店而言。减小大小的第一步是确定哪些资源对最终大小的影响最大，因为这些资源最有可能是需要优化的目标。执行构建后，可在 Editor 日志中找到此信息。选择 Console 窗口（菜单：__Window__ &lt; Console__），单击右上角的小下拉选单面板，然后选择 Open Editor Log__。">
-<meta property="og:description" content="将构建的应用程序的文件大小保持在最低限度非常重要，尤其是对于移动设备或施加了大小限制的应用商店而言。减小大小的第一步是确定哪些资源对最终大小的影响最大，因为这些资源最有可能是需要优化的目标。执行构建后，可在 Editor 日志中找到此信息。选择 Console 窗口（菜单：__Window__ &lt; Console__），单击右上角的小下拉选单面板，然后选择 Open Editor Log__。">
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.4/uploads/Main/FileSizeOptimization.png">
+<meta name="description" content="Keeping the file size of the built app to a minimum is important, especially for mobile devices or for app stores that impose a size limit. The first step in reducing the size is to determine which Assets contribute most to it, because these Assets are the most likely candidates for optimization. This information is available in the Editor Log just after you have performed the build. Go to the Console window (menu: Window &gt; General &gt; Console), click the small drop-down panel in the top right, and select Open Editor Log.">
+<meta property="og:description" content="Keeping the file size of the built app to a minimum is important, especially for mobile devices or for app stores that impose a size limit. The first step in reducing the size is to determine which Assets contribute most to it, because these Assets are the most likely candidates for optimization. This information is available in the Editor Log just after you have performed the build. Go to the Console window (menu: Window &gt; General &gt; Console), click the small drop-down panel in the top right, and select Open Editor Log.">
 <meta name="author" content="Unity Technologies">
 <link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
 <link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
@@ -31,7 +31,7 @@
       var lang = 'zh_CN';
       var page = 'ReducingFilesize';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -63,7 +63,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -92,10 +92,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/ReducingFilesize.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/ReducingFilesize.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/ReducingFilesize.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/ReducingFilesize.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/ReducingFilesize.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/ReducingFilesize.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/ReducingFilesize.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/ReducingFilesize.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -107,7 +107,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -129,7 +129,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="UnityOverview.html">在 Unity 中操作</a></li>
 <li><a href="AdvancedDevelopment.html">高级开发</a></li>
 <li>减小构建的文件大小</li>
@@ -146,7 +146,7 @@
 <!--BeginSwitchLink--><!--EndSwitchLink-->
 <div class="clear"></div>
 
-<p>将构建的应用程序的文件大小保持在最低限度非常重要，尤其是对于移动设备或施加了大小限制的应用商店而言。减小大小的第一步是确定哪些资源对最终大小的影响最大，因为这些资源最有可能是需要优化的目标。执行构建后，可在 Editor 日志中找到此信息。选择 Console 窗口（菜单：__Window__ &lt; <strong>Console__），单击右上角的小下拉选单面板，然后选择 </strong>Open Editor Log__。</p>
+<p>Keeping the file size of the built app to a minimum is important, especially for mobile devices or for app stores that impose a size limit. The first step in reducing the size is to determine which Assets contribute most to it, because these Assets are the most likely candidates for optimization. This information is available in the Editor Log just after you have performed the build. Go to the Console window (menu: <strong>Window</strong> &gt; <strong>General</strong> &gt; <strong>Console</strong>), click the small drop-down panel in the top right, and select <strong>Open Editor Log</strong>.</p>
 
 <figure>
 <img src="../uploads/Main/FileSizeOptimization.png" alt="执行构建后打开的 Editor 日志">
@@ -183,31 +183,9 @@
 
 <p>请注意，网格压缩只是生成较小的数据文件，在运行时不会减少使用的内存。减少动画关键帧会生成较小的数据文件，并会在运行时减少使用的内存；通常应始终启用该功能。请参阅有关<a href="class-AnimationClip.html">动画剪辑</a>的文档以了解与此相关的更多信息。</p>
 
-<h3>DLL</h3>
+<h3>Reducing .NET library size</h3>
 
-<p>默认情况下，Unity 在构建的播放器中仅包含以下 DLL：</p>
-
-<ul>
-<li><p>mscorlib.dll</p></li>
-<li><p>Boo.Lang.dll</p></li>
-<li><p>UnityScript.Lang.dll</p></li>
-<li><p>UnityEngine.dll</p></li>
-</ul>
-
-<p>构建播放器时，应避免依赖 <em>System.dll</em> 和 <em>System.Xml.dll</em>。默认情况下，Unity 不会在构建的播放器中包含这些文件，但如果使用了它们的类，则会包含它们。这些 DLL 将为播放器的存储大小增加大约 1 兆字节。如果需要在游戏中解析 XML，可使用诸如 <a href="https://docs.unity3d.com/550/Documentation/uploads/Examples/Mono.Xml.zip">Mono.Xml.zip</a> 之类较小的库来替代系统库。大多数通用容器都包含在 mscorlib 中，只有堆栈和极少内容位于 System.dll 中，所以如果可能，应避免使用它们。</p>
-
-<figure>
-<img src="../uploads/Main/FileSizeMonoDependency.png" alt="Unity 在构建播放器时包含 System.Xml.dll 和 System.dll">
-<figcaption>Unity 在构建播放器时包含 System.Xml.dll 和 System.dll</figcaption>
-</figure>
-
-<h3>减小移动端 .NET 库大小</h3>
-
-<p>Unity 对某些移动设备支持两个 .NET API 兼容性级别：.NET 2.0 和 .NET 2.0 的子集。请在 <a href="class-PlayerSettings.html">Player Settings</a> 中为构建选择适当的兼容性级别。</p>
-
-<p>.NET 2.0 API 配置文件与完整的 .NET 2.0 API 类似。大多数库例程都是完全实现的，因此该选项提供了与预先存在的 .NET 代码之间的最佳兼容性。但是，对于许多游戏，并不需要完整的库，而多余的代码会占用宝贵的内存空间。</p>
-
-<p>为了避免浪费内存，Unity 还支持 .NET 2.0 Subset API 配置文件。此配置文件与 Mono“monotouch”配置文件非常相似，因此“monotouch”配置文件的许多局限性也适用于 Unity 的 .NET 2.0 Subset 配置文件。有关更多信息，请参阅 Mono Project 关于 <a href="http://www.mono-project.com/archived/monotouchlimitations/">MonoTouch 局限性</a>的文档。游戏中不常用的许多库例程都不在此配置文件中，因此可节省内存。但是，这也意味着依赖于这些例程的代码将无法正常工作。此方案可能是一种有用的优化，但应检查现有代码在应用此方案后是否仍然有效。</p>
+<p>Unity supports two .NET API compatibility levels.: .NET 4.x and .NET Standard 2.0. The .NET Standard 2.0 restricts you to a smaller subset of the .NET API, which can help keep size down.</p>
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
 <span class="prev"><a href="AssetBundles-Browser.html"></a></span><div class="tip">Unity Asset Bundle Browser 工具</div>
@@ -219,7 +197,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

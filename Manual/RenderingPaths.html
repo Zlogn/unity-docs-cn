@@ -30,7 +30,7 @@
       var lang = 'zh_CN';
       var page = 'RenderingPaths';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -62,7 +62,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -91,10 +91,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/RenderingPaths.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/RenderingPaths.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/RenderingPaths.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/RenderingPaths.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/RenderingPaths.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/RenderingPaths.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/RenderingPaths.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/RenderingPaths.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -106,7 +106,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -128,7 +128,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="Graphics.html">图形</a></li>
 <li><a href="GraphicsOverview.html">图形概述</a></li>
 <li>高级渲染功能</li>
@@ -139,7 +139,7 @@
 <span class="prev"><a href="HDRColorPicker.html"></a></span><div class="tip">HDR 拾色器</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
-<span class="next"><a href="LevelOfDetail.html"></a></span><div class="tip">细节级别 (LOD)</div>
+<span class="next"><a href="LevelOfDetail.html"></a></span><div class="tip">Level of Detail (LOD)</div>
 </div>
 </div></div>
 <h1>渲染路径</h1>
@@ -148,9 +148,9 @@
 
 <p>Unity 支持不同的<em>渲染路径</em>。您应该根据自己的游戏内容和目标平台/硬件而选择使用哪一个渲染路径。不同的渲染路径具有不同的性能特征，主要影响光照和阴影。请参阅<a href="SL-RenderPipeline.html">渲染管线</a>以了解技术细节。</p>
 
-<p>项目所用的渲染路径是在<a href="class-GraphicsSettings.html">图形设置 (Graphics Settings)</a>中选择的。此外，可针对每个<a href="class-Camera.html">摄像机</a>重写渲染路径。</p>
+<p>The rendering path used by your project is chosen on the <a href="class-GraphicsSettings.html">Graphics</a> window. Additionally, you can override it for each <a href="class-Camera.html">Camera</a>.</p>
 
-<p>如果显卡无法处理选定的渲染路径，Unity 将自动使用较低保真度的渲染路径。例如，在无法处理延迟着色 (Deferred Shading) 的 GPU 上将使用前向渲染 (Forward Rendering)。</p>
+<p>If the graphics card can’t handle a selected rendering path, Unity automatically uses a lower fidelity one. For example, on a GPU that can’t handle Deferred Shading, Forward Rendering will be used.</p>
 
 <h2>延迟着色</h2>
 
@@ -334,13 +334,13 @@
 <span class="prev"><a href="HDRColorPicker.html"></a></span><div class="tip">HDR 拾色器</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
-<span class="next"><a href="LevelOfDetail.html"></a></span><div class="tip">细节级别 (LOD)</div>
+<span class="next"><a href="LevelOfDetail.html"></a></span><div class="tip">Level of Detail (LOD)</div>
 </div>
 </div>
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

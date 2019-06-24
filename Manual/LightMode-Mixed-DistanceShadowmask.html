@@ -30,7 +30,7 @@
       var lang = 'zh_CN';
       var page = 'LightMode-Mixed-DistanceShadowmask';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -62,7 +62,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -91,10 +91,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/LightMode-Mixed-DistanceShadowmask.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/LightMode-Mixed-DistanceShadowmask.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/LightMode-Mixed-DistanceShadowmask.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/LightMode-Mixed-DistanceShadowmask.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/LightMode-Mixed-DistanceShadowmask.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/LightMode-Mixed-DistanceShadowmask.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/LightMode-Mixed-DistanceShadowmask.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/LightMode-Mixed-DistanceShadowmask.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -106,7 +106,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -128,7 +128,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="Graphics.html">图形</a></li>
 <li><a href="GraphicsOverview.html">图形概述</a></li>
 <li><a href="LightingOverview.html">光照</a></li>
@@ -153,8 +153,8 @@
 <p><strong>Distance Shadowmask__是 </strong>Shadowmask（阴影遮罩）__光照模式的一个版本。该模式由场景中的所有混合光源共用。要将 <strong>Mixed lighting</strong> 设置为 __Distance Shadowmask__，请执行以下操作：</p>
 
 <ul>
-<li>打开 Lighting 窗口（菜单：__Window__ &gt; <strong>Lighting</strong> &gt; <strong>Settings__），单击 </strong>Scene__ 选项卡，导航至 <strong>Mixed Lighting__，然后将 </strong>Lighting Mode__ 设置为 <strong>Shadowmask</strong>。</li>
-<li>接下来，打开 <strong>Quality Settings__（菜单：__Edit</strong> &gt; <strong>Project Settings</strong> &gt; <strong>Quality__），导航至 </strong>Shadowmask Mode__，然后将其设置为 <strong>Distance Shadowmask</strong>。</li>
+<li>Open the Lighting window (menu: <strong>Window</strong> &gt; <strong>Rendering</strong> &gt; <strong>Lighting Settings</strong>), click the <strong>Scene</strong> tab, navigate to <strong>Mixed Lighting</strong>, and set the <strong>Lighting Mode</strong> to <strong>Shadowmask</strong>.</li>
+<li>Next, open the <strong>Quality</strong> settings (menu: <strong>Edit</strong> &gt; <strong>Project Settings</strong>, then select the <strong>Quality</strong> category), navigate to <strong>Shadowmask Mode</strong> and set it to <strong>Distance Shadowmask</strong>.</li>
 </ul>
 
 <p>请参阅<a href="LightMode-Mixed.html">混合光照</a>相关文档以了解有关此光照模式的更多信息，并参阅<a href="LightModes.html">光照模式</a>相关文档以了解有关其他可用模式的更多信息。</p>
@@ -163,7 +163,7 @@
 
 <p><strong>Distance Shadowmask</strong> 模式是 <strong>Shadowmask</strong> 光照模式的一个版本，可提供从静态游戏对象投射到动态游戏对象的高质量阴影。</p>
 
-<p>在__阴影距离 (Shadow Distance)<strong>（菜单：__Edit</strong> &gt; <strong>Project Settings</strong> &gt; <strong>Quality</strong> &gt; <strong>Shadows__）内，Unity 会将动态和静态游戏对象渲染到阴影贴图中，可让静态游戏对象将清晰的阴影投射到动态游戏对象上。基于此原因，__Distance Shadowmask</strong> 模式相对于 <strong>Shadowmask</strong> 模式具有更高的性能要求，因为场景中的所有静态游戏对象都将渲染到阴影贴图中。</p>
+<p>Within the <strong>Shadow Distance</strong> (menu: <strong>Edit</strong> &gt; <strong>Project Settings</strong>, then select the <strong>Quality</strong> category, and navigate to the <strong>Shadows</strong> section), Unity renders both dynamic and static GameObjects into the shadow map, allowing static GameObjects to cast sharp shadows onto dynamic GameObjects. For this reason, <strong>Distance Shadowmask</strong> mode has higher performance requirements than <strong>Shadowmask</strong> mode, because all static GameObjects in the scene are rendered into the shadow map.</p>
 
 <p>超出__阴影距离__：</p>
 
@@ -266,7 +266,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

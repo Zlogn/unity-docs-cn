@@ -12,7 +12,7 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="Renderer 模块 - Unity Manual">
 <title>Renderer 模块 - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/PartSysRendererModule-0.png">
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.4/uploads/Main/PartSysRendererModule-0.png">
 <meta name="description" content="Renderer 模块的设置决定了粒子的图像或网格如何被其他粒子变换、着色和过度绘制。">
 <meta property="og:description" content="Renderer 模块的设置决定了粒子的图像或网格如何被其他粒子变换、着色和过度绘制。">
 <meta name="author" content="Unity Technologies">
@@ -31,7 +31,7 @@
       var lang = 'zh_CN';
       var page = 'PartSysRendererModule';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -63,7 +63,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -92,10 +92,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/PartSysRendererModule.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/PartSysRendererModule.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/PartSysRendererModule.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/PartSysRendererModule.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/PartSysRendererModule.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/PartSysRendererModule.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/PartSysRendererModule.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/PartSysRendererModule.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -107,7 +107,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -129,7 +129,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="Graphics.html">图形</a></li>
 <li><a href="GraphicsReference.html">图形参考</a></li>
 <li><a href="PartSysReference.html">粒子系统参考</a></li>
@@ -141,7 +141,7 @@
 <span class="prev"><a href="PartSysCustomDataModule.html"></a></span><div class="tip">Custom Data 模块</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
-<span class="next"><a href="comp-ParticlesLegacy.html"></a></span><div class="tip">粒子系统（旧版，3.5 版之前）</div>
+<span class="next"><a href="class-ParticleSystemForceField.html"></a></span><div class="tip">Particle System Force Field</div>
 </div>
 </div></div>
 <h1>Renderer 模块</h1>
@@ -263,12 +263,40 @@
 	<td style="text-align:left;">控制是否要使用 GPU 实例化来渲染粒子系统。需要使用网格渲染模式并使用兼容的着色器。有关更多详细信息，请参阅<a href="PartSysInstancing.html">粒子网格 GPU 实例化</a>。</td>
 </tr>
 <tr>
+	<td style="text-align:left;"><strong>Flip</strong></td>
+	<td style="text-align:left;">Mirror a proportion of the particles across the specified axes. A higher value flips more particles.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Allow Roll</strong></td>
+	<td style="text-align:left;">Control whether camera-facing particles can rotate around the Z-axis of the camera. Disabling this can be particularly useful for VR applications, where HMD roll can give undesirable results for Particle Systems.</td>
+</tr>
+<tr>
 	<td style="text-align:left;"><strong>Pivot</strong></td>
-	<td style="text-align:left;">修改用作旋转粒子中心的轴心点。</td>
+	<td style="text-align:left;">Modify the central pivot point for rotating particles. The value is a multiplier of the particle size.</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Visualize Pivot</strong></td>
 	<td style="text-align:left;">在 Scene 视图中预览粒子轴心点。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Masking</strong></td>
+	<td style="text-align:left;">Set how the particles rendered by the Particle System behave when interacting with a Sprite Mask.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    No Masking</td>
+	<td style="text-align:left;">The Particle System does not interact with any Sprite Masks in the Scene. This is the default option.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Visible Inside Mask</td>
+	<td style="text-align:left;">The particles are visible where the Sprite Mask overlays them, but not outside of it.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Visible Outside Mask</td>
+	<td style="text-align:left;">The particles are visible outside of the Sprite Mask, but not inside it. The Sprite Mask hides the sections of the particles it overlays.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Apply Active Color Space</strong></td>
+	<td style="text-align:left;">When rendering in Linear Color Space, the system converts particle colors from Gamma Space before uploading them to the GPU.</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Custom Vertex Streams</strong></td>
@@ -293,6 +321,10 @@
 <tr>
 	<td style="text-align:left;">    Shadows Only</td>
 	<td style="text-align:left;">选择 <strong>Shadows Only</strong> 使阴影可见，但网格本身不可见。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Shadow Bias</strong></td>
+	<td style="text-align:left;">Move the shadows along the direction of the light, in order to remove shadowing artifacts caused by approximating volumes with billboards.</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>Receive Shadows</strong></td>
@@ -325,7 +357,9 @@
 
 <h2>详细信息</h2>
 
-<p><strong>Render Mode</strong> 允许您在多个 2D 公告牌 (Billboard) 图形模式和网格 (Mesh) 模式之间进行选择。使用 3D 网格表示实体游戏对象（如岩石）时，它们可以为粒子提供额外的真实性，还可以改善云、火球和液体的体积感。使用 2D 公告牌图形时，不同的选项可用于不同的效果。</p>
+<p>The <strong>Render Mode</strong> lets you choose between several 2D Billboard graphic modes and Mesh mode. Using 3D Meshes gives particles extra authenticity when they represent solid GameObjects, such as rocks, and can also improve the sense of volume for clouds, fireballs and liquids. Meshes must be read/write enabled to work on the Particle System. If you assign them in the editor Unity handles this for you but if you want to assign different meshes at runtime you need to handle this setting yourself.</p>
+
+<p>When 2D billboard graphics are used, the different options can be used for a variety of effects:</p>
 
 <p>1.__Billboard 模式__适合用于表示从任何方向看起来大致相同的体积的粒子（例如云）。</p>
 
@@ -340,22 +374,23 @@
 <hr>
 
 <ul>
-<li><p><span class="page-edit">2018–03–28 Page published with <a href="DocumentationEditorialReview.html">editorial review</a>
+<li><p><span class="page-edit">2018–10–16 Page published with <a href="DocumentationEditorialReview.html">editorial review</a>
 </span></p></li>
 <li><p><span class="page-history">在 Unity 2018.1 中添加了 GPU 实例化</span></p></li>
+<li><p><span class="page-history">New particle system options added to Renderer module in <a href="https://docs.unity3d.com/2018.3/Documentation/Manual/30_search.html?q=newin20183">2018.3</a> <span class="search-words">NewIn20183</span></span></p></li>
 </ul>
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
 <span class="prev"><a href="PartSysCustomDataModule.html"></a></span><div class="tip">Custom Data 模块</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
-<span class="next"><a href="comp-ParticlesLegacy.html"></a></span><div class="tip">粒子系统（旧版，3.5 版之前）</div>
+<span class="next"><a href="class-ParticleSystemForceField.html"></a></span><div class="tip">Particle System Force Field</div>
 </div>
 </div>
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

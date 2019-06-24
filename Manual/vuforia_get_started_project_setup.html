@@ -12,7 +12,7 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="为 Vuforia 设置项目 - Unity Manual">
 <title>为 Vuforia 设置项目 - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/installing_vuforia.jpg">
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.4/uploads/Main/installing_vuforia.jpg">
 <meta name="description" content="为开发 Vuforia AR 或 MR 移动应用程序而设置项目的过程，与使用 Unity 进行移动平台的构建时设置的过程非常相似。Unity 安装程序包含 Vuforia SDK。请按照在 InstallingUnity 手册页上下载和安装 Unity 的说明进行操作。Vuforia 提供了一系列旨在放入场景中的预制件，从而为应用程序提供各种功能。所有这些预制件均可在 Unity Editor 中找到。">
 <meta property="og:description" content="为开发 Vuforia AR 或 MR 移动应用程序而设置项目的过程，与使用 Unity 进行移动平台的构建时设置的过程非常相似。Unity 安装程序包含 Vuforia SDK。请按照在 InstallingUnity 手册页上下载和安装 Unity 的说明进行操作。Vuforia 提供了一系列旨在放入场景中的预制件，从而为应用程序提供各种功能。所有这些预制件均可在 Unity Editor 中找到。">
 <meta name="author" content="Unity Technologies">
@@ -31,7 +31,7 @@
       var lang = 'zh_CN';
       var page = 'vuforia_get_started_project_setup';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -63,7 +63,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -92,10 +92,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/vuforia_get_started_project_setup.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/vuforia_get_started_project_setup.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/vuforia_get_started_project_setup.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/vuforia_get_started_project_setup.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/vuforia_get_started_project_setup.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/vuforia_get_started_project_setup.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/vuforia_get_started_project_setup.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/vuforia_get_started_project_setup.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -107,7 +107,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -129,7 +129,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="XR.html">XR</a></li>
 <li><a href="XR-SDK_overviews.html">XR SDK</a></li>
 <li><a href="vuforia-sdk-overview.html">Vuforia</a></li>
@@ -180,18 +180,18 @@
 
 <h2>在 Unity 中激活 Vuforia</h2>
 
-<p>要在 Unity 项目中激活 Vuforia，请通过 <strong>Edit</strong> &gt; <strong>Project Settings</strong> &gt; <strong>Player</strong> 访问 Player Settings，然后选择要构建到的目标移动设备的相应选项卡。在 <strong>XR Settings</strong> 下，勾选 <strong>Vuforia Augmented Reality Support</strong> 复选框。</p>
+<p>To activate Vuforia in your Unity project, access the <strong>Player</strong> settings from <strong>Edit</strong> &gt; <strong>Project Settings</strong>, then select the <strong>Player</strong> category, and select the tab for the mobile device you are building to. Under the <strong>XR Settings</strong> panel, enable the <strong>Vuforia Augmented Reality Support</strong> property.</p>
 
 <figure>
-<img src="../uploads/Main/vuforia_ar_support.png" alt="在 Unity Player Settings 中启用 Vuforia Augmented Reality Support">
-<figcaption>在 Unity Player Settings 中启用 Vuforia Augmented Reality Support</figcaption>
+<img src="../uploads/Main/vuforia_ar_support.png" alt="Enabling Vuforia Augmented Reality Support in Unity Player settings">
+<figcaption>Enabling Vuforia Augmented Reality Support in Unity Player settings</figcaption>
 </figure>
 
 <p>场景中现在包含两个游戏对象：主摄像机和方向光。需要向场景添加新的 AR 摄像机才能启用 AR 功能，并需要从场景中删除当前的__主摄像机__游戏对象。</p>
 
 <p>要删除摄像机游戏对象，请在 <strong>Hierarchy 窗口__中选择该游戏对象，然后按键盘上的 Delete 键，或者右键单击该游戏对象并选择 </strong>Delete__。</p>
 
-<p>有关 XR Settings 窗口中各项设置的更多信息，请参阅本手册的 <a href="vuforia_configuration.html">Vuforia 平台配置</a>页面。</p>
+<p>For more information on the individual settings under the <strong>XR Settings</strong> panel, see the <a href="vuforia_configuration.html">Vuforia Platform Configuration</a> page of this manual.</p>
 
 <h2>添加 Vuforia AR 摄像机和其他游戏对象</h2>
 
@@ -285,7 +285,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

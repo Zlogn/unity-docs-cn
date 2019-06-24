@@ -12,9 +12,9 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="停用游戏对象 - Unity Manual">
 <title>停用游戏对象 - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/GOActiveBox.png">
-<meta name="description" content="可以通过将游戏对象标记为非活动来暂时从场景中移除此对象。可以使用脚本的 activeSelf 属性或者使用 Inspector 中的激活复选框来完成此操作">
-<meta property="og:description" content="可以通过将游戏对象标记为非活动来暂时从场景中移除此对象。可以使用脚本的 activeSelf 属性或者使用 Inspector 中的激活复选框来完成此操作">
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.4/uploads/Main/GOActiveBox.png">
+<meta name="description" content="You can mark a GameObject as inactive to temporarily remove it from the Scene. To do this, navigate to the Inspector and uncheck the checkbox next to the GameObject&amp;#8217;s name (see image below), or use the activeSelf property in script.">
+<meta property="og:description" content="You can mark a GameObject as inactive to temporarily remove it from the Scene. To do this, navigate to the Inspector and uncheck the checkbox next to the GameObject&amp;#8217;s name (see image below), or use the activeSelf property in script.">
 <meta name="author" content="Unity Technologies">
 <link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
 <link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
@@ -31,7 +31,7 @@
       var lang = 'zh_CN';
       var page = 'DeactivatingGameObjects';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -63,7 +63,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -92,10 +92,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/DeactivatingGameObjects.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/DeactivatingGameObjects.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/DeactivatingGameObjects.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/DeactivatingGameObjects.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/DeactivatingGameObjects.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/DeactivatingGameObjects.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/DeactivatingGameObjects.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/DeactivatingGameObjects.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -107,7 +107,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -129,7 +129,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="UnityOverview.html">在 Unity 中操作</a></li>
 <li><a href="CreatingGameplay.html">创建游戏玩法</a></li>
 <li><a href="GameObjects.html">游戏对象</a></li>
@@ -147,35 +147,27 @@
 <!--BeginSwitchLink--><!--EndSwitchLink-->
 <div class="clear"></div>
 
-<p>可以通过将游戏对象标记为非活动来暂时从场景中移除此对象。可以使用脚本的 <a href="../ScriptReference/GameObject-activeSelf.html">activeSelf</a> 属性或者使用 Inspector 中的激活复选框来完成此操作</p>
+<p>You can mark a GameObject as inactive to temporarily remove it from the Scene. To do this, navigate to the Inspector and uncheck the checkbox next to the GameObject’s name (see image below), or use the <a href="../ScriptReference/GameObject-activeSelf.html">activeSelf</a> property in script.</p>
 
 <figure>
-<img src="../uploads/Main/GOActiveBox.png" alt="">
+<img src="../uploads/Main/GOActiveBox.png" alt="A GameObjects activation checkbox next to the name, both highlighted in the red box">
+<figcaption>A GameObject’s activation checkbox next to the name, both highlighted in the red box</figcaption>
 </figure>
 
-<p><em>游戏对象的激活复选框</em></p>
+<h2>Deactivating a parent GameObject</h2>
 
-<h2>停用父游戏对象的效果</h2>
+<p>When you deactivate a parent GameObject, You also deactivate all of its child GameObjects.</p>
 
-<p>停用父对象时，停用也会覆盖其所有子对象上的 <strong>activeSelf</strong> 设置，因此父级的整个层级视图将变为非活动状态。请注意，这不会更改子对象上 <strong>activeSelf</strong> 属性的值，因此一旦重新激活父对象，子对象将恢复到其原始状态。这意味着无法通过读取 <strong>activeSelf</strong> 属性来确定子对象当前是否在场景中处于活动状态。而应该使用 <a href="../ScriptReference/GameObject-activeInHierarchy.html">activeInHierarchy</a> 属性，该属性将考虑父对象的覆盖效果。</p>
+<p>The deactivation overrides the <code>activeSelf</code> setting on all child GameObjects, so Unity makes the whole hierarchy inactive from the parent down. This does not change the value of the <code>activeSelf</code> property on the child GameObjects, so they return to their original state when you re-activate the parent. This means that you can’t determine whether or not a child GameObject is currently active in the Scene by reading its <strong>activeSelf</strong> property. Instead, you should use the <a href="../ScriptReference/GameObject-activeInHierarchy.html">activeInHierarchy</a> property, which takes the overriding effect of the parent into account.</p>
 
-<p>在 Unity 4.0 中，已引入此覆盖行为。在早期版本中，有一个称为 <strong>SetActiveRecursively</strong> 的函数可用于激活或停用给定父对象的子项。但是，此函数的工作方式不同：每个子对象的激活设置都已更改 - 可以关闭和打开整个层级视图，但是子对象无法“记住”自己最初所处的状态。为了避免破坏旧版代码，__SetActiveRecursively__ 已保留在 4.0 的 API 中，但不建议予以使用，而且将来可能会将其移除。在实际希望更改子项的 <strong>activeSelf</strong> 设置的极少情况下，可以使用如下代码：</p>
+<p>If you want to change the <strong>activeSelf</strong> settings of a GameObject’s child Gameobjects, but not the parent, you can use code like the following:</p>
 
-<pre><code>// JavaScript
-function DeactivateChildren(g: GameObject, a: boolean) {
+<pre><code>void DeactivateChildren(GameObject g, bool a) 
+{
     g.activeSelf = a;
     
-    for (var child: Transform in g.transform) {
-        DeactivateChildren(child.gameObject, a);
-    }
-}
-
-
-// C#
-void DeactivateChildren(GameObject g, bool a) {
-    g.activeSelf = a;
-    
-    foreach (Transform child in g.transform) {
+    foreach (Transform child in g.transform) 
+    {
         DeactivateChildren(child.gameObject, a);
     }
 }
@@ -191,7 +183,7 @@ void DeactivateChildren(GameObject g, bool a) {
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

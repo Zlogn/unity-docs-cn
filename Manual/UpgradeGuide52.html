@@ -12,7 +12,7 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="升级到 Unity 5.2 - Unity Manual">
 <title>升级到 Unity 5.2 - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/ReflectionProbeComparison.png">
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.4/uploads/ReflectionProbeComparison.png">
 <meta name="description" content="烘焙 UV 的 UV 打包不填充 0&amp;#8211;1 空间（更小或更大）的问题已经修复。现在，如果每个对象的展开未填充 0&amp;#8211;1 空间以及对象的边界为非正方形的情况下，分配给该对象的分辨率更加可靠了。请查看烘焙光照贴图的实例上的分辨率。">
 <meta property="og:description" content="烘焙 UV 的 UV 打包不填充 0&amp;#8211;1 空间（更小或更大）的问题已经修复。现在，如果每个对象的展开未填充 0&amp;#8211;1 空间以及对象的边界为非正方形的情况下，分配给该对象的分辨率更加可靠了。请查看烘焙光照贴图的实例上的分辨率。">
 <meta name="author" content="Unity Technologies">
@@ -31,7 +31,7 @@
       var lang = 'zh_CN';
       var page = 'UpgradeGuide52';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -63,7 +63,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -92,10 +92,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/UpgradeGuide52.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/UpgradeGuide52.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/UpgradeGuide52.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/UpgradeGuide52.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/UpgradeGuide52.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/UpgradeGuide52.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/UpgradeGuide52.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/UpgradeGuide52.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -107,7 +107,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -129,7 +129,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="UnityOverview.html">在 Unity 中操作</a></li>
 <li><a href="UpgradeGuides.html">升级指南</a></li>
 <li>升级到 Unity 5.2</li>
@@ -150,7 +150,7 @@
 
 <p>烘焙 UV 的 UV 打包不填充 0–1 空间（更小或更大）的问题已经修复。现在，如果每个对象的展开未填充 0–1 空间以及对象的边界为非正方形的情况下，分配给该对象的分辨率更加可靠了。请查看烘焙光照贴图的实例上的分辨率。</p>
 
-<p>以前，对于实时光照贴图，着色器变体剥离是固定的。现在可以分别为烘焙和实时 GI 选择每个光照贴图模式（非方向、方向和方向镜面模式）变体。如果以前在图形设置 (Graphics Settings) 中选择了特定的光照贴图模式变体，请检查设置，使该模式适用于实时光照贴图。</p>
+<p>Shader variant stripping was fixed for realtime lightmaps. Now each lightmaps mode (non-directional, directional and directional specular) variant can be picked for baked and realtime GI separately. Please review your settings if you previously selected a specific lightmaps mode variant in the <a href="class-GraphicsSettings.html">Graphics</a> window to make that mode work for realtime lightmaps.</p>
 
 <p>反弹比例已从任意值 0.7 更改为 1.0。反弹是反照率和反弹比例的乘积。美术师应该设定现实生活中的反照率值（最亮的非金属值是 0.9 的雪）。这是我们的 PBS 参考：<a href="http://forum.unity3d.com/threads/official-5-0-pbr-calibration-charts.289416/">http://forum.unity3d.com/threads/official–5–0-pbr-calibration-charts.289416/</a></p>
 
@@ -251,7 +251,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

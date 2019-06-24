@@ -12,7 +12,7 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="在 Unity 中准备渲染设置 - Unity Manual">
 <title>在 Unity 中准备渲染设置 - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/BelievableVisualsACESTonemapping.jpg">
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.4/uploads/Main/BelievableVisualsACESTonemapping.jpg">
 <meta name="description" content="以下建议可帮助您了解如何使用 Unity 的渲染功能逼真地模拟现实世界，并快速实现项目的可信视觉效果目标。这包括：">
 <meta property="og:description" content="以下建议可帮助您了解如何使用 Unity 的渲染功能逼真地模拟现实世界，并快速实现项目的可信视觉效果目标。这包括：">
 <meta name="author" content="Unity Technologies">
@@ -31,7 +31,7 @@
       var lang = 'zh_CN';
       var page = 'BestPracticeMakingBelievableVisuals2';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -63,7 +63,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -92,10 +92,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/BestPracticeMakingBelievableVisuals2.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/BestPracticeMakingBelievableVisuals2.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/BestPracticeMakingBelievableVisuals2.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/BestPracticeMakingBelievableVisuals2.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/BestPracticeMakingBelievableVisuals2.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/BestPracticeMakingBelievableVisuals2.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/BestPracticeMakingBelievableVisuals2.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/BestPracticeMakingBelievableVisuals2.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -107,7 +107,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -129,7 +129,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="BestPracticeGuides.html">最佳实践指南</a></li>
 <li><a href="BestPracticeMakingBelievableVisuals.html">在 Unity 中制作可信的视觉效果</a></li>
 <li>在 Unity 中准备渲染设置</li>
@@ -167,7 +167,9 @@
 
 <p>要指定伽马或线性工作流程，请执行以下操作：</p>
 
-<p>1.在 Unity 中，选择 <strong>Edit</strong> &gt; <strong>Project Settings</strong> &gt; <strong>Player</strong> 并打开 <strong>Player Settings</strong>。</p>
+<ol>
+<li>In Unity, navigate to <strong>Edit</strong> &gt; <strong>Project Settings</strong> from the main menu, and then select the <strong>Player</strong> category.</li>
+</ol>
 
 <p>2.选择 <strong>Other Settings</strong> &gt; <strong>Rendering</strong> 并将 <strong>Color Space</strong> 更改为 <strong>Linear</strong>。</p>
 
@@ -185,7 +187,7 @@
 <li><p>使用 Unity 2017+ 中的现有屏幕空间反射功能</p></li>
 </ul>
 
-<p>要在 Editor 中设置渲染路径，请选择 <strong>Edit</strong> &gt; <strong>Project Settings</strong> &gt; <strong>Graphics</strong> 或在场景中选择 <strong>Main Camera__，然后在 Inspector 窗口中设置 </strong>Rendering Path__。</p>
+<p>To set the rendering path in the Editor, select <strong>Edit</strong> &gt; <strong>Project Settings</strong>, and then select the <strong>Graphics</strong> category. Alternatively, you can select the <strong>Main Camera</strong> in your Scene, and then set the <strong>Rendering Path</strong> in the Inspector window.</p>
 
 <p>有关渲染模式的更多信息，请参阅<a href="Rendering-Tech.html">渲染管线详细信息</a>。</p>
 
@@ -221,7 +223,7 @@
 
 <p>Spotlight Tunnel 示例场景不使用烘焙光照。但是，如果您计划使用 HDR 烘焙光照，请将光照贴图编码设置为 HDR 光照贴图以获得一致的结果。</p>
 
-<p>要在 Unity 中设置光照贴图编码，请选择 <strong>Edit</strong> &gt; <strong>Project</strong> &gt; <strong>Player</strong> &gt; <strong>Other Settingspost</strong> &gt; <strong>Lightmap Encoding</strong>。有关更多信息，请参阅<a href="Lightmaps-TechnicalInformation.html">光照贴图：技术信息</a>。</p>
+<p>To set lightmap encoding in Unity, go to <strong>Edit</strong> &gt; <strong>Project Settings</strong>, and then select the <strong>Player</strong> category, expand the <strong>Other Settings</strong> panel, and navigate to <strong>Lightmap Encoding</strong>. For more information, see <a href="Lightmaps-TechnicalInformation.html">Lightmaps: Technical information</a>.</p>
 
 <p><a name="imageEffects"></a> </p>
 
@@ -260,7 +262,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

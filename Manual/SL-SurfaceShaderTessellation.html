@@ -12,7 +12,7 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="支持 DX11/OpenGL Core 曲面细分的表面着色器 - Unity Manual">
 <title>支持 DX11/OpenGL Core 曲面细分的表面着色器 - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/SurfaceShaderTess1-none.png">
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.4/uploads/Main/SurfaceShaderTess1-none.jpg">
 <meta name="description" content="表面着色器在一定程度上支持 DirectX 11/OpenGL Core GPU 曲面细分。具体情况为：">
 <meta property="og:description" content="表面着色器在一定程度上支持 DirectX 11/OpenGL Core GPU 曲面细分。具体情况为：">
 <meta name="author" content="Unity Technologies">
@@ -31,7 +31,7 @@
       var lang = 'zh_CN';
       var page = 'SL-SurfaceShaderTessellation';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -63,7 +63,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -92,10 +92,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/SL-SurfaceShaderTessellation.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/SL-SurfaceShaderTessellation.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/SL-SurfaceShaderTessellation.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/SL-SurfaceShaderTessellation.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/SL-SurfaceShaderTessellation.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/SL-SurfaceShaderTessellation.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/SL-SurfaceShaderTessellation.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/SL-SurfaceShaderTessellation.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -107,7 +107,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -129,7 +129,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="Graphics.html">图形</a></li>
 <li><a href="GraphicsReference.html">图形参考</a></li>
 <li><a href="SL-Reference.html">着色器参考</a></li>
@@ -234,7 +234,7 @@
 <p>下图显示了应用此着色器的一些简单游戏对象。</p>
 
 <figure>
-<img src="../uploads/Main/SurfaceShaderTess1-none.png" alt="">
+<img src="../uploads/Main/SurfaceShaderTess1-none.jpg" alt="">
 </figure>
 
 <hr>
@@ -312,7 +312,7 @@
 <p>该示例返回材质属性中设置的常量值。</p>
 
 <figure>
-<img src="../uploads/Main/SurfaceShaderTess2-fixed.png" alt="">
+<img src="../uploads/Main/SurfaceShaderTess2-fixed.jpg" alt="">
 </figure>
 
 <hr>
@@ -398,7 +398,7 @@
 <p>该示例包含一个内置的 helper 文件 Tessellation.cginc，并从该文件中调用 <code>UnityDistanceBasedTess</code> 函数来完成所有工作。此函数计算每个顶点到摄像机的距离，并推导出最终的曲面细分因子。</p>
 
 <figure>
-<img src="../uploads/Main/SurfaceShaderTess3-distance.png" alt="">
+<img src="../uploads/Main/SurfaceShaderTess3-distance.jpg" alt="">
 </figure>
 
 <hr>
@@ -475,7 +475,7 @@
 <p>在此示例中，从 <em>Tessellation.cginc</em> 调用 <code>UnityEdgeLengthBasedTess</code> 函数来完成所有工作。</p>
 
 <figure>
-<img src="../uploads/Main/SurfaceShaderTess4-edgelength.png" alt="">
+<img src="../uploads/Main/SurfaceShaderTess4-edgelength.jpg" alt="">
 </figure>
 
 <p>出于性能原因，请改为调用 UnityEdgeLengthBasedTessCull 函数，该函数将执行样条曲线视锥体剔除。这会使着色器的成本略微提高，但为摄像机视图之外的网格部分节省了大量 GPU 工作。</p>
@@ -541,7 +541,7 @@
 <p>以下是常规着色器（上排）和使用 Phong 曲面细分的着色器（下排）之间的比较。可以看出，即使没有任何位移贴图，表面也会变得更圆。</p>
 
 <figure>
-<img src="../uploads/Main/SurfaceShaderPhongTess.png" alt="">
+<img src="../uploads/Main/SurfaceShaderPhongTess.jpg" alt="">
 </figure>
 
 <hr>
@@ -562,7 +562,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

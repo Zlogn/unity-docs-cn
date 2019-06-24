@@ -63,6 +63,15 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 	}
 		]
 	},
+	{"link":"null","title":"UnityEngine.Android","children":
+		[
+			{"link":"null","title":"Classes","children":
+		[
+					{"link":"Android.Permission","title":"Permission","children":null}
+		]
+	}
+		]
+	},
 	{"link":"null","title":"UnityEngine.Animations","children":
 		[
 			{"link":"null","title":"Classes","children":
@@ -79,9 +88,11 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 			{"link":"Animations.AnimationClipPlayable","title":"AnimationClipPlayable","children":null},
 			{"link":"Animations.AnimationLayerMixerPlayable","title":"AnimationLayerMixerPlayable","children":null},
 			{"link":"Animations.AnimationMixerPlayable","title":"AnimationMixerPlayable","children":null},
+			{"link":"Animations.AnimationPlayableBinding","title":"AnimationPlayableBinding","children":null},
 			{"link":"Animations.AnimationPlayableOutput","title":"AnimationPlayableOutput","children":null},
 			{"link":"Animations.AnimatorControllerPlayable","title":"AnimatorControllerPlayable","children":null},
 			{"link":"Animations.ConstraintSource","title":"ConstraintSource","children":null},
+			{"link":"Animations.LookAtConstraint","title":"LookAtConstraint","children":null},
 			{"link":"Animations.ParentConstraint","title":"ParentConstraint","children":null},
 			{"link":"Animations.PositionConstraint","title":"PositionConstraint","children":null},
 			{"link":"Animations.RotationConstraint","title":"RotationConstraint","children":null},
@@ -98,28 +109,6 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 					{"link":"Animations.Axis","title":"Axis","children":null}
 		]
 	}
-		]
-	},
-	{"link":"null","title":"UnityEngine.Apple","children":
-		[
-				{"link":"null","title":"UnityEngine.Apple.ReplayKit","children":
-			[
-					{"link":"null","title":"Classes","children":
-			[
-							{"link":"Apple.ReplayKit.ReplayKit","title":"ReplayKit","children":null}
-			]
-		}
-			]
-		},
-		{"link":"null","title":"UnityEngine.Apple.TV","children":
-			[
-					{"link":"null","title":"Classes","children":
-			[
-							{"link":"Apple.TV.Remote","title":"Remote","children":null}
-			]
-		}
-			]
-		}
 		]
 	},
 	{"link":"null","title":"UnityEngine.Assertions","children":
@@ -159,6 +148,7 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 			{"link":"Audio.AudioMixerGroup","title":"AudioMixerGroup","children":null},
 			{"link":"Audio.AudioMixerPlayable","title":"AudioMixerPlayable","children":null},
 			{"link":"Audio.AudioMixerSnapshot","title":"AudioMixerSnapshot","children":null},
+			{"link":"Audio.AudioPlayableBinding","title":"AudioPlayableBinding","children":null},
 			{"link":"Audio.AudioPlayableOutput","title":"AudioPlayableOutput","children":null},
 			{"link":"Audio.AudioSpatializerMicrosoft","title":"AudioSpatializerMicrosoft","children":
 				[
@@ -183,6 +173,20 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 			{"link":"null","title":"Classes","children":
 		[
 					{"link":"CrashReportHandler.CrashReportHandler","title":"CrashReportHandler","children":null}
+		]
+	}
+		]
+	},
+	{"link":"null","title":"UnityEngine.Diagnostics","children":
+		[
+			{"link":"null","title":"Classes","children":
+		[
+					{"link":"Diagnostics.Utils","title":"Utils","children":null}
+		]
+	},
+	{"link":"null","title":"Enumerations","children":
+		[
+					{"link":"Diagnostics.ForcedCrashCategory","title":"ForcedCrashCategory","children":null}
 		]
 	}
 		]
@@ -308,6 +312,29 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 		}
 			]
 		},
+		{"link":"null","title":"UnityEngine.Experimental.Animations","children":
+			[
+					{"link":"null","title":"Classes","children":
+			[
+							{"link":"Experimental.Animations.AnimationHumanStream","title":"AnimationHumanStream","children":null},
+				{"link":"Experimental.Animations.AnimationScriptPlayable","title":"AnimationScriptPlayable","children":null},
+				{"link":"Experimental.Animations.AnimationStream","title":"AnimationStream","children":null},
+				{"link":"Experimental.Animations.AnimatorJobExtensions","title":"AnimatorJobExtensions","children":null},
+				{"link":"Experimental.Animations.MuscleHandle","title":"MuscleHandle","children":null},
+				{"link":"Experimental.Animations.PropertySceneHandle","title":"PropertySceneHandle","children":null},
+				{"link":"Experimental.Animations.PropertyStreamHandle","title":"PropertyStreamHandle","children":null},
+				{"link":"Experimental.Animations.TransformSceneHandle","title":"TransformSceneHandle","children":null},
+				{"link":"Experimental.Animations.TransformStreamHandle","title":"TransformStreamHandle","children":null}
+			]
+		},
+		{"link":"null","title":"Interfaces","children":
+			[
+							{"link":"Experimental.Animations.IAnimationJob","title":"IAnimationJob","children":null},
+				{"link":"Experimental.Animations.IAnimationJobPlayable","title":"IAnimationJobPlayable","children":null}
+			]
+		}
+			]
+		},
 		{"link":"null","title":"UnityEngine.Experimental.Audio","children":
 			[
 					{"link":"null","title":"Classes","children":
@@ -322,6 +349,7 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 					{"link":"null","title":"Classes","children":
 			[
 							{"link":"Experimental.GlobalIllumination.DirectionalLight","title":"DirectionalLight","children":null},
+				{"link":"Experimental.GlobalIllumination.DiscLight","title":"DiscLight","children":null},
 				{"link":"Experimental.GlobalIllumination.LightDataGI","title":"LightDataGI","children":null},
 				{"link":"Experimental.GlobalIllumination.LightmapperUtils","title":"LightmapperUtils","children":null},
 				{"link":"Experimental.GlobalIllumination.Lightmapping","title":"Lightmapping","children":null},
@@ -357,6 +385,7 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 							{"link":"Experimental.Playables.CameraPlayable","title":"CameraPlayable","children":null},
 				{"link":"Experimental.Playables.MaterialEffectPlayable","title":"MaterialEffectPlayable","children":null},
 				{"link":"Experimental.Playables.TextureMixerPlayable","title":"TextureMixerPlayable","children":null},
+				{"link":"Experimental.Playables.TexturePlayableBinding","title":"TexturePlayableBinding","children":null},
 				{"link":"Experimental.Playables.TexturePlayableOutput","title":"TexturePlayableOutput","children":null}
 			]
 		}
@@ -370,15 +399,14 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 					[
 									{"link":"null","title":"Classes","children":
 					[
-											{"link":"Experimental.PlayerLoop.EarlyUpdate.ClearIntermediateRenderers","title":"ClearIntermediateRenderers","children":null},
+											{"link":"Experimental.PlayerLoop.EarlyUpdate.AnalyticsCoreStatsUpdate","title":"AnalyticsCoreStatsUpdate","children":null},
+						{"link":"Experimental.PlayerLoop.EarlyUpdate.ClearIntermediateRenderers","title":"ClearIntermediateRenderers","children":null},
 						{"link":"Experimental.PlayerLoop.EarlyUpdate.ClearLines","title":"ClearLines","children":null},
-						{"link":"Experimental.PlayerLoop.EarlyUpdate.CloudWebServicesUpdate","title":"CloudWebServicesUpdate","children":null},
 						{"link":"Experimental.PlayerLoop.EarlyUpdate.DeliverIosPlatformEvents","title":"DeliverIosPlatformEvents","children":null},
 						{"link":"Experimental.PlayerLoop.EarlyUpdate.DirectorSampleTime","title":"DirectorSampleTime","children":null},
 						{"link":"Experimental.PlayerLoop.EarlyUpdate.DispatchEventQueueEvents","title":"DispatchEventQueueEvents","children":null},
 						{"link":"Experimental.PlayerLoop.EarlyUpdate.ExecuteMainThreadJobs","title":"ExecuteMainThreadJobs","children":null},
 						{"link":"Experimental.PlayerLoop.EarlyUpdate.GpuTimestamp","title":"GpuTimestamp","children":null},
-						{"link":"Experimental.PlayerLoop.EarlyUpdate.NewInputBeginFrame","title":"NewInputBeginFrame","children":null},
 						{"link":"Experimental.PlayerLoop.EarlyUpdate.PerformanceAnalyticsUpdate","title":"PerformanceAnalyticsUpdate","children":null},
 						{"link":"Experimental.PlayerLoop.EarlyUpdate.PhysicsResetInterpolatedTransformPosition","title":"PhysicsResetInterpolatedTransformPosition","children":null},
 						{"link":"Experimental.PlayerLoop.EarlyUpdate.PlayerCleanupCachedData","title":"PlayerCleanupCachedData","children":null},
@@ -393,7 +421,6 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 						{"link":"Experimental.PlayerLoop.EarlyUpdate.ScriptRunDelayedStartupFrame","title":"ScriptRunDelayedStartupFrame","children":null},
 						{"link":"Experimental.PlayerLoop.EarlyUpdate.SpriteAtlasManagerUpdate","title":"SpriteAtlasManagerUpdate","children":null},
 						{"link":"Experimental.PlayerLoop.EarlyUpdate.TangoUpdate","title":"TangoUpdate","children":null},
-						{"link":"Experimental.PlayerLoop.EarlyUpdate.UnityConnectClientUpdate","title":"UnityConnectClientUpdate","children":null},
 						{"link":"Experimental.PlayerLoop.EarlyUpdate.UnityWebRequestUpdate","title":"UnityWebRequestUpdate","children":null},
 						{"link":"Experimental.PlayerLoop.EarlyUpdate.UpdateAllUnityWebStreams","title":"UpdateAllUnityWebStreams","children":null},
 						{"link":"Experimental.PlayerLoop.EarlyUpdate.UpdateAsyncReadbackManager","title":"UpdateAsyncReadbackManager","children":null},
@@ -402,6 +429,7 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 						{"link":"Experimental.PlayerLoop.EarlyUpdate.UpdateKinect","title":"UpdateKinect","children":null},
 						{"link":"Experimental.PlayerLoop.EarlyUpdate.UpdateMainGameViewRect","title":"UpdateMainGameViewRect","children":null},
 						{"link":"Experimental.PlayerLoop.EarlyUpdate.UpdatePreloading","title":"UpdatePreloading","children":null},
+						{"link":"Experimental.PlayerLoop.EarlyUpdate.UpdateStreamingManager","title":"UpdateStreamingManager","children":null},
 						{"link":"Experimental.PlayerLoop.EarlyUpdate.UpdateTextureStreamingManager","title":"UpdateTextureStreamingManager","children":null},
 						{"link":"Experimental.PlayerLoop.EarlyUpdate.XRUpdate","title":"XRUpdate","children":null}
 					]
@@ -418,13 +446,11 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 						{"link":"Experimental.PlayerLoop.FixedUpdate.DirectorFixedUpdate","title":"DirectorFixedUpdate","children":null},
 						{"link":"Experimental.PlayerLoop.FixedUpdate.DirectorFixedUpdatePostPhysics","title":"DirectorFixedUpdatePostPhysics","children":null},
 						{"link":"Experimental.PlayerLoop.FixedUpdate.LegacyFixedAnimationUpdate","title":"LegacyFixedAnimationUpdate","children":null},
-						{"link":"Experimental.PlayerLoop.FixedUpdate.NewInputBeginFixedUpdate","title":"NewInputBeginFixedUpdate","children":null},
-						{"link":"Experimental.PlayerLoop.FixedUpdate.NewInputEndFixedUpdate","title":"NewInputEndFixedUpdate","children":null},
+						{"link":"Experimental.PlayerLoop.FixedUpdate.NewInputFixedUpdate","title":"NewInputFixedUpdate","children":null},
 						{"link":"Experimental.PlayerLoop.FixedUpdate.Physics2DFixedUpdate","title":"Physics2DFixedUpdate","children":null},
 						{"link":"Experimental.PlayerLoop.FixedUpdate.PhysicsFixedUpdate","title":"PhysicsFixedUpdate","children":null},
 						{"link":"Experimental.PlayerLoop.FixedUpdate.ScriptRunBehaviourFixedUpdate","title":"ScriptRunBehaviourFixedUpdate","children":null},
 						{"link":"Experimental.PlayerLoop.FixedUpdate.ScriptRunDelayedFixedFrameRate","title":"ScriptRunDelayedFixedFrameRate","children":null},
-						{"link":"Experimental.PlayerLoop.FixedUpdate.ScriptRunDelayedTasks","title":"ScriptRunDelayedTasks","children":null},
 						{"link":"Experimental.PlayerLoop.FixedUpdate.XRFixedUpdate","title":"XRFixedUpdate","children":null}
 					]
 				}
@@ -457,7 +483,6 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 						{"link":"Experimental.PlayerLoop.PostLateUpdate.GUIClearEvents","title":"GUIClearEvents","children":null},
 						{"link":"Experimental.PlayerLoop.PostLateUpdate.InputEndFrame","title":"InputEndFrame","children":null},
 						{"link":"Experimental.PlayerLoop.PostLateUpdate.MemoryFrameMaintenance","title":"MemoryFrameMaintenance","children":null},
-						{"link":"Experimental.PlayerLoop.PostLateUpdate.ParticlesLegacyUpdateAllParticleSystems","title":"ParticlesLegacyUpdateAllParticleSystems","children":null},
 						{"link":"Experimental.PlayerLoop.PostLateUpdate.ParticleSystemEndUpdateAll","title":"ParticleSystemEndUpdateAll","children":null},
 						{"link":"Experimental.PlayerLoop.PostLateUpdate.PhysicsSkinnedClothBeginUpdate","title":"PhysicsSkinnedClothBeginUpdate","children":null},
 						{"link":"Experimental.PlayerLoop.PostLateUpdate.PhysicsSkinnedClothFinishUpdate","title":"PhysicsSkinnedClothFinishUpdate","children":null},
@@ -501,7 +526,6 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 						{"link":"Experimental.PlayerLoop.PreLateUpdate.DirectorDeferredEvaluate","title":"DirectorDeferredEvaluate","children":null},
 						{"link":"Experimental.PlayerLoop.PreLateUpdate.DirectorUpdateAnimationBegin","title":"DirectorUpdateAnimationBegin","children":null},
 						{"link":"Experimental.PlayerLoop.PreLateUpdate.DirectorUpdateAnimationEnd","title":"DirectorUpdateAnimationEnd","children":null},
-						{"link":"Experimental.PlayerLoop.PreLateUpdate.EndGraphicsJobsLate","title":"EndGraphicsJobsLate","children":null},
 						{"link":"Experimental.PlayerLoop.PreLateUpdate.LegacyAnimationUpdate","title":"LegacyAnimationUpdate","children":null},
 						{"link":"Experimental.PlayerLoop.PreLateUpdate.ParticleSystemBeginUpdateAll","title":"ParticleSystemBeginUpdateAll","children":null},
 						{"link":"Experimental.PlayerLoop.PreLateUpdate.ScriptRunBehaviourLateUpdate","title":"ScriptRunBehaviourLateUpdate","children":null},
@@ -535,7 +559,8 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 					[
 											{"link":"Experimental.PlayerLoop.Update.DirectorUpdate","title":"DirectorUpdate","children":null},
 						{"link":"Experimental.PlayerLoop.Update.ScriptRunBehaviourUpdate","title":"ScriptRunBehaviourUpdate","children":null},
-						{"link":"Experimental.PlayerLoop.Update.ScriptRunDelayedDynamicFrameRate","title":"ScriptRunDelayedDynamicFrameRate","children":null}
+						{"link":"Experimental.PlayerLoop.Update.ScriptRunDelayedDynamicFrameRate","title":"ScriptRunDelayedDynamicFrameRate","children":null},
+						{"link":"Experimental.PlayerLoop.Update.ScriptRunDelayedTasks","title":"ScriptRunDelayedTasks","children":null}
 					]
 				}
 					]
@@ -548,9 +573,7 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 			[
 					{"link":"null","title":"Classes","children":
 			[
-							{"link":"Experimental.Rendering.AsyncGPUReadback","title":"AsyncGPUReadback","children":null},
-				{"link":"Experimental.Rendering.AsyncGPUReadbackRequest","title":"AsyncGPUReadbackRequest","children":null},
-				{"link":"Experimental.Rendering.BlendState","title":"BlendState","children":null},
+							{"link":"Experimental.Rendering.BlendState","title":"BlendState","children":null},
 				{"link":"Experimental.Rendering.CameraProperties","title":"CameraProperties","children":null},
 				{"link":"Experimental.Rendering.CoreCameraValues","title":"CoreCameraValues","children":null},
 				{"link":"Experimental.Rendering.CullResults","title":"CullResults","children":null},
@@ -581,6 +604,8 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 				{"link":"Experimental.Rendering.RenderTargetBlendState","title":"RenderTargetBlendState","children":null},
 				{"link":"Experimental.Rendering.ScriptableCullingParameters","title":"ScriptableCullingParameters","children":null},
 				{"link":"Experimental.Rendering.ScriptableRenderContext","title":"ScriptableRenderContext","children":null},
+				{"link":"Experimental.Rendering.ScriptableRuntimeReflectionSystem","title":"ScriptableRuntimeReflectionSystem","children":null},
+				{"link":"Experimental.Rendering.ScriptableRuntimeReflectionSystemSettings","title":"ScriptableRuntimeReflectionSystemSettings","children":null},
 				{"link":"Experimental.Rendering.ShaderPassName","title":"ShaderPassName","children":null},
 				{"link":"Experimental.Rendering.ShadowSplitData","title":"ShadowSplitData","children":null},
 				{"link":"Experimental.Rendering.StencilState","title":"StencilState","children":null},
@@ -601,28 +626,62 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 		{"link":"null","title":"Interfaces","children":
 			[
 							{"link":"Experimental.Rendering.IRenderPipeline","title":"IRenderPipeline","children":null},
-				{"link":"Experimental.Rendering.IRenderPipelineAsset","title":"IRenderPipelineAsset","children":null}
+				{"link":"Experimental.Rendering.IRenderPipelineAsset","title":"IRenderPipelineAsset","children":null},
+				{"link":"Experimental.Rendering.IScriptableRuntimeReflectionSystem","title":"IScriptableRuntimeReflectionSystem","children":null}
 			]
 		},
 		{"link":"null","title":"Enumerations","children":
 			[
 							{"link":"Experimental.Rendering.DrawRendererFlags","title":"DrawRendererFlags","children":null},
+				{"link":"Experimental.Rendering.DrawRendererSortMode","title":"DrawRendererSortMode","children":null},
+				{"link":"Experimental.Rendering.FormatUsage","title":"FormatUsage","children":null},
+				{"link":"Experimental.Rendering.GraphicsFormat","title":"GraphicsFormat","children":null},
 				{"link":"Experimental.Rendering.ReflectionProbeSortOptions","title":"ReflectionProbeSortOptions","children":null},
 				{"link":"Experimental.Rendering.RendererConfiguration","title":"RendererConfiguration","children":null},
 				{"link":"Experimental.Rendering.RenderStateMask","title":"RenderStateMask","children":null},
 				{"link":"Experimental.Rendering.SortFlags","title":"SortFlags","children":null},
-				{"link":"Experimental.Rendering.VertexAttribute","title":"VertexAttribute","children":null},
 				{"link":"Experimental.Rendering.VisibleLightFlags","title":"VisibleLightFlags","children":null}
 			]
 		}
 			]
 		},
-		{"link":"null","title":"UnityEngine.Experimental.Timeline","children":
+		{"link":"null","title":"UnityEngine.Experimental.TerrainAPI","children":
 			[
 					{"link":"null","title":"Classes","children":
 			[
-							{"link":"Experimental.Timeline.VideoPlayableAsset","title":"VideoPlayableAsset","children":null},
-				{"link":"Experimental.Timeline.VideoTrack","title":"VideoTrack","children":null}
+							{"link":"Experimental.TerrainAPI.TerrainPaintUtility","title":"TerrainPaintUtility","children":
+					[
+									{"link":"null","title":"Enumerations","children":
+					[
+											{"link":"Experimental.TerrainAPI.TerrainPaintUtility.BuiltinPaintMaterialPasses","title":"BuiltinPaintMaterialPasses","children":null},
+						{"link":"Experimental.TerrainAPI.TerrainPaintUtility.ToolAction","title":"ToolAction","children":null}
+					]
+				}
+					]
+				},
+				{"link":"Experimental.TerrainAPI.TerrainUtility","title":"TerrainUtility","children":
+					[
+									{"link":"null","title":"Classes","children":
+					[
+											{"link":"Experimental.TerrainAPI.TerrainUtility.TerrainGroups","title":"TerrainGroups","children":null},
+						{"link":"Experimental.TerrainAPI.TerrainUtility.TerrainMap","title":"TerrainMap","children":
+							[
+													{"link":"null","title":"Classes","children":
+							[
+															{"link":"TerrainUtility.TerrainMap.TileCoord","title":"TileCoord","children":null}
+							]
+						},
+						{"link":"null","title":"Enumerations","children":
+							[
+															{"link":"TerrainUtility.TerrainMap.ErrorCode","title":"ErrorCode","children":null}
+							]
+						}
+							]
+						}
+					]
+				}
+					]
+				}
 			]
 		}
 			]
@@ -632,6 +691,7 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 					{"link":"null","title":"Classes","children":
 			[
 							{"link":"Experimental.U2D.AngleRangeInfo","title":"AngleRangeInfo","children":null},
+				{"link":"Experimental.U2D.PixelPerfectRendering","title":"PixelPerfectRendering","children":null},
 				{"link":"Experimental.U2D.ShapeControlPoint","title":"ShapeControlPoint","children":null},
 				{"link":"Experimental.U2D.SpriteBone","title":"SpriteBone","children":null},
 				{"link":"Experimental.U2D.SpriteDataAccessExtensions","title":"SpriteDataAccessExtensions","children":null},
@@ -654,6 +714,7 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 					{"link":"Experimental.UIElements.StyleEnums.FlexDirection","title":"FlexDirection","children":null},
 					{"link":"Experimental.UIElements.StyleEnums.Justify","title":"Justify","children":null},
 					{"link":"Experimental.UIElements.StyleEnums.PositionType","title":"PositionType","children":null},
+					{"link":"Experimental.UIElements.StyleEnums.Visibility","title":"Visibility","children":null},
 					{"link":"Experimental.UIElements.StyleEnums.Wrap","title":"Wrap","children":null}
 				]
 			}
@@ -676,43 +737,95 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 		{"link":"null","title":"Classes","children":
 			[
 							{"link":"Experimental.UIElements.AttachToPanelEvent","title":"AttachToPanelEvent","children":null},
-				{"link":"Experimental.UIElements.BaseTextElement","title":"BaseTextElement","children":null},
-				{"link":"Experimental.UIElements.BlurEvent","title":"BlurEvent","children":null},
-				{"link":"Experimental.UIElements.CallbackEventHandler","title":"CallbackEventHandler","children":null},
-				{"link":"Experimental.UIElements.ChangeEvent_1","title":"ChangeEvent<T0>","children":null},
-				{"link":"Experimental.UIElements.ContextualMenu","title":"ContextualMenu","children":
+				{"link":"Experimental.UIElements.BaseField_1","title":"BaseField<T0>","children":
 					[
 									{"link":"null","title":"Classes","children":
 					[
-											{"link":"Experimental.UIElements.ContextualMenu.MenuAction","title":"MenuAction","children":
-							[
-													{"link":"null","title":"Enumerations","children":
-							[
-															{"link":"ContextualMenu.MenuAction.StatusFlags","title":"StatusFlags","children":null}
-							]
-						}
-							]
-						},
-						{"link":"Experimental.UIElements.ContextualMenu.MenuItem","title":"MenuItem","children":null},
-						{"link":"Experimental.UIElements.ContextualMenu.Separator","title":"Separator","children":null}
+											{"link":"Experimental.UIElements.BaseField_1.UxmlTraits","title":"UxmlTraits","children":null}
 					]
 				}
 					]
 				},
+				{"link":"Experimental.UIElements.BaseSlider_1","title":"BaseSlider<T0>","children":null},
+				{"link":"Experimental.UIElements.BindableElement","title":"BindableElement","children":
+					[
+									{"link":"null","title":"Classes","children":
+					[
+											{"link":"Experimental.UIElements.BindableElement.UxmlFactory","title":"UxmlFactory","children":null},
+						{"link":"Experimental.UIElements.BindableElement.UxmlTraits","title":"UxmlTraits","children":null}
+					]
+				}
+					]
+				},
+				{"link":"Experimental.UIElements.BlurEvent","title":"BlurEvent","children":null},
+				{"link":"Experimental.UIElements.Box","title":"Box","children":
+					[
+									{"link":"null","title":"Classes","children":
+					[
+											{"link":"Experimental.UIElements.Box.UxmlFactory","title":"UxmlFactory","children":null}
+					]
+				}
+					]
+				},
+				{"link":"Experimental.UIElements.Button","title":"Button","children":
+					[
+									{"link":"null","title":"Classes","children":
+					[
+											{"link":"Experimental.UIElements.Button.UxmlFactory","title":"UxmlFactory","children":null},
+						{"link":"Experimental.UIElements.Button.UxmlTraits","title":"UxmlTraits","children":null}
+					]
+				}
+					]
+				},
+				{"link":"Experimental.UIElements.CallbackEventHandler","title":"CallbackEventHandler","children":null},
+				{"link":"Experimental.UIElements.ChangeEvent_1","title":"ChangeEvent<T0>","children":null},
+				{"link":"Experimental.UIElements.CommandEventBase_1","title":"CommandEventBase<T0>","children":null},
+				{"link":"Experimental.UIElements.ContextClickEvent","title":"ContextClickEvent","children":null},
+				{"link":"Experimental.UIElements.ContextualMenuManager","title":"ContextualMenuManager","children":null},
+				{"link":"Experimental.UIElements.ContextualMenuManipulator","title":"ContextualMenuManipulator","children":null},
 				{"link":"Experimental.UIElements.ContextualMenuPopulateEvent","title":"ContextualMenuPopulateEvent","children":null},
 				{"link":"Experimental.UIElements.CreationContext","title":"CreationContext","children":null},
 				{"link":"Experimental.UIElements.CursorStyle","title":"CursorStyle","children":null},
 				{"link":"Experimental.UIElements.DetachFromPanelEvent","title":"DetachFromPanelEvent","children":null},
-				{"link":"Experimental.UIElements.EventBase","title":"EventBase","children":
+				{"link":"Experimental.UIElements.DragAndDropEventBase_1","title":"DragAndDropEventBase<T0>","children":null},
+				{"link":"Experimental.UIElements.DragEnterEvent","title":"DragEnterEvent","children":null},
+				{"link":"Experimental.UIElements.DragExitedEvent","title":"DragExitedEvent","children":null},
+				{"link":"Experimental.UIElements.DragLeaveEvent","title":"DragLeaveEvent","children":null},
+				{"link":"Experimental.UIElements.DragPerformEvent","title":"DragPerformEvent","children":null},
+				{"link":"Experimental.UIElements.DragUpdatedEvent","title":"DragUpdatedEvent","children":null},
+				{"link":"Experimental.UIElements.DropdownMenu","title":"DropdownMenu","children":
 					[
-									{"link":"null","title":"Enumerations","children":
+									{"link":"null","title":"Classes","children":
 					[
-											{"link":"Experimental.UIElements.EventBase.EventFlags","title":"EventFlags","children":null}
+											{"link":"Experimental.UIElements.DropdownMenu.EventInfo","title":"EventInfo","children":null},
+						{"link":"Experimental.UIElements.DropdownMenu.MenuAction","title":"MenuAction","children":
+							[
+													{"link":"null","title":"Enumerations","children":
+							[
+															{"link":"DropdownMenu.MenuAction.StatusFlags","title":"StatusFlags","children":null}
+							]
+						}
+							]
+						},
+						{"link":"Experimental.UIElements.DropdownMenu.MenuItem","title":"MenuItem","children":null},
+						{"link":"Experimental.UIElements.DropdownMenu.Separator","title":"Separator","children":null}
 					]
 				}
 					]
 				},
+				{"link":"Experimental.UIElements.EventBase","title":"EventBase","children":null},
 				{"link":"Experimental.UIElements.EventBase_1","title":"EventBase<T0>","children":null},
+				{"link":"Experimental.UIElements.EventDispatcher","title":"EventDispatcher","children":
+					[
+									{"link":"null","title":"Classes","children":
+					[
+											{"link":"Experimental.UIElements.EventDispatcher.Gate","title":"Gate","children":null}
+					]
+				}
+					]
+				},
+				{"link":"Experimental.UIElements.ExecuteCommandEvent","title":"ExecuteCommandEvent","children":null},
+				{"link":"Experimental.UIElements.Flex","title":"Flex","children":null},
 				{"link":"Experimental.UIElements.Focusable","title":"Focusable","children":null},
 				{"link":"Experimental.UIElements.FocusChangeDirection","title":"FocusChangeDirection","children":null},
 				{"link":"Experimental.UIElements.FocusController","title":"FocusController","children":null},
@@ -720,13 +833,74 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 				{"link":"Experimental.UIElements.FocusEventBase_1","title":"FocusEventBase<T0>","children":null},
 				{"link":"Experimental.UIElements.FocusInEvent","title":"FocusInEvent","children":null},
 				{"link":"Experimental.UIElements.FocusOutEvent","title":"FocusOutEvent","children":null},
-				{"link":"Experimental.UIElements.Image","title":"Image","children":null},
+				{"link":"Experimental.UIElements.Foldout","title":"Foldout","children":
+					[
+									{"link":"null","title":"Classes","children":
+					[
+											{"link":"Experimental.UIElements.Foldout.UxmlFactory","title":"UxmlFactory","children":null}
+					]
+				}
+					]
+				},
+				{"link":"Experimental.UIElements.GeometryChangedEvent","title":"GeometryChangedEvent","children":null},
+				{"link":"Experimental.UIElements.IBindingExtensions","title":"IBindingExtensions","children":null},
+				{"link":"Experimental.UIElements.Image","title":"Image","children":
+					[
+									{"link":"null","title":"Classes","children":
+					[
+											{"link":"Experimental.UIElements.Image.UxmlFactory","title":"UxmlFactory","children":null},
+						{"link":"Experimental.UIElements.Image.UxmlTraits","title":"UxmlTraits","children":null}
+					]
+				}
+					]
+				},
+				{"link":"Experimental.UIElements.IMGUIContainer","title":"IMGUIContainer","children":
+					[
+									{"link":"null","title":"Classes","children":
+					[
+											{"link":"Experimental.UIElements.IMGUIContainer.UxmlFactory","title":"UxmlFactory","children":null},
+						{"link":"Experimental.UIElements.IMGUIContainer.UxmlTraits","title":"UxmlTraits","children":null}
+					]
+				}
+					]
+				},
 				{"link":"Experimental.UIElements.IMGUIEvent","title":"IMGUIEvent","children":null},
 				{"link":"Experimental.UIElements.InputEvent","title":"InputEvent","children":null},
 				{"link":"Experimental.UIElements.KeyboardEventBase_1","title":"KeyboardEventBase<T0>","children":null},
 				{"link":"Experimental.UIElements.KeyDownEvent","title":"KeyDownEvent","children":null},
 				{"link":"Experimental.UIElements.KeyUpEvent","title":"KeyUpEvent","children":null},
+				{"link":"Experimental.UIElements.Label","title":"Label","children":
+					[
+									{"link":"null","title":"Classes","children":
+					[
+											{"link":"Experimental.UIElements.Label.UxmlFactory","title":"UxmlFactory","children":null},
+						{"link":"Experimental.UIElements.Label.UxmlTraits","title":"UxmlTraits","children":null}
+					]
+				}
+					]
+				},
+				{"link":"Experimental.UIElements.ListView","title":"ListView","children":
+					[
+									{"link":"null","title":"Classes","children":
+					[
+											{"link":"Experimental.UIElements.ListView.UxmlFactory","title":"UxmlFactory","children":null},
+						{"link":"Experimental.UIElements.ListView.UxmlTraits","title":"UxmlTraits","children":null}
+					]
+				}
+					]
+				},
+				{"link":"Experimental.UIElements.Manipulator","title":"Manipulator","children":null},
 				{"link":"Experimental.UIElements.ManipulatorActivationFilter","title":"ManipulatorActivationFilter","children":null},
+				{"link":"Experimental.UIElements.MinMaxSlider","title":"MinMaxSlider","children":
+					[
+									{"link":"null","title":"Classes","children":
+					[
+											{"link":"Experimental.UIElements.MinMaxSlider.UxmlFactory","title":"UxmlFactory","children":null},
+						{"link":"Experimental.UIElements.MinMaxSlider.UxmlTraits","title":"UxmlTraits","children":null}
+					]
+				}
+					]
+				},
 				{"link":"Experimental.UIElements.MouseCaptureController","title":"MouseCaptureController","children":null},
 				{"link":"Experimental.UIElements.MouseCaptureEvent","title":"MouseCaptureEvent","children":null},
 				{"link":"Experimental.UIElements.MouseCaptureEventBase_1","title":"MouseCaptureEventBase<T0>","children":null},
@@ -741,9 +915,127 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 				{"link":"Experimental.UIElements.MouseOutEvent","title":"MouseOutEvent","children":null},
 				{"link":"Experimental.UIElements.MouseOverEvent","title":"MouseOverEvent","children":null},
 				{"link":"Experimental.UIElements.MouseUpEvent","title":"MouseUpEvent","children":null},
-				{"link":"Experimental.UIElements.PostLayoutEvent","title":"PostLayoutEvent","children":null},
-				{"link":"Experimental.UIElements.TextField","title":"TextField","children":null},
-				{"link":"Experimental.UIElements.TextInputFieldBase","title":"TextInputFieldBase","children":null},
+				{"link":"Experimental.UIElements.PanelChangedEventBase_1","title":"PanelChangedEventBase<T0>","children":null},
+				{"link":"Experimental.UIElements.PopupWindow","title":"PopupWindow","children":
+					[
+									{"link":"null","title":"Classes","children":
+					[
+											{"link":"Experimental.UIElements.PopupWindow.UxmlFactory","title":"UxmlFactory","children":null},
+						{"link":"Experimental.UIElements.PopupWindow.UxmlTraits","title":"UxmlTraits","children":null}
+					]
+				}
+					]
+				},
+				{"link":"Experimental.UIElements.RepeatButton","title":"RepeatButton","children":
+					[
+									{"link":"null","title":"Classes","children":
+					[
+											{"link":"Experimental.UIElements.RepeatButton.UxmlFactory","title":"UxmlFactory","children":null},
+						{"link":"Experimental.UIElements.RepeatButton.UxmlTraits","title":"UxmlTraits","children":null}
+					]
+				}
+					]
+				},
+				{"link":"Experimental.UIElements.Scroller","title":"Scroller","children":
+					[
+									{"link":"null","title":"Classes","children":
+					[
+											{"link":"Experimental.UIElements.Scroller.UxmlFactory","title":"UxmlFactory","children":null},
+						{"link":"Experimental.UIElements.Scroller.UxmlTraits","title":"UxmlTraits","children":null}
+					]
+				}
+					]
+				},
+				{"link":"Experimental.UIElements.ScrollerButton","title":"ScrollerButton","children":
+					[
+									{"link":"null","title":"Classes","children":
+					[
+											{"link":"Experimental.UIElements.ScrollerButton.UxmlFactory","title":"UxmlFactory","children":null},
+						{"link":"Experimental.UIElements.ScrollerButton.UxmlTraits","title":"UxmlTraits","children":null}
+					]
+				}
+					]
+				},
+				{"link":"Experimental.UIElements.ScrollView","title":"ScrollView","children":
+					[
+									{"link":"null","title":"Classes","children":
+					[
+											{"link":"Experimental.UIElements.ScrollView.UxmlFactory","title":"UxmlFactory","children":null},
+						{"link":"Experimental.UIElements.ScrollView.UxmlTraits","title":"UxmlTraits","children":null}
+					]
+				}
+					]
+				},
+				{"link":"Experimental.UIElements.Slider","title":"Slider","children":
+					[
+									{"link":"null","title":"Classes","children":
+					[
+											{"link":"Experimental.UIElements.Slider.UxmlFactory","title":"UxmlFactory","children":null},
+						{"link":"Experimental.UIElements.Slider.UxmlTraits","title":"UxmlTraits","children":null}
+					]
+				}
+					]
+				},
+				{"link":"Experimental.UIElements.SliderInt","title":"SliderInt","children":
+					[
+									{"link":"null","title":"Classes","children":
+					[
+											{"link":"Experimental.UIElements.SliderInt.UxmlFactory","title":"UxmlFactory","children":null},
+						{"link":"Experimental.UIElements.SliderInt.UxmlTraits","title":"UxmlTraits","children":null}
+					]
+				}
+					]
+				},
+				{"link":"Experimental.UIElements.TemplateContainer","title":"TemplateContainer","children":
+					[
+									{"link":"null","title":"Classes","children":
+					[
+											{"link":"Experimental.UIElements.TemplateContainer.UxmlFactory","title":"UxmlFactory","children":null},
+						{"link":"Experimental.UIElements.TemplateContainer.UxmlTraits","title":"UxmlTraits","children":null}
+					]
+				}
+					]
+				},
+				{"link":"Experimental.UIElements.TextElement","title":"TextElement","children":
+					[
+									{"link":"null","title":"Classes","children":
+					[
+											{"link":"Experimental.UIElements.TextElement.UxmlFactory","title":"UxmlFactory","children":null},
+						{"link":"Experimental.UIElements.TextElement.UxmlTraits","title":"UxmlTraits","children":null}
+					]
+				}
+					]
+				},
+				{"link":"Experimental.UIElements.TextField","title":"TextField","children":
+					[
+									{"link":"null","title":"Classes","children":
+					[
+											{"link":"Experimental.UIElements.TextField.UxmlFactory","title":"UxmlFactory","children":null},
+						{"link":"Experimental.UIElements.TextField.UxmlTraits","title":"UxmlTraits","children":null}
+					]
+				}
+					]
+				},
+				{"link":"Experimental.UIElements.TextInputFieldBase_1","title":"TextInputFieldBase<T0>","children":
+					[
+									{"link":"null","title":"Classes","children":
+					[
+											{"link":"Experimental.UIElements.TextInputFieldBase_1.UxmlTraits","title":"UxmlTraits","children":null}
+					]
+				}
+					]
+				},
+				{"link":"Experimental.UIElements.Toggle","title":"Toggle","children":
+					[
+									{"link":"null","title":"Classes","children":
+					[
+											{"link":"Experimental.UIElements.Toggle.UxmlFactory","title":"UxmlFactory","children":null},
+						{"link":"Experimental.UIElements.Toggle.UxmlTraits","title":"UxmlTraits","children":null}
+					]
+				}
+					]
+				},
+				{"link":"Experimental.UIElements.TooltipEvent","title":"TooltipEvent","children":null},
 				{"link":"Experimental.UIElements.UQuery","title":"UQuery","children":
 					[
 									{"link":"null","title":"Classes","children":
@@ -755,12 +1047,50 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 					]
 				},
 				{"link":"Experimental.UIElements.UQueryExtensions","title":"UQueryExtensions","children":null},
+				{"link":"Experimental.UIElements.UxmlAttributeDescription","title":"UxmlAttributeDescription","children":
+					[
+									{"link":"null","title":"Enumerations","children":
+					[
+											{"link":"Experimental.UIElements.UxmlAttributeDescription.Use","title":"Use","children":null}
+					]
+				}
+					]
+				},
+				{"link":"Experimental.UIElements.UxmlBoolAttributeDescription","title":"UxmlBoolAttributeDescription","children":null},
+				{"link":"Experimental.UIElements.UxmlChildElementDescription","title":"UxmlChildElementDescription","children":null},
+				{"link":"Experimental.UIElements.UxmlColorAttributeDescription","title":"UxmlColorAttributeDescription","children":null},
+				{"link":"Experimental.UIElements.UxmlDoubleAttributeDescription","title":"UxmlDoubleAttributeDescription","children":null},
+				{"link":"Experimental.UIElements.UxmlEnumAttributeDescription_1","title":"UxmlEnumAttributeDescription<T0>","children":null},
+				{"link":"Experimental.UIElements.UxmlEnumeration","title":"UxmlEnumeration","children":null},
 				{"link":"Experimental.UIElements.UxmlFactory_1","title":"UxmlFactory<T0>","children":null},
+				{"link":"Experimental.UIElements.UxmlFactory_2","title":"UxmlFactory<T0,T1>","children":null},
+				{"link":"Experimental.UIElements.UxmlFloatAttributeDescription","title":"UxmlFloatAttributeDescription","children":null},
+				{"link":"Experimental.UIElements.UxmlIntAttributeDescription","title":"UxmlIntAttributeDescription","children":null},
+				{"link":"Experimental.UIElements.UxmlLongAttributeDescription","title":"UxmlLongAttributeDescription","children":null},
+				{"link":"Experimental.UIElements.UxmlRootElementFactory","title":"UxmlRootElementFactory","children":null},
+				{"link":"Experimental.UIElements.UxmlRootElementTraits","title":"UxmlRootElementTraits","children":null},
+				{"link":"Experimental.UIElements.UxmlStringAttributeDescription","title":"UxmlStringAttributeDescription","children":null},
+				{"link":"Experimental.UIElements.UxmlTraits","title":"UxmlTraits","children":null},
+				{"link":"Experimental.UIElements.UxmlTypeRestriction","title":"UxmlTypeRestriction","children":null},
+				{"link":"Experimental.UIElements.UxmlValueBounds","title":"UxmlValueBounds","children":null},
+				{"link":"Experimental.UIElements.UxmlValueMatches","title":"UxmlValueMatches","children":null},
+				{"link":"Experimental.UIElements.ValidateCommandEvent","title":"ValidateCommandEvent","children":null},
+				{"link":"Experimental.UIElements.VisualContainer","title":"VisualContainer","children":
+					[
+									{"link":"null","title":"Classes","children":
+					[
+											{"link":"Experimental.UIElements.VisualContainer.UxmlFactory","title":"UxmlFactory","children":null}
+					]
+				}
+					]
+				},
 				{"link":"Experimental.UIElements.VisualElement","title":"VisualElement","children":
 					[
 									{"link":"null","title":"Classes","children":
 					[
-											{"link":"Experimental.UIElements.VisualElement.Hierarchy","title":"Hierarchy","children":null}
+											{"link":"Experimental.UIElements.VisualElement.Hierarchy","title":"Hierarchy","children":null},
+						{"link":"Experimental.UIElements.VisualElement.UxmlFactory","title":"UxmlFactory","children":null},
+						{"link":"Experimental.UIElements.VisualElement.UxmlTraits","title":"UxmlTraits","children":null}
 					]
 				},
 				{"link":"null","title":"Enumerations","children":
@@ -782,21 +1112,27 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 				}
 					]
 				},
+				{"link":"Experimental.UIElements.VisualTreeAsset","title":"VisualTreeAsset","children":null},
 				{"link":"Experimental.UIElements.WheelEvent","title":"WheelEvent","children":null}
 			]
 		},
 		{"link":"null","title":"Interfaces","children":
 			[
-							{"link":"Experimental.UIElements.IChangeEvent","title":"IChangeEvent","children":null},
-				{"link":"Experimental.UIElements.IEventDispatcher","title":"IEventDispatcher","children":null},
+							{"link":"Experimental.UIElements.IBindable","title":"IBindable","children":null},
+				{"link":"Experimental.UIElements.IBinding","title":"IBinding","children":null},
+				{"link":"Experimental.UIElements.IChangeEvent","title":"IChangeEvent","children":null},
+				{"link":"Experimental.UIElements.ICommandEvent","title":"ICommandEvent","children":null},
+				{"link":"Experimental.UIElements.IDragAndDropEvent","title":"IDragAndDropEvent","children":null},
 				{"link":"Experimental.UIElements.IEventHandler","title":"IEventHandler","children":null},
 				{"link":"Experimental.UIElements.IFocusEvent","title":"IFocusEvent","children":null},
 				{"link":"Experimental.UIElements.IFocusRing","title":"IFocusRing","children":null},
 				{"link":"Experimental.UIElements.IKeyboardEvent","title":"IKeyboardEvent","children":null},
+				{"link":"Experimental.UIElements.IManipulator","title":"IManipulator","children":null},
 				{"link":"Experimental.UIElements.IMouseCaptureEvent","title":"IMouseCaptureEvent","children":null},
 				{"link":"Experimental.UIElements.IMouseEvent","title":"IMouseEvent","children":null},
 				{"link":"Experimental.UIElements.INotifyValueChanged_1","title":"INotifyValueChanged<T0>","children":null},
 				{"link":"Experimental.UIElements.IPanel","title":"IPanel","children":null},
+				{"link":"Experimental.UIElements.IPanelChangedEvent","title":"IPanelChangedEvent","children":null},
 				{"link":"Experimental.UIElements.IScheduledItem","title":"IScheduledItem","children":null},
 				{"link":"Experimental.UIElements.IScheduler","title":"IScheduler","children":null},
 				{"link":"Experimental.UIElements.IStyle","title":"IStyle","children":null},
@@ -804,15 +1140,37 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 				{"link":"Experimental.UIElements.IUIElementDataWatch","title":"IUIElementDataWatch","children":null},
 				{"link":"Experimental.UIElements.IUIElementDataWatchRequest","title":"IUIElementDataWatchRequest","children":null},
 				{"link":"Experimental.UIElements.IUxmlAttributes","title":"IUxmlAttributes","children":null},
+				{"link":"Experimental.UIElements.IUxmlFactory","title":"IUxmlFactory","children":null},
 				{"link":"Experimental.UIElements.IVisualElementScheduledItem","title":"IVisualElementScheduledItem","children":null},
 				{"link":"Experimental.UIElements.IVisualElementScheduler","title":"IVisualElementScheduler","children":null}
 			]
 		},
 		{"link":"null","title":"Enumerations","children":
 			[
-							{"link":"Experimental.UIElements.Capture","title":"Capture","children":null},
-				{"link":"Experimental.UIElements.ChangeType","title":"ChangeType","children":null},
-				{"link":"Experimental.UIElements.PropagationPhase","title":"PropagationPhase","children":null}
+							{"link":"Experimental.UIElements.ChangeType","title":"ChangeType","children":null},
+				{"link":"Experimental.UIElements.PropagationPhase","title":"PropagationPhase","children":null},
+				{"link":"Experimental.UIElements.SelectionType","title":"SelectionType","children":null},
+				{"link":"Experimental.UIElements.SliderDirection","title":"SliderDirection","children":null},
+				{"link":"Experimental.UIElements.TrickleDown","title":"TrickleDown","children":null}
+			]
+		}
+			]
+		},
+		{"link":"null","title":"UnityEngine.Experimental.VFX","children":
+			[
+					{"link":"null","title":"Classes","children":
+			[
+							{"link":"Experimental.VFX.VFXExpressionValues","title":"VFXExpressionValues","children":null},
+				{"link":"Experimental.VFX.VFXManager","title":"VFXManager","children":null},
+				{"link":"Experimental.VFX.VFXSpawnerCallbacks","title":"VFXSpawnerCallbacks","children":null},
+				{"link":"Experimental.VFX.VFXSpawnerState","title":"VFXSpawnerState","children":null},
+				{"link":"Experimental.VFX.VisualEffect","title":"VisualEffect","children":null},
+				{"link":"Experimental.VFX.VisualEffectAsset","title":"VisualEffectAsset","children":null}
+			]
+		},
+		{"link":"null","title":"Attributes","children":
+			[
+							{"link":"Experimental.VFX.VFXEventAttribute","title":"VFXEventAttribute","children":null}
 			]
 		}
 			]
@@ -829,10 +1187,22 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 		},
 		{"link":"null","title":"UnityEngine.Experimental.XR","children":
 			[
-					{"link":"null","title":"Classes","children":
+						{"link":"null","title":"UnityEngine.Experimental.XR.Interaction","children":
+				[
+							{"link":"null","title":"Classes","children":
+				[
+									{"link":"Experimental.XR.Interaction.BaseArmModel","title":"BaseArmModel","children":null},
+					{"link":"Experimental.XR.Interaction.BasePoseProvider","title":"BasePoseProvider","children":null}
+				]
+			}
+				]
+			},
+		{"link":"null","title":"Classes","children":
 			[
 							{"link":"Experimental.XR.BoundedPlane","title":"BoundedPlane","children":null},
 				{"link":"Experimental.XR.FrameReceivedEventArgs","title":"FrameReceivedEventArgs","children":null},
+				{"link":"Experimental.XR.MeshGenerationResult","title":"MeshGenerationResult","children":null},
+				{"link":"Experimental.XR.MeshInfo","title":"MeshInfo","children":null},
 				{"link":"Experimental.XR.PlaneAddedEventArgs","title":"PlaneAddedEventArgs","children":null},
 				{"link":"Experimental.XR.PlaneRemovedEventArgs","title":"PlaneRemovedEventArgs","children":null},
 				{"link":"Experimental.XR.PlaneUpdatedEventArgs","title":"PlaneUpdatedEventArgs","children":null},
@@ -845,8 +1215,12 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 				{"link":"Experimental.XR.XRCameraSubsystemDescriptor","title":"XRCameraSubsystemDescriptor","children":null},
 				{"link":"Experimental.XR.XRDepthSubsystem","title":"XRDepthSubsystem","children":null},
 				{"link":"Experimental.XR.XRDepthSubsystemDescriptor","title":"XRDepthSubsystemDescriptor","children":null},
+				{"link":"Experimental.XR.XRDisplaySubsystem","title":"XRDisplaySubsystem","children":null},
+				{"link":"Experimental.XR.XRDisplaySubsystemDescriptor","title":"XRDisplaySubsystemDescriptor","children":null},
 				{"link":"Experimental.XR.XRInputSubsystem","title":"XRInputSubsystem","children":null},
 				{"link":"Experimental.XR.XRInputSubsystemDescriptor","title":"XRInputSubsystemDescriptor","children":null},
+				{"link":"Experimental.XR.XRMeshSubsystem","title":"XRMeshSubsystem","children":null},
+				{"link":"Experimental.XR.XRMeshSubsystemDescriptor","title":"XRMeshSubsystemDescriptor","children":null},
 				{"link":"Experimental.XR.XRPlaneSubsystem","title":"XRPlaneSubsystem","children":null},
 				{"link":"Experimental.XR.XRPlaneSubsystemDescriptor","title":"XRPlaneSubsystemDescriptor","children":null},
 				{"link":"Experimental.XR.XRRaycastHit","title":"XRRaycastHit","children":null},
@@ -860,7 +1234,10 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 		},
 		{"link":"null","title":"Enumerations","children":
 			[
-							{"link":"Experimental.XR.PlaneAlignment","title":"PlaneAlignment","children":null},
+							{"link":"Experimental.XR.MeshChangeState","title":"MeshChangeState","children":null},
+				{"link":"Experimental.XR.MeshGenerationStatus","title":"MeshGenerationStatus","children":null},
+				{"link":"Experimental.XR.MeshVertexAttributes","title":"MeshVertexAttributes","children":null},
+				{"link":"Experimental.XR.PlaneAlignment","title":"PlaneAlignment","children":null},
 				{"link":"Experimental.XR.TrackableType","title":"TrackableType","children":null},
 				{"link":"Experimental.XR.TrackingState","title":"TrackingState","children":null}
 			]
@@ -869,44 +1246,26 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 		},
 	{"link":"null","title":"Classes","children":
 		[
-					{"link":"Experimental.Subsystem","title":"Subsystem","children":null},
-			{"link":"Experimental.SubsystemDescriptor_1","title":"SubsystemDescriptor<T0>","children":null},
+					{"link":"Experimental.IntegratedSubsystem","title":"IntegratedSubsystem","children":null},
+			{"link":"Experimental.IntegratedSubsystemDescriptor","title":"IntegratedSubsystemDescriptor","children":null},
+			{"link":"Experimental.Subsystem","title":"Subsystem","children":null},
+			{"link":"Experimental.SubsystemDescriptor","title":"SubsystemDescriptor","children":null},
 			{"link":"Experimental.SubsystemManager","title":"SubsystemManager","children":null}
+		]
+	},
+	{"link":"null","title":"Interfaces","children":
+		[
+					{"link":"Experimental.ISubsystem","title":"ISubsystem","children":null},
+			{"link":"Experimental.ISubsystemDescriptor","title":"ISubsystemDescriptor","children":null}
 		]
 	}
 		]
 	},
 	{"link":"null","title":"UnityEngine.iOS","children":
 		[
-			{"link":"null","title":"Classes","children":
+			{"link":"null","title":"Enumerations","children":
 		[
-					{"link":"iOS.ADBannerView","title":"ADBannerView","children":
-				[
-							{"link":"null","title":"Enumerations","children":
-				[
-									{"link":"iOS.ADBannerView.Layout","title":"Layout","children":null},
-					{"link":"iOS.ADBannerView.Type","title":"Type","children":null}
-				]
-			}
-				]
-			},
-			{"link":"iOS.ADInterstitialAd","title":"ADInterstitialAd","children":null},
-			{"link":"iOS.Device","title":"Device","children":null},
-			{"link":"iOS.LocalNotification","title":"LocalNotification","children":null},
-			{"link":"iOS.NotificationServices","title":"NotificationServices","children":null},
-			{"link":"iOS.OnDemandResources","title":"OnDemandResources","children":null},
-			{"link":"iOS.OnDemandResourcesRequest","title":"OnDemandResourcesRequest","children":null},
-			{"link":"iOS.RemoteNotification","title":"RemoteNotification","children":null}
-		]
-	},
-	{"link":"null","title":"Enumerations","children":
-		[
-					{"link":"iOS.ActivityIndicatorStyle","title":"ActivityIndicatorStyle","children":null},
-			{"link":"iOS.CalendarIdentifier","title":"CalendarIdentifier","children":null},
-			{"link":"iOS.CalendarUnit","title":"CalendarUnit","children":null},
-			{"link":"iOS.DeviceGeneration","title":"DeviceGeneration","children":null},
-			{"link":"iOS.NotificationType","title":"NotificationType","children":null},
-			{"link":"iOS.SystemGestureDeferMode","title":"SystemGestureDeferMode","children":null}
+					{"link":"iOS.SystemGestureDeferMode","title":"SystemGestureDeferMode","children":null}
 		]
 	}
 		]
@@ -1125,7 +1484,8 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 	},
 	{"link":"null","title":"Interfaces","children":
 		[
-					{"link":"Networking.IMultipartFormSection","title":"IMultipartFormSection","children":null}
+					{"link":"Networking.IMultipartFormSection","title":"IMultipartFormSection","children":null},
+			{"link":"Networking.INetworkTransport","title":"INetworkTransport","children":null}
 		]
 	},
 	{"link":"null","title":"Enumerations","children":
@@ -1170,6 +1530,7 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 			}
 				]
 			},
+			{"link":"Playables.Notification","title":"Notification","children":null},
 			{"link":"Playables.Playable","title":"Playable","children":null},
 			{"link":"Playables.PlayableAsset","title":"PlayableAsset","children":null},
 			{"link":"Playables.PlayableBehaviour","title":"PlayableBehaviour","children":null},
@@ -1180,12 +1541,15 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 			{"link":"Playables.PlayableOutput","title":"PlayableOutput","children":null},
 			{"link":"Playables.PlayableOutputExtensions","title":"PlayableOutputExtensions","children":null},
 			{"link":"Playables.ScriptPlayable_1","title":"ScriptPlayable<T0>","children":null},
+			{"link":"Playables.ScriptPlayableBinding","title":"ScriptPlayableBinding","children":null},
 			{"link":"Playables.ScriptPlayableOutput","title":"ScriptPlayableOutput","children":null}
 		]
 	},
 	{"link":"null","title":"Interfaces","children":
 		[
-					{"link":"Playables.IPlayable","title":"IPlayable","children":null},
+					{"link":"Playables.INotification","title":"INotification","children":null},
+			{"link":"Playables.INotificationReceiver","title":"INotificationReceiver","children":null},
+			{"link":"Playables.IPlayable","title":"IPlayable","children":null},
 			{"link":"Playables.IPlayableAsset","title":"IPlayableAsset","children":null},
 			{"link":"Playables.IPlayableBehaviour","title":"IPlayableBehaviour","children":null},
 			{"link":"Playables.IPlayableOutput","title":"IPlayableOutput","children":null}
@@ -1196,6 +1560,7 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 					{"link":"Playables.DataStreamType","title":"DataStreamType","children":null},
 			{"link":"Playables.DirectorUpdateMode","title":"DirectorUpdateMode","children":null},
 			{"link":"Playables.DirectorWrapMode","title":"DirectorWrapMode","children":null},
+			{"link":"Playables.PlayableTraversalMode","title":"PlayableTraversalMode","children":null},
 			{"link":"Playables.PlayState","title":"PlayState","children":null}
 		]
 	}
@@ -1203,12 +1568,36 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 	},
 	{"link":"null","title":"UnityEngine.Profiling","children":
 		[
-			{"link":"null","title":"Classes","children":
+				{"link":"null","title":"UnityEngine.Profiling.Memory","children":
+			[
+						{"link":"null","title":"UnityEngine.Profiling.Memory.Experimental","children":
+				[
+							{"link":"null","title":"Classes","children":
+				[
+									{"link":"Profiling.Memory.Experimental.MemoryProfiler","title":"MemoryProfiler","children":null},
+					{"link":"Profiling.Memory.Experimental.MetaData","title":"MetaData","children":null}
+				]
+			},
+			{"link":"null","title":"Enumerations","children":
+				[
+									{"link":"Profiling.Memory.Experimental.CaptureFlags","title":"CaptureFlags","children":null}
+				]
+			}
+				]
+			}
+			]
+		},
+	{"link":"null","title":"Classes","children":
 		[
 					{"link":"Profiling.CustomSampler","title":"CustomSampler","children":null},
 			{"link":"Profiling.Profiler","title":"Profiler","children":null},
 			{"link":"Profiling.Recorder","title":"Recorder","children":null},
 			{"link":"Profiling.Sampler","title":"Sampler","children":null}
+		]
+	},
+	{"link":"null","title":"Enumerations","children":
+		[
+					{"link":"Profiling.ProfilerArea","title":"ProfilerArea","children":null}
 		]
 	}
 		]
@@ -1217,11 +1606,17 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 		[
 			{"link":"null","title":"Classes","children":
 		[
-					{"link":"Rendering.CommandBuffer","title":"CommandBuffer","children":null},
+					{"link":"Rendering.AsyncGPUReadback","title":"AsyncGPUReadback","children":null},
+			{"link":"Rendering.AsyncGPUReadbackRequest","title":"AsyncGPUReadbackRequest","children":null},
+			{"link":"Rendering.CommandBuffer","title":"CommandBuffer","children":null},
 			{"link":"Rendering.GPUFence","title":"GPUFence","children":null},
 			{"link":"Rendering.GraphicsSettings","title":"GraphicsSettings","children":null},
+			{"link":"Rendering.PlatformKeywordSet","title":"PlatformKeywordSet","children":null},
 			{"link":"Rendering.ReflectionProbeBlendInfo","title":"ReflectionProbeBlendInfo","children":null},
+			{"link":"Rendering.RenderTargetBinding","title":"RenderTargetBinding","children":null},
 			{"link":"Rendering.RenderTargetIdentifier","title":"RenderTargetIdentifier","children":null},
+			{"link":"Rendering.ShaderKeyword","title":"ShaderKeyword","children":null},
+			{"link":"Rendering.ShaderKeywordSet","title":"ShaderKeywordSet","children":null},
 			{"link":"Rendering.SortingGroup","title":"SortingGroup","children":null},
 			{"link":"Rendering.SphericalHarmonicsL2","title":"SphericalHarmonicsL2","children":null},
 			{"link":"Rendering.SplashScreen","title":"SplashScreen","children":null}
@@ -1262,13 +1657,15 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 			{"link":"Rendering.RenderBufferLoadAction","title":"RenderBufferLoadAction","children":null},
 			{"link":"Rendering.RenderBufferStoreAction","title":"RenderBufferStoreAction","children":null},
 			{"link":"Rendering.RenderQueue","title":"RenderQueue","children":null},
+			{"link":"Rendering.ShaderKeywordType","title":"ShaderKeywordType","children":null},
 			{"link":"Rendering.ShadowCastingMode","title":"ShadowCastingMode","children":null},
 			{"link":"Rendering.ShadowMapPass","title":"ShadowMapPass","children":null},
 			{"link":"Rendering.ShadowSamplingMode","title":"ShadowSamplingMode","children":null},
 			{"link":"Rendering.StencilOp","title":"StencilOp","children":null},
 			{"link":"Rendering.SynchronisationStage","title":"SynchronisationStage","children":null},
 			{"link":"Rendering.TextureDimension","title":"TextureDimension","children":null},
-			{"link":"Rendering.UVChannelFlags","title":"UVChannelFlags","children":null}
+			{"link":"Rendering.UVChannelFlags","title":"UVChannelFlags","children":null},
+			{"link":"Rendering.VertexAttribute","title":"VertexAttribute","children":null}
 		]
 	}
 		]
@@ -1277,14 +1674,17 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 		[
 			{"link":"null","title":"Classes","children":
 		[
-					{"link":"SceneManagement.Scene","title":"Scene","children":null},
+					{"link":"SceneManagement.CreateSceneParameters","title":"CreateSceneParameters","children":null},
+			{"link":"SceneManagement.LoadSceneParameters","title":"LoadSceneParameters","children":null},
+			{"link":"SceneManagement.Scene","title":"Scene","children":null},
 			{"link":"SceneManagement.SceneManager","title":"SceneManager","children":null},
 			{"link":"SceneManagement.SceneUtility","title":"SceneUtility","children":null}
 		]
 	},
 	{"link":"null","title":"Enumerations","children":
 		[
-					{"link":"SceneManagement.LoadSceneMode","title":"LoadSceneMode","children":null}
+					{"link":"SceneManagement.LoadSceneMode","title":"LoadSceneMode","children":null},
+			{"link":"SceneManagement.LocalPhysicsMode","title":"LocalPhysicsMode","children":null}
 		]
 	}
 		]
@@ -1338,7 +1738,8 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 		[
 			{"link":"null","title":"Classes","children":
 		[
-					{"link":"SpatialTracking.TrackedPoseDriver","title":"TrackedPoseDriver","children":
+					{"link":"SpatialTracking.PoseDataSource","title":"PoseDataSource","children":null},
+			{"link":"SpatialTracking.TrackedPoseDriver","title":"TrackedPoseDriver","children":
 				[
 							{"link":"null","title":"Enumerations","children":
 				[
@@ -1365,7 +1766,17 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 	},
 	{"link":"null","title":"UnityEngine.TestTools","children":
 		[
-				{"link":"null","title":"UnityEngine.TestTools.Utils","children":
+				{"link":"null","title":"UnityEngine.TestTools.Constraints","children":
+			[
+					{"link":"null","title":"Classes","children":
+			[
+							{"link":"TestTools.Constraints.AllocatingGCMemoryConstraint","title":"AllocatingGCMemoryConstraint","children":null},
+				{"link":"TestTools.Constraints.Is","title":"Is","children":null}
+			]
+		}
+			]
+		},
+		{"link":"null","title":"UnityEngine.TestTools.Utils","children":
 			[
 					{"link":"null","title":"Classes","children":
 			[
@@ -1385,13 +1796,16 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 		},
 	{"link":"null","title":"Classes","children":
 		[
-					{"link":"TestTools.LogAssert","title":"LogAssert","children":null},
+					{"link":"TestTools.EnterPlayMode","title":"EnterPlayMode","children":null},
+			{"link":"TestTools.ExitPlayMode","title":"ExitPlayMode","children":null},
+			{"link":"TestTools.LogAssert","title":"LogAssert","children":null},
 			{"link":"TestTools.MonoBehaviourTest_1","title":"MonoBehaviourTest<T0>","children":null}
 		]
 	},
 	{"link":"null","title":"Interfaces","children":
 		[
-					{"link":"TestTools.IMonoBehaviourTest","title":"IMonoBehaviourTest","children":null},
+					{"link":"TestTools.IEditModeTestYieldInstruction","title":"IEditModeTestYieldInstruction","children":null},
+			{"link":"TestTools.IMonoBehaviourTest","title":"IMonoBehaviourTest","children":null},
 			{"link":"TestTools.IPostBuildCleanup","title":"IPostBuildCleanup","children":null},
 			{"link":"TestTools.IPrebuildSetup","title":"IPrebuildSetup","children":null}
 		]
@@ -1406,7 +1820,33 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 					{"link":"TestTools.PostBuildCleanupAttribute","title":"PostBuildCleanupAttribute","children":null},
 			{"link":"TestTools.PrebuildSetupAttribute","title":"PrebuildSetupAttribute","children":null},
 			{"link":"TestTools.UnityPlatformAttribute","title":"UnityPlatformAttribute","children":null},
+			{"link":"TestTools.UnitySetUpAttribute","title":"UnitySetUpAttribute","children":null},
+			{"link":"TestTools.UnityTearDownAttribute","title":"UnityTearDownAttribute","children":null},
 			{"link":"TestTools.UnityTestAttribute","title":"UnityTestAttribute","children":null}
+		]
+	}
+		]
+	},
+	{"link":"null","title":"UnityEngine.TextCore","children":
+		[
+				{"link":"null","title":"UnityEngine.TextCore.LowLevel","children":
+			[
+					{"link":"null","title":"Classes","children":
+			[
+							{"link":"TextCore.LowLevel.FontEngine","title":"FontEngine","children":null}
+			]
+		},
+		{"link":"null","title":"Enumerations","children":
+			[
+							{"link":"TextCore.LowLevel.FontEngineError","title":"FontEngineError","children":null},
+				{"link":"TextCore.LowLevel.GlyphLoadFlags","title":"GlyphLoadFlags","children":null}
+			]
+		}
+			]
+		},
+	{"link":"null","title":"Classes","children":
+		[
+					{"link":"TextCore.Glyph","title":"Glyph","children":null}
 		]
 	}
 		]
@@ -1443,6 +1883,7 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 							{"link":"null","title":"Enumerations","children":
 				[
 									{"link":"Tilemaps.TilemapRenderer.DetectChunkCullingBounds","title":"DetectChunkCullingBounds","children":null},
+					{"link":"Tilemaps.TilemapRenderer.Mode","title":"Mode","children":null},
 					{"link":"Tilemaps.TilemapRenderer.SortOrder","title":"SortOrder","children":null}
 				]
 			}
@@ -1486,7 +1927,6 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 			{"link":"Timeline.ControlPlayableAsset","title":"ControlPlayableAsset","children":null},
 			{"link":"Timeline.ControlTrack","title":"ControlTrack","children":null},
 			{"link":"Timeline.DirectorControlPlayable","title":"DirectorControlPlayable","children":null},
-			{"link":"Timeline.EventPlayable","title":"EventPlayable","children":null},
 			{"link":"Timeline.GroupTrack","title":"GroupTrack","children":null},
 			{"link":"Timeline.ParticleControlPlayable","title":"ParticleControlPlayable","children":null},
 			{"link":"Timeline.PlayableTrack","title":"PlayableTrack","children":null},
@@ -1509,7 +1949,6 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 			}
 				]
 			},
-			{"link":"Timeline.TimelineMarker","title":"TimelineMarker","children":null},
 			{"link":"Timeline.TimelinePlayable","title":"TimelinePlayable","children":null},
 			{"link":"Timeline.TrackAsset","title":"TrackAsset","children":null},
 			{"link":"Timeline.TrackAssetExtensions","title":"TrackAssetExtensions","children":null}
@@ -1520,13 +1959,14 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 					{"link":"Timeline.IPropertyCollector","title":"IPropertyCollector","children":null},
 			{"link":"Timeline.IPropertyPreview","title":"IPropertyPreview","children":null},
 			{"link":"Timeline.ITimeControl","title":"ITimeControl","children":null},
-			{"link":"Timeline.ITimelineClipAsset","title":"ITimelineClipAsset","children":null},
-			{"link":"Timeline.ITimelineMarkerContainer","title":"ITimelineMarkerContainer","children":null}
+			{"link":"Timeline.ITimelineClipAsset","title":"ITimelineClipAsset","children":null}
 		]
 	},
 	{"link":"null","title":"Enumerations","children":
 		[
-					{"link":"Timeline.ClipCaps","title":"ClipCaps","children":null}
+					{"link":"Timeline.ClipCaps","title":"ClipCaps","children":null},
+			{"link":"Timeline.TrackBindingFlags","title":"TrackBindingFlags","children":null},
+			{"link":"Timeline.TrackOffset","title":"TrackOffset","children":null}
 		]
 	},
 	{"link":"null","title":"Attributes","children":
@@ -1535,15 +1975,6 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 			{"link":"Timeline.TrackBindingTypeAttribute","title":"TrackBindingTypeAttribute","children":null},
 			{"link":"Timeline.TrackClipTypeAttribute","title":"TrackClipTypeAttribute","children":null},
 			{"link":"Timeline.TrackColorAttribute","title":"TrackColorAttribute","children":null}
-		]
-	}
-		]
-	},
-	{"link":"null","title":"UnityEngine.Tizen","children":
-		[
-			{"link":"null","title":"Classes","children":
-		[
-					{"link":"Tizen.Window","title":"Window","children":null}
 		]
 	}
 		]
@@ -1855,7 +2286,11 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 		},
 	{"link":"null","title":"Classes","children":
 		[
-					{"link":"Windows.CrashReporting","title":"CrashReporting","children":null}
+					{"link":"Windows.CrashReporting","title":"CrashReporting","children":null},
+			{"link":"Windows.Crypto","title":"Crypto","children":null},
+			{"link":"Windows.Directory","title":"Directory","children":null},
+			{"link":"Windows.File","title":"File","children":null},
+			{"link":"Windows.LicenseInformation","title":"LicenseInformation","children":null}
 		]
 	}
 		]
@@ -2004,7 +2439,8 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 			},
 		{"link":"null","title":"Classes","children":
 			[
-							{"link":"XR.WSA.HolographicSettings","title":"HolographicSettings","children":
+							{"link":"XR.WSA.HolographicRemoting","title":"HolographicRemoting","children":null},
+				{"link":"XR.WSA.HolographicSettings","title":"HolographicSettings","children":
 					[
 									{"link":"null","title":"Enumerations","children":
 					[
@@ -2042,7 +2478,9 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 		},
 		{"link":"null","title":"Enumerations","children":
 			[
-							{"link":"XR.WSA.PositionalLocatorState","title":"PositionalLocatorState","children":null},
+							{"link":"XR.WSA.HolographicStreamerConnectionFailureReason","title":"HolographicStreamerConnectionFailureReason","children":null},
+				{"link":"XR.WSA.HolographicStreamerConnectionState","title":"HolographicStreamerConnectionState","children":null},
+				{"link":"XR.WSA.PositionalLocatorState","title":"PositionalLocatorState","children":null},
 				{"link":"XR.WSA.SurfaceChange","title":"SurfaceChange","children":null}
 			]
 		}
@@ -2051,16 +2489,29 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 	{"link":"null","title":"Classes","children":
 		[
 					{"link":"XR.ARBackgroundRenderer","title":"ARBackgroundRenderer","children":null},
+			{"link":"XR.HapticCapabilities","title":"HapticCapabilities","children":null},
+			{"link":"XR.InputDevice","title":"InputDevice","children":null},
+			{"link":"XR.InputDevices","title":"InputDevices","children":null},
 			{"link":"XR.InputTracking","title":"InputTracking","children":null},
 			{"link":"XR.XRDevice","title":"XRDevice","children":null},
 			{"link":"XR.XRNodeState","title":"XRNodeState","children":null},
-			{"link":"XR.XRSettings","title":"XRSettings","children":null},
+			{"link":"XR.XRSettings","title":"XRSettings","children":
+				[
+							{"link":"null","title":"Enumerations","children":
+				[
+									{"link":"XR.XRSettings.StereoRenderingMode","title":"StereoRenderingMode","children":null}
+				]
+			}
+				]
+			},
 			{"link":"XR.XRStats","title":"XRStats","children":null}
 		]
 	},
 	{"link":"null","title":"Enumerations","children":
 		[
 					{"link":"XR.ARRenderMode","title":"ARRenderMode","children":null},
+			{"link":"XR.GameViewRenderMode","title":"GameViewRenderMode","children":null},
+			{"link":"XR.TrackingOriginMode","title":"TrackingOriginMode","children":null},
 			{"link":"XR.TrackingSpaceType","title":"TrackingSpaceType","children":null},
 			{"link":"XR.UserPresenceState","title":"UserPresenceState","children":null},
 			{"link":"XR.XRNode","title":"XRNode","children":null}
@@ -2097,6 +2548,7 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 		{"link":"AssetBundle","title":"AssetBundle","children":null},
 		{"link":"AssetBundleCreateRequest","title":"AssetBundleCreateRequest","children":null},
 		{"link":"AssetBundleManifest","title":"AssetBundleManifest","children":null},
+		{"link":"AssetBundleRecompressOperation","title":"AssetBundleRecompressOperation","children":null},
 		{"link":"AssetBundleRequest","title":"AssetBundleRequest","children":null},
 		{"link":"AsyncOperation","title":"AsyncOperation","children":null},
 		{"link":"AudioChorusFilter","title":"AudioChorusFilter","children":null},
@@ -2131,17 +2583,25 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 		}
 			]
 		},
+		{"link":"BoxcastCommand","title":"BoxcastCommand","children":null},
 		{"link":"BoxCollider","title":"BoxCollider","children":null},
 		{"link":"BoxCollider2D","title":"BoxCollider2D","children":null},
+		{"link":"BuildCompression","title":"BuildCompression","children":null},
 		{"link":"BuoyancyEffector2D","title":"BuoyancyEffector2D","children":null},
 		{"link":"Cache","title":"Cache","children":null},
 		{"link":"CachedAssetBundle","title":"CachedAssetBundle","children":null},
 		{"link":"Caching","title":"Caching","children":null},
 		{"link":"Camera","title":"Camera","children":
 			[
-					{"link":"null","title":"Enumerations","children":
+					{"link":"null","title":"Classes","children":
 			[
-							{"link":"Camera.MonoOrStereoscopicEye","title":"MonoOrStereoscopicEye","children":null},
+							{"link":"Camera.GateFitParameters","title":"GateFitParameters","children":null}
+			]
+		},
+		{"link":"null","title":"Enumerations","children":
+			[
+							{"link":"Camera.GateFitMode","title":"GateFitMode","children":null},
+				{"link":"Camera.MonoOrStereoscopicEye","title":"MonoOrStereoscopicEye","children":null},
 				{"link":"Camera.StereoscopicEye","title":"StereoscopicEye","children":null}
 			]
 		}
@@ -2150,6 +2610,7 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 		{"link":"Canvas","title":"Canvas","children":null},
 		{"link":"CanvasGroup","title":"CanvasGroup","children":null},
 		{"link":"CanvasRenderer","title":"CanvasRenderer","children":null},
+		{"link":"CapsulecastCommand","title":"CapsulecastCommand","children":null},
 		{"link":"CapsuleCollider","title":"CapsuleCollider","children":null},
 		{"link":"CapsuleCollider2D","title":"CapsuleCollider2D","children":null},
 		{"link":"CharacterController","title":"CharacterController","children":null},
@@ -2209,7 +2670,6 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 		{"link":"DynamicGI","title":"DynamicGI","children":null},
 		{"link":"EdgeCollider2D","title":"EdgeCollider2D","children":null},
 		{"link":"Effector2D","title":"Effector2D","children":null},
-		{"link":"EllipsoidParticleEmitter","title":"EllipsoidParticleEmitter","children":null},
 		{"link":"Event","title":"Event","children":null},
 		{"link":"ExitGUIException","title":"ExitGUIException","children":null},
 		{"link":"ExposedPropertyResolver","title":"ExposedPropertyResolver","children":null},
@@ -2295,6 +2755,8 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 		{"link":"Gyroscope","title":"Gyroscope","children":null},
 		{"link":"Handheld","title":"Handheld","children":null},
 		{"link":"Hash128","title":"Hash128","children":null},
+		{"link":"HashUnsafeUtilities","title":"HashUnsafeUtilities","children":null},
+		{"link":"HashUtilities","title":"HashUtilities","children":null},
 		{"link":"HingeJoint","title":"HingeJoint","children":null},
 		{"link":"HingeJoint2D","title":"HingeJoint2D","children":null},
 		{"link":"HostData","title":"HostData","children":null},
@@ -2331,6 +2793,7 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 			[
 							{"link":"LightProbeProxyVolume.BoundingBoxMode","title":"BoundingBoxMode","children":null},
 				{"link":"LightProbeProxyVolume.ProbePositionMode","title":"ProbePositionMode","children":null},
+				{"link":"LightProbeProxyVolume.QualityMode","title":"QualityMode","children":null},
 				{"link":"LightProbeProxyVolume.RefreshMode","title":"RefreshMode","children":null},
 				{"link":"LightProbeProxyVolume.ResolutionMode","title":"ResolutionMode","children":null}
 			]
@@ -2340,6 +2803,7 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 		{"link":"LightProbes","title":"LightProbes","children":null},
 		{"link":"LineRenderer","title":"LineRenderer","children":null},
 		{"link":"LineUtility","title":"LineUtility","children":null},
+		{"link":"LocalizationAsset","title":"LocalizationAsset","children":null},
 		{"link":"LocationInfo","title":"LocationInfo","children":null},
 		{"link":"LocationService","title":"LocationService","children":null},
 		{"link":"LOD","title":"LOD","children":null},
@@ -2354,7 +2818,6 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 		{"link":"Mesh","title":"Mesh","children":null},
 		{"link":"MeshCollider","title":"MeshCollider","children":null},
 		{"link":"MeshFilter","title":"MeshFilter","children":null},
-		{"link":"MeshParticleEmitter","title":"MeshParticleEmitter","children":null},
 		{"link":"MeshRenderer","title":"MeshRenderer","children":null},
 		{"link":"Microphone","title":"Microphone","children":null},
 		{"link":"MonoBehaviour","title":"MonoBehaviour","children":null},
@@ -2368,11 +2831,8 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 		{"link":"Object","title":"Object","children":null},
 		{"link":"OcclusionArea","title":"OcclusionArea","children":null},
 		{"link":"OcclusionPortal","title":"OcclusionPortal","children":null},
-		{"link":"ParticleAnimator","title":"ParticleAnimator","children":null},
 		{"link":"ParticleCollisionEvent","title":"ParticleCollisionEvent","children":null},
-		{"link":"ParticleEmitter","title":"ParticleEmitter","children":null},
 		{"link":"ParticlePhysicsExtensions","title":"ParticlePhysicsExtensions","children":null},
-		{"link":"ParticleRenderer","title":"ParticleRenderer","children":null},
 		{"link":"ParticleSystem","title":"ParticleSystem","children":
 			[
 					{"link":"null","title":"Classes","children":
@@ -2408,12 +2868,18 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 		}
 			]
 		},
+		{"link":"ParticleSystemForceField","title":"ParticleSystemForceField","children":null},
 		{"link":"ParticleSystemRenderer","title":"ParticleSystemRenderer","children":null},
+		{"link":"PatchExtents","title":"PatchExtents","children":null},
 		{"link":"PhysicMaterial","title":"PhysicMaterial","children":null},
 		{"link":"Physics","title":"Physics","children":null},
 		{"link":"Physics2D","title":"Physics2D","children":null},
 		{"link":"PhysicsJobOptions2D","title":"PhysicsJobOptions2D","children":null},
 		{"link":"PhysicsMaterial2D","title":"PhysicsMaterial2D","children":null},
+		{"link":"PhysicsScene","title":"PhysicsScene","children":null},
+		{"link":"PhysicsScene2D","title":"PhysicsScene2D","children":null},
+		{"link":"PhysicsSceneExtensions","title":"PhysicsSceneExtensions","children":null},
+		{"link":"PhysicsSceneExtensions2D","title":"PhysicsSceneExtensions2D","children":null},
 		{"link":"PhysicsUpdateBehaviour2D","title":"PhysicsUpdateBehaviour2D","children":null},
 		{"link":"Ping","title":"Ping","children":null},
 		{"link":"Plane","title":"Plane","children":null},
@@ -2467,7 +2933,15 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 			]
 		},
 		{"link":"RectTransformUtility","title":"RectTransformUtility","children":null},
-		{"link":"ReflectionProbe","title":"ReflectionProbe","children":null},
+		{"link":"ReflectionProbe","title":"ReflectionProbe","children":
+			[
+					{"link":"null","title":"Enumerations","children":
+			[
+							{"link":"ReflectionProbe.ReflectionProbeEvent","title":"ReflectionProbeEvent","children":null}
+			]
+		}
+			]
+		},
 		{"link":"RelativeJoint2D","title":"RelativeJoint2D","children":null},
 		{"link":"RemoteSettings","title":"RemoteSettings","children":null},
 		{"link":"RenderBuffer","title":"RenderBuffer","children":null},
@@ -2485,7 +2959,15 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 		{"link":"RuntimeAnimatorController","title":"RuntimeAnimatorController","children":null},
 		{"link":"ScalableBufferManager","title":"ScalableBufferManager","children":null},
 		{"link":"Screen","title":"Screen","children":null},
-		{"link":"ScreenCapture","title":"ScreenCapture","children":null},
+		{"link":"ScreenCapture","title":"ScreenCapture","children":
+			[
+					{"link":"null","title":"Enumerations","children":
+			[
+							{"link":"ScreenCapture.StereoScreenCaptureMode","title":"StereoScreenCaptureMode","children":null}
+			]
+		}
+			]
+		},
 		{"link":"ScriptableObject","title":"ScriptableObject","children":null},
 		{"link":"Security","title":"Security","children":null},
 		{"link":"Shader","title":"Shader","children":null},
@@ -2508,6 +2990,7 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 		{"link":"SoftJointLimitSpring","title":"SoftJointLimitSpring","children":null},
 		{"link":"SortingLayer","title":"SortingLayer","children":null},
 		{"link":"SparseTexture","title":"SparseTexture","children":null},
+		{"link":"SpherecastCommand","title":"SpherecastCommand","children":null},
 		{"link":"SphereCollider","title":"SphereCollider","children":null},
 		{"link":"SplatPrototype","title":"SplatPrototype","children":null},
 		{"link":"SpringJoint","title":"SpringJoint","children":null},
@@ -2517,6 +3000,7 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 		{"link":"SpriteRenderer","title":"SpriteRenderer","children":null},
 		{"link":"StateMachineBehaviour","title":"StateMachineBehaviour","children":null},
 		{"link":"StaticBatchingUtility","title":"StaticBatchingUtility","children":null},
+		{"link":"StreamingController","title":"StreamingController","children":null},
 		{"link":"SurfaceEffector2D","title":"SurfaceEffector2D","children":null},
 		{"link":"SystemInfo","title":"SystemInfo","children":null},
 		{"link":"TargetJoint2D","title":"TargetJoint2D","children":null},
@@ -2532,6 +3016,7 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 		{"link":"TerrainCollider","title":"TerrainCollider","children":null},
 		{"link":"TerrainData","title":"TerrainData","children":null},
 		{"link":"TerrainExtensions","title":"TerrainExtensions","children":null},
+		{"link":"TerrainLayer","title":"TerrainLayer","children":null},
 		{"link":"TextAsset","title":"TextAsset","children":null},
 		{"link":"TextGenerationSettings","title":"TextGenerationSettings","children":null},
 		{"link":"TextGenerator","title":"TextGenerator","children":null},
@@ -2593,7 +3078,8 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 },
 {"link":"null","title":"Interfaces","children":
 	[
-			{"link":"ICanvasRaycastFilter","title":"ICanvasRaycastFilter","children":null},
+			{"link":"IAnimationClipSource","title":"IAnimationClipSource","children":null},
+		{"link":"ICanvasRaycastFilter","title":"ICanvasRaycastFilter","children":null},
 		{"link":"IExposedPropertyTable","title":"IExposedPropertyTable","children":null},
 		{"link":"ILogger","title":"ILogger","children":null},
 		{"link":"ILogHandler","title":"ILogHandler","children":null},
@@ -2613,6 +3099,8 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 		{"link":"AnisotropicFiltering","title":"AnisotropicFiltering","children":null},
 		{"link":"ApplicationInstallMode","title":"ApplicationInstallMode","children":null},
 		{"link":"ApplicationSandboxType","title":"ApplicationSandboxType","children":null},
+		{"link":"ArmDof","title":"ArmDof","children":null},
+		{"link":"AssetBundleLoadResult","title":"AssetBundleLoadResult","children":null},
 		{"link":"AudioClipLoadType","title":"AudioClipLoadType","children":null},
 		{"link":"AudioCompressionFormat","title":"AudioCompressionFormat","children":null},
 		{"link":"AudioDataLoadState","title":"AudioDataLoadState","children":null},
@@ -2628,6 +3116,7 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 		{"link":"AvatarTarget","title":"AvatarTarget","children":null},
 		{"link":"BatteryStatus","title":"BatteryStatus","children":null},
 		{"link":"BlendWeights","title":"BlendWeights","children":null},
+		{"link":"BodyDof","title":"BodyDof","children":null},
 		{"link":"CameraClearFlags","title":"CameraClearFlags","children":null},
 		{"link":"CameraType","title":"CameraType","children":null},
 		{"link":"CapsuleDirection2D","title":"CapsuleDirection2D","children":null},
@@ -2637,6 +3126,8 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 		{"link":"CollisionFlags","title":"CollisionFlags","children":null},
 		{"link":"ColorGamut","title":"ColorGamut","children":null},
 		{"link":"ColorSpace","title":"ColorSpace","children":null},
+		{"link":"CompressionLevel","title":"CompressionLevel","children":null},
+		{"link":"CompressionType","title":"CompressionType","children":null},
 		{"link":"ComputeBufferType","title":"ComputeBufferType","children":null},
 		{"link":"ConfigurableJointMotion","title":"ConfigurableJointMotion","children":null},
 		{"link":"ConnectionTesterStatus","title":"ConnectionTesterStatus","children":null},
@@ -2658,6 +3149,7 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 		{"link":"EventType","title":"EventType","children":null},
 		{"link":"FFTWindow","title":"FFTWindow","children":null},
 		{"link":"FilterMode","title":"FilterMode","children":null},
+		{"link":"FingerDof","title":"FingerDof","children":null},
 		{"link":"FocusType","title":"FocusType","children":null},
 		{"link":"FogMode","title":"FogMode","children":null},
 		{"link":"FontStyle","title":"FontStyle","children":null},
@@ -2667,19 +3159,23 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 		{"link":"FullScreenMovieControlMode","title":"FullScreenMovieControlMode","children":null},
 		{"link":"FullScreenMovieScalingMode","title":"FullScreenMovieScalingMode","children":null},
 		{"link":"GradientMode","title":"GradientMode","children":null},
+		{"link":"HeadDof","title":"HeadDof","children":null},
 		{"link":"HideFlags","title":"HideFlags","children":null},
 		{"link":"HorizontalWrapMode","title":"HorizontalWrapMode","children":null},
 		{"link":"HumanBodyBones","title":"HumanBodyBones","children":null},
+		{"link":"HumanPartDof","title":"HumanPartDof","children":null},
 		{"link":"ImagePosition","title":"ImagePosition","children":null},
 		{"link":"IMECompositionMode","title":"IMECompositionMode","children":null},
 		{"link":"JointDriveMode","title":"JointDriveMode","children":null},
 		{"link":"JointLimitState2D","title":"JointLimitState2D","children":null},
 		{"link":"JointProjectionMode","title":"JointProjectionMode","children":null},
 		{"link":"KeyCode","title":"KeyCode","children":null},
+		{"link":"LegDof","title":"LegDof","children":null},
 		{"link":"LightmapBakeType","title":"LightmapBakeType","children":null},
 		{"link":"LightmapsMode","title":"LightmapsMode","children":null},
 		{"link":"LightmapsModeLegacy","title":"LightmapsModeLegacy","children":null},
 		{"link":"LightRenderMode","title":"LightRenderMode","children":null},
+		{"link":"LightShadowCasterMode","title":"LightShadowCasterMode","children":null},
 		{"link":"LightShadows","title":"LightShadows","children":null},
 		{"link":"LightType","title":"LightType","children":null},
 		{"link":"LineAlignment","title":"LineAlignment","children":null},
@@ -2702,15 +3198,19 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 		{"link":"NPOTSupport","title":"NPOTSupport","children":null},
 		{"link":"OperatingSystemFamily","title":"OperatingSystemFamily","children":null},
 		{"link":"ParticleSystemAnimationMode","title":"ParticleSystemAnimationMode","children":null},
+		{"link":"ParticleSystemAnimationTimeMode","title":"ParticleSystemAnimationTimeMode","children":null},
 		{"link":"ParticleSystemAnimationType","title":"ParticleSystemAnimationType","children":null},
 		{"link":"ParticleSystemCollisionMode","title":"ParticleSystemCollisionMode","children":null},
 		{"link":"ParticleSystemCollisionQuality","title":"ParticleSystemCollisionQuality","children":null},
 		{"link":"ParticleSystemCollisionType","title":"ParticleSystemCollisionType","children":null},
+		{"link":"ParticleSystemCullingMode","title":"ParticleSystemCullingMode","children":null},
 		{"link":"ParticleSystemCurveMode","title":"ParticleSystemCurveMode","children":null},
 		{"link":"ParticleSystemCustomData","title":"ParticleSystemCustomData","children":null},
 		{"link":"ParticleSystemCustomDataMode","title":"ParticleSystemCustomDataMode","children":null},
 		{"link":"ParticleSystemEmissionType","title":"ParticleSystemEmissionType","children":null},
 		{"link":"ParticleSystemEmitterVelocityMode","title":"ParticleSystemEmitterVelocityMode","children":null},
+		{"link":"ParticleSystemForceFieldShape","title":"ParticleSystemForceFieldShape","children":null},
+		{"link":"ParticleSystemGameObjectFilter","title":"ParticleSystemGameObjectFilter","children":null},
 		{"link":"ParticleSystemGradientMode","title":"ParticleSystemGradientMode","children":null},
 		{"link":"ParticleSystemInheritVelocityMode","title":"ParticleSystemInheritVelocityMode","children":null},
 		{"link":"ParticleSystemMeshShapeType","title":"ParticleSystemMeshShapeType","children":null},
@@ -2718,6 +3218,7 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 		{"link":"ParticleSystemOverlapAction","title":"ParticleSystemOverlapAction","children":null},
 		{"link":"ParticleSystemRenderMode","title":"ParticleSystemRenderMode","children":null},
 		{"link":"ParticleSystemRenderSpace","title":"ParticleSystemRenderSpace","children":null},
+		{"link":"ParticleSystemRingBufferMode","title":"ParticleSystemRingBufferMode","children":null},
 		{"link":"ParticleSystemScalingMode","title":"ParticleSystemScalingMode","children":null},
 		{"link":"ParticleSystemShapeMultiModeValue","title":"ParticleSystemShapeMultiModeValue","children":null},
 		{"link":"ParticleSystemShapeTextureChannel","title":"ParticleSystemShapeTextureChannel","children":null},
@@ -2774,6 +3275,7 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 		{"link":"SpriteMeshType","title":"SpriteMeshType","children":null},
 		{"link":"SpritePackingMode","title":"SpritePackingMode","children":null},
 		{"link":"SpritePackingRotation","title":"SpritePackingRotation","children":null},
+		{"link":"SpriteSortPoint","title":"SpriteSortPoint","children":null},
 		{"link":"SpriteTileMode","title":"SpriteTileMode","children":null},
 		{"link":"StackTraceLogType","title":"StackTraceLogType","children":null},
 		{"link":"StereoTargetEyeMask","title":"StereoTargetEyeMask","children":null},
@@ -2783,11 +3285,9 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 		{"link":"TextAlignment","title":"TextAlignment","children":null},
 		{"link":"TextAnchor","title":"TextAnchor","children":null},
 		{"link":"TextClipping","title":"TextClipping","children":null},
-		{"link":"TextureCompressionQuality","title":"TextureCompressionQuality","children":null},
 		{"link":"TextureFormat","title":"TextureFormat","children":null},
 		{"link":"TextureWrapMode","title":"TextureWrapMode","children":null},
 		{"link":"ThreadPriority","title":"ThreadPriority","children":null},
-		{"link":"TizenActivityIndicatorStyle","title":"TizenActivityIndicatorStyle","children":null},
 		{"link":"TouchPhase","title":"TouchPhase","children":null},
 		{"link":"TouchScreenKeyboardType","title":"TouchScreenKeyboardType","children":null},
 		{"link":"TouchType","title":"TouchType","children":null},
@@ -2795,6 +3295,7 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 		{"link":"UserAuthorization","title":"UserAuthorization","children":null},
 		{"link":"VerticalWrapMode","title":"VerticalWrapMode","children":null},
 		{"link":"VRTextureUsage","title":"VRTextureUsage","children":null},
+		{"link":"WebCamKind","title":"WebCamKind","children":null},
 		{"link":"WeightedMode","title":"WeightedMode","children":null},
 		{"link":"WindZoneMode","title":"WindZoneMode","children":null},
 		{"link":"WrapMode","title":"WrapMode","children":null}
@@ -2814,7 +3315,9 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 		{"link":"DisallowMultipleComponent","title":"DisallowMultipleComponent","children":null},
 		{"link":"ExcludeFromObjectFactoryAttribute","title":"ExcludeFromObjectFactoryAttribute","children":null},
 		{"link":"ExcludeFromPresetAttribute","title":"ExcludeFromPresetAttribute","children":null},
+		{"link":"ExecuteAlways","title":"ExecuteAlways","children":null},
 		{"link":"ExecuteInEditMode","title":"ExecuteInEditMode","children":null},
+		{"link":"GradientUsageAttribute","title":"GradientUsageAttribute","children":null},
 		{"link":"GUITargetAttribute","title":"GUITargetAttribute","children":null},
 		{"link":"HeaderAttribute","title":"HeaderAttribute","children":null},
 		{"link":"HelpURLAttribute","title":"HelpURLAttribute","children":null},
@@ -2823,6 +3326,7 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 		{"link":"ImageEffectAllowedInSceneView","title":"ImageEffectAllowedInSceneView","children":null},
 		{"link":"ImageEffectOpaque","title":"ImageEffectOpaque","children":null},
 		{"link":"ImageEffectTransformsToLDR","title":"ImageEffectTransformsToLDR","children":null},
+		{"link":"MinAttribute","title":"MinAttribute","children":null},
 		{"link":"MultilineAttribute","title":"MultilineAttribute","children":null},
 		{"link":"PreferBinarySerialization","title":"PreferBinarySerialization","children":null},
 		{"link":"PropertyAttribute","title":"PropertyAttribute","children":null},
@@ -2843,16 +3347,18 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 	[
 			{"link":"UnityEngine.AIModule","title":"UnityEngine.AIModule","children":null},
 		{"link":"UnityEngine.AnimationModule","title":"UnityEngine.AnimationModule","children":null},
+		{"link":"UnityEngine.AssetBundleModule","title":"UnityEngine.AssetBundleModule","children":null},
 		{"link":"UnityEngine.AudioModule","title":"UnityEngine.AudioModule","children":null},
 		{"link":"UnityEngine.BaselibModule","title":"UnityEngine.BaselibModule","children":null},
 		{"link":"UnityEngine.ClothModule","title":"UnityEngine.ClothModule","children":null},
 		{"link":"UnityEngine.CoreModule","title":"UnityEngine.CoreModule","children":null},
+		{"link":"UnityEngine.DirectorModule","title":"UnityEngine.DirectorModule","children":null},
 		{"link":"UnityEngine.FacebookModule","title":"UnityEngine.FacebookModule","children":null},
+		{"link":"UnityEngine.FileSystemHttpModule","title":"UnityEngine.FileSystemHttpModule","children":null},
 		{"link":"UnityEngine.GameCenterModule","title":"UnityEngine.GameCenterModule","children":null},
 		{"link":"UnityEngine.ImageConversionModule","title":"UnityEngine.ImageConversionModule","children":null},
 		{"link":"UnityEngine.IMGUIModule","title":"UnityEngine.IMGUIModule","children":null},
 		{"link":"UnityEngine.JSONSerializeModule","title":"UnityEngine.JSONSerializeModule","children":null},
-		{"link":"UnityEngine.ParticlesLegacyModule","title":"UnityEngine.ParticlesLegacyModule","children":null},
 		{"link":"UnityEngine.ParticleSystemModule","title":"UnityEngine.ParticleSystemModule","children":null},
 		{"link":"UnityEngine.Physics2DModule","title":"UnityEngine.Physics2DModule","children":null},
 		{"link":"UnityEngine.PhysicsModule","title":"UnityEngine.PhysicsModule","children":null},
@@ -2863,8 +3369,11 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 		{"link":"UnityEngine.TerrainModule","title":"UnityEngine.TerrainModule","children":null},
 		{"link":"UnityEngine.TerrainPhysicsModule","title":"UnityEngine.TerrainPhysicsModule","children":null},
 		{"link":"UnityEngine.TextRenderingModule","title":"UnityEngine.TextRenderingModule","children":null},
+		{"link":"UnityEngine.TilemapModule","title":"UnityEngine.TilemapModule","children":null},
+		{"link":"UnityEngine.UIElementsModule","title":"UnityEngine.UIElementsModule","children":null},
 		{"link":"UnityEngine.UIModule","title":"UnityEngine.UIModule","children":null},
 		{"link":"UnityEngine.UmbraModule","title":"UnityEngine.UmbraModule","children":null},
+		{"link":"UnityEngine.UnityAnalyticsModule","title":"UnityEngine.UnityAnalyticsModule","children":null},
 		{"link":"UnityEngine.UnityWebRequestAssetBundleModule","title":"UnityEngine.UnityWebRequestAssetBundleModule","children":null},
 		{"link":"UnityEngine.UnityWebRequestAudioModule","title":"UnityEngine.UnityWebRequestAudioModule","children":null},
 		{"link":"UnityEngine.UnityWebRequestModule","title":"UnityEngine.UnityWebRequestModule","children":null},
@@ -2875,7 +3384,8 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 		{"link":"UnityEngine.VRModule","title":"UnityEngine.VRModule","children":null},
 		{"link":"UnityEngine.WebGLModule","title":"UnityEngine.WebGLModule","children":null},
 		{"link":"UnityEngine.WebModule","title":"UnityEngine.WebModule","children":null},
-		{"link":"UnityEngine.WindModule","title":"UnityEngine.WindModule","children":null}
+		{"link":"UnityEngine.WindModule","title":"UnityEngine.WindModule","children":null},
+		{"link":"UnityEngine.XRModule","title":"UnityEngine.XRModule","children":null}
 	]
 }
 	]
@@ -2911,6 +3421,15 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 	}
 		]
 	},
+	{"link":"null","title":"UnityEditor.Android","children":
+		[
+			{"link":"null","title":"Interfaces","children":
+		[
+					{"link":"Android.IPostGenerateGradleAndroidProject","title":"IPostGenerateGradleAndroidProject","children":null}
+		]
+	}
+		]
+	},
 	{"link":"null","title":"UnityEditor.AnimatedValues","children":
 		[
 			{"link":"null","title":"Classes","children":
@@ -2940,6 +3459,7 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 			{"link":"Animations.ChildAnimatorState","title":"ChildAnimatorState","children":null},
 			{"link":"Animations.ChildAnimatorStateMachine","title":"ChildAnimatorStateMachine","children":null},
 			{"link":"Animations.ChildMotion","title":"ChildMotion","children":null},
+			{"link":"Animations.GameObjectRecorder","title":"GameObjectRecorder","children":null},
 			{"link":"Animations.StateMachineBehaviourContext","title":"StateMachineBehaviourContext","children":null}
 		]
 	},
@@ -2955,7 +3475,60 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 	},
 	{"link":"null","title":"UnityEditor.Build","children":
 		[
-				{"link":"null","title":"UnityEditor.Build.Reporting","children":
+				{"link":"null","title":"UnityEditor.Build.Content","children":
+			[
+					{"link":"null","title":"Classes","children":
+			[
+							{"link":"Build.Content.AssetBundleInfo","title":"AssetBundleInfo","children":null},
+				{"link":"Build.Content.AssetLoadInfo","title":"AssetLoadInfo","children":null},
+				{"link":"Build.Content.BuildCompression","title":"BuildCompression","children":null},
+				{"link":"Build.Content.BuildReferenceMap","title":"BuildReferenceMap","children":null},
+				{"link":"Build.Content.BuildSettings","title":"BuildSettings","children":null},
+				{"link":"Build.Content.BuildUsageCache","title":"BuildUsageCache","children":null},
+				{"link":"Build.Content.BuildUsageTagGlobal","title":"BuildUsageTagGlobal","children":null},
+				{"link":"Build.Content.BuildUsageTagSet","title":"BuildUsageTagSet","children":null},
+				{"link":"Build.Content.ContentBuildInterface","title":"ContentBuildInterface","children":null},
+				{"link":"Build.Content.ObjectIdentifier","title":"ObjectIdentifier","children":null},
+				{"link":"Build.Content.ObjectSerializedInfo","title":"ObjectSerializedInfo","children":null},
+				{"link":"Build.Content.PreloadInfo","title":"PreloadInfo","children":null},
+				{"link":"Build.Content.ResourceFile","title":"ResourceFile","children":null},
+				{"link":"Build.Content.SceneBundleInfo","title":"SceneBundleInfo","children":null},
+				{"link":"Build.Content.SceneDependencyInfo","title":"SceneDependencyInfo","children":null},
+				{"link":"Build.Content.SceneLoadInfo","title":"SceneLoadInfo","children":null},
+				{"link":"Build.Content.SerializationInfo","title":"SerializationInfo","children":null},
+				{"link":"Build.Content.SerializedLocation","title":"SerializedLocation","children":null},
+				{"link":"Build.Content.WriteCommand","title":"WriteCommand","children":null},
+				{"link":"Build.Content.WriteResult","title":"WriteResult","children":null}
+			]
+		},
+		{"link":"null","title":"Enumerations","children":
+			[
+							{"link":"Build.Content.CompressionLevel","title":"CompressionLevel","children":null},
+				{"link":"Build.Content.CompressionType","title":"CompressionType","children":null},
+				{"link":"Build.Content.ContentBuildFlags","title":"ContentBuildFlags","children":null},
+				{"link":"Build.Content.FileType","title":"FileType","children":null}
+			]
+		}
+			]
+		},
+		{"link":"null","title":"UnityEditor.Build.Player","children":
+			[
+					{"link":"null","title":"Classes","children":
+			[
+							{"link":"Build.Player.PlayerBuildInterface","title":"PlayerBuildInterface","children":null},
+				{"link":"Build.Player.ScriptCompilationResult","title":"ScriptCompilationResult","children":null},
+				{"link":"Build.Player.ScriptCompilationSettings","title":"ScriptCompilationSettings","children":null},
+				{"link":"Build.Player.TypeDB","title":"TypeDB","children":null}
+			]
+		},
+		{"link":"null","title":"Enumerations","children":
+			[
+							{"link":"Build.Player.ScriptCompilationOptions","title":"ScriptCompilationOptions","children":null}
+			]
+		}
+			]
+		},
+		{"link":"null","title":"UnityEditor.Build.Reporting","children":
 			[
 					{"link":"null","title":"Classes","children":
 			[
@@ -2983,11 +3556,14 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 	{"link":"null","title":"Interfaces","children":
 		[
 					{"link":"Build.IActiveBuildTargetChanged","title":"IActiveBuildTargetChanged","children":null},
+			{"link":"Build.IFilterBuildAssemblies","title":"IFilterBuildAssemblies","children":null},
 			{"link":"Build.IOrderedCallback","title":"IOrderedCallback","children":null},
+			{"link":"Build.IPostBuildPlayerScriptDLLs","title":"IPostBuildPlayerScriptDLLs","children":null},
 			{"link":"Build.IPostprocessBuild","title":"IPostprocessBuild","children":null},
 			{"link":"Build.IPostprocessBuildWithReport","title":"IPostprocessBuildWithReport","children":null},
 			{"link":"Build.IPreprocessBuild","title":"IPreprocessBuild","children":null},
 			{"link":"Build.IPreprocessBuildWithReport","title":"IPreprocessBuildWithReport","children":null},
+			{"link":"Build.IPreprocessShaders","title":"IPreprocessShaders","children":null},
 			{"link":"Build.IProcessScene","title":"IProcessScene","children":null},
 			{"link":"Build.IProcessSceneWithReport","title":"IProcessSceneWithReport","children":null}
 		]
@@ -3020,6 +3596,7 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 			{"link":"Compilation.AssemblyDefinitionPlatform","title":"AssemblyDefinitionPlatform","children":null},
 			{"link":"Compilation.CompilationPipeline","title":"CompilationPipeline","children":null},
 			{"link":"Compilation.CompilerMessage","title":"CompilerMessage","children":null},
+			{"link":"Compilation.PrecompiledAssemblyException","title":"PrecompiledAssemblyException","children":null},
 			{"link":"Compilation.ScriptCompilerOptions","title":"ScriptCompilerOptions","children":null}
 		]
 	},
@@ -3064,16 +3641,7 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 	},
 	{"link":"null","title":"UnityEditor.Experimental","children":
 		[
-				{"link":"null","title":"UnityEditor.Experimental.Animations","children":
-			[
-					{"link":"null","title":"Classes","children":
-			[
-							{"link":"Experimental.Animations.GameObjectRecorder","title":"GameObjectRecorder","children":null}
-			]
-		}
-			]
-		},
-		{"link":"null","title":"UnityEditor.Experimental.AssetImporters","children":
+				{"link":"null","title":"UnityEditor.Experimental.AssetImporters","children":
 			[
 					{"link":"null","title":"Classes","children":
 			[
@@ -3091,6 +3659,50 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 		{"link":"null","title":"Attributes","children":
 			[
 							{"link":"Experimental.AssetImporters.ScriptedImporterAttribute","title":"ScriptedImporterAttribute","children":null}
+			]
+		}
+			]
+		},
+		{"link":"null","title":"UnityEditor.Experimental.Rendering","children":
+			[
+					{"link":"null","title":"Classes","children":
+			[
+							{"link":"Experimental.Rendering.SceneStateHash","title":"SceneStateHash","children":null},
+				{"link":"Experimental.Rendering.ScriptableBakedReflectionSystem","title":"ScriptableBakedReflectionSystem","children":null},
+				{"link":"Experimental.Rendering.ScriptableBakedReflectionSystemSettings","title":"ScriptableBakedReflectionSystemSettings","children":null}
+			]
+		},
+		{"link":"null","title":"Interfaces","children":
+			[
+							{"link":"Experimental.Rendering.IScriptableBakedReflectionSystem","title":"IScriptableBakedReflectionSystem","children":null},
+				{"link":"Experimental.Rendering.IScriptableBakedReflectionSystemStageNotifier","title":"IScriptableBakedReflectionSystemStageNotifier","children":null}
+			]
+		}
+			]
+		},
+		{"link":"null","title":"UnityEditor.Experimental.SceneManagement","children":
+			[
+					{"link":"null","title":"Classes","children":
+			[
+							{"link":"Experimental.SceneManagement.PrefabStage","title":"PrefabStage","children":null},
+				{"link":"Experimental.SceneManagement.PrefabStageUtility","title":"PrefabStageUtility","children":null}
+			]
+		}
+			]
+		},
+		{"link":"null","title":"UnityEditor.Experimental.TerrainAPI","children":
+			[
+					{"link":"null","title":"Classes","children":
+			[
+							{"link":"Experimental.TerrainAPI.TerrainPaintTool_1","title":"TerrainPaintTool<T0>","children":null},
+				{"link":"Experimental.TerrainAPI.TerrainPaintUtilityEditor","title":"TerrainPaintUtilityEditor","children":null}
+			]
+		},
+		{"link":"null","title":"Interfaces","children":
+			[
+							{"link":"Experimental.TerrainAPI.IOnInspectorGUI","title":"IOnInspectorGUI","children":null},
+				{"link":"Experimental.TerrainAPI.IOnPaint","title":"IOnPaint","children":null},
+				{"link":"Experimental.TerrainAPI.IOnSceneGUI","title":"IOnSceneGUI","children":null}
 			]
 		}
 			]
@@ -3129,6 +3741,10 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 							{"link":"null","title":"Classes","children":
 				[
 									{"link":"Experimental.UIElements.GraphView.Attacher","title":"Attacher","children":null},
+					{"link":"Experimental.UIElements.GraphView.Blackboard","title":"Blackboard","children":null},
+					{"link":"Experimental.UIElements.GraphView.BlackboardField","title":"BlackboardField","children":null},
+					{"link":"Experimental.UIElements.GraphView.BlackboardRow","title":"BlackboardRow","children":null},
+					{"link":"Experimental.UIElements.GraphView.BlackboardSection","title":"BlackboardSection","children":null},
 					{"link":"Experimental.UIElements.GraphView.ClickSelector","title":"ClickSelector","children":null},
 					{"link":"Experimental.UIElements.GraphView.ContentDragger","title":"ContentDragger","children":null},
 					{"link":"Experimental.UIElements.GraphView.ContentZoomer","title":"ContentZoomer","children":null},
@@ -3142,7 +3758,7 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 					{"link":"Experimental.UIElements.GraphView.EdgeManipulator","title":"EdgeManipulator","children":null},
 					{"link":"Experimental.UIElements.GraphView.FreehandSelector","title":"FreehandSelector","children":null},
 					{"link":"Experimental.UIElements.GraphView.GraphElement","title":"GraphElement","children":null},
-					{"link":"Experimental.UIElements.GraphView.GraphElementGroupNodeExtensions","title":"GraphElementGroupNodeExtensions","children":null},
+					{"link":"Experimental.UIElements.GraphView.GraphElementScopeExtensions","title":"GraphElementScopeExtensions","children":null},
 					{"link":"Experimental.UIElements.GraphView.GraphView","title":"GraphView","children":
 						[
 											{"link":"null","title":"Enumerations","children":
@@ -3155,23 +3771,44 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 					},
 					{"link":"Experimental.UIElements.GraphView.GraphViewChange","title":"GraphViewChange","children":null},
 					{"link":"Experimental.UIElements.GraphView.GridBackground","title":"GridBackground","children":null},
-					{"link":"Experimental.UIElements.GraphView.GroupNode","title":"GroupNode","children":null},
+					{"link":"Experimental.UIElements.GraphView.Group","title":"Group","children":null},
 					{"link":"Experimental.UIElements.GraphView.IconBadge","title":"IconBadge","children":null},
 					{"link":"Experimental.UIElements.GraphView.MiniMap","title":"MiniMap","children":null},
 					{"link":"Experimental.UIElements.GraphView.Node","title":"Node","children":null},
 					{"link":"Experimental.UIElements.GraphView.NodeCreationContext","title":"NodeCreationContext","children":null},
-					{"link":"Experimental.UIElements.GraphView.Port","title":"Port","children":null},
+					{"link":"Experimental.UIElements.GraphView.Pill","title":"Pill","children":
+						[
+											{"link":"null","title":"Classes","children":
+						[
+													{"link":"Experimental.UIElements.GraphView.Pill.UxmlFactory","title":"UxmlFactory","children":null},
+							{"link":"Experimental.UIElements.GraphView.Pill.UxmlTraits","title":"UxmlTraits","children":null}
+						]
+					}
+						]
+					},
+					{"link":"Experimental.UIElements.GraphView.Port","title":"Port","children":
+						[
+											{"link":"null","title":"Enumerations","children":
+						[
+													{"link":"Experimental.UIElements.GraphView.Port.Capacity","title":"Capacity","children":null}
+						]
+					}
+						]
+					},
 					{"link":"Experimental.UIElements.GraphView.PortSource_1","title":"PortSource<T0>","children":null},
 					{"link":"Experimental.UIElements.GraphView.RectangleSelector","title":"RectangleSelector","children":null},
 					{"link":"Experimental.UIElements.GraphView.RectUtils","title":"RectUtils","children":null},
 					{"link":"Experimental.UIElements.GraphView.Resizer","title":"Resizer","children":null},
+					{"link":"Experimental.UIElements.GraphView.Scope","title":"Scope","children":null},
 					{"link":"Experimental.UIElements.GraphView.SearchTreeEntry","title":"SearchTreeEntry","children":null},
 					{"link":"Experimental.UIElements.GraphView.SearchTreeGroupEntry","title":"SearchTreeGroupEntry","children":null},
 					{"link":"Experimental.UIElements.GraphView.SearchWindow","title":"SearchWindow","children":null},
 					{"link":"Experimental.UIElements.GraphView.SearchWindowContext","title":"SearchWindowContext","children":null},
 					{"link":"Experimental.UIElements.GraphView.SelectionDragger","title":"SelectionDragger","children":null},
 					{"link":"Experimental.UIElements.GraphView.SelectionDropper","title":"SelectionDropper","children":null},
-					{"link":"Experimental.UIElements.GraphView.ShortcutHandler","title":"ShortcutHandler","children":null}
+					{"link":"Experimental.UIElements.GraphView.ShortcutHandler","title":"ShortcutHandler","children":null},
+					{"link":"Experimental.UIElements.GraphView.StackNode","title":"StackNode","children":null},
+					{"link":"Experimental.UIElements.GraphView.TokenNode","title":"TokenNode","children":null}
 				]
 			},
 			{"link":"null","title":"Interfaces","children":
@@ -3195,32 +3832,381 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 			},
 		{"link":"null","title":"Classes","children":
 			[
-							{"link":"Experimental.UIElements.BoundsField","title":"BoundsField","children":null},
-				{"link":"Experimental.UIElements.ColorField","title":"ColorField","children":null},
-				{"link":"Experimental.UIElements.CurveField","title":"CurveField","children":null},
-				{"link":"Experimental.UIElements.DoubleField","title":"DoubleField","children":null},
-				{"link":"Experimental.UIElements.EnumField","title":"EnumField","children":null},
+							{"link":"Experimental.UIElements.BaseCompositeField_3","title":"BaseCompositeField<T0,T1,T2>","children":
+					[
+									{"link":"null","title":"Classes","children":
+					[
+											{"link":"Experimental.UIElements.BaseCompositeField_3.UxmlTraits","title":"UxmlTraits","children":null}
+					]
+				}
+					]
+				},
+				{"link":"Experimental.UIElements.BasePopupField_2","title":"BasePopupField<T0,T1>","children":null},
+				{"link":"Experimental.UIElements.BindingExtensions","title":"BindingExtensions","children":null},
+				{"link":"Experimental.UIElements.BoundsField","title":"BoundsField","children":
+					[
+									{"link":"null","title":"Classes","children":
+					[
+											{"link":"Experimental.UIElements.BoundsField.UxmlFactory","title":"UxmlFactory","children":null},
+						{"link":"Experimental.UIElements.BoundsField.UxmlTraits","title":"UxmlTraits","children":null}
+					]
+				}
+					]
+				},
+				{"link":"Experimental.UIElements.BoundsIntField","title":"BoundsIntField","children":
+					[
+									{"link":"null","title":"Classes","children":
+					[
+											{"link":"Experimental.UIElements.BoundsIntField.UxmlFactory","title":"UxmlFactory","children":null},
+						{"link":"Experimental.UIElements.BoundsIntField.UxmlTraits","title":"UxmlTraits","children":null}
+					]
+				}
+					]
+				},
+				{"link":"Experimental.UIElements.ColorField","title":"ColorField","children":
+					[
+									{"link":"null","title":"Classes","children":
+					[
+											{"link":"Experimental.UIElements.ColorField.UxmlFactory","title":"UxmlFactory","children":null},
+						{"link":"Experimental.UIElements.ColorField.UxmlTraits","title":"UxmlTraits","children":null}
+					]
+				}
+					]
+				},
+				{"link":"Experimental.UIElements.CurveField","title":"CurveField","children":
+					[
+									{"link":"null","title":"Classes","children":
+					[
+											{"link":"Experimental.UIElements.CurveField.UxmlFactory","title":"UxmlFactory","children":null},
+						{"link":"Experimental.UIElements.CurveField.UxmlTraits","title":"UxmlTraits","children":null}
+					]
+				},
+				{"link":"null","title":"Enumerations","children":
+					[
+											{"link":"Experimental.UIElements.CurveField.RenderMode","title":"RenderMode","children":null}
+					]
+				}
+					]
+				},
+				{"link":"Experimental.UIElements.DoubleField","title":"DoubleField","children":
+					[
+									{"link":"null","title":"Classes","children":
+					[
+											{"link":"Experimental.UIElements.DoubleField.UxmlFactory","title":"UxmlFactory","children":null},
+						{"link":"Experimental.UIElements.DoubleField.UxmlTraits","title":"UxmlTraits","children":null}
+					]
+				}
+					]
+				},
+				{"link":"Experimental.UIElements.EnumField","title":"EnumField","children":
+					[
+									{"link":"null","title":"Classes","children":
+					[
+											{"link":"Experimental.UIElements.EnumField.UxmlFactory","title":"UxmlFactory","children":null},
+						{"link":"Experimental.UIElements.EnumField.UxmlTraits","title":"UxmlTraits","children":null}
+					]
+				}
+					]
+				},
 				{"link":"Experimental.UIElements.FieldMouseDragger_1","title":"FieldMouseDragger<T0>","children":null},
-				{"link":"Experimental.UIElements.GradientField","title":"GradientField","children":null},
-				{"link":"Experimental.UIElements.IntegerField","title":"IntegerField","children":null},
-				{"link":"Experimental.UIElements.ObjectField","title":"ObjectField","children":null},
+				{"link":"Experimental.UIElements.FloatField","title":"FloatField","children":
+					[
+									{"link":"null","title":"Classes","children":
+					[
+											{"link":"Experimental.UIElements.FloatField.UxmlFactory","title":"UxmlFactory","children":null},
+						{"link":"Experimental.UIElements.FloatField.UxmlTraits","title":"UxmlTraits","children":null}
+					]
+				}
+					]
+				},
+				{"link":"Experimental.UIElements.GradientField","title":"GradientField","children":
+					[
+									{"link":"null","title":"Classes","children":
+					[
+											{"link":"Experimental.UIElements.GradientField.UxmlFactory","title":"UxmlFactory","children":null},
+						{"link":"Experimental.UIElements.GradientField.UxmlTraits","title":"UxmlTraits","children":null}
+					]
+				}
+					]
+				},
+				{"link":"Experimental.UIElements.InspectorElement","title":"InspectorElement","children":
+					[
+									{"link":"null","title":"Classes","children":
+					[
+											{"link":"Experimental.UIElements.InspectorElement.UxmlFactory","title":"UxmlFactory","children":null}
+					]
+				},
+				{"link":"null","title":"Enumerations","children":
+					[
+											{"link":"Experimental.UIElements.InspectorElement.Mode","title":"Mode","children":null}
+					]
+				}
+					]
+				},
+				{"link":"Experimental.UIElements.IntegerField","title":"IntegerField","children":
+					[
+									{"link":"null","title":"Classes","children":
+					[
+											{"link":"Experimental.UIElements.IntegerField.UxmlFactory","title":"UxmlFactory","children":null},
+						{"link":"Experimental.UIElements.IntegerField.UxmlTraits","title":"UxmlTraits","children":null}
+					]
+				}
+					]
+				},
+				{"link":"Experimental.UIElements.LayerField","title":"LayerField","children":
+					[
+									{"link":"null","title":"Classes","children":
+					[
+											{"link":"Experimental.UIElements.LayerField.UxmlFactory","title":"UxmlFactory","children":null},
+						{"link":"Experimental.UIElements.LayerField.UxmlTraits","title":"UxmlTraits","children":null}
+					]
+				}
+					]
+				},
+				{"link":"Experimental.UIElements.LayerMaskField","title":"LayerMaskField","children":
+					[
+									{"link":"null","title":"Classes","children":
+					[
+											{"link":"Experimental.UIElements.LayerMaskField.UxmlFactory","title":"UxmlFactory","children":null},
+						{"link":"Experimental.UIElements.LayerMaskField.UxmlTraits","title":"UxmlTraits","children":null}
+					]
+				}
+					]
+				},
+				{"link":"Experimental.UIElements.LongField","title":"LongField","children":
+					[
+									{"link":"null","title":"Classes","children":
+					[
+											{"link":"Experimental.UIElements.LongField.UxmlFactory","title":"UxmlFactory","children":null},
+						{"link":"Experimental.UIElements.LongField.UxmlTraits","title":"UxmlTraits","children":null}
+					]
+				}
+					]
+				},
+				{"link":"Experimental.UIElements.MaskField","title":"MaskField","children":
+					[
+									{"link":"null","title":"Classes","children":
+					[
+											{"link":"Experimental.UIElements.MaskField.UxmlFactory","title":"UxmlFactory","children":null},
+						{"link":"Experimental.UIElements.MaskField.UxmlTraits","title":"UxmlTraits","children":null}
+					]
+				}
+					]
+				},
+				{"link":"Experimental.UIElements.ObjectField","title":"ObjectField","children":
+					[
+									{"link":"null","title":"Classes","children":
+					[
+											{"link":"Experimental.UIElements.ObjectField.UxmlFactory","title":"UxmlFactory","children":null},
+						{"link":"Experimental.UIElements.ObjectField.UxmlTraits","title":"UxmlTraits","children":null}
+					]
+				}
+					]
+				},
 				{"link":"Experimental.UIElements.PopupField_1","title":"PopupField<T0>","children":null},
-				{"link":"Experimental.UIElements.RectField","title":"RectField","children":null},
-				{"link":"Experimental.UIElements.TextValueField_1","title":"TextValueField<T0>","children":null},
+				{"link":"Experimental.UIElements.PropertyField","title":"PropertyField","children":
+					[
+									{"link":"null","title":"Classes","children":
+					[
+											{"link":"Experimental.UIElements.PropertyField.UxmlFactory","title":"UxmlFactory","children":null},
+						{"link":"Experimental.UIElements.PropertyField.UxmlTraits","title":"UxmlTraits","children":null}
+					]
+				}
+					]
+				},
+				{"link":"Experimental.UIElements.RectField","title":"RectField","children":
+					[
+									{"link":"null","title":"Classes","children":
+					[
+											{"link":"Experimental.UIElements.RectField.UxmlFactory","title":"UxmlFactory","children":null},
+						{"link":"Experimental.UIElements.RectField.UxmlTraits","title":"UxmlTraits","children":null}
+					]
+				}
+					]
+				},
+				{"link":"Experimental.UIElements.RectIntField","title":"RectIntField","children":
+					[
+									{"link":"null","title":"Classes","children":
+					[
+											{"link":"Experimental.UIElements.RectIntField.UxmlFactory","title":"UxmlFactory","children":null},
+						{"link":"Experimental.UIElements.RectIntField.UxmlTraits","title":"UxmlTraits","children":null}
+					]
+				}
+					]
+				},
+				{"link":"Experimental.UIElements.TagField","title":"TagField","children":
+					[
+									{"link":"null","title":"Classes","children":
+					[
+											{"link":"Experimental.UIElements.TagField.UxmlFactory","title":"UxmlFactory","children":null},
+						{"link":"Experimental.UIElements.TagField.UxmlTraits","title":"UxmlTraits","children":null}
+					]
+				}
+					]
+				},
+				{"link":"Experimental.UIElements.TextValueField_1","title":"TextValueField<T0>","children":
+					[
+									{"link":"null","title":"Classes","children":
+					[
+											{"link":"Experimental.UIElements.TextValueField_1.UxmlTraits","title":"UxmlTraits","children":null}
+					]
+				}
+					]
+				},
+				{"link":"Experimental.UIElements.Toolbar","title":"Toolbar","children":
+					[
+									{"link":"null","title":"Classes","children":
+					[
+											{"link":"Experimental.UIElements.Toolbar.UxmlFactory","title":"UxmlFactory","children":null}
+					]
+				}
+					]
+				},
+				{"link":"Experimental.UIElements.ToolbarButton","title":"ToolbarButton","children":
+					[
+									{"link":"null","title":"Classes","children":
+					[
+											{"link":"Experimental.UIElements.ToolbarButton.UxmlFactory","title":"UxmlFactory","children":null},
+						{"link":"Experimental.UIElements.ToolbarButton.UxmlTraits","title":"UxmlTraits","children":null}
+					]
+				}
+					]
+				},
+				{"link":"Experimental.UIElements.ToolbarFlexSpacer","title":"ToolbarFlexSpacer","children":
+					[
+									{"link":"null","title":"Classes","children":
+					[
+											{"link":"Experimental.UIElements.ToolbarFlexSpacer.UxmlFactory","title":"UxmlFactory","children":null}
+					]
+				}
+					]
+				},
+				{"link":"Experimental.UIElements.ToolbarMenu","title":"ToolbarMenu","children":
+					[
+									{"link":"null","title":"Classes","children":
+					[
+											{"link":"Experimental.UIElements.ToolbarMenu.UxmlFactory","title":"UxmlFactory","children":null},
+						{"link":"Experimental.UIElements.ToolbarMenu.UxmlTraits","title":"UxmlTraits","children":null}
+					]
+				}
+					]
+				},
+				{"link":"Experimental.UIElements.ToolbarMenuBase","title":"ToolbarMenuBase","children":null},
+				{"link":"Experimental.UIElements.ToolbarMenuElementExtensions","title":"ToolbarMenuElementExtensions","children":null},
+				{"link":"Experimental.UIElements.ToolbarPopup","title":"ToolbarPopup","children":
+					[
+									{"link":"null","title":"Classes","children":
+					[
+											{"link":"Experimental.UIElements.ToolbarPopup.UxmlFactory","title":"UxmlFactory","children":null},
+						{"link":"Experimental.UIElements.ToolbarPopup.UxmlTraits","title":"UxmlTraits","children":null}
+					]
+				}
+					]
+				},
+				{"link":"Experimental.UIElements.ToolbarPopupSearchField","title":"ToolbarPopupSearchField","children":
+					[
+									{"link":"null","title":"Classes","children":
+					[
+											{"link":"Experimental.UIElements.ToolbarPopupSearchField.UxmlFactory","title":"UxmlFactory","children":null}
+					]
+				}
+					]
+				},
+				{"link":"Experimental.UIElements.ToolbarSearchField","title":"ToolbarSearchField","children":
+					[
+									{"link":"null","title":"Classes","children":
+					[
+											{"link":"Experimental.UIElements.ToolbarSearchField.UxmlFactory","title":"UxmlFactory","children":null}
+					]
+				}
+					]
+				},
+				{"link":"Experimental.UIElements.ToolbarSpacer","title":"ToolbarSpacer","children":
+					[
+									{"link":"null","title":"Classes","children":
+					[
+											{"link":"Experimental.UIElements.ToolbarSpacer.UxmlFactory","title":"UxmlFactory","children":null}
+					]
+				}
+					]
+				},
+				{"link":"Experimental.UIElements.ToolbarToggle","title":"ToolbarToggle","children":
+					[
+									{"link":"null","title":"Classes","children":
+					[
+											{"link":"Experimental.UIElements.ToolbarToggle.UxmlFactory","title":"UxmlFactory","children":null},
+						{"link":"Experimental.UIElements.ToolbarToggle.UxmlTraits","title":"UxmlTraits","children":null}
+					]
+				}
+					]
+				},
 				{"link":"Experimental.UIElements.UIElementsEditorUtility","title":"UIElementsEditorUtility","children":null},
-				{"link":"Experimental.UIElements.Vector2Field","title":"Vector2Field","children":null},
-				{"link":"Experimental.UIElements.Vector3Field","title":"Vector3Field","children":null},
-				{"link":"Experimental.UIElements.Vector4Field","title":"Vector4Field","children":null}
+				{"link":"Experimental.UIElements.Vector2Field","title":"Vector2Field","children":
+					[
+									{"link":"null","title":"Classes","children":
+					[
+											{"link":"Experimental.UIElements.Vector2Field.UxmlFactory","title":"UxmlFactory","children":null},
+						{"link":"Experimental.UIElements.Vector2Field.UxmlTraits","title":"UxmlTraits","children":null}
+					]
+				}
+					]
+				},
+				{"link":"Experimental.UIElements.Vector2IntField","title":"Vector2IntField","children":
+					[
+									{"link":"null","title":"Classes","children":
+					[
+											{"link":"Experimental.UIElements.Vector2IntField.UxmlFactory","title":"UxmlFactory","children":null},
+						{"link":"Experimental.UIElements.Vector2IntField.UxmlTraits","title":"UxmlTraits","children":null}
+					]
+				}
+					]
+				},
+				{"link":"Experimental.UIElements.Vector3Field","title":"Vector3Field","children":
+					[
+									{"link":"null","title":"Classes","children":
+					[
+											{"link":"Experimental.UIElements.Vector3Field.UxmlFactory","title":"UxmlFactory","children":null},
+						{"link":"Experimental.UIElements.Vector3Field.UxmlTraits","title":"UxmlTraits","children":null}
+					]
+				}
+					]
+				},
+				{"link":"Experimental.UIElements.Vector3IntField","title":"Vector3IntField","children":
+					[
+									{"link":"null","title":"Classes","children":
+					[
+											{"link":"Experimental.UIElements.Vector3IntField.UxmlFactory","title":"UxmlFactory","children":null},
+						{"link":"Experimental.UIElements.Vector3IntField.UxmlTraits","title":"UxmlTraits","children":null}
+					]
+				}
+					]
+				},
+				{"link":"Experimental.UIElements.Vector4Field","title":"Vector4Field","children":
+					[
+									{"link":"null","title":"Classes","children":
+					[
+											{"link":"Experimental.UIElements.Vector4Field.UxmlFactory","title":"UxmlFactory","children":null},
+						{"link":"Experimental.UIElements.Vector4Field.UxmlTraits","title":"UxmlTraits","children":null}
+					]
+				}
+					]
+				}
 			]
 		},
 		{"link":"null","title":"Interfaces","children":
 			[
-							{"link":"Experimental.UIElements.IValueField_1","title":"IValueField<T0>","children":null}
+							{"link":"Experimental.UIElements.IToolbarMenuElement","title":"IToolbarMenuElement","children":null},
+				{"link":"Experimental.UIElements.IValueField_1","title":"IValueField<T0>","children":null}
 			]
 		},
 		{"link":"null","title":"Enumerations","children":
 			[
 							{"link":"Experimental.UIElements.DeltaSpeed","title":"DeltaSpeed","children":null}
+			]
+		},
+		{"link":"null","title":"Attributes","children":
+			[
+							{"link":"Experimental.UIElements.UxmlNamespacePrefixAttribute","title":"UxmlNamespacePrefixAttribute","children":null}
 			]
 		}
 			]
@@ -3228,7 +4214,9 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 	{"link":"null","title":"Classes","children":
 		[
 					{"link":"Experimental.Lightmapping","title":"Lightmapping","children":null},
-			{"link":"Experimental.RenderSettings","title":"RenderSettings","children":null}
+			{"link":"Experimental.RenderSettings","title":"RenderSettings","children":null},
+			{"link":"Experimental.UIElementsEditor","title":"UIElementsEditor","children":null},
+			{"link":"Experimental.UIElementsPropertyDrawer","title":"UIElementsPropertyDrawer","children":null}
 		]
 	}
 		]
@@ -3378,8 +4366,24 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 			{"link":"MemoryProfiler.PackedGCHandle","title":"PackedGCHandle","children":null},
 			{"link":"MemoryProfiler.PackedMemorySnapshot","title":"PackedMemorySnapshot","children":null},
 			{"link":"MemoryProfiler.PackedNativeType","title":"PackedNativeType","children":null},
-			{"link":"MemoryProfiler.PackedNativeUnityEngineObject","title":"PackedNativeUnityEngineObject","children":null},
-			{"link":"MemoryProfiler.TypeDescription","title":"TypeDescription","children":null},
+			{"link":"MemoryProfiler.PackedNativeUnityEngineObject","title":"PackedNativeUnityEngineObject","children":
+				[
+							{"link":"null","title":"Enumerations","children":
+				[
+									{"link":"MemoryProfiler.PackedNativeUnityEngineObject.ObjectFlags","title":"ObjectFlags","children":null}
+				]
+			}
+				]
+			},
+			{"link":"MemoryProfiler.TypeDescription","title":"TypeDescription","children":
+				[
+							{"link":"null","title":"Enumerations","children":
+				[
+									{"link":"MemoryProfiler.TypeDescription.TypeFlags","title":"TypeFlags","children":null}
+				]
+			}
+				]
+			},
 			{"link":"MemoryProfiler.VirtualMachineInformation","title":"VirtualMachineInformation","children":null}
 		]
 	}
@@ -3418,8 +4422,10 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 		},
 	{"link":"null","title":"Classes","children":
 		[
-					{"link":"PackageManager.BuildUtilities","title":"BuildUtilities","children":null},
+					{"link":"PackageManager.AuthorInfo","title":"AuthorInfo","children":null},
+			{"link":"PackageManager.BuildUtilities","title":"BuildUtilities","children":null},
 			{"link":"PackageManager.Client","title":"Client","children":null},
+			{"link":"PackageManager.DependencyInfo","title":"DependencyInfo","children":null},
 			{"link":"PackageManager.Error","title":"Error","children":null},
 			{"link":"PackageManager.PackageCollection","title":"PackageCollection","children":null},
 			{"link":"PackageManager.PackageInfo","title":"PackageInfo","children":null},
@@ -3478,12 +4484,17 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 					{"link":"Rendering.AlbedoSwatchInfo","title":"AlbedoSwatchInfo","children":null},
 			{"link":"Rendering.EditorGraphicsSettings","title":"EditorGraphicsSettings","children":null},
 			{"link":"Rendering.PlatformShaderSettings","title":"PlatformShaderSettings","children":null},
+			{"link":"Rendering.ShaderCompilerData","title":"ShaderCompilerData","children":null},
+			{"link":"Rendering.ShaderSnippetData","title":"ShaderSnippetData","children":null},
 			{"link":"Rendering.TierSettings","title":"TierSettings","children":null}
 		]
 	},
 	{"link":"null","title":"Enumerations","children":
 		[
-					{"link":"Rendering.ShaderQuality","title":"ShaderQuality","children":null}
+					{"link":"Rendering.ShaderCompilerPlatform","title":"ShaderCompilerPlatform","children":null},
+			{"link":"Rendering.ShaderQuality","title":"ShaderQuality","children":null},
+			{"link":"Rendering.ShaderRequirements","title":"ShaderRequirements","children":null},
+			{"link":"Rendering.ShaderType","title":"ShaderType","children":null}
 		]
 	}
 		]
@@ -3492,8 +4503,15 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 		[
 			{"link":"null","title":"Classes","children":
 		[
-					{"link":"SceneManagement.EditorSceneManager","title":"EditorSceneManager","children":null},
-			{"link":"SceneManagement.SceneSetup","title":"SceneSetup","children":null}
+					{"link":"SceneManagement.AddedComponent","title":"AddedComponent","children":null},
+			{"link":"SceneManagement.AddedGameObject","title":"AddedGameObject","children":null},
+			{"link":"SceneManagement.EditorSceneManager","title":"EditorSceneManager","children":null},
+			{"link":"SceneManagement.ObjectOverride","title":"ObjectOverride","children":null},
+			{"link":"SceneManagement.PrefabOverride","title":"PrefabOverride","children":null},
+			{"link":"SceneManagement.RemovedComponent","title":"RemovedComponent","children":null},
+			{"link":"SceneManagement.SceneSetup","title":"SceneSetup","children":null},
+			{"link":"SceneManagement.StageHandle","title":"StageHandle","children":null},
+			{"link":"SceneManagement.StageUtility","title":"StageUtility","children":null}
 		]
 	},
 	{"link":"null","title":"Enumerations","children":
@@ -3544,6 +4562,23 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 			{"link":"null","title":"Classes","children":
 		[
 					{"link":"Timeline.TimelineEditor","title":"TimelineEditor","children":null}
+		]
+	},
+	{"link":"null","title":"Enumerations","children":
+		[
+					{"link":"Timeline.RefreshReason","title":"RefreshReason","children":null}
+		]
+	}
+		]
+	},
+	{"link":"null","title":"UnityEditor.U2D","children":
+		[
+			{"link":"null","title":"Classes","children":
+		[
+					{"link":"U2D.SpriteAtlasExtensions","title":"SpriteAtlasExtensions","children":null},
+			{"link":"U2D.SpriteAtlasPackingSettings","title":"SpriteAtlasPackingSettings","children":null},
+			{"link":"U2D.SpriteAtlasTextureSettings","title":"SpriteAtlasTextureSettings","children":null},
+			{"link":"U2D.SpriteAtlasUtility","title":"SpriteAtlasUtility","children":null}
 		]
 	}
 		]
@@ -3642,8 +4677,7 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 	},
 {"link":"null","title":"Classes","children":
 	[
-			{"link":"AlphabeticalSort","title":"AlphabeticalSort","children":null},
-		{"link":"AnimationClipCurveData","title":"AnimationClipCurveData","children":null},
+			{"link":"AnimationClipCurveData","title":"AnimationClipCurveData","children":null},
 		{"link":"AnimationMode","title":"AnimationMode","children":null},
 		{"link":"AnimationUtility","title":"AnimationUtility","children":
 			[
@@ -3674,7 +4708,6 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 		{"link":"AudioCurveRendering","title":"AudioCurveRendering","children":null},
 		{"link":"AudioImporter","title":"AudioImporter","children":null},
 		{"link":"AudioImporterSampleSettings","title":"AudioImporterSampleSettings","children":null},
-		{"link":"BaseHierarchySort","title":"BaseHierarchySort","children":null},
 		{"link":"BuildPipeline","title":"BuildPipeline","children":null},
 		{"link":"BuildPlayerOptions","title":"BuildPlayerOptions","children":null},
 		{"link":"BuildPlayerWindow","title":"BuildPlayerWindow","children":
@@ -3696,12 +4729,14 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 		}
 			]
 		},
+		{"link":"CameraEditorUtils","title":"CameraEditorUtils","children":null},
 		{"link":"ClipAnimationInfoCurve","title":"ClipAnimationInfoCurve","children":null},
 		{"link":"CloudProjectSettings","title":"CloudProjectSettings","children":null},
 		{"link":"ColorPickerHDRConfig","title":"ColorPickerHDRConfig","children":null},
 		{"link":"DDSImporter","title":"DDSImporter","children":null},
 		{"link":"DecoratorDrawer","title":"DecoratorDrawer","children":null},
 		{"link":"DefaultAsset","title":"DefaultAsset","children":null},
+		{"link":"DefaultLightingExplorerExtension","title":"DefaultLightingExplorerExtension","children":null},
 		{"link":"DragAndDrop","title":"DragAndDrop","children":null},
 		{"link":"Editor","title":"Editor","children":null},
 		{"link":"EditorAnalytics","title":"EditorAnalytics","children":null},
@@ -3801,6 +4836,8 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 			]
 		},
 		{"link":"LightingDataAsset","title":"LightingDataAsset","children":null},
+		{"link":"LightingExplorerTab","title":"LightingExplorerTab","children":null},
+		{"link":"LightingExplorerTableColumn","title":"LightingExplorerTableColumn","children":null},
 		{"link":"LightmapEditorSettings","title":"LightmapEditorSettings","children":
 			[
 					{"link":"null","title":"Enumerations","children":
@@ -3866,18 +4903,6 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 							{"link":"PlayerSettings.Android","title":"Android","children":null},
 				{"link":"PlayerSettings.Facebook","title":"Facebook","children":null},
 				{"link":"PlayerSettings.iOS","title":"iOS","children":null},
-				{"link":"PlayerSettings.N3DS","title":"N3DS","children":
-					[
-									{"link":"null","title":"Enumerations","children":
-					[
-											{"link":"PlayerSettings.N3DS.LogoStyle","title":"LogoStyle","children":null},
-						{"link":"PlayerSettings.N3DS.MediaSize","title":"MediaSize","children":null},
-						{"link":"PlayerSettings.N3DS.Region","title":"Region","children":null},
-						{"link":"PlayerSettings.N3DS.TargetPlatform","title":"TargetPlatform","children":null}
-					]
-				}
-					]
-				},
 				{"link":"PlayerSettings.PS4","title":"PS4","children":
 					[
 									{"link":"null","title":"Enumerations","children":
@@ -3885,20 +4910,6 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 											{"link":"PlayerSettings.PS4.PS4AppCategory","title":"PS4AppCategory","children":null},
 						{"link":"PlayerSettings.PS4.PS4EnterButtonAssignment","title":"PS4EnterButtonAssignment","children":null},
 						{"link":"PlayerSettings.PS4.PS4RemotePlayKeyAssignment","title":"PS4RemotePlayKeyAssignment","children":null}
-					]
-				}
-					]
-				},
-				{"link":"PlayerSettings.PSVita","title":"PSVita","children":
-					[
-									{"link":"null","title":"Enumerations","children":
-					[
-											{"link":"PlayerSettings.PSVita.PSVitaAppCategory","title":"PSVitaAppCategory","children":null},
-						{"link":"PlayerSettings.PSVita.PSVitaDRMType","title":"PSVitaDRMType","children":null},
-						{"link":"PlayerSettings.PSVita.PSVitaEnterButtonAssignment","title":"PSVitaEnterButtonAssignment","children":null},
-						{"link":"PlayerSettings.PSVita.PSVitaMemoryExpansionMode","title":"PSVitaMemoryExpansionMode","children":null},
-						{"link":"PlayerSettings.PSVita.PSVitaPowerMode","title":"PSVitaPowerMode","children":null},
-						{"link":"PlayerSettings.PSVita.PSVitaTvBootMode","title":"PSVitaTvBootMode","children":null}
 					]
 				}
 					]
@@ -3915,7 +4926,6 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 					]
 				},
 				{"link":"PlayerSettings.SplashScreenLogo","title":"SplashScreenLogo","children":null},
-				{"link":"PlayerSettings.Tizen","title":"Tizen","children":null},
 				{"link":"PlayerSettings.tvOS","title":"tvOS","children":null},
 				{"link":"PlayerSettings.VRCardboard","title":"VRCardboard","children":null},
 				{"link":"PlayerSettings.VRDaydream","title":"VRDaydream","children":null},
@@ -3936,8 +4946,7 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 		},
 		{"link":"null","title":"Enumerations","children":
 			[
-							{"link":"PlayerSettings.TizenCapability","title":"TizenCapability","children":null},
-				{"link":"PlayerSettings.WSACompilationOverrides","title":"WSACompilationOverrides","children":null},
+							{"link":"PlayerSettings.WSACompilationOverrides","title":"WSACompilationOverrides","children":null},
 				{"link":"PlayerSettings.WSAImageScale","title":"WSAImageScale","children":null},
 				{"link":"PlayerSettings.WSAImageType","title":"WSAImageType","children":null},
 				{"link":"PlayerSettings.WSAInputSource","title":"WSAInputSource","children":null}
@@ -3952,6 +4961,15 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 		{"link":"PropertyDrawer","title":"PropertyDrawer","children":null},
 		{"link":"PropertyModification","title":"PropertyModification","children":null},
 		{"link":"SceneAsset","title":"SceneAsset","children":null},
+		{"link":"SceneView","title":"SceneView","children":
+			[
+					{"link":"null","title":"Classes","children":
+			[
+							{"link":"SceneView.CameraMode","title":"CameraMode","children":null}
+			]
+		}
+			]
+		},
 		{"link":"ScriptableWizard","title":"ScriptableWizard","children":null},
 		{"link":"Selection","title":"Selection","children":null},
 		{"link":"SerializedObject","title":"SerializedObject","children":null},
@@ -3982,17 +5000,25 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 		{"link":"SketchUpImportCamera","title":"SketchUpImportCamera","children":null},
 		{"link":"SketchUpImporter","title":"SketchUpImporter","children":null},
 		{"link":"SketchUpImportScene","title":"SketchUpImportScene","children":null},
-		{"link":"SpeedTreeImporter","title":"SpeedTreeImporter","children":null},
+		{"link":"SpeedTreeImporter","title":"SpeedTreeImporter","children":
+			[
+					{"link":"null","title":"Enumerations","children":
+			[
+							{"link":"SpeedTreeImporter.MaterialLocation","title":"MaterialLocation","children":null}
+			]
+		}
+			]
+		},
 		{"link":"SpriteMetaData","title":"SpriteMetaData","children":null},
 		{"link":"SpriteRect","title":"SpriteRect","children":null},
 		{"link":"StaticOcclusionCulling","title":"StaticOcclusionCulling","children":null},
 		{"link":"StaticOcclusionCullingVisualization","title":"StaticOcclusionCullingVisualization","children":null},
 		{"link":"TakeInfo","title":"TakeInfo","children":null},
+		{"link":"TerrainLayerUtility","title":"TerrainLayerUtility","children":null},
 		{"link":"TextureImporter","title":"TextureImporter","children":null},
 		{"link":"TextureImporterPlatformSettings","title":"TextureImporterPlatformSettings","children":null},
 		{"link":"TextureImporterSettings","title":"TextureImporterSettings","children":null},
 		{"link":"Tools","title":"Tools","children":null},
-		{"link":"TransformSort","title":"TransformSort","children":null},
 		{"link":"TransformUtils","title":"TransformUtils","children":null},
 		{"link":"TrueTypeFontImporter","title":"TrueTypeFontImporter","children":null},
 		{"link":"Undo","title":"Undo","children":null},
@@ -4005,7 +5031,9 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 },
 {"link":"null","title":"Interfaces","children":
 	[
-			{"link":"IHasCustomMenu","title":"IHasCustomMenu","children":null}
+			{"link":"IHasCustomMenu","title":"IHasCustomMenu","children":null},
+		{"link":"ILightingExplorerExtension","title":"ILightingExplorerExtension","children":null},
+		{"link":"ITerrainLayerCustomUI","title":"ITerrainLayerCustomUI","children":null}
 	]
 },
 {"link":"null","title":"Enumerations","children":
@@ -4051,6 +5079,7 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 		{"link":"IconKind","title":"IconKind","children":null},
 		{"link":"Il2CppCompilerConfiguration","title":"Il2CppCompilerConfiguration","children":null},
 		{"link":"ImportAssetOptions","title":"ImportAssetOptions","children":null},
+		{"link":"InteractionMode","title":"InteractionMode","children":null},
 		{"link":"iOSAppInBackgroundBehavior","title":"iOSAppInBackgroundBehavior","children":null},
 		{"link":"iOSBackgroundMode","title":"iOSBackgroundMode","children":null},
 		{"link":"iOSBuildType","title":"iOSBuildType","children":null},
@@ -4063,6 +5092,7 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 		{"link":"iOSTargetOSVersion","title":"iOSTargetOSVersion","children":null},
 		{"link":"LightmapBakeQuality","title":"LightmapBakeQuality","children":null},
 		{"link":"MacFullscreenMode","title":"MacFullscreenMode","children":null},
+		{"link":"ManagedStrippingLevel","title":"ManagedStrippingLevel","children":null},
 		{"link":"MessageType","title":"MessageType","children":null},
 		{"link":"MobileTextureSubtarget","title":"MobileTextureSubtarget","children":null},
 		{"link":"ModelImporterAnimationCompression","title":"ModelImporterAnimationCompression","children":null},
@@ -4077,6 +5107,7 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 		{"link":"ModelImporterMeshCompression","title":"ModelImporterMeshCompression","children":null},
 		{"link":"ModelImporterNormalCalculationMode","title":"ModelImporterNormalCalculationMode","children":null},
 		{"link":"ModelImporterNormals","title":"ModelImporterNormals","children":null},
+		{"link":"ModelImporterNormalSmoothingSource","title":"ModelImporterNormalSmoothingSource","children":null},
 		{"link":"ModelImporterTangents","title":"ModelImporterTangents","children":null},
 		{"link":"ModelImporterTangentSpaceMode","title":"ModelImporterTangentSpaceMode","children":null},
 		{"link":"MouseCursor","title":"MouseCursor","children":null},
@@ -4084,10 +5115,12 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 		{"link":"PivotMode","title":"PivotMode","children":null},
 		{"link":"PivotRotation","title":"PivotRotation","children":null},
 		{"link":"PlayModeStateChange","title":"PlayModeStateChange","children":null},
+		{"link":"PrefabAssetType","title":"PrefabAssetType","children":null},
+		{"link":"PrefabInstanceStatus","title":"PrefabInstanceStatus","children":null},
 		{"link":"PrefabType","title":"PrefabType","children":null},
+		{"link":"PrefabUnpackMode","title":"PrefabUnpackMode","children":null},
 		{"link":"ProvisioningProfileType","title":"ProvisioningProfileType","children":null},
 		{"link":"PS4BuildSubtarget","title":"PS4BuildSubtarget","children":null},
-		{"link":"PSP2BuildSubtarget","title":"PSP2BuildSubtarget","children":null},
 		{"link":"RemoveAssetOptions","title":"RemoveAssetOptions","children":null},
 		{"link":"ReplacePrefabOptions","title":"ReplacePrefabOptions","children":null},
 		{"link":"ResolutionDialogSetting","title":"ResolutionDialogSetting","children":null},
@@ -4105,6 +5138,7 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 		{"link":"StatusQueryOptions","title":"StatusQueryOptions","children":null},
 		{"link":"StereoRenderingPath","title":"StereoRenderingPath","children":null},
 		{"link":"StrippingLevel","title":"StrippingLevel","children":null},
+		{"link":"TextureCompressionQuality","title":"TextureCompressionQuality","children":null},
 		{"link":"TextureImporterAlphaSource","title":"TextureImporterAlphaSource","children":null},
 		{"link":"TextureImporterCompression","title":"TextureImporterCompression","children":null},
 		{"link":"TextureImporterCubemapConvolution","title":"TextureImporterCubemapConvolution","children":null},
@@ -4118,8 +5152,6 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 		{"link":"TextureImporterSingleChannelComponent","title":"TextureImporterSingleChannelComponent","children":null},
 		{"link":"TextureImporterType","title":"TextureImporterType","children":null},
 		{"link":"TextureResizeAlgorithm","title":"TextureResizeAlgorithm","children":null},
-		{"link":"TizenOSVersion","title":"TizenOSVersion","children":null},
-		{"link":"TizenShowActivityIndicatorOnLoading","title":"TizenShowActivityIndicatorOnLoading","children":null},
 		{"link":"Tool","title":"Tool","children":null},
 		{"link":"tvOSSdkVersion","title":"tvOSSdkVersion","children":null},
 		{"link":"tvOSTargetOSVersion","title":"tvOSTargetOSVersion","children":null},
@@ -4151,6 +5183,7 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 		{"link":"DrawGizmo","title":"DrawGizmo","children":null},
 		{"link":"InitializeOnLoadAttribute","title":"InitializeOnLoadAttribute","children":null},
 		{"link":"InitializeOnLoadMethodAttribute","title":"InitializeOnLoadMethodAttribute","children":null},
+		{"link":"LightingExplorerExtensionAttribute","title":"LightingExplorerExtensionAttribute","children":null},
 		{"link":"MenuItem","title":"MenuItem","children":null},
 		{"link":"PreferenceItem","title":"PreferenceItem","children":null},
 		{"link":"ShaderIncludePathAttribute","title":"ShaderIncludePathAttribute","children":null}
@@ -4289,6 +5322,77 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 		]
 	}
 		]
+	},
+	{"link":"null","title":"Unity.Profiling","children":
+		[
+			{"link":"null","title":"Classes","children":
+		[
+					{"link":"Unity.Profiling.ProfilerMarker","title":"ProfilerMarker","children":
+				[
+							{"link":"null","title":"Classes","children":
+				[
+									{"link":"Unity.Profiling.ProfilerMarker.AutoScope","title":"AutoScope","children":null}
+				]
+			}
+				]
+			}
+		]
+	}
+		]
+	}
+	]
+},{"link":"null","title":"Unity.IO.LowLevel","children":
+	[
+		{"link":"null","title":"Unity.IO.LowLevel.Unsafe","children":
+		[
+			{"link":"null","title":"Classes","children":
+		[
+					{"link":"Unity.IO.LowLevel.Unsafe.AsyncReadManager","title":"AsyncReadManager","children":null},
+			{"link":"Unity.IO.LowLevel.Unsafe.ReadCommand","title":"ReadCommand","children":null},
+			{"link":"Unity.IO.LowLevel.Unsafe.ReadHandle","title":"ReadHandle","children":null}
+		]
+	},
+	{"link":"null","title":"Enumerations","children":
+		[
+					{"link":"Unity.IO.LowLevel.Unsafe.ReadStatus","title":"ReadStatus","children":null}
+		]
+	}
+		]
+	}
+	]
+},{"link":"null","title":"UnityEditor.Profiling.Memory","children":
+	[
+		{"link":"null","title":"UnityEditor.Profiling.Memory.Experimental","children":
+		[
+			{"link":"null","title":"Classes","children":
+		[
+					{"link":"Profiling.Memory.Experimental.ArrayEntries_1","title":"ArrayEntries<T0>","children":null},
+			{"link":"Profiling.Memory.Experimental.ConnectionEntries","title":"ConnectionEntries","children":null},
+			{"link":"Profiling.Memory.Experimental.FieldDescriptionEntries","title":"FieldDescriptionEntries","children":null},
+			{"link":"Profiling.Memory.Experimental.GCHandleEntries","title":"GCHandleEntries","children":null},
+			{"link":"Profiling.Memory.Experimental.ManagedMemorySectionEntries","title":"ManagedMemorySectionEntries","children":null},
+			{"link":"Profiling.Memory.Experimental.NativeAllocationEntries","title":"NativeAllocationEntries","children":null},
+			{"link":"Profiling.Memory.Experimental.NativeAllocationSiteEntries","title":"NativeAllocationSiteEntries","children":null},
+			{"link":"Profiling.Memory.Experimental.NativeCallstackSymbolEntries","title":"NativeCallstackSymbolEntries","children":null},
+			{"link":"Profiling.Memory.Experimental.NativeMemoryLabelEntries","title":"NativeMemoryLabelEntries","children":null},
+			{"link":"Profiling.Memory.Experimental.NativeMemoryRegionEntries","title":"NativeMemoryRegionEntries","children":null},
+			{"link":"Profiling.Memory.Experimental.NativeObjectEntries","title":"NativeObjectEntries","children":null},
+			{"link":"Profiling.Memory.Experimental.NativeRootReferenceEntries","title":"NativeRootReferenceEntries","children":null},
+			{"link":"Profiling.Memory.Experimental.NativeTypeEntries","title":"NativeTypeEntries","children":null},
+			{"link":"Profiling.Memory.Experimental.ObjectFlagsExtensions","title":"ObjectFlagsExtensions","children":null},
+			{"link":"Profiling.Memory.Experimental.PackedMemorySnapshot","title":"PackedMemorySnapshot","children":null},
+			{"link":"Profiling.Memory.Experimental.TypeDescriptionEntries","title":"TypeDescriptionEntries","children":null},
+			{"link":"Profiling.Memory.Experimental.TypeFlagsExtensions","title":"TypeFlagsExtensions","children":null},
+			{"link":"Profiling.Memory.Experimental.VirtualMachineInformation","title":"VirtualMachineInformation","children":null}
+		]
+	},
+	{"link":"null","title":"Enumerations","children":
+		[
+					{"link":"Profiling.Memory.Experimental.ObjectFlags","title":"ObjectFlags","children":null},
+			{"link":"Profiling.Memory.Experimental.TypeFlags","title":"TypeFlags","children":null}
+		]
+	}
+		]
 	}
 	]
 },{"link":"null","title":"Other","children":
@@ -4296,11 +5400,18 @@ var toc = {"link":"toc","title":"toc","children":[{"link":"null","title":"UnityE
 	{"link":"null","title":"Classes","children":
 	[
 			{"link":"Array","title":"Array","children":null},
+		{"link":"Experimental.PlayerLoop.PostLateUpdate.EndGraphicsJobsAfterScriptLateUpdate","title":"Experimental.PlayerLoop.PostLateUpdate","children":null},
+		{"link":"Experimental.PlayerLoop.PreLateUpdate.EndGraphicsJobsAfterScriptUpdate","title":"Experimental.PlayerLoop.PreLateUpdate","children":null},
 		{"link":"Hashtable","title":"Hashtable","children":null},
-		{"link":"NonSerializable","title":"NonSerializable","children":null},
+		{"link":"NonSerialized","title":"NonSerialized","children":null},
 		{"link":"Path","title":"Path","children":null},
 		{"link":"Serializable","title":"Serializable","children":null},
 		{"link":"String","title":"String","children":null}
+	]
+},
+{"link":"null","title":"Enumerations","children":
+	[
+			{"link":"Experimental.UIElements.DropdownMenu.MenuAction.StatusFlags","title":"Experimental.UIElements.DropdownMenu.MenuAction","children":null}
 	]
 }
 	]

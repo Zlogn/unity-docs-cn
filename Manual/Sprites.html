@@ -12,7 +12,7 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="精灵 - Unity Manual">
 <title>精灵 - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/TextureTypeSprite.png">
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.4/uploads/Main/TextureTypeSprite.png">
 <meta name="description" content="__精灵__是 2D 图形对象。如果习惯于在 3D 空间中工作，__精灵__本质上只是标准纹理，但可通过一些特殊技巧在开发过程中组合和管理精灵纹理以提高效率和方便性。">
 <meta property="og:description" content="__精灵__是 2D 图形对象。如果习惯于在 3D 空间中工作，__精灵__本质上只是标准纹理，但可通过一些特殊技巧在开发过程中组合和管理精灵纹理以提高效率和方便性。">
 <meta name="author" content="Unity Technologies">
@@ -31,7 +31,7 @@
       var lang = 'zh_CN';
       var page = 'Sprites';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -63,7 +63,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -92,10 +92,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/Sprites.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/Sprites.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/Sprites.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/Sprites.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/Sprites.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/Sprites.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/Sprites.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/Sprites.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -107,7 +107,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -129,13 +129,13 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="Unity2D.html">2D</a></li>
 <li>精灵</li>
 </ul></div>
 <div class="mb20"><div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
-<span class="prev"><a href="Overview2D.html"></a></span><div class="tip">2D 游戏</div>
+<span class="prev"><a href="2DSorting.html"></a></span><div class="tip">2D Sorting</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
 <span class="next"><a href="class-SpriteRenderer.html"></a></span><div class="tip">精灵渲染器 (Sprite Renderer)</div>
@@ -205,7 +205,7 @@
 
 <h2>对精灵排序</h2>
 
-<p>Unity 中的渲染器按几个条件排序，例如图层顺序或与摄像机的距离。Unity 的 GraphicsSettings（菜单：__Edit__ &gt; <strong>Project Settings</strong> &gt; <strong>Graphics__）提供了一项名为 </strong>Transparency Sort Mode__ 的设置，此设置可根据精灵相对于摄像机的位置来控制精灵的排序方式。更具体地说，此设置使用精灵在轴上的位置来确定哪些精灵相对于其他精灵透明，而哪些不透明。</p>
+<p>Renderers in Unity are sorted by several criteria, such as their Layer order or their distance from the Camera. Unity’s GraphicsSettings (menu: <strong>Edit</strong> &gt; <strong>Project Settings</strong>, then select the <strong>Graphics</strong> category) provide a setting called <strong>Transparency Sort Mode</strong>, which allows you to control how Sprites are sorted depending on where they are in relation to the Camera. More specifically, it uses the Sprite’s position on an axis to determine which ones are transparent against others, and which are not. </p>
 
 <p>例如，若要沿 Y 轴对精灵进行排序，可使用此设置。这种情况在 2D 游戏中很常见，通常需要将较高的精灵排在较低的精灵之后，这样会看起来更远。</p>
 
@@ -265,7 +265,7 @@ camera.transparencySortAxis = new Vector3(0.0f, 1.0f, 0.0f);
 </ul>
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
-<span class="prev"><a href="Overview2D.html"></a></span><div class="tip">2D 游戏</div>
+<span class="prev"><a href="2DSorting.html"></a></span><div class="tip">2D Sorting</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
 <span class="next"><a href="class-SpriteRenderer.html"></a></span><div class="tip">精灵渲染器 (Sprite Renderer)</div>
@@ -274,7 +274,7 @@ camera.transparencySortAxis = new Vector3(0.0f, 1.0f, 0.0f);
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

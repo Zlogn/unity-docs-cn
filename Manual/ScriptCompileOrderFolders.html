@@ -30,7 +30,7 @@
       var lang = 'zh_CN';
       var page = 'ScriptCompileOrderFolders';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -62,7 +62,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -91,10 +91,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/ScriptCompileOrderFolders.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/ScriptCompileOrderFolders.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/ScriptCompileOrderFolders.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/ScriptCompileOrderFolders.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/ScriptCompileOrderFolders.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/ScriptCompileOrderFolders.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/ScriptCompileOrderFolders.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/ScriptCompileOrderFolders.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -106,7 +106,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -128,7 +128,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="ScriptingSection.html">脚本</a></li>
 <li><a href="ScriptingConcepts.html">脚本概述</a></li>
 <li>特殊文件夹和脚本编译顺序</li>
@@ -158,30 +158,58 @@
 <li>StreamingAssets</li>
 </ul>
 
-<p>请参阅<a href="SpecialFolders.html">特殊文件夹名称</a>了解这些文件夹的用途。</p>
+<p>See <a href="SpecialFolders.html">Special folder names</a> for more information about these folders.</p>
 
-<p>脚本编译过程有四个独立的阶段。编译脚本的阶段由其父文件夹确定。</p>
+<h2>Predefined assemblies</h2>
 
-<p>在脚本必须引用其他脚本中定义的类的情况下，这很重要。基本规则是无法引用在当前阶段<em>之后</em>的阶段编译的任何内容。在当前阶段或早期阶段编译的所有内容则是完全可用的。</p>
+<p>Unity compiles scripts in four separate phases, based on where the script file is located within the project folder structure. Unity creates a separate CSharp project file (.csproj) and a predefined assembly for each phase. (If there are no scripts eligible for a compilation phase, Unity does not create the corresponding project file or assembly.)</p>
 
-<p>当用一种语言编写的脚本必须引用另一种语言定义的类（例如，UnityScript 文件声明 C# 脚本中定义的类的变量）时，会出现另一种情况。这里的规则是被引用的类必须在早期阶段完成编译。</p>
+<p>Compilation order is significant when a script references a class compiled in a different phase (and therefore located in a different assembly). The basic rule is that anything that is compiled in a phase <em>after</em> the current one cannot be referenced. Anything that is compiled in the current phase or an earlier phase is fully available.</p>
 
 <p>编译阶段如下：</p>
 
-<ul>
-<li>
-<strong>第 1 阶段：</strong>名为 <strong>Standard Assets</strong>、<strong>Pro Standard Assets</strong> 和 <strong>Plugins</strong> 的文件夹中的运行时脚本。</li>
-<li>
-<strong>第 2 阶段：</strong>名为 <strong>Editor</strong> 的文件夹（位于名为 <strong>Standard Assets</strong>、<strong>Pro Standard Assets</strong> 和 <strong>Plugins</strong> 的顶层文件夹中的任意位置）中的 Editor 脚本。</li>
-<li>
-<strong>第 3 阶段：</strong>不在名为 <strong>Editor</strong> 的文件夹中的所有其他脚本。</li>
-<li>
-<strong>第 4 阶段：</strong>其余所有脚本（位于名为 <strong>Editor</strong> 的文件夹中的脚本）。</li>
-</ul>
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
 
-<p>体现此顺序非常重要的一个常见示例是 UnityScript 文件需要引用 C# 文件中定义的类时。要实现此引用，必须将 C# 文件放在 Plugins 文件夹中，并将 UnityScript 文件放在非特殊文件夹中。如果不这样做，则会抛出错误，指出无法找到 C# 类。</p>
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Phase</strong></th>
+	<th style="text-align:left;"><strong>Assembly name</strong></th>
+	<th style="text-align:left;"><strong>Script files</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">1</td>
+	<td style="text-align:left;">Assembly-CSharp-firstpass</td>
+	<td style="text-align:left;">Runtime scripts in folders called Standard Assets, Pro Standard Assets and Plugins.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">2</td>
+	<td style="text-align:left;">Assembly-CSharp-Editor-firstpass</td>
+	<td style="text-align:left;">Editor scripts in folders called Editor that are anywhere inside top-level folders called Standard Assets, Pro Standard Assets and Plugins.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">3</td>
+	<td style="text-align:left;">Assembly-CSharp</td>
+	<td style="text-align:left;">All other scripts that are not inside a folder called Editor.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">4</td>
+	<td style="text-align:left;">Assembly-CSharp-Editor</td>
+	<td style="text-align:left;">All remaining scripts (those that are inside a folder called Editor.</td>
+</tr>
+</tbody>
+</table>
 
 <p><strong>注意</strong>：Standard Assets 仅在 <strong>Assets</strong> 根文件夹中有效。</p>
+
+<p>You can organize the scripts in your project using your own assemblies by creating assembly definition files. Defining your own assemblies can reduce the amount of code that needs to be recompiled when you make an unrelated code change and can provide more control over dependencies to other assemblies. See <a href="ScriptCompilationAssemblyDefinitionFiles.html">Script Compilation - Assembly Definition Files</a> for more information.</p>
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
 <span class="prev"><a href="PlatformDependentCompilation.html"></a></span><div class="tip">平台相关的编译</div>
@@ -193,7 +221,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>

@@ -12,7 +12,7 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="导航系统的内部工作原理 - Unity Manual">
 <title>导航系统的内部工作原理 - Unity Manual</title>
-<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/NavMeshUnderstandingAreas.svg">
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.4/uploads/Main/NavMeshUnderstandingAreas.svg">
 <meta name="description" content="当您希望智能地移动游戏中的角色（或者 AI 行业中所称的代理）时，必须解决两个问题：如何_推断_关卡来寻找目标，然后如何_移动_到该位置。这两个问题是紧密相关的，但性质却截然不同。关卡推断问题更具全局性和静态性，因为需要考虑整个场景。移动到目标更具局部性和动态性，只考虑移动的方向以及如何防止与其他移动的代理发生碰撞。">
 <meta property="og:description" content="当您希望智能地移动游戏中的角色（或者 AI 行业中所称的代理）时，必须解决两个问题：如何_推断_关卡来寻找目标，然后如何_移动_到该位置。这两个问题是紧密相关的，但性质却截然不同。关卡推断问题更具全局性和静态性，因为需要考虑整个场景。移动到目标更具局部性和动态性，只考虑移动的方向以及如何防止与其他移动的代理发生碰撞。">
 <meta name="author" content="Unity Technologies">
@@ -31,7 +31,7 @@
       var lang = 'zh_CN';
       var page = 'nav-InnerWorkings';
       if(!page) page = 'index';
-      var version = '2018.1';
+      var version = '2018.4';
       var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
@@ -63,7 +63,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -92,10 +92,10 @@
 <div class="arrow"></div>
 </div>
 <div class="lang-list" style="display:none;"><ul>
-<li><a data-lang="en" href="/2018.1/Documentation/Manual/nav-InnerWorkings.html">English</a></li>
-<li><a data-lang="ja" href="/ja/2018.1/Manual/nav-InnerWorkings.html">日本語</a></li>
-<li><a data-lang="es" href="/es/2018.1/Manual/nav-InnerWorkings.html">Español</a></li>
-<li><a data-lang="kr" href="/kr/2018.1/Manual/nav-InnerWorkings.html">한국어</a></li>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/nav-InnerWorkings.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/nav-InnerWorkings.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/nav-InnerWorkings.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/nav-InnerWorkings.html">한국어</a></li>
 </ul></div>
 </div>
 </div></div>
@@ -107,7 +107,7 @@
 <div class="current toggle" data-target=".version-list"><div class="version-number">
 <div class="d-inline-block">
           Version:
-          <b>2018.1</b>
+          <b>2018.4</b>
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
@@ -129,7 +129,7 @@
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
 <li><a href="Navigation.html">导航和寻路</a></li>
 <li><a href="nav-Overview.html">导航概述</a></li>
 <li>导航系统的内部工作原理</li>
@@ -246,7 +246,7 @@
 </div>
 <div class="footer-wrapper">
 <div class="footer clear">
-<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="copy">Copyright © 2019 Unity Technologies. Publication 2018.4</div>
 <div class="menu">
 <a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
 </div>
