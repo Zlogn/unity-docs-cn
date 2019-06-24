@@ -12,13 +12,13 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="ShaderLab 语法 - Unity Manual">
 <title>ShaderLab 语法 - Unity Manual</title>
-<meta name="description" content="Unity 中的所有着色器文件都是用名为“ShaderLab”的声明性语言编写的。在文件中，通过嵌套括号
+<meta name="description" content="Unity 中的所有着色器文件都是用名为&amp;#8220;ShaderLab&amp;#8221;的声明性语言编写的。在文件中，通过嵌套括号
 语法声明着色器的各个描述，例如，材质检视面板中应显示的着色器属性；
-要执行哪些类型的硬件回退；要使用哪些类型的混合模式等；而且实际“着色器代码”
+要执行哪些类型的硬件回退；要使用哪些类型的混合模式等；而且实际&amp;#8220;着色器代码&amp;#8221;
 编写在同一着色器文件中的 CGPROGRAM 代码片段中（请参阅表面着色器和顶点和片元着色器）。">
-<meta property="og:description" content="Unity 中的所有着色器文件都是用名为“ShaderLab”的声明性语言编写的。在文件中，通过嵌套括号
+<meta property="og:description" content="Unity 中的所有着色器文件都是用名为&amp;#8220;ShaderLab&amp;#8221;的声明性语言编写的。在文件中，通过嵌套括号
 语法声明着色器的各个描述，例如，材质检视面板中应显示的着色器属性；
-要执行哪些类型的硬件回退；要使用哪些类型的混合模式等；而且实际“着色器代码”
+要执行哪些类型的硬件回退；要使用哪些类型的混合模式等；而且实际&amp;#8220;着色器代码&amp;#8221;
 编写在同一着色器文件中的 CGPROGRAM 代码片段中（请参阅表面着色器和顶点和片元着色器）。">
 <meta name="author" content="Unity Technologies">
 <link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
@@ -37,7 +37,7 @@
       var page = 'SL-Shader';
       if(!page) page = 'index';
       var version = '2018.1';
-      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
 </head>
@@ -74,6 +74,7 @@
 </div></div>
 <div class="version-list" style="display:none;"><ul>
 <li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/SL-Shader.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/SL-Shader.html">2018.4</a></li>
 <li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/SL-Shader.html">2018.3</a></li>
 <li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/SL-Shader.html">2018.2</a></li>
 <li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/SL-Shader.html">2018.1</a></li>
@@ -117,6 +118,7 @@
 </div></div>
 <div class="version-list" style="display:none;"><ul>
 <li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/SL-Shader.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/SL-Shader.html">2018.4</a></li>
 <li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/SL-Shader.html">2018.3</a></li>
 <li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/SL-Shader.html">2018.2</a></li>
 <li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/SL-Shader.html">2018.1</a></li>

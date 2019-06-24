@@ -13,8 +13,8 @@
 <meta property="og:title" content="子状态机 - Unity Manual">
 <title>子状态机 - Unity Manual</title>
 <meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/MecanimStateExcerpt.png">
-<meta name="description" content="角色通常具有包含若干阶段的复杂动作。合理的做法是识别单独阶段并将单独状态用于每个阶段，而不是用单个状态来处理整个动作。例如，角色可能会有一个名为“Trickshot”（花式射击）的动作；在此动作中，角色会蹲下来稳定瞄准，射击，然后再站起来。">
-<meta property="og:description" content="角色通常具有包含若干阶段的复杂动作。合理的做法是识别单独阶段并将单独状态用于每个阶段，而不是用单个状态来处理整个动作。例如，角色可能会有一个名为“Trickshot”（花式射击）的动作；在此动作中，角色会蹲下来稳定瞄准，射击，然后再站起来。">
+<meta name="description" content="角色通常具有包含若干阶段的复杂动作。合理的做法是识别单独阶段并将单独状态用于每个阶段，而不是用单个状态来处理整个动作。例如，角色可能会有一个名为&amp;#8220;Trickshot&amp;#8221;（花式射击）的动作；在此动作中，角色会蹲下来稳定瞄准，射击，然后再站起来。">
+<meta property="og:description" content="角色通常具有包含若干阶段的复杂动作。合理的做法是识别单独阶段并将单独状态用于每个阶段，而不是用单个状态来处理整个动作。例如，角色可能会有一个名为&amp;#8220;Trickshot&amp;#8221;（花式射击）的动作；在此动作中，角色会蹲下来稳定瞄准，射击，然后再站起来。">
 <meta name="author" content="Unity Technologies">
 <link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
 <link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
@@ -32,7 +32,7 @@
       var page = 'NestedStateMachines';
       if(!page) page = 'index';
       var version = '2018.1';
-      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
 </head>
@@ -69,6 +69,7 @@
 </div></div>
 <div class="version-list" style="display:none;"><ul>
 <li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/NestedStateMachines.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/NestedStateMachines.html">2018.4</a></li>
 <li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/NestedStateMachines.html">2018.3</a></li>
 <li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/NestedStateMachines.html">2018.2</a></li>
 <li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/NestedStateMachines.html">2018.1</a></li>
@@ -112,6 +113,7 @@
 </div></div>
 <div class="version-list" style="display:none;"><ul>
 <li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/NestedStateMachines.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/NestedStateMachines.html">2018.4</a></li>
 <li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/NestedStateMachines.html">2018.3</a></li>
 <li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/NestedStateMachines.html">2018.2</a></li>
 <li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/NestedStateMachines.html">2018.1</a></li>
@@ -148,7 +150,7 @@
 <p>角色通常具有包含若干阶段的复杂动作。合理的做法是识别单独阶段并将单独状态用于每个阶段，而不是用单个状态来处理整个动作。例如，角色可能会有一个名为“Trickshot”（花式射击）的动作；在此动作中，角色会蹲下来稳定瞄准，射击，然后再站起来。</p>
 
 <figure>
-<img src="../uploads/Main/MecanimStateExcerpt.png" alt="“Trickshot”动作中的状态序列">
+<img src="../uploads/Main/MecanimStateExcerpt.png" alt="Trickshot动作中的状态序列">
 <figcaption>“Trickshot”动作中的状态序列</figcaption>
 </figure>
 
@@ -164,7 +166,7 @@
 <p>双击六边形时将清理编辑器，让您编辑子状态机，好像它本身就是一个完全独立的状态机。窗口顶栏会显示“示踪导航路径”以指示当前正在编辑的子状态机（注意，可在其他子状态机内创建子状态机，以此类推）。单击跟踪路径中的某项将使编辑器聚焦于该特定子状态机。</p>
 
 <figure>
-<img src="../uploads/Main/MecanimStateMachineCrumbs.png" alt="“示踪导航路径”">
+<img src="../uploads/Main/MecanimStateMachineCrumbs.png" alt="示踪导航路径">
 <figcaption>“示踪导航路径”</figcaption>
 </figure>
 
@@ -173,14 +175,14 @@
 <p>如上所述，子状态机只是一种在编辑器中直观地折叠一组状态的方式，因此在过渡到子状态机时，必须选择要连接到子状态机的哪个状态。</p>
 
 <figure>
-<img src="../uploads/Main/MecanimSelectSubState.png" alt="在“Trickshot”子状态机内选择目标状态">
+<img src="../uploads/Main/MecanimSelectSubState.png" alt="在Trickshot子状态机内选择目标状态">
 <figcaption>在“Trickshot”子状态机内选择目标状态</figcaption>
 </figure>
 
 <p>您将注意到子状态机中有一个名称以 <em>Up</em> 开头的额外状态。</p>
 
 <figure>
-<img src="../uploads/Main/MecanimSubStateUp.png" alt="“Up”状态">
+<img src="../uploads/Main/MecanimSubStateUp.png" alt="Up状态">
 <figcaption>“Up”状态</figcaption>
 </figure>
 

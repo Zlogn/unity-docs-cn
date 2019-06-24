@@ -12,8 +12,8 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="格式的描述 - Unity Manual">
 <title>格式的描述 - Unity Manual</title>
-<meta name="description" content="Unity 的场景格式是用 YAML 数据序列化语言实现的。YAML 是一种开放格式，但我们无法在此对其进行深入介绍，可在 YAML 网站中免费获取此格式的规范。场景中的每个对象都作为单独 YAML 文档写入到文件（通过 &amp;#8212; 序列加入到文件中）。注意，在此背景下，术语“对象”通指游戏对象、组件和其他场景数据；每一项都需要在场景文件中有自己的 YAML 文档。可以从以下示例中理解序列化对象的基本结构：">
-<meta property="og:description" content="Unity 的场景格式是用 YAML 数据序列化语言实现的。YAML 是一种开放格式，但我们无法在此对其进行深入介绍，可在 YAML 网站中免费获取此格式的规范。场景中的每个对象都作为单独 YAML 文档写入到文件（通过 &amp;#8212; 序列加入到文件中）。注意，在此背景下，术语“对象”通指游戏对象、组件和其他场景数据；每一项都需要在场景文件中有自己的 YAML 文档。可以从以下示例中理解序列化对象的基本结构：">
+<meta name="description" content="Unity 的场景格式是用 YAML 数据序列化语言实现的。YAML 是一种开放格式，但我们无法在此对其进行深入介绍，可在 YAML 网站中免费获取此格式的规范。场景中的每个对象都作为单独 YAML 文档写入到文件（通过 &amp;#8212; 序列加入到文件中）。注意，在此背景下，术语&amp;#8220;对象&amp;#8221;通指游戏对象、组件和其他场景数据；每一项都需要在场景文件中有自己的 YAML 文档。可以从以下示例中理解序列化对象的基本结构：">
+<meta property="og:description" content="Unity 的场景格式是用 YAML 数据序列化语言实现的。YAML 是一种开放格式，但我们无法在此对其进行深入介绍，可在 YAML 网站中免费获取此格式的规范。场景中的每个对象都作为单独 YAML 文档写入到文件（通过 &amp;#8212; 序列加入到文件中）。注意，在此背景下，术语&amp;#8220;对象&amp;#8221;通指游戏对象、组件和其他场景数据；每一项都需要在场景文件中有自己的 YAML 文档。可以从以下示例中理解序列化对象的基本结构：">
 <meta name="author" content="Unity Technologies">
 <link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
 <link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
@@ -31,7 +31,7 @@
       var page = 'FormatDescription';
       if(!page) page = 'index';
       var version = '2018.1';
-      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
 </head>
@@ -68,6 +68,7 @@
 </div></div>
 <div class="version-list" style="display:none;"><ul>
 <li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/FormatDescription.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/FormatDescription.html">2018.4</a></li>
 <li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/FormatDescription.html">2018.3</a></li>
 <li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/FormatDescription.html">2018.2</a></li>
 <li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/FormatDescription.html">2018.1</a></li>
@@ -111,6 +112,7 @@
 </div></div>
 <div class="version-list" style="display:none;"><ul>
 <li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/FormatDescription.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/FormatDescription.html">2018.4</a></li>
 <li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/FormatDescription.html">2018.3</a></li>
 <li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/FormatDescription.html">2018.2</a></li>
 <li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/FormatDescription.html">2018.1</a></li>

@@ -12,8 +12,8 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="粒子系统 - Unity Manual">
 <title>粒子系统 - Unity Manual</title>
-<meta name="description" content="在 3D 游戏中，大多数角色、道具和景物元素都表示为__网格__，而 2D 游戏则使用__精灵__来表现它们。网格和精灵是描绘具有明确形状的“实体”对象的理想方式。然而，游戏中还有其他存在物，它们本质上是流动和无形的，因此很难用网格或精灵来描绘。对于流动性的液体、烟雾、云、火焰和魔法等效果，可使用不同的图形方法（称为__粒子系统__）来捕捉固有的流动性和能量。本部分将介绍 Unity 的粒子系统及其可能的用途。">
-<meta property="og:description" content="在 3D 游戏中，大多数角色、道具和景物元素都表示为__网格__，而 2D 游戏则使用__精灵__来表现它们。网格和精灵是描绘具有明确形状的“实体”对象的理想方式。然而，游戏中还有其他存在物，它们本质上是流动和无形的，因此很难用网格或精灵来描绘。对于流动性的液体、烟雾、云、火焰和魔法等效果，可使用不同的图形方法（称为__粒子系统__）来捕捉固有的流动性和能量。本部分将介绍 Unity 的粒子系统及其可能的用途。">
+<meta name="description" content="在 3D 游戏中，大多数角色、道具和景物元素都表示为__网格__，而 2D 游戏则使用__精灵__来表现它们。网格和精灵是描绘具有明确形状的&amp;#8220;实体&amp;#8221;对象的理想方式。然而，游戏中还有其他存在物，它们本质上是流动和无形的，因此很难用网格或精灵来描绘。对于流动性的液体、烟雾、云、火焰和魔法等效果，可使用不同的图形方法（称为__粒子系统__）来捕捉固有的流动性和能量。本部分将介绍 Unity 的粒子系统及其可能的用途。">
+<meta property="og:description" content="在 3D 游戏中，大多数角色、道具和景物元素都表示为__网格__，而 2D 游戏则使用__精灵__来表现它们。网格和精灵是描绘具有明确形状的&amp;#8220;实体&amp;#8221;对象的理想方式。然而，游戏中还有其他存在物，它们本质上是流动和无形的，因此很难用网格或精灵来描绘。对于流动性的液体、烟雾、云、火焰和魔法等效果，可使用不同的图形方法（称为__粒子系统__）来捕捉固有的流动性和能量。本部分将介绍 Unity 的粒子系统及其可能的用途。">
 <meta name="author" content="Unity Technologies">
 <link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
 <link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
@@ -31,7 +31,7 @@
       var page = 'ParticleSystems';
       if(!page) page = 'index';
       var version = '2018.1';
-      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
 </head>
@@ -68,6 +68,7 @@
 </div></div>
 <div class="version-list" style="display:none;"><ul>
 <li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/ParticleSystems.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/ParticleSystems.html">2018.4</a></li>
 <li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/ParticleSystems.html">2018.3</a></li>
 <li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/ParticleSystems.html">2018.2</a></li>
 <li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/ParticleSystems.html">2018.1</a></li>
@@ -111,6 +112,7 @@
 </div></div>
 <div class="version-list" style="display:none;"><ul>
 <li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/ParticleSystems.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/ParticleSystems.html">2018.4</a></li>
 <li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/ParticleSystems.html">2018.3</a></li>
 <li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/ParticleSystems.html">2018.2</a></li>
 <li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/ParticleSystems.html">2018.1</a></li>

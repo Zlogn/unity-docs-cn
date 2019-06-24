@@ -13,8 +13,8 @@
 <meta property="og:title" content="地形纹理 - Unity Manual">
 <title>地形纹理 - Unity Manual</title>
 <meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/TerrainTexSandDunes.jpg">
-<meta name="description" content="您可以将纹理图像添加到地形表面以创建自然色彩和精细的细节。由于地形是如此之大的对象，因此标准做法是使用无缝重复的纹理并将其平铺在表面上（从角色靠近地面的角度来看，重复通常是不明显的）。一个纹理将作为地形上的 “背景” 图像，但也可以绘制不同纹理的区域来模拟不同的地面，如草地、沙漠和雪地。绘制的纹理可应用不同的透明度，因此您可以在草地覆盖的乡村与沙滩之间逐渐过渡。">
-<meta property="og:description" content="您可以将纹理图像添加到地形表面以创建自然色彩和精细的细节。由于地形是如此之大的对象，因此标准做法是使用无缝重复的纹理并将其平铺在表面上（从角色靠近地面的角度来看，重复通常是不明显的）。一个纹理将作为地形上的 “背景” 图像，但也可以绘制不同纹理的区域来模拟不同的地面，如草地、沙漠和雪地。绘制的纹理可应用不同的透明度，因此您可以在草地覆盖的乡村与沙滩之间逐渐过渡。">
+<meta name="description" content="您可以将纹理图像添加到地形表面以创建自然色彩和精细的细节。由于地形是如此之大的对象，因此标准做法是使用无缝重复的纹理并将其平铺在表面上（从角色靠近地面的角度来看，重复通常是不明显的）。一个纹理将作为地形上的 &amp;#8220;背景&amp;#8221; 图像，但也可以绘制不同纹理的区域来模拟不同的地面，如草地、沙漠和雪地。绘制的纹理可应用不同的透明度，因此您可以在草地覆盖的乡村与沙滩之间逐渐过渡。">
+<meta property="og:description" content="您可以将纹理图像添加到地形表面以创建自然色彩和精细的细节。由于地形是如此之大的对象，因此标准做法是使用无缝重复的纹理并将其平铺在表面上（从角色靠近地面的角度来看，重复通常是不明显的）。一个纹理将作为地形上的 &amp;#8220;背景&amp;#8221; 图像，但也可以绘制不同纹理的区域来模拟不同的地面，如草地、沙漠和雪地。绘制的纹理可应用不同的透明度，因此您可以在草地覆盖的乡村与沙滩之间逐渐过渡。">
 <meta name="author" content="Unity Technologies">
 <link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
 <link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
@@ -32,7 +32,7 @@
       var page = 'terrain-Textures';
       if(!page) page = 'index';
       var version = '2018.1';
-      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
 </head>
@@ -69,6 +69,7 @@
 </div></div>
 <div class="version-list" style="display:none;"><ul>
 <li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/terrain-Textures.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/terrain-Textures.html">2018.4</a></li>
 <li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/terrain-Textures.html">2018.3</a></li>
 <li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/terrain-Textures.html">2018.2</a></li>
 <li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/terrain-Textures.html">2018.1</a></li>
@@ -112,6 +113,7 @@
 </div></div>
 <div class="version-list" style="display:none;"><ul>
 <li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/terrain-Textures.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/terrain-Textures.html">2018.4</a></li>
 <li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/terrain-Textures.html">2018.3</a></li>
 <li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/terrain-Textures.html">2018.2</a></li>
 <li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/terrain-Textures.html">2018.1</a></li>

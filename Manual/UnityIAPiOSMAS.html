@@ -31,7 +31,7 @@
       var page = 'UnityIAPiOSMAS';
       if(!page) page = 'index';
       var version = '2018.1';
-      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
 </head>
@@ -68,6 +68,7 @@
 </div></div>
 <div class="version-list" style="display:none;"><ul>
 <li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UnityIAPiOSMAS.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UnityIAPiOSMAS.html">2018.4</a></li>
 <li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UnityIAPiOSMAS.html">2018.3</a></li>
 <li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UnityIAPiOSMAS.html">2018.2</a></li>
 <li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UnityIAPiOSMAS.html">2018.1</a></li>
@@ -111,6 +112,7 @@
 </div></div>
 <div class="version-list" style="display:none;"><ul>
 <li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/UnityIAPiOSMAS.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/UnityIAPiOSMAS.html">2018.4</a></li>
 <li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/UnityIAPiOSMAS.html">2018.3</a></li>
 <li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/UnityIAPiOSMAS.html">2018.2</a></li>
 <li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/UnityIAPiOSMAS.html">2018.1</a></li>
@@ -279,7 +281,7 @@ public class AskToBuy : MonoBehaviour, IStoreListener
         m_Controller = controller;
         m_AppleExtensions = extensions.GetExtension&lt;IAppleExtensions&gt; ();
 
-        // 在 Apple 平台上，我们需要处理由 Apple 的“购买前先询问”功能导致的延期购买。
+        // 在 Apple 平台上，我们需要处理由 Apple 的"购买前先询问"功能导致的延期购买。
         //在非 Apple 平台上，这将不起作用；永远不会调用 OnDeferred。
         m_AppleExtensions.RegisterPurchaseDeferredListener (OnDeferred);
     }
@@ -318,7 +320,7 @@ public class AskToBuy : MonoBehaviour, IStoreListener
     /// &amp;lt;summary&gt;
     /// 特定于 iOS。
     /// 未成年人要求购买并提交给家长批准时，
-    /// 此函数将作为 Apple 的“购买前先询问”功能的一部分
+    /// 此函数将作为 Apple 的"购买前先询问"功能的一部分
     /// 接受调用。
     ///
     /// 购买被批准或拒绝时，将触发正常的购买

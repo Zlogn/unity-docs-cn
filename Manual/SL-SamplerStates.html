@@ -32,7 +32,7 @@
       var page = 'SL-SamplerStates';
       if(!page) page = 'index';
       var version = '2018.1';
-      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
 </head>
@@ -69,6 +69,7 @@
 </div></div>
 <div class="version-list" style="display:none;"><ul>
 <li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/SL-SamplerStates.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/SL-SamplerStates.html">2018.4</a></li>
 <li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/SL-SamplerStates.html">2018.3</a></li>
 <li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/SL-SamplerStates.html">2018.2</a></li>
 <li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/SL-SamplerStates.html">2018.1</a></li>
@@ -112,6 +113,7 @@
 </div></div>
 <div class="version-list" style="display:none;"><ul>
 <li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/SL-SamplerStates.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/SL-SamplerStates.html">2018.4</a></li>
 <li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/SL-SamplerStates.html">2018.3</a></li>
 <li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/SL-SamplerStates.html">2018.2</a></li>
 <li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/SL-SamplerStates.html">2018.1</a></li>
@@ -168,7 +170,7 @@ half4 color = tex2D(_MainTex, uv);
 <p>以上部分中的着色器代码片段可以用 DX11 风格的 HLSL 语法重写，并且也会执行相同的操作：</p>
 
 <pre><code>Texture2D _MainTex;
-SamplerState sampler_MainTex; //“sampler”+“_MainTex”
+SamplerState sampler_MainTex; //"sampler"+"_MainTex"
 // ...
 half4 color = _MainTex.Sample(sampler_MainTex, uv);
 </code></pre>
@@ -178,7 +180,7 @@ half4 color = _MainTex.Sample(sampler_MainTex, uv);
 <pre><code>Texture2D _MainTex;
 Texture2D _SecondTex;
 Texture2D _ThirdTex;
-SamplerState sampler_MainTex; //“sampler”+“_MainTex”
+SamplerState sampler_MainTex; //"sampler"+"_MainTex"
 // ...
 half4 color = _MainTex.Sample(sampler_MainTex, uv);
 color += _SecondTex.Sample(sampler_MainTex, uv);
@@ -218,7 +220,7 @@ half4 color = _MainTex.Sample(my_point_clamp_sampler, uv);
 
 <p>*“Clamp”、“Repeat”、“Mirror”或“MirrorOnce”（必需）设置纹理包裹模式。</p>
 
-<pre><code>* 可根据每个轴 (UVW) 来指定包裹模式，例如“ClampU_RepeatV”。
+<pre><code>* 可根据每个轴 (UVW) 来指定包裹模式，例如"ClampU_RepeatV"。
 </code></pre>
 
 <p>*“Compare”（可选）设置用于深度比较的采样器；与 HLSL SamplerComparisonState 类型和 SampleCmp/SampleCmpLevelZero 函数配合使用。</p>

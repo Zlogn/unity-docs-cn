@@ -31,7 +31,7 @@
       var page = 'SL-PropertiesInPrograms';
       if(!page) page = 'index';
       var version = '2018.1';
-      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
 </head>
@@ -68,6 +68,7 @@
 </div></div>
 <div class="version-list" style="display:none;"><ul>
 <li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/SL-PropertiesInPrograms.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/SL-PropertiesInPrograms.html">2018.4</a></li>
 <li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/SL-PropertiesInPrograms.html">2018.3</a></li>
 <li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/SL-PropertiesInPrograms.html">2018.2</a></li>
 <li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/SL-PropertiesInPrograms.html">2018.1</a></li>
@@ -111,6 +112,7 @@
 </div></div>
 <div class="version-list" style="display:none;"><ul>
 <li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/SL-PropertiesInPrograms.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/SL-PropertiesInPrograms.html">2018.4</a></li>
 <li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/SL-PropertiesInPrograms.html">2018.3</a></li>
 <li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/SL-PropertiesInPrograms.html">2018.2</a></li>
 <li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/SL-PropertiesInPrograms.html">2018.1</a></li>
@@ -243,7 +245,7 @@ samplerCUBE _MyCubemap;
 
 <p>使用<a href="LinearLighting.html">线性颜色空间</a>时，所有材质颜色属性均以 sRGB 颜色提供，但在传递到着色器时会转换为线性值。</p>
 
-<p>例如，如果 <a href="SL-Properties.html">Properties</a> 着色器代码块包含名为“_MyColor”的 <code>Color</code> 属性，则相应的“_MyColor”HLSL 变量将获得线性颜色值。</p>
+<p>例如，如果 <a href="SL-Properties.html">Properties</a> 着色器代码块包含名为“<em>MyColor“的 <code>Color</code> 属性，则相应的”</em>MyColor”HLSL 变量将获得线性颜色值。</p>
 
 <p>对于标记为 <code>Float</code> 或 <code>Vector</code> 类型的属性，默认情况下不进行颜色空间转换；而是假设它们包含非颜色数据。可为浮点/矢量属性添加 <code>[Gamma]</code> 特性，以表示它们是以 sRGB 空间指定，就像颜色一样（请参阅<a href="SL-Properties.html">属性</a>）。</p>
 

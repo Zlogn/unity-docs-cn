@@ -31,7 +31,7 @@
       var page = 'CommandLineArguments';
       if(!page) page = 'index';
       var version = '2018.1';
-      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
 </head>
@@ -68,6 +68,7 @@
 </div></div>
 <div class="version-list" style="display:none;"><ul>
 <li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/CommandLineArguments.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/CommandLineArguments.html">2018.4</a></li>
 <li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/CommandLineArguments.html">2018.3</a></li>
 <li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/CommandLineArguments.html">2018.2</a></li>
 <li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/CommandLineArguments.html">2018.1</a></li>
@@ -111,6 +112,7 @@
 </div></div>
 <div class="version-list" style="display:none;"><ul>
 <li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/CommandLineArguments.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/CommandLineArguments.html">2018.4</a></li>
 <li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/CommandLineArguments.html">2018.3</a></li>
 <li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/CommandLineArguments.html">2018.2</a></li>
 <li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/CommandLineArguments.html">2018.1</a></li>
@@ -318,7 +320,7 @@
 |</strong>-silent-crashes<strong>|Prevent Unity from displaying the dialog that appears when a Standalone Player crashes. This argument is useful when you want to run the Player in automated builds or tests, where you don’t want a dialog prompt to obstruct automation.|
 |</strong>-username &lt;username&gt;<strong>|在激活 Unity Editor 期间，在登录窗体中输入用户名。|
 |</strong>-disable-assembly-updater &lt;assembly1 assembly2&gt;__</td>
-	<td style="text-align:left;">指定一个以空格分隔的程序集名称列表作为 Unity 在自动更新时忽略的参数。<br>以空格分隔的程序集名称列表是可选的：如果传递命令行选项时不带任何程序集名称，表示忽略所有程序集，如示例 1 所示。<br><br>示例 1<br><code>unity.exe -disable-assembly-updater</code><br><br>示例 2 有两个程序集名称，其中一个具有路径名。示例 2 无论 <code>A1.dll</code> 存储在哪个文件夹中都会将其忽略，但只有 <code>A2.dll</code> 存储在 <code>subfolder</code> 文件夹下时才会将其忽略：<br><br>示例 2<br><code>unity.exe -disable-assembly-updater A1.dll subfolder/A2.dll</code><br><br>如果在 <code>-disable-assembly-updater</code> 命令行参数中列出程序集（或者如果不指定程序集），Unity 会将以下消息记录到 <a href="LogFiles.html">Editor.log</a>：<br><br> <code>[Assembly Updater] warning: Ignoring assembly [assembly_path] as requested by command line parameter.”).</code> <br><br> 可用于在导入程序集时避免不必要的 <a href="APIUpdater.html">API Updater</a> 开销。<br><br>如果知道 Unity API 不需要更新，对于导入访问 Unity API 的程序集非常有用。在导入完全不访问 Unity API 的程序集时也很有用（例如，如果在 Unity 之外构建了游戏源代码或其中部分代码，并且想要将生成的程序集导入到 Unity 项目中）。<br><br>注意：如果对任何需要更新的程序集禁用更新，则可能会在编译时和/或运行时都出现难以跟踪的错误。</td>
+	<td style="text-align:left;">指定一个以空格分隔的程序集名称列表作为 Unity 在自动更新时忽略的参数。<br>以空格分隔的程序集名称列表是可选的：如果传递命令行选项时不带任何程序集名称，表示忽略所有程序集，如示例 1 所示。<br><br>示例 1<br><code>unity.exe -disable-assembly-updater</code><br><br>示例 2 有两个程序集名称，其中一个具有路径名。示例 2 无论 <code>A1.dll</code> 存储在哪个文件夹中都会将其忽略，但只有 <code>A2.dll</code> 存储在 <code>subfolder</code> 文件夹下时才会将其忽略：<br><br>示例 2<br><code>unity.exe -disable-assembly-updater A1.dll subfolder/A2.dll</code><br><br>如果在 <code>-disable-assembly-updater</code> 命令行参数中列出程序集（或者如果不指定程序集），Unity 会将以下消息记录到 <a href="LogFiles.html">Editor.log</a>：<br><br> <code>[Assembly Updater] warning: Ignoring assembly [assembly_path] as requested by command line parameter.").</code> <br><br> 可用于在导入程序集时避免不必要的 <a href="APIUpdater.html">API Updater</a> 开销。<br><br>如果知道 Unity API 不需要更新，对于导入访问 Unity API 的程序集非常有用。在导入完全不访问 Unity API 的程序集时也很有用（例如，如果在 Unity 之外构建了游戏源代码或其中部分代码，并且想要将生成的程序集导入到 Unity 项目中）。<br><br>注意：如果对任何需要更新的程序集禁用更新，则可能会在编译时和/或运行时都出现难以跟踪的错误。</td>
 </tr>
 <tr>
 	<td style="text-align:left;"><strong>-accept-apiupdate</strong></td>

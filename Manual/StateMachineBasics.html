@@ -13,8 +13,8 @@
 <meta property="og:title" content="状态机基础 - Unity Manual">
 <title>状态机基础 - Unity Manual</title>
 <meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/StateMachineDiagram.png">
-<meta name="description" content="状态机的基本思想是使角色在某一给定时刻进行一个特定的动作。动作类型可因游戏类型的不同而不同，常用的动作包括空闲、行走、跑步、跳跃等，其中每一个动作被称为__一种状态。在某种意义上，角色处于行走、空闲或者其它的“状态”中。一般来说，角色从一个状态立即切换到另一个状态是需要一定的限制条件的。比如角色只能从跑步状态切换到跑跳状态，而不能直接由静止状态切换到跑跳状态。角色从当前状态进入下一个状态的选项被称为状态过渡条件。状态集合、状态过渡条件以及记录当前状态的变量放在一起，形成了一个__状态机。">
-<meta property="og:description" content="状态机的基本思想是使角色在某一给定时刻进行一个特定的动作。动作类型可因游戏类型的不同而不同，常用的动作包括空闲、行走、跑步、跳跃等，其中每一个动作被称为__一种状态。在某种意义上，角色处于行走、空闲或者其它的“状态”中。一般来说，角色从一个状态立即切换到另一个状态是需要一定的限制条件的。比如角色只能从跑步状态切换到跑跳状态，而不能直接由静止状态切换到跑跳状态。角色从当前状态进入下一个状态的选项被称为状态过渡条件。状态集合、状态过渡条件以及记录当前状态的变量放在一起，形成了一个__状态机。">
+<meta name="description" content="状态机的基本思想是使角色在某一给定时刻进行一个特定的动作。动作类型可因游戏类型的不同而不同，常用的动作包括空闲、行走、跑步、跳跃等，其中每一个动作被称为__一种状态。在某种意义上，角色处于行走、空闲或者其它的&amp;#8220;状态&amp;#8221;中。一般来说，角色从一个状态立即切换到另一个状态是需要一定的限制条件的。比如角色只能从跑步状态切换到跑跳状态，而不能直接由静止状态切换到跑跳状态。角色从当前状态进入下一个状态的选项被称为状态过渡条件。状态集合、状态过渡条件以及记录当前状态的变量放在一起，形成了一个__状态机。">
+<meta property="og:description" content="状态机的基本思想是使角色在某一给定时刻进行一个特定的动作。动作类型可因游戏类型的不同而不同，常用的动作包括空闲、行走、跑步、跳跃等，其中每一个动作被称为__一种状态。在某种意义上，角色处于行走、空闲或者其它的&amp;#8220;状态&amp;#8221;中。一般来说，角色从一个状态立即切换到另一个状态是需要一定的限制条件的。比如角色只能从跑步状态切换到跑跳状态，而不能直接由静止状态切换到跑跳状态。角色从当前状态进入下一个状态的选项被称为状态过渡条件。状态集合、状态过渡条件以及记录当前状态的变量放在一起，形成了一个__状态机。">
 <meta name="author" content="Unity Technologies">
 <link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
 <link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
@@ -32,7 +32,7 @@
       var page = 'StateMachineBasics';
       if(!page) page = 'index';
       var version = '2018.1';
-      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
 </head>
@@ -69,6 +69,7 @@
 </div></div>
 <div class="version-list" style="display:none;"><ul>
 <li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/StateMachineBasics.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/StateMachineBasics.html">2018.4</a></li>
 <li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/StateMachineBasics.html">2018.3</a></li>
 <li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/StateMachineBasics.html">2018.2</a></li>
 <li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/StateMachineBasics.html">2018.1</a></li>
@@ -112,6 +113,7 @@
 </div></div>
 <div class="version-list" style="display:none;"><ul>
 <li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/StateMachineBasics.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/StateMachineBasics.html">2018.4</a></li>
 <li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/StateMachineBasics.html">2018.3</a></li>
 <li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/StateMachineBasics.html">2018.2</a></li>
 <li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/StateMachineBasics.html">2018.1</a></li>

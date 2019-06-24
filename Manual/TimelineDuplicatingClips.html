@@ -32,7 +32,7 @@
       var page = 'TimelineDuplicatingClips';
       if(!page) page = 'index';
       var version = '2018.1';
-      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
 </head>
@@ -69,6 +69,7 @@
 </div></div>
 <div class="version-list" style="display:none;"><ul>
 <li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/TimelineDuplicatingClips.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/TimelineDuplicatingClips.html">2018.4</a></li>
 <li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/TimelineDuplicatingClips.html">2018.3</a></li>
 <li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/TimelineDuplicatingClips.html">2018.2</a></li>
 <li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/TimelineDuplicatingClips.html">2018.1</a></li>
@@ -112,6 +113,7 @@
 </div></div>
 <div class="version-list" style="display:none;"><ul>
 <li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/TimelineDuplicatingClips.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/TimelineDuplicatingClips.html">2018.4</a></li>
 <li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/TimelineDuplicatingClips.html">2018.3</a></li>
 <li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/TimelineDuplicatingClips.html">2018.2</a></li>
 <li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/TimelineDuplicatingClips.html">2018.1</a></li>
@@ -157,17 +159,17 @@
 <p>如果复制使用录制剪辑作为源资源的动画剪辑，则会创建录制剪辑的副本并将其添加到时间轴资源。只有在保存场景或项目后才会显示录制剪辑的副本。复制的录制剪辑的名称基于原始的录制剪辑。复制的动画剪辑的名称与复制的录制剪辑的名称相同。</p>
 
 <figure>
-<img src="../uploads/Main/timeline_clip_duplicate_before.png" alt="例如，名为“Scale Anim”的动画剪辑使用名为“Recorded (1)”的录制剪辑。">
+<img src="../uploads/Main/timeline_clip_duplicate_before.png" alt="例如，名为Scale Anim的动画剪辑使用名为Recorded (1)的录制剪辑。">
 <figcaption>例如，名为“Scale Anim”的动画剪辑使用名为“Recorded (1)”的录制剪辑。</figcaption>
 </figure>
 
 <figure>
-<img src="../uploads/Main/timeline_clip_duplicate_clip_after.png" alt="复制“Scale Anim”剪辑会在同一轨道的末尾放置录制剪辑“Recorded (1)”的副本。根据已与时间轴资源相关联的录制剪辑的数量，录制剪辑的副本命将名为“Recorded (4)”。">
+<img src="../uploads/Main/timeline_clip_duplicate_clip_after.png" alt="复制Scale Anim剪辑会在同一轨道的末尾放置录制剪辑Recorded (1)的副本。根据已与时间轴资源相关联的录制剪辑的数量，录制剪辑的副本命将名为Recorded (4)。">
 <figcaption>复制“Scale Anim”剪辑会在同一轨道的末尾放置录制剪辑“Recorded (1)”的副本。根据已与时间轴资源相关联的录制剪辑的数量，录制剪辑的副本命将名为“Recorded (4)”。</figcaption>
 </figure>
 
 <figure>
-<img src="../uploads/Main/timeline_clip_duplicate_project.png" alt="只有在保存场景或项目后，新的“Recorded (4)”录制剪辑才会显示在 Project 窗口中">
+<img src="../uploads/Main/timeline_clip_duplicate_project.png" alt="只有在保存场景或项目后，新的Recorded (4)录制剪辑才会显示在 Project 窗口中">
 <figcaption>只有在保存场景或项目后，新的“Recorded (4)”录制剪辑才会显示在 Project 窗口中</figcaption>
 </figure>
 
