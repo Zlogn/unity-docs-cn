@@ -151,8 +151,8 @@
 <p><a href="SL-SurfaceShaders.html">表面着色器</a>在一定程度上支持 DirectX 11/OpenGL Core GPU 曲面细分。具体情况为：</p>
 
 <ul>
-<li>曲面细分由 <code>tessellate:FunctionName</code> 修改器指示。该函数计算三角形边和内部曲面细分因子。</li>
-<li>使用曲面细分时，对于域着色器中的每个生成的顶点，将在曲面细分_之后_调用“顶点修改器”(<code>vertex:FunctionName</code>)。这里通常要进行位移贴图。</li>
+<li>曲面细分由 <code>tessellate:FunctionName</code> 修改器声明。该函数计算三角形的边和内部曲面细分因子。</li>
+<li>使用曲面细分时，对于域着色器中的每个生成的顶点，将在曲面细分_之后_调用“顶点修改器”(<code>vertex:FunctionName</code>)。这里通常要进行置换贴图。</li>
 <li>即使没有任何位移贴图，表面着色器也可以选择计算 <a href="https://www.google.lt/search?q=phong+tessellation">Phong 曲面细分</a>来平滑模型表面。</li>
 </ul>
 
@@ -160,7 +160,7 @@
 
 <ul>
 <li>仅限于三角形域 - 不支持四边形和等值线曲面细分。</li>
-<li>使用曲面细分时，着色器会自动编译到着色器模型 <a href="SL-ShaderCompileTargets.html">4.6 目标</a>，这会阻止在较旧的图形目标上运行。</li>
+<li>使用曲面细分时，着色器会自动编译到 Shader Model <a href="SL-ShaderCompileTargets.html">4.6 target</a>，即表示它仅在支持 DX11/12 OpenGL Core 和 PS4/XB1 的设备上正常工作。</li>
 </ul>
 
 <hr>
