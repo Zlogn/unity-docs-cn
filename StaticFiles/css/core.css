@@ -13,8 +13,6 @@ code { font-size: 1em; font-weight: normal; font-style: normal; background: #f0f
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, video { display: block; }
 iframe { border: none; } caption,th { text-align: left; } table { border-collapse: collapse; border-spacing: 0; }
 img, img a, img a:hover { border: 0; max-width: 100%; }
-::-moz-selection { background: #999; color: #fff; text-shadow: none; }
-::selection { background: #999; color: #fff; text-shadow: none; }
 .clear:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }.clear { display: inline-table; clear: both; }
 /* Hides from IE-mac \*/ * html .clear { height: 1%; } .clear { display: block; } /* End hide from IE-mac */
 .left { float: left !important; } .right { float: right !important; }

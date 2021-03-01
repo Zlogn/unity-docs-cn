@@ -6,16 +6,17 @@
       j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
       })(window,document,'script','dataLayer','GTM-5V25JL6');
-    </script><meta charset="utf-8">
+    </script><link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
+<meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="twitter:card" content="summary">
-<meta property="og:title" content="ViewData persistence - Unity 手册">
-<title>ViewData persistence - Unity 手册</title>
-<meta name="description" content="Use the ViewData API to persist UI-specific state data after a domain reloads or when the Editor restarts. Persistent data is stored on each EditorWindow. Each VisualElement has a persistenceKey that must be set in order to enable ViewData persistence.">
-<meta property="og:description" content="Use the ViewData API to persist UI-specific state data after a domain reloads or when the Editor restarts. Persistent data is stored on each EditorWindow. Each VisualElement has a persistenceKey that must be set in order to enable ViewData persistence.">
+<meta property="og:title" content="ViewData 持久性 - Unity 手册">
+<title>ViewData 持久性 - Unity 手册</title>
+<meta name="description" content="使用 ViewData API 可在域重新加载后或 Editor 重新启动时保留特定于 UI 的状态数据。持久数据存储在每个 EditorWindow 上。每个 VisualElement 都有一个 persistenceKey，必须设置它才能启用 ViewData 持久性。">
+<meta property="og:description" content="使用 ViewData API 可在域重新加载后或 Editor 重新启动时保留特定于 UI 的状态数据。持久数据存储在每个 EditorWindow 上。每个 VisualElement 都有一个 persistenceKey，必须设置它才能启用 ViewData 持久性。">
 <meta name="author" content="Unity Technologies">
-<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
 <link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
 <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
@@ -25,17 +26,19 @@
 <link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
 <meta name="msapplication-TileColor" content="#222c37">
 <meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
-<script>
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
       var docs_type = 'Manual';
       var lang = 'cn';
       var page = 'UIE-ViewData';
       if(!page) page = 'index';
       var version = '2018.4';
-      var docs_versions = [{version: '2019.3',version_string: '2019.3'},{version: '2019.2',version_string: '2019.2'},{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.2',version_string: '2020.2',supported: true},{version: '2020.1',version_string: '2020.1',supported: true},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
 <link rel="canonical" href="https://docs.unity3d.com/cn/2018.4/Manual/UIE-ViewData.html">
 <link rel="alternate" href="https://docs.unity3d.com/en/2018.4/Manual/UIE-ViewData.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2018.4/Manual/UIE-ViewData.html" hreflang="zh">
 <link rel="alternate" href="https://docs.unity3d.com/ja/2018.4/Manual/UIE-ViewData.html" hreflang="ja">
 <link rel="alternate" href="https://docs.unity3d.com/es/2018.4/Manual/UIE-ViewData.html" hreflang="es">
 <link rel="alternate" href="https://docs.unity3d.com/kr/2018.4/Manual/UIE-ViewData.html" hreflang="ko">
@@ -48,7 +51,7 @@
 <div id="header" class="header"><div class="content">
 <div class="spacer"><div class="menu">
 <div id="nav-open" for="nav-input"><span></span></div>
-<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="logo"><a href="./index.html"></a></div>
 <div class="search-form"><form action="30_search.html" method="get" class="apisearch">
 <input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
 </form></div>
@@ -73,20 +76,32 @@
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
-<div class="version-list" style="display:none;"><ul>
-<li><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/UIE-ViewData.html">2019.3</a></li>
-<li><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/UIE-ViewData.html">2019.2</a></li>
-<li><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/UIE-ViewData.html">2019.1</a></li>
-<li><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/UIE-ViewData.html">2018.4</a></li>
-<li><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/UIE-ViewData.html">2018.3</a></li>
-<li><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/UIE-ViewData.html">2018.2</a></li>
-<li><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/UIE-ViewData.html">2018.1</a></li>
-<li><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/UIE-ViewData.html">2017.4</a></li>
-<li><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/UIE-ViewData.html">2017.3</a></li>
-<li><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/UIE-ViewData.html">2017.2</a></li>
-<li><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/UIE-ViewData.html">2017.1</a></li>
-<li><a class="docs_version_url_560" href="/cn/560/Manual/UIE-ViewData.html">5.6</a></li>
-</ul></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/UIE-ViewData.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/UIE-ViewData.html">2020.2</a></li>
+<li class="supported"><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/UIE-ViewData.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/UIE-ViewData.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/UIE-ViewData.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/UIE-ViewData.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/UIE-ViewData.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/UIE-ViewData.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/UIE-ViewData.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/UIE-ViewData.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/UIE-ViewData.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/UIE-ViewData.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/UIE-ViewData.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/UIE-ViewData.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/UIE-ViewData.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/UIE-ViewData.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p></p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p></p></li></div>
+</ul>
+<ul class="description">
+<li><div class="supported-box"></div></li>
+<li><div class="legacy-box"></div></li>
+</ul>
+</div>
 </div>
 <ul class="nav-menu-items">
 <li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
@@ -101,6 +116,7 @@
 </div>
 <div class="lang-list" style="display:none;"><ul>
 <li><a data-lang="en" href="/2018.4/Documentation/Manual/UIE-ViewData.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2018.4/Manual/UIE-ViewData.html">中文</a></li>
 <li><a data-lang="ja" href="/ja/2018.4/Manual/UIE-ViewData.html">日本語</a></li>
 <li><a data-lang="es" href="/es/2018.4/Manual/UIE-ViewData.html">Español</a></li>
 <li><a data-lang="kr" href="/kr/2018.4/Manual/UIE-ViewData.html">한국어</a></li>
@@ -120,54 +136,66 @@
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
-<div class="version-list" style="display:none;"><ul>
-<li><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/UIE-ViewData.html">2019.3</a></li>
-<li><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/UIE-ViewData.html">2019.2</a></li>
-<li><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/UIE-ViewData.html">2019.1</a></li>
-<li><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/UIE-ViewData.html">2018.4</a></li>
-<li><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/UIE-ViewData.html">2018.3</a></li>
-<li><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/UIE-ViewData.html">2018.2</a></li>
-<li><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/UIE-ViewData.html">2018.1</a></li>
-<li><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/UIE-ViewData.html">2017.4</a></li>
-<li><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/UIE-ViewData.html">2017.3</a></li>
-<li><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/UIE-ViewData.html">2017.2</a></li>
-<li><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/UIE-ViewData.html">2017.1</a></li>
-<li><a class="docs_version_url_560" href="/cn/560/Manual/UIE-ViewData.html">5.6</a></li>
-</ul></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/UIE-ViewData.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/UIE-ViewData.html">2020.2</a></li>
+<li class="supported"><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/UIE-ViewData.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/UIE-ViewData.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/UIE-ViewData.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/UIE-ViewData.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/UIE-ViewData.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/UIE-ViewData.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/UIE-ViewData.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/UIE-ViewData.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/UIE-ViewData.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/UIE-ViewData.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/UIE-ViewData.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/UIE-ViewData.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/UIE-ViewData.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/UIE-ViewData.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p></p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p></p></li></div>
+</ul>
+<ul class="description">
+<li><div class="supported-box"></div></li>
+<li><div class="legacy-box"></div></li>
+</ul>
+</div>
 </div>
 <div class="clear"></div>
 </div></div></div></div></div>
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
+<li><a href="UnityManual.html">Unity 用户手册 (2018.4)</a></li>
 <li><a href="Experimental.html">实验性</a></li>
-<li><a href="UIElements.html">UIElements Developer Guide</a></li>
-<li>ViewData persistence</li>
+<li><a href="UIElements.html">UIElements 开发者指南</a></li>
+<li>ViewData 持久性</li>
 </ul></div>
 <div class="mb20"><div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
-<span class="prev"><a href="UIE-IMGUI.html"></a></span><div class="tip">Supporting IMGUI</div>
+<span class="prev"><a href="UIE-IMGUI.html"></a></span><div class="tip">支持 IMGUI</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
 <span class="next"><a href="ScriptedImporters.html"></a></span><div class="tip">脚本化导入器 (Scripted Importer)</div>
 </div>
 </div></div>
-<h1>ViewData persistence</h1>
+<h1>ViewData 持久性</h1>
 <!--BeginSwitchLink--><!--EndSwitchLink-->
 <div class="clear"></div>
 
-<p>Use the ViewData API to persist UI-specific state data after a domain reloads or when the Editor restarts. Persistent data is stored on each <code>EditorWindow</code>. Each <code>VisualElement</code> has a <code>persistenceKey</code> that must be set in order to enable <code>ViewData</code> persistence. </p>
+<p>使用 ViewData API 可在域重新加载后或 Editor 重新启动时保留特定于 UI 的状态数据。持久数据存储在每个 <code>EditorWindow</code> 上。每个 <code>VisualElement</code> 都有一个 <code>persistenceKey</code>，必须设置它才能启用 <code>ViewData</code> 持久性。</p>
 
-<p>This topic provides examples on how to enable ViewData persistence for implemented controls and new objects.</p>
+<p>本主题举例说明如何为已实现的控件和新对象启用 ViewData 持久性。</p>
 
-<h2>Usage for implemented controls</h2>
+<h2>已实现的控件的用法</h2>
 
-<p>If an element already supports persistence, set the <code>persistenceKey</code> to tell the system that it needs to save data. The <code>persistenceKey</code> must be unique compared against the keys for other visual elements.</p>
+<p>如果一个元素已经支持持久性，请设置 <code>persistenceKey</code> 来告诉系统其需要保存数据。与其他视觉元素的键相比，<code>persistenceKey</code> 必须是唯一的。</p>
 
-<h2>Usage with VisualElement object inheritance</h2>
+<h2>与 VisualElement 对象继承结合使用</h2>
 
-<p>If you create a new <code>VisualElement</code>, you can have it support persistent data. The first step is to encapsulate your persistent data within one or more <code>Serializable</code> classes inside your element class:</p>
+<p>创建新的 <code>VisualElement</code> 时可使其支持持久数据。第一步是将持久数据封装在元素类中的一个或多个 <code>Serializable</code> 类中：</p>
 
 <pre><code class="csharp">[Serializable]
 public class ExtraData
@@ -177,47 +205,47 @@ public class ExtraData
 public ExtraData m_ExtraData;
 </code></pre>
 
-<p>The second step is to call the <code>SavePersistentData()</code> method whenever the persistent data changes. This ensures that the data is saved properly:</p>
+<p>第二步是每当持久数据发生变化时调用 <code>SavePersistentData()</code> 方法。这样可确保正确保存数据：</p>
 
 <pre><code class="csharp">public int value
 {
     get { return m_Value; }
     set
     {
-        // do stuff
+        // 执行操作
         SavePersistentData();
     }
 }
 </code></pre>
 
-<p>The last step is to override <code>OnPersistentDataReady()</code>:</p>
+<p>最后一步是覆盖 <code>OnPersistentDataReady()</code>：</p>
 
-<pre><code class="csharp">// We do our real initial work here, once we know we can access our
-// persistent data store.
+<pre><code class="csharp">// 一旦我们知道可以访问持久数据存储，我们就在此处
+// 开始真正的初步工作。
 protected override void OnPersistentDataReady()
 {
     base.OnPersistentDataReady();
 
-    // Optionally get a more unique key based on current parents.
-    // This includes our own `persistenceKey`.
+    //（可选）根据当前父项获取更具唯一性的键。
+    //这包括我们自己的 `persistenceKey`。
     var key = GetFullHierarchicalPersistenceKey();
 
-    // Get or create a new ExtraData objects.
+    //获取或创建新的 ExtraData 对象。
     m_ExtraData = GetOrCreatePersistentData&lt;ExtraData&gt;(m_ExtraData, key);
 }
 </code></pre>
 
-<p>The example above also demonstrates how to generate and assign a unique key. Once the key is assigned, <code>GetOrCreatePersistentData()</code> returns the object with the persistence state, or as-is.</p>
+<p>上面的示例还演示了如何生成和分配唯一键。一旦指定了键，<code>GetOrCreatePersistentData()</code> 就会返回具有持久性状态的对象，或者按原样返回。</p>
 
 <hr>
 
 <ul>
-<li><span class="page-edit">2018–11–02 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+<li><span class="page-edit">2018–11–02 页面已修订并只进行了有限的<a href="DocumentationEditorialReview.html">编辑审查</a>
 </span></li>
 </ul>
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
-<span class="prev"><a href="UIE-IMGUI.html"></a></span><div class="tip">Supporting IMGUI</div>
+<span class="prev"><a href="UIE-IMGUI.html"></a></span><div class="tip">支持 IMGUI</div>
 </div>
 <div class="icon tt right" data-distance="-40|-30|top">
 <span class="next"><a href="ScriptedImporters.html"></a></span><div class="tip">脚本化导入器 (Scripted Importer)</div>

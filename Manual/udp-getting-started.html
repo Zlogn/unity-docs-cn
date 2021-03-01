@@ -1,0 +1,269 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script><link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Getting started with UDP - Unity 手册">
+<title>Getting started with UDP - Unity 手册</title>
+<meta name="description" content="">
+<meta property="og:description" content="">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'udp-getting-started';
+      if(!page) page = 'index';
+      var version = '2018.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.2',version_string: '2020.2',supported: true},{version: '2020.1',version_string: '2020.1',supported: true},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2018.4/Manual/udp-getting-started.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2018.4/Manual/udp-getting-started.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2018.4/Manual/udp-getting-started.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2018.4/Manual/udp-getting-started.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2018.4/Manual/udp-getting-started.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2018.4/Manual/udp-getting-started.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2018.4/Manual/udp-getting-started.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2018.4/Documentation/Manual/udp-getting-started.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2018.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/udp-getting-started.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/udp-getting-started.html">2020.2</a></li>
+<li class="supported"><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/udp-getting-started.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/udp-getting-started.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/udp-getting-started.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/udp-getting-started.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/udp-getting-started.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/udp-getting-started.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/udp-getting-started.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/udp-getting-started.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/udp-getting-started.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/udp-getting-started.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/udp-getting-started.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/udp-getting-started.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/udp-getting-started.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/udp-getting-started.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p></p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p></p></li></div>
+</ul>
+<ul class="description">
+<li><div class="supported-box"></div></li>
+<li><div class="legacy-box"></div></li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/udp-getting-started.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2018.4/Manual/udp-getting-started.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/udp-getting-started.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/udp-getting-started.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/udp-getting-started.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2018.4/Manual/udp-getting-started.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2018.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/udp-getting-started.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/udp-getting-started.html">2020.2</a></li>
+<li class="supported"><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/udp-getting-started.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/udp-getting-started.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/udp-getting-started.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/udp-getting-started.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/udp-getting-started.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/udp-getting-started.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/udp-getting-started.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/udp-getting-started.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/udp-getting-started.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/udp-getting-started.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/udp-getting-started.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/udp-getting-started.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/udp-getting-started.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/udp-getting-started.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p></p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p></p></li></div>
+</ul>
+<ul class="description">
+<li><div class="supported-box"></div></li>
+<li><div class="legacy-box"></div></li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2018.4)</a></li>
+<li><a href="UnityServices.html">Unity 服务</a></li>
+<li><a href="udp.html">Unity Distribution Portal</a></li>
+<li>Getting started with UDP</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="udp.html"></a></span><div class="tip">Unity Distribution Portal</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="udp-distribution.html"></a></span><div class="tip">Distributing your game with UDP</div>
+</div>
+</div></div>
+<h1>Getting started with UDP</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p><a name="how-to-implement"></a></p>
+
+<h2>UDP implementation</h2>
+
+<p>Unity recommends implementing UDP in your game development cycle towards the end of the development cycle, for example when you have decided what your game’s purchasable in-app products will be. This makes it easier to implement UDP in your back-catalog games to give them a new lease of life on new app stores.</p>
+
+<p>You can implement UDP in your game in one of the following ways.</p>
+
+<ul>
+<li>Using the UDP Package only</li>
+<li>Using the UDP package and Unity IAP package (for Unity IAP package versions 2.0.0+)</li>
+<li>Using Unity IAP only (for Unity IAP package versions 1.22.0–1.23.5)</li>
+</ul>
+
+<p>The implementation you choose does not affect the UDP console.</p>
+
+<p><a name="using-udp"></a></p>
+
+<h3>Using the UDP Package</h3>
+
+<p>This implementation is similar to the Google Play In-App Billing implementation. If you have previously configured your game for Google Play then Unity recommends using the UDP package.</p>
+
+<p>The UDP package is available from Unity Package Manager or from the Unity Asset Store.</p>
+
+<p>For standalone UDP package installations, see <a href="https://docs.unity3d.com/Packages/com.unity.purchasing.udp@2.1/manual/getting-started.html">Installing the UDP package</a>.</p>
+
+<h3>Using the UDP package and Unity IAP</h3>
+
+<p>The Unity IAP package version 2.0.0 and above does not contain the UDP DLL. This requires the UDP package version 2.0.0 and above. From these versions on, <a href="https://docs.unity3d.com/Packages/com.unity.purchasing.udp@2.1/manual/getting-started.html">install the UDP package</a> and install the Unity IAP package from the Asset Store.</p>
+
+<p><a name="using-iap"></a></p>
+
+<h3>Using Unity IAP</h3>
+
+<p>If your game already uses Unity IAP, you can continue to use the Unity IAP package.</p>
+
+<p><strong>Note</strong>: Unity recommends using the UDP package along with the Unity IAP package version 2.0.0+, available from the <a href="https://assetstore.unity.com/packages/add-ons/services/billing/unity-iap-68207">Asset Store</a>.. </p>
+
+<p>UDP is included in Unity IAP from version 1.22.0 - 1.23.5. If you use the Unity IAP package (1.22.0 - 1.23.5) do not install the UDP package separately.
+To check which Unity IAP version is installed, go to <strong>Window</strong> &gt; <strong>Unity IAP</strong> &gt; <strong>IAP Updates</strong>.
+Follow the general implementation guidance of <a href="https://docs.unity3d.com/Manual/UnityIAP.html">Unity IAP’s documentation</a> before you <a href="udp-service-interoperability.html#iap">implement your IAP items with Unity IAP</a>.</p>
+
+<p>If using the Unity IAP package, you can implement IAP items in your game using code, or a codeless implementation. For better integration with UDP, implement IAP using code.</p>
+
+<h2>System requirements</h2>
+
+<p>UDP is supported in Unity 5.6.1 or higher. Unity recommends to use 2018.4 or above.</p>
+
+<p>From the following package versions and above, you can use the UDP and Unity IAP packages together:</p>
+
+<ul>
+<li>UDP - 2.0.0</li>
+<li>Unity IAP - 2.0.0 (Asset Store version)</li>
+</ul>
+
+<h2>Navigating the UDP console</h2>
+
+<p>Access the UDP console at https://distribute.dashboard.unity.com. </p>
+
+<p>To access the UDP console from the Unity Editor, select <strong>Window</strong> &gt; <strong>Unity Distribution Portal</strong> &gt; <strong>Settings</strong>. In the UDP Settings inspector window, select <strong>Go to UDP console</strong>.</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="udp.html"></a></span><div class="tip">Unity Distribution Portal</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="udp-distribution.html"></a></span><div class="tip">Distributing your game with UDP</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2019 Unity Technologies. Publication 2018.4</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

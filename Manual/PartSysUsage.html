@@ -6,7 +6,8 @@
       j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
       })(window,document,'script','dataLayer','GTM-5V25JL6');
-    </script><meta charset="utf-8">
+    </script><link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
+<meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="twitter:card" content="summary">
@@ -16,7 +17,7 @@
 <meta name="description" content="Unity 使用组件实现粒子系统，因此将粒子系统放置在场景中涉及到添加预制的游戏对象（菜单：__GameObject__ &gt; Effects &gt; Particle System__）或将组件添加到现有游戏对象（菜单：__Component &gt; Effects &gt; Particle System__）。由于组件非常复杂，因此 Inspector 分为多个可折叠子部分或__模块__，每个子部分或模块都包含一组相关属性。此外，可使用单独的 Editor 窗口（通过 Inspector 中的 Open Window__ 按钮访问）同时编辑一个或多个系统。请参阅有关粒子系统组件和各个粒子系统模块的文档，了解更多信息。">
 <meta property="og:description" content="Unity 使用组件实现粒子系统，因此将粒子系统放置在场景中涉及到添加预制的游戏对象（菜单：__GameObject__ &gt; Effects &gt; Particle System__）或将组件添加到现有游戏对象（菜单：__Component &gt; Effects &gt; Particle System__）。由于组件非常复杂，因此 Inspector 分为多个可折叠子部分或__模块__，每个子部分或模块都包含一组相关属性。此外，可使用单独的 Editor 窗口（通过 Inspector 中的 Open Window__ 按钮访问）同时编辑一个或多个系统。请参阅有关粒子系统组件和各个粒子系统模块的文档，了解更多信息。">
 <meta name="author" content="Unity Technologies">
-<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
 <link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
 <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
@@ -26,17 +27,19 @@
 <link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
 <meta name="msapplication-TileColor" content="#222c37">
 <meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
-<script>
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
       var docs_type = 'Manual';
       var lang = 'cn';
       var page = 'PartSysUsage';
       if(!page) page = 'index';
       var version = '2018.4';
-      var docs_versions = [{version: '2019.3',version_string: '2019.3'},{version: '2019.2',version_string: '2019.2'},{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.2',version_string: '2020.2',supported: true},{version: '2020.1',version_string: '2020.1',supported: true},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
 <link rel="canonical" href="https://docs.unity3d.com/cn/2018.4/Manual/PartSysUsage.html">
 <link rel="alternate" href="https://docs.unity3d.com/en/2018.4/Manual/PartSysUsage.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2018.4/Manual/PartSysUsage.html" hreflang="zh">
 <link rel="alternate" href="https://docs.unity3d.com/ja/2018.4/Manual/PartSysUsage.html" hreflang="ja">
 <link rel="alternate" href="https://docs.unity3d.com/es/2018.4/Manual/PartSysUsage.html" hreflang="es">
 <link rel="alternate" href="https://docs.unity3d.com/kr/2018.4/Manual/PartSysUsage.html" hreflang="ko">
@@ -49,7 +52,7 @@
 <div id="header" class="header"><div class="content">
 <div class="spacer"><div class="menu">
 <div id="nav-open" for="nav-input"><span></span></div>
-<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="logo"><a href="./index.html"></a></div>
 <div class="search-form"><form action="30_search.html" method="get" class="apisearch">
 <input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
 </form></div>
@@ -74,20 +77,32 @@
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
-<div class="version-list" style="display:none;"><ul>
-<li><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/PartSysUsage.html">2019.3</a></li>
-<li><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/PartSysUsage.html">2019.2</a></li>
-<li><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/PartSysUsage.html">2019.1</a></li>
-<li><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/PartSysUsage.html">2018.4</a></li>
-<li><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/PartSysUsage.html">2018.3</a></li>
-<li><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/PartSysUsage.html">2018.2</a></li>
-<li><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/PartSysUsage.html">2018.1</a></li>
-<li><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/PartSysUsage.html">2017.4</a></li>
-<li><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/PartSysUsage.html">2017.3</a></li>
-<li><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/PartSysUsage.html">2017.2</a></li>
-<li><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/PartSysUsage.html">2017.1</a></li>
-<li><a class="docs_version_url_560" href="/cn/560/Manual/PartSysUsage.html">5.6</a></li>
-</ul></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/PartSysUsage.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/PartSysUsage.html">2020.2</a></li>
+<li class="supported"><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/PartSysUsage.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/PartSysUsage.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/PartSysUsage.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/PartSysUsage.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/PartSysUsage.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/PartSysUsage.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/PartSysUsage.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/PartSysUsage.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/PartSysUsage.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/PartSysUsage.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/PartSysUsage.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/PartSysUsage.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/PartSysUsage.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/PartSysUsage.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p></p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p></p></li></div>
+</ul>
+<ul class="description">
+<li><div class="supported-box"></div></li>
+<li><div class="legacy-box"></div></li>
+</ul>
+</div>
 </div>
 <ul class="nav-menu-items">
 <li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
@@ -102,6 +117,7 @@
 </div>
 <div class="lang-list" style="display:none;"><ul>
 <li><a data-lang="en" href="/2018.4/Documentation/Manual/PartSysUsage.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2018.4/Manual/PartSysUsage.html">中文</a></li>
 <li><a data-lang="ja" href="/ja/2018.4/Manual/PartSysUsage.html">日本語</a></li>
 <li><a data-lang="es" href="/es/2018.4/Manual/PartSysUsage.html">Español</a></li>
 <li><a data-lang="kr" href="/kr/2018.4/Manual/PartSysUsage.html">한국어</a></li>
@@ -121,27 +137,39 @@
 </div>
 <div class="d-inline-block arrow"></div>
 </div></div>
-<div class="version-list" style="display:none;"><ul>
-<li><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/PartSysUsage.html">2019.3</a></li>
-<li><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/PartSysUsage.html">2019.2</a></li>
-<li><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/PartSysUsage.html">2019.1</a></li>
-<li><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/PartSysUsage.html">2018.4</a></li>
-<li><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/PartSysUsage.html">2018.3</a></li>
-<li><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/PartSysUsage.html">2018.2</a></li>
-<li><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/PartSysUsage.html">2018.1</a></li>
-<li><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/PartSysUsage.html">2017.4</a></li>
-<li><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/PartSysUsage.html">2017.3</a></li>
-<li><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/PartSysUsage.html">2017.2</a></li>
-<li><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/PartSysUsage.html">2017.1</a></li>
-<li><a class="docs_version_url_560" href="/cn/560/Manual/PartSysUsage.html">5.6</a></li>
-</ul></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/PartSysUsage.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/PartSysUsage.html">2020.2</a></li>
+<li class="supported"><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/PartSysUsage.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/PartSysUsage.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/PartSysUsage.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/PartSysUsage.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/PartSysUsage.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/PartSysUsage.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/PartSysUsage.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/PartSysUsage.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/PartSysUsage.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/PartSysUsage.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/PartSysUsage.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/PartSysUsage.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/PartSysUsage.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/PartSysUsage.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p></p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p></p></li></div>
+</ul>
+<ul class="description">
+<li><div class="supported-box"></div></li>
+<li><div class="legacy-box"></div></li>
+</ul>
+</div>
 </div>
 <div class="clear"></div>
 </div></div></div></div></div>
 <div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
 <div class="section">
 <div class="breadcrumbs clear"><ul>
-<li><a href="UnityManual.html">Unity User Manual (2018.3)</a></li>
+<li><a href="UnityManual.html">Unity 用户手册 (2018.4)</a></li>
 <li><a href="Graphics.html">图形</a></li>
 <li><a href="GraphicsOverview.html">图形概述</a></li>
 <li><a href="ParticleSystems.html">粒子系统</a></li>
@@ -179,42 +207,37 @@
 <li>__Constant：__属性的值在其整个生命周期内是固定的。</li>
 <li>__Curve：__该值由曲线/图形指定。</li>
 <li>__Random Between Two Constants：__两个常量值定义了值的上限和下限；实际值随着时间的推移在这些边界之间随机变化。</li>
-<li>
-<strong>Random Between Two Curves:</strong> Two curves define the upper and lower bounds of the value at a given point in its lifetime; the current value varies randomly between those bounds.</li>
+<li>__Random Between Two Curves：__两条曲线定义了值在生命周期内给定点的上限和下限；当前值在这些边界之间随机变化。</li>
 </ul>
 
-<p>When you set a property to <strong>Curve</strong> or <strong>Random Between Two Curves</strong>, the Particle System Curves editor appears at the bottom of the Inspector:</p>
+<p>将属性设置为 <strong>Curve</strong> 或 <strong>Random Between Two Curves</strong> 时，粒子系统曲线编辑器 (Particle System Curves Editor) 将显示在 Inspector 的底部：</p>
 
 <figure>
 <img src="../uploads/Main/ParticleSystemCurve.png" alt="">
 </figure>
 
-<p>To edit a curve, click and drag an end point or key to reshape the curve:</p>
+<p>要编辑曲线，请单击并拖动结束点或关键点以调整曲线形状：</p>
 
 <figure>
 <img src="../uploads/Main/ParticleSystemCurveKeys.png" alt="">
 </figure>
 
-<p>Particle System curves are similar to <a href="animeditor-AnimationCurves.html">Animation curves</a>. For information on using curves, see the documentation on <a href="EditingCurves.html">Editing Curves</a>.</p>
+<p>粒子系统曲线与<a href="animeditor-AnimationCurves.html">动画曲线</a>类似。如需了解关于使用曲线的更多信息，请参阅有关<a href="EditingCurves.html">编辑曲线</a>的文档。</p>
 
-<p>The Particle System Curves editor has the following buttons:</p>
+<p>粒子系统曲线编辑器具有以下按钮：</p>
 
 <ul>
-<li>
-<strong>Optimize</strong>: Fits the curve into four or fewer keys to build a fast evaluator called a Polynomial, which is more efficient than reading the unoptimized curve.</li>
-<li>
-<strong>Remove</strong>: Deletes the selected curve.</li>
+<li>__Optimize__：使曲线适应四个或更少的关键点以构建称为多项式 (Polynomial) 的快速计算器，这比读取未优化的曲线更有效。</li>
+<li>__Remove__：删除选定的曲线。</li>
 </ul>
 
-<p>To edit the way in which the Particle System plays curves, click the cog next to a selected key and choose one of the following options: </p>
+<p>要编辑粒子系统播放曲线的方式，请单击所选关键点旁边的齿轮图标，然后选择以下选项之一：</p>
 
 <ul>
+<li>__Loop__：在粒子的生命周期内以指定的次数播放曲线。例如，如果制作一条缩放粒子大小的曲线，可以指定其多次循环，这会使“大小缩放”动画在粒子消亡之前多次播放，而不是仅播放一次。</li>
 <li>
-<strong>Loop</strong>: Plays the curve the specified number times over a particle’s life. For example, if you make a curve that scales a particle’s size up and down, you can tell it to loop multiple times, which causes the “up and down” animation to happen multiple times before the particle dies, instead of just once.</li>
-<li>
-<strong>Ping Pong</strong>: Similar to <strong>Loop</strong>, but plays the curve forwards then backwards in a continuous oscillation.</li>
-<li>
-<strong>Clamp</strong>: Limits particle queries that fall outside the curve time range to the first or last value of the curve.</li>
+<strong>Ping Pong__：与 </strong>Loop__ 相似，但以连续振荡的方式依次向前和向后播放曲线。</li>
+<li>__Clamp__：将超出曲线时间范围的粒子查询限制为曲线的第一个或最后一个值。</li>
 </ul>
 
 <p>同样，主模块中的 <strong>Start Color</strong> 属性具有以下选项：</p>
@@ -223,27 +246,21 @@
 <li>__Color：__粒子初始颜色在整个系统的生命周期内是固定的。</li>
 <li>__Gradient：__使用渐变指定的初始颜色发射粒子，渐变表示粒子系统的生命周期。</li>
 <li>__Random Between Two Colors：__选择两种给定颜色之间的随机线性插值作为初始粒子颜色。</li>
-<li>
-<strong>Random Between Two Gradients:</strong> Two colors are picked from the given Gradients at the point corresponding to the current age of the Particle System; the starting particle color is chosen as a random linear interpolation between these colors.</li>
-<li>
-<strong>Random Color</strong>: Picks any point at random from the Gradient for every newly spawned particle.</li>
+<li>__Random Between Two Gradients：__在对应于粒子系统当前时期的点处从给定渐变中挑选两种颜色；选择这两种颜色之间的随机线性插值作为初始粒子颜色。</li>
+<li>__Random Color__：对于每个新生成的粒子，从渐变中随机挑选任意点。</li>
 </ul>
 
-<p>When you set the <strong>Gradient</strong> color for particles, the Gradient Editor appears:</p>
+<p>为粒子设置 <strong>Gradient</strong> 颜色时，将显示渐变编辑器 (Gradient Editor)：</p>
 
 <figure>
 <img src="../uploads/Main/ParticleSystemGradientEditor.png" alt="">
 </figure>
 
 <ul>
-<li>
-<strong>Mode:</strong> Determines whether the particle color settings are blended or not.</li>
-<li>
-<strong>Color:</strong> Displays the color of the currently selected key in the Gradient. Use this to edit the color at that position of the Gradient.</li>
-<li>
-<strong>Location:</strong> Shows how far along on the Gradient the currently selected key is.</li>
-<li>
-<strong>Presets:</strong> Allows you to save Gradient settings. Click New to make the current set of values a Gradient preset.</li>
+<li>__Mode：__确定是否混合粒子颜色设置。</li>
+<li>__Color：__显示渐变中当前所选关键点的颜色。使用此项可以编辑渐变中该位置的颜色。</li>
+<li>__Location：__显示当前所选关键点在渐变上的距离。</li>
+<li>__Presets：__保存渐变设置。单击 New 可将当前值集设置为渐变预设。</li>
 </ul>
 
 <p>各种模块中的颜色属性按照每个通道相乘，从而计算出最终的粒子颜色结果。</p>
@@ -277,10 +294,10 @@
 <hr>
 
 <ul>
-<li><p><span class="page-edit">2018–11–27 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+<li><p><span class="page-edit">2018–11–27 页面已修订并只进行了有限的<a href="DocumentationEditorialReview.html">编辑审查</a>
 </span></p></li>
 <li><p><span class="page-history">在 Unity 4.6 中更改了 GameObject 菜单</span></p></li>
-<li><p><span class="page-history">Particle System loop/ping-pong curve playing added in <a href="https://docs.unity3d.com/2018.3/Documentation/Manual/30_search.html?q=newin20183">2018.3</a> <span class="search-words">NewIn20183X</span></span></p></li>
+<li><p><span class="page-history">在 <a href="https://docs.unity3d.com/2018.3/Documentation/Manual/30_search.html?q=newin20183">2018.3</a> 版中添加了粒子系统 Loop/Ping-Pong 曲线播放 <span class="search-words">NewIn20183X</span></span></p></li>
 </ul>
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">

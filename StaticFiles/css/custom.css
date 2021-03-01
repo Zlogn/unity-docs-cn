@@ -82,6 +82,7 @@ html, body{
 html, body {
   height: 100%;
   overflow-x: hidden !important;
+  font: 16px/135% 'Roboto', sans-serif;
 }
 
 #master-wrapper h1,
@@ -96,6 +97,10 @@ html, body {
   color: inherit !important;
 }
 
+div.toolbar {
+  float: left;
+}
+
 div.arrow {
   vertical-align: middle;
   width: 7px;
@@ -107,6 +112,11 @@ div.arrow {
 div.mCSB_container {
   margin: 0 20px 0 20px !important;
 }
+
+
+/****************************************
+  ==== Version Switcher
+****************************************/
 
 div.version-switcher {
   cursor: pointer;
@@ -121,17 +131,18 @@ div.version-number {
 }
 
 div.version-switcher div.version-list {
-  width: 150px;
+  width: 250px;
   position: absolute;
   left: 9px;
   z-index: 9999;
   font-size: medium;
-  background: #fff;
+  background-color: var(--main-bg-color);
   border-top: #19e3b1 4px solid;
   -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
   display: none;
+  
 }
 
 div.version-switcher div.version-list:before {
@@ -139,7 +150,7 @@ div.version-switcher div.version-list:before {
   display: block;
   position: absolute;
   top: -20px;
-  left: 50%;
+  left: 35%;
   font-size: 0px;
   line-height: 0%;
   width: 0px;
@@ -148,33 +159,79 @@ div.version-switcher div.version-list:before {
   border-bottom-color: #19e3b1;
 }
 
-div.version-switcher div.version-list ul {
-  list-style-type: none;
-  margin: 0 !important;
-}
-
 div.version-switcher div.version-list li {
   font-size: 0.8125em;
-  border-bottom: #e6e6e6 1px solid;
   padding: 0;
   margin: 0 !important;
-  text-align: center;
+  text-align: left;
+  list-style-type: none;
 }
 
-div.version-switcher div.version-list li:last-child {
-  border: 0;
+div.version-switcher div.version-list .versions {
+  margin: 0 !important;
+  max-height: 400px;
+  overflow-y: scroll;
 }
 
-div.version-switcher div.version-list a {
+div.version-switcher div.version-list .versions li {
+  border-left: var(--nextprev-bar-bg-color) 8px solid;
+  border-bottom: var(--nextprev-bar-bg-color) 1px solid;
+}
+
+div.version-switcher div.version-list .versions a:hover {
+  background: var(--nextprev-bar-bg-color);
+}
+
+
+div.version-switcher div.version-list .versions li.supported {
+  border-left: #19e3b1 8px solid;
+}
+
+div.version-switcher div.version-list .versions a {
   display: block;
   padding: 7px 10px;
   color: #455463;
   text-decoration: none;
+  background-color: var(--main-bg-color);
 }
 
-div.version-switcher div.version-list a:hover {
-  background: #f0f0f0;
+
+div.version-switcher div.version-list .versions div.versionsWithThisPage li:first-child p,
+div.version-switcher div.version-list .versions div.versionsWithoutThisPage li:first-child p {
+ font-weight: bold;
+ margin: 0;
+ padding: 0;
+ background: var(--nextprev-bar-bg-color);
 }
+
+div.version-switcher div.version-list .description {
+  padding-top: 4px;
+  padding-left: 8px;
+  cursor: auto;
+}
+div.version-switcher div.version-list .description .supported-box {
+  background: #19e3b1;
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  margin-right: 4px;
+  border: var(--main-text-color) 1px solid;
+  box-sizing: border-box;
+}
+
+div.version-switcher div.version-list .description .legacy-box {
+  background: var(--nextprev-bar-bg-color);
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  margin-right: 4px;
+  border: var(--main-text-color) 1px solid;
+  box-sizing: border-box;
+}
+
+/****************************************
+  ==== Language Switcher
+****************************************/
 
 div.lang-switcher div.lang-list {
   width: 150px;

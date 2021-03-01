@@ -1,0 +1,474 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script><link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Implementing in-app purchases with the UDP package - Unity 手册">
+<title>Implementing in-app purchases with the UDP package - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2018.4/uploads/Main/UDPManagingGame_07.png">
+<meta name="description" content="Unity recommends adding and managing your IAP products in the UDP console. The IAP Catalog in the UDP console is the source of truth for what is submitted to the store’s back-end systems. Additionally, the UDP console lets you:">
+<meta property="og:description" content="Unity recommends adding and managing your IAP products in the UDP console. The IAP Catalog in the UDP console is the source of truth for what is submitted to the store’s back-end systems. Additionally, the UDP console lets you:">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'udp-implementing-iap';
+      if(!page) page = 'index';
+      var version = '2018.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.2',version_string: '2020.2',supported: true},{version: '2020.1',version_string: '2020.1',supported: true},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2018.4/Manual/udp-implementing-iap.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2018.4/Manual/udp-implementing-iap.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2018.4/Manual/udp-implementing-iap.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2018.4/Manual/udp-implementing-iap.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2018.4/Manual/udp-implementing-iap.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2018.4/Manual/udp-implementing-iap.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2018.4/Manual/udp-implementing-iap.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2018.4/Documentation/Manual/udp-implementing-iap.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2018.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/udp-implementing-iap.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/udp-implementing-iap.html">2020.2</a></li>
+<li class="supported"><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/udp-implementing-iap.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/udp-implementing-iap.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/udp-implementing-iap.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/udp-implementing-iap.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/udp-implementing-iap.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/udp-implementing-iap.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/udp-implementing-iap.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/udp-implementing-iap.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/udp-implementing-iap.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/udp-implementing-iap.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/udp-implementing-iap.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/udp-implementing-iap.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/udp-implementing-iap.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/udp-implementing-iap.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p></p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p></p></li></div>
+</ul>
+<ul class="description">
+<li><div class="supported-box"></div></li>
+<li><div class="legacy-box"></div></li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/udp-implementing-iap.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2018.4/Manual/udp-implementing-iap.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/udp-implementing-iap.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/udp-implementing-iap.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/udp-implementing-iap.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2018.4/Manual/udp-implementing-iap.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2018.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/udp-implementing-iap.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/udp-implementing-iap.html">2020.2</a></li>
+<li class="supported"><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/udp-implementing-iap.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/udp-implementing-iap.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/udp-implementing-iap.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/udp-implementing-iap.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/udp-implementing-iap.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/udp-implementing-iap.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/udp-implementing-iap.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/udp-implementing-iap.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/udp-implementing-iap.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/udp-implementing-iap.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/udp-implementing-iap.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/udp-implementing-iap.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/udp-implementing-iap.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/udp-implementing-iap.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p></p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p></p></li></div>
+</ul>
+<ul class="description">
+<li><div class="supported-box"></div></li>
+<li><div class="legacy-box"></div></li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2018.4)</a></li>
+<li><a href="UnityServices.html">Unity 服务</a></li>
+<li><a href="udp.html">Unity Distribution Portal</a></li>
+<li>Implementing in-app purchases with the UDP package</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="udp-distribution.html"></a></span><div class="tip">Distributing your game with UDP</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="udp-sandbox-testing.html"></a></span><div class="tip">Testing your game in the UDP sandbox</div>
+</div>
+</div></div>
+<h1>Implementing in-app purchases with the UDP package</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Unity recommends adding and managing your IAP products in the UDP console. The <a href="udp.html#iap-catalog">IAP Catalog</a> in the UDP console is the source of truth for what is submitted to the store’s back-end systems. Additionally, the UDP console lets you:</p>
+
+<ul>
+<li>Manage multiple IAP prices and currencies</li>
+<li>Add descriptions in multiple languages</li>
+<li>Upload items in bulk via CSV file (multiple currencies and languages supported)</li>
+</ul>
+
+<p><strong>Note</strong>: If you are using the UDP package only, you should still create at least one IAP item in the Unity Editor to test that it can sync with the UDP console correctly.
+If you are using the Unity IAP package (codeless implementation), you must add each IAP item in the Unity Editor and upload them all to the UDP console. If you are using the Unity IAP package and have implemented IAP in code, create the IAP items in the UDP console.</p>
+
+<p>If you maintain an IAP Catalog in your game client, UDP keeps it synchronized between the Unity Editor and the UDP console.</p>
+
+<p><a name="managing-iap"></a></p>
+
+<h2>Managing in-app purchases on the UDP console</h2>
+
+<p>In the <a href="https://distribute.dashboard.unity.com/">UDP console</a>, navigate to your game via the My Games page.
+In the Game Info page, select the <strong>EDIT INFO</strong> button to enter edit mode. To save changes select <strong>SAVE</strong>. To discard your changes, select <strong>CANCEL</strong>.
+This section covers how to edit, create and delete IAP products from the UDP console.</p>
+
+<figure>
+<img src="../uploads/Main/UDPManagingGame_07.png" alt="">
+</figure>
+
+<p><a name="create"></a></p>
+
+<h3>Creating new IAP items</h3>
+
+<p>To create new IAP items in the UDP console:</p>
+
+<ol>
+<li>Select <strong>EDIT INFO</strong> on the Game Information page.</li>
+<li>Select <strong>Add Item</strong> to create a new item.</li>
+<li>Specify and save your <a href="udp-reference.html#iap">product information</a>.
+
+<ol>
+<li>Follow the requirements for Product IDs to make sure they’re valid for app stores.</li>
+<li>Make sure the IAP products you define in your game use the same <strong>Product ID</strong> that is set in the IAP Catalog.</li>
+</ol>
+</li>
+<li>Select <strong>Manage amounts and currencies</strong> to:
+
+<ol>
+<li>Convert the IAP price from USD to foreign currencies.</li>
+<li>Adjust pricing in these currencies.</li>
+</ol>
+</li>
+<li>Select <strong>SAVE</strong> to save your changes.</li>
+</ol>
+
+<p><strong>Note</strong>: If you have many IAP items to create, consider using the <a href="#bulk">Bulk IAP Import</a> feature to create all your IAP items at once, including localized description and pricing in multiple currencies.</p>
+
+<p>If using the UDP package, any new IAP items you add in the Console are synced to your Unity project. You don’t need to rebuild your game to include them.</p>
+
+<p><a name="edit"></a></p>
+
+<h3>Editing IAP descriptions</h3>
+
+<p>To edit IAP descriptions, proceed as follows.</p>
+
+<ol>
+<li>Select <strong>EDIT INFO</strong> on the Game Information page.</li>
+<li>Choose the language for which you want to edit your description via the drop-down language selector.</li>
+<li>In the In-App Purchases section, select the pencil icon to edit an existing IAP item.</li>
+<li>Edit your IAP item information:
+
+<ol>
+<li>
+<strong>Product Name</strong>, the name of the IAP item</li>
+<li>
+<strong>Description</strong>, to succinctly describe the IAP item</li>
+</ol>
+</li>
+<li>Select <strong>SAVE</strong> to save your changes.</li>
+</ol>
+
+<p><strong>Note</strong>: The above steps only edit your IAP item information for the language selected. If you have a large number of IAP items and languages to support, consider using <a href="#bulk">Bulk IAP Import</a> to import this information.</p>
+
+<h3>Editing IAP prices and currencies</h3>
+
+<ol>
+<li>Select <strong>EDIT INFO</strong> on the Game Information page.</li>
+<li>Select <strong>Manage amounts and currencies</strong> for an IAP item to:
+
+<ol>
+<li>Change the IAP price.</li>
+<li>Convert it from USD to foreign currencies.</li>
+<li>Adjust pricing in these currencies.</li>
+</ol>
+</li>
+<li>Select <strong>SAVE</strong> to save your changes.</li>
+</ol>
+
+<p><strong>Hint</strong>: To set currencies as favourite currencies, select the star icon next to their currency code. This pins the currency to the top of the list. Deselect the star to unpin.</p>
+
+<p><strong>Note</strong>: If you have many IAP items and currencies to support, you can use the <strong>Convert</strong> function to automatically convert all your IAP prices into global currencies, based on the USD amount set for each IAP item. This overrides any local prices you have previously set.</p>
+
+<p>Alternatively, use <a href="#bulk">Bulk IAP Import</a> to import all this information at once.</p>
+
+<h3>Deleting IAP items</h3>
+
+<ol>
+<li>Select <strong>EDIT INFO</strong> on the Game Information page.</li>
+<li>Select the trash can icon to delete an IAP item.</li>
+<li>Select <strong>SAVE</strong> to save your changes.</li>
+</ol>
+
+<h3>Importing IAP items in bulk</h3>
+
+<ol>
+<li>Select <strong>EDIT INFO</strong> on the Game Information page.</li>
+<li>Select <strong>IMPORT CATALOG</strong> in the top-right corner of the In-App Purchases panel.<br>See Bulk IAP Import for full coverage of this function.</li>
+<li>Select <strong>SAVE</strong> to save your changes.</li>
+</ol>
+
+<h3>Importing game information from Google Play</h3>
+
+<p>If you have already published your game on Google Play, you can import the basic information using your game’s Google Play URL:</p>
+
+<ol>
+<li>Select <strong>Import from Google Play</strong>.</li>
+<li>Paste your game’s Google Play URL into the input box.</li>
+<li>To specify which language to specifically import, use a Google Play URL that contains the language suffix, for example for Italian use <code>&amp;hl=it</code>.<br>If your Google Play URL doesn’t contain the language suffix, UDP fetches the information for the language that you’re currently editing in the UDP console (if it is set on Google Play).</li>
+<li>Select <strong>Import</strong>.</li>
+<li>Double-check the outcome as in some instances your computer’s IP address may ultimately determine which language you are served.</li>
+</ol>
+
+<p><a name="bulk"></a></p>
+
+<h2>Bulk IAP Import</h2>
+
+<p>The Bulk IAP Import feature makes it easier to manage your IAP Catalog if you have a lot of IAP items. This lets you upload CSV files in the regular UDP format and in Google Play format to the UDP Console with all your IAP product details, including prices in multiple currencies and descriptions in multiple languages.</p>
+
+<p>Unity recommends that you still add an IAP item in the Unity Editor for testing purposes to ensure you can purchase an IAP item in the sandbox environment.</p>
+
+<p><strong>Note</strong>: If your CSV file contains multiple languages, <a href="#udp-distribution.html#languages">add the supported languages</a> before you import the CSV file.</p>
+
+<p>This section describes how to import your IAP items in bulk via CSV.</p>
+
+<h3>Implementation requirements</h3>
+
+<h4>To add new IAP products</h4>
+
+<p>You should only use the Bulk IAP Import function to add new IAP products if you implemented UDP:</p>
+
+<ul>
+<li>With the UDP package</li>
+<li>With Unity IAP (code implementation)</li>
+</ul>
+
+<p>Unity recommends that you still add an IAP item in the Unity Editor for testing purposes to ensure you can purchase an IAP item in the sandbox environment.</p>
+
+<h4>To add localized descriptions and prices</h4>
+
+<p>For all implementations, you can use Bulk IAP Import to assign descriptions in more languages and prices in more currencies to your existing IAP products.</p>
+
+<h4>With the UDP Package</h4>
+
+<p>You can use Bulk IAP Import to entirely redefine your game’s IAP Catalog without having to rebuild your game.</p>
+
+<p>You only need to have a UDP implementation in good working order. </p>
+
+<h4>With Unity IAP (code implementation)</h4>
+
+<p>With Unity IAP, you can only sync your IAP Catalog from the Editor to the UDP Console. </p>
+
+<p>If you will upload your game’s IAP Catalog to the UDP Console via Bulk IAP Upload, you should prepare your game to fetch IAP product information from the UDP Console, rather than from the game client’s default IAP Catalog.</p>
+
+<p>To allow your game to fetch the IAP Catalog from the UDP console, do not invoke any IAP product retrieval method in your code. </p>
+
+<p>For more information, see <a href="https://docs.unity3d.com/Packages/com.unity.purchasing.udp@2.1/manual/games-with-iap.html#query-iap">Querying IAP inventory</a>.</p>
+
+<h3>Download the CSV Template</h3>
+
+<p>UDP provides a CSV template you can use for bulk import of IAP products. The template is in the regular UDP format for CSV files.</p>
+
+<ol>
+<li>Select <strong>EDIT INFO</strong> on the <strong>Game Information</strong> page.</li>
+<li>Go to the <strong>In-App Purchases</strong> panel.</li>
+<li>Select <strong>IMPORT CATALOG</strong>.</li>
+<li>Select <strong>Download Template</strong>.</li>
+</ol>
+
+<h3>Fill in the CSV file</h3>
+
+<p>CSV files use commas (,) and semicolons (;) to separate data values. Commas separate primary data values, and semicolons separate subvalues.</p>
+
+<p>Each IAP item must appear entirely on a single line within the CSV file.</p>
+
+<p>You must enter data in the exact <a href="udp-reference.html#csv">format</a> of the template provided.</p>
+
+<h3>Upload your CSV file</h3>
+
+<ol>
+<li>Select <strong>EDIT INFO</strong> on the <strong>Game Information</strong> page.</li>
+<li>Go to the <strong>In-App Purchases</strong> section.</li>
+<li>Select <strong>IMPORT CATALOG</strong>.</li>
+<li>Select <strong>Upload CSV</strong> or drag and drop your CSV file in the designated box.</li>
+<li>Select <strong>IMPORT</strong> to upload your IAP Catalog to the UDP console.</li>
+</ol>
+
+<p><strong>Note:</strong> Uploading a CSV file entirely overwrites this revision’s IAP catalog. The UDP console only uses the information contained in your CSV file; any other IAP information you previously entered via the UDP console is lost.</p>
+
+<h3>Export a CSV file</h3>
+
+<p>To re-use or modify an existing IAP Catalog:</p>
+
+<ol>
+<li>Select <strong>EDIT INFO</strong> on the Game Information page.</li>
+<li>Go to the In-App Purchases section.</li>
+<li>Select <strong>EXPORT CATALOG</strong>.<br>This exports your existing IAP Catalog as a CSV file in the regular UDP format.</li>
+<li>Modify the CSV file.</li>
+<li>Upload your CSV file.</li>
+</ol>
+
+<p>The <strong>EXPORT CATALOG</strong> button is only shown if you have IAP products in your IAP Catalog, and is only visible in edit mode. The image below shows this button in the In-App Purchases section.</p>
+
+<figure>
+<img src="../uploads/Main/UDPBulkImport_06.png" alt="">
+</figure>
+
+<p><a name="google"></a></p>
+
+<h2>Import IAP products from Google Play format</h2>
+
+<p>UDP also supports CSV files in Google Play format.</p>
+
+<p>To import IAP products using a Google Play CSV file:</p>
+
+<ol>
+<li>Select <strong>EDIT INFO</strong> on the <strong>Game Information</strong> page.</li>
+<li>Go to the <strong>In-App Purchases</strong> section.</li>
+<li>Click <strong>IMPORT CATALOG</strong>.</li>
+<li>Select the <strong>CSV file in Google Play format</strong> checkbox.</li>
+<li>Select Upload CSV or drag and drop your CSV file in the designated box.
+
+<ol>
+<li>In the <strong>Google Play default currency</strong> field, select the default currency for your game.</li>
+</ol>
+</li>
+<li>Select <strong>Import</strong> to upload your IAP Catalog to the UDP console.</li>
+</ol>
+
+<h3>Pricing</h3>
+
+<p>Google Play sets pricing by country, UDP sets pricing by currency. Therefore the import maps countries to currencies.
+If for an IAP product you’ve set different prices across countries using the same currency (for example, EUR in European countries) UDP uses the first country in the list for the currency. If there are several countries with USD listed, the US locale is used.</p>
+
+<p>UDP does not support Google Play’s pricing templates. This setting is ignored. UDP only uses the local prices provided in the CSV file.</p>
+
+<h3>Default currency</h3>
+
+<p>UDP uses USD as its default currency. If you don’t have USD pricing on Google Play, UDP converts your Google Play default pricing and currency into USD and uses this as the UDP default pricing.</p>
+
+<p>Local prices that are set in your CSV file are maintained in their respective currencies.</p>
+
+<p>For countries that aren’t explicitly set in the CSV file, UDP converts your Google Play default pricing and currency into their respective currencies.</p>
+
+<h3>IAP products</h3>
+
+<p>The type of IAP products (consumable / non-consumable) cannot be determined from your CSV file; you need to tell UDP the type of each IAP product.</p>
+
+<p>UDP does not support Auto-Translate. This setting is ignored. UDP only uses the localized descriptions provided in the CSV file.</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="udp-distribution.html"></a></span><div class="tip">Distributing your game with UDP</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="udp-sandbox-testing.html"></a></span><div class="tip">Testing your game in the UDP sandbox</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2019 Unity Technologies. Publication 2018.4</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

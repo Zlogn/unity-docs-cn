@@ -1,0 +1,566 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script><link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Using UDP with other services - Unity 手册">
+<title>Using UDP with other services - Unity 手册</title>
+<meta property="og:image" content="https://docs.unity3d.com/cn/2018.4/uploads/Main/UDPUsingCloudBuild_03.png">
+<meta name="description" content="You can use Cloud Build to deploy your game to the UDP console in the following ways:">
+<meta property="og:description" content="You can use Cloud Build to deploy your game to the UDP console in the following ways:">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'udp-service-interoperability';
+      if(!page) page = 'index';
+      var version = '2018.4';
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.2',version_string: '2020.2',supported: true},{version: '2020.1',version_string: '2020.1',supported: true},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2018.4/Manual/udp-service-interoperability.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2018.4/Manual/udp-service-interoperability.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2018.4/Manual/udp-service-interoperability.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2018.4/Manual/udp-service-interoperability.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2018.4/Manual/udp-service-interoperability.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2018.4/Manual/udp-service-interoperability.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2018.4/Manual/udp-service-interoperability.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2018.4/Documentation/Manual/udp-service-interoperability.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="./index.html"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2018.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/udp-service-interoperability.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/udp-service-interoperability.html">2020.2</a></li>
+<li class="supported"><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/udp-service-interoperability.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/udp-service-interoperability.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/udp-service-interoperability.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/udp-service-interoperability.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/udp-service-interoperability.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/udp-service-interoperability.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/udp-service-interoperability.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/udp-service-interoperability.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/udp-service-interoperability.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/udp-service-interoperability.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/udp-service-interoperability.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/udp-service-interoperability.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/udp-service-interoperability.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/udp-service-interoperability.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p></p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p></p></li></div>
+</ul>
+<ul class="description">
+<li><div class="supported-box"></div></li>
+<li><div class="legacy-box"></div></li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2018.4/Documentation/Manual/udp-service-interoperability.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2018.4/Manual/udp-service-interoperability.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2018.4/Manual/udp-service-interoperability.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.4/Manual/udp-service-interoperability.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.4/Manual/udp-service-interoperability.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2018.4/Manual/udp-service-interoperability.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2018.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/udp-service-interoperability.html">2021.1</a></li>
+<li class="supported"><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/udp-service-interoperability.html">2020.2</a></li>
+<li class="supported"><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/udp-service-interoperability.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/udp-service-interoperability.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/udp-service-interoperability.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/udp-service-interoperability.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/udp-service-interoperability.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/udp-service-interoperability.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/udp-service-interoperability.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/udp-service-interoperability.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/udp-service-interoperability.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/udp-service-interoperability.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/udp-service-interoperability.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/udp-service-interoperability.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/udp-service-interoperability.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/udp-service-interoperability.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p></p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p></p></li></div>
+</ul>
+<ul class="description">
+<li><div class="supported-box"></div></li>
+<li><div class="legacy-box"></div></li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2018.4)</a></li>
+<li><a href="UnityServices.html">Unity 服务</a></li>
+<li><a href="udp.html">Unity Distribution Portal</a></li>
+<li>Using UDP with other services</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="udp-managing-and-publishing.html"></a></span><div class="tip">Managing and publishing your game on the UDP console</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="udp-reference.html"></a></span><div class="tip">UDP reference</div>
+</div>
+</div></div>
+<h1>Using UDP with other services</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<h2>Using Cloud Build with UDP</h2>
+
+<p>You can use <a href="https://docs.unity3d.com/Manual/UnityCloudBuild.html">Cloud Build</a> to deploy your game to the UDP console in the following ways:</p>
+
+<ul>
+<li>
+<a href="#upload">Upload your APK to Cloud Build</a>, and deploy it to UDP from there</li>
+<li>
+<a href="#build">Build your game with Cloud Build</a>, and deploy it to UDP from there</li>
+</ul>
+
+<p><a name="upload"></a></p>
+
+<h2>Pushing the build to the UDP console via Cloud Build</h2>
+
+<p>This section explains how to use Cloud Build to push your game to UDP.
+In the Unity Editor, enable Cloud Build through the <strong>Unity Services</strong> window.</p>
+
+<h3>Using Cloud Build in the Editor to deploy your game to UDP</h3>
+
+<p>To deploy your game to UDP via the Cloud Build feature in the Unity Editor, you need to upload your UDP build and push it to UDP.</p>
+
+<ol>
+<li>In the <strong>Cloud Build Services</strong> window, if you haven’t uploaded any build before, select <strong>Upload Build</strong>.<br>
+</li>
+<li>In <strong>FILE</strong>:<br>
+
+<ul>
+<li>Choose the APK of your UDP build</li>
+<li>Enter a useful <strong>LABEL</strong>
+</li>
+<li>Set the <strong>PLATFORM</strong> field to Android.<br>
+</li>
+</ul>
+</li>
+<li>Select <strong>UPLOAD</strong>, and let it complete the upload process.</li>
+<li>In the <strong>Cloud Build Services</strong> window, locate the desired build from the build <strong>History</strong> timeline and select <strong>Push to Unity Distribution Portal</strong>.
+
+<ol>
+<li>Verify that you want to push, and that the action completes.<br>
+<img src="../uploads/Main/UDPUsingCloudBuild_03.png" alt="">
+</li>
+</ol>
+</li>
+</ol>
+
+<h3>Using the Unity Dashboard to deploy your game to UDP</h3>
+
+<p>To deploy your game to UDP via the Cloud Build feature in the Unity Dashboard, you need to upload your UDP build to the Unity Dashboard and push it from there to UDP.</p>
+
+<ol>
+<li>In the <a href="https://developer.cloud.unity3d.com/build">Unity Developer Dashboard</a>, navigate to your Project’s <strong>Cloud Build</strong> &gt; <strong>History</strong>.</li>
+<li>Select <strong>Upload</strong>, then select your APK file.</li>
+<li>In the <strong>Platform</strong> field, select <strong>Android</strong>.</li>
+<li>Select <strong>Upload</strong>.</li>
+<li>Select the More menu next to your build to expand the drop-down menu.</li>
+<li>Select <strong>Push to Unity Distribution Portal</strong>.</li>
+</ol>
+
+<p><a name="build"></a></p>
+
+<h2>Building and deploying via Cloud Build</h2>
+
+<p>If you use Unity Teams Advanced, you can <a href="https://docs.unity3d.com/Manual/UnityCloudBuildContinuousIntegration.html">generate builds automatically</a>. </p>
+
+<p>In the Cloud Build Services window:</p>
+
+<ol>
+<li>Select <strong>Manage Build Targets</strong> &gt; <strong>Add new build target</strong>
+</li>
+<li>In the <strong>TARGET SETUP</strong> window, set the <strong>PLATFORM</strong> field to Android and enter a useful <strong>TARGET LABEL</strong>.</li>
+<li>Select <strong>Next: Save</strong>.</li>
+<li>Select <strong>Start Cloud Build</strong>, then select the target build you just created.</li>
+</ol>
+
+<p>Push your build to UDP directly via the Unity Cloud Build Developer Dashboard (as shown above).</p>
+
+<h2>Service interoperability</h2>
+
+<p>UDP can tell other services used by your game which store was the game downloaded from.</p>
+
+<p>This information can be used in many ways, by Unity services as well as by third-party or your own services.</p>
+
+<p>For example, <a href="https://unity.com/remote-config">Unity Remote Config</a> lets you tune your game settings based on rules that you define, such as which store the game was downloaded from.</p>
+
+<p>This section explains how to let other services gain access to this information, and includes an <a href="#example">example</a>.</p>
+
+<h2>How does it work?</h2>
+
+<p>When your game first launches on a player’s device, UDP creates and drops the <code>udp.json</code> file in the game’s Persistent Data Path. This file contains the field <code>udpStore</code>, which shows which store the game was downloaded from. Retrieve that information to use it the way you intend to.</p>
+
+<p><strong>Note:</strong> This doesn’t add any new permission into your game manifest.</p>
+
+<h2>Locating udp.json</h2>
+
+<p>The file <code>udp.json</code> is saved in: </p>
+
+<p><code>Application.PersistentDataPath + '/Unity' + /Application.CloudProjectID + /udp/udp.json</code></p>
+
+<p>Where:</p>
+
+<ul>
+<li>
+<code>Application.PersistentDataPath</code> is your game’s persistent data path</li>
+<li>
+<code>Application.CloudProjectID</code> is your game’s Unity project ID</li>
+</ul>
+
+<p>Here is an example of a path to the <code>udp.json</code> file:</p>
+
+<p><code>path/storage/emulated/0/Android/data/com.mystudio.mygame/files/Unity/c83d2de2-de74-4b75-83fc-ade948bda064/udp/udp.json</code></p>
+
+<p>Where:</p>
+
+<ul>
+<li>
+<code>Application.PersistentDataPath</code>= <code>path/storage/emulated/0/Android/data/com.mystudio.mygame</code>
+</li>
+<li>
+<code>Application.CloudProjectID</code>= <code>c83d2de2-de74-4b75-83fc-ade948bda064</code>
+</li>
+</ul>
+
+<h2>Reading udp.json</h2>
+
+<p>The file <code>udp.json</code> contains the following information:</p>
+
+<pre><code>{"key":"UDP","udpStore":"StoreName","udpClientId":"value_of_udpClientId","CloudProjectId":"value_of_CloudProjectId"}
+</code></pre>
+
+<p>The field <code>udpStore</code> contains the value of the UDP store your game was downloaded from.</p>
+
+<p>Here is an example of a <code>udp.json</code> file:</p>
+
+<p>{“key”:“UDP”,“udpStore”:“SamsungGalaxyStore”,“udpClientId”:“icjaB7wmu_q7AOjrSLH8yw”,“cloudProjectId”:“bc2be074–09f3–450f–8e98-a0f79c9746f7”}</p>
+
+<p>In this example, the game was downloaded from the Samsung Galaxy Store.</p>
+
+<p><strong>Tip:</strong> use <code>JSONUtility.FromJsonOverwrite</code> to read the contents of the file as a text asset.</p>
+
+<p><a name="udp-values"></a></p>
+
+<h2>udpStore values</h2>
+
+<p>The table below lists the <code>udpStore</code> values you can expect for stores available on UDP.</p>
+
+<p>These are case-sensitive.</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">Store (channel name on UDP)</th>
+	<th style="text-align:left;">Value for udpStore</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">UDP Sandbox (for the generic UDP builds)</td>
+	<td style="text-align:left;">UdpSandbox</td>
+</tr>
+<tr>
+	<td style="text-align:left;">ONE store</td>
+	<td style="text-align:left;">OneStore</td>
+</tr>
+<tr>
+	<td style="text-align:left;">APPTUTTi</td>
+	<td style="text-align:left;">Apptutti</td>
+</tr>
+<tr>
+	<td style="text-align:left;">VIVEPORT</td>
+	<td style="text-align:left;">Htc</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Mi GetApps (Xiaomi)</td>
+	<td style="text-align:left;">XiaomiStore</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Mi Game Center (Xiaomi China)</td>
+	<td style="text-align:left;">XiaomiStoreCn</td>
+</tr>
+<tr>
+	<td style="text-align:left;">HUAWEI AppGallery</td>
+	<td style="text-align:left;">Huawei</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Samsung Galaxy Store</td>
+	<td style="text-align:left;">SamsungGalaxyStore</td>
+</tr>
+<tr>
+	<td style="text-align:left;">QooApp Game Store</td>
+	<td style="text-align:left;">QooApp</td>
+</tr>
+<tr>
+	<td style="text-align:left;">TPAY MOBILE Stores</td>
+	<td style="text-align:left;">Tpay</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Uptodown</td>
+	<td style="text-align:left;">Uptodown</td>
+</tr>
+<tr>
+	<td style="text-align:left;">SHAREit</td>
+	<td style="text-align:left;">ShareIt</td>
+</tr>
+<tr>
+	<td style="text-align:left;">JioGames</td>
+	<td style="text-align:left;">JioGamesStore</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="example"></a></p>
+
+<h2>Using udpStore with Remote Config</h2>
+
+<p><a href="https://unity.com/remote-config">Unity Remote Config</a> lets you tune your game settings without deploying new versions of your application. When a player launches your game, Remote Config detects contextual attributes used as Rule conditions (based on Unity, the application, the user, or custom criteria that you define). The service then returns customized settings for each player according to the Rules that apply to them.</p>
+
+<p>Use <code>udpStore</code> as an attribute in your Rule conditions, so you can determine game settings that depend on which UDP store the game was downloaded from.</p>
+
+<p>To implement udpStore with Remote Config, follow these steps.</p>
+
+<ol>
+<li>Download and install the UDP package.</li>
+<li>Download and install the Unity Remote Config package. See the <a href="https://docs.unity3d.com/Packages/com.unity.remote-config@latest/index.html">Remote Config documentation</a>.</li>
+<li>Create an AppAttributes struct, which at least has a parameter, “udpStore”:<br>
+<code>
+public struct AppAttributes
+{
+  public string udpStore;
+}
+</code>
+</li>
+<li>In the game code, implement the Remote Config ConfigManager.FetchConfigs call.</li>
+<li>When calling FetchConfigs, create a new instance of the AppAttributes struct, read the UDP store data file from:
+Application.PersistentDataPath + ‘/Unity’ + /Application.CloudProjectId + /udp/udp.json
+Use JSONUtility.FromJsonOverwrite to read the contents of the file as a text asset.<br>
+<code>
+{
+    string udpFilePath = System.IO.Path.Combine(Application.persistentDataPath, "Unity", Application.cloudProjectId, "udp", "udp.json");
+    string udpFileContents = System.IO.File.ReadAllText(udpFilePath);
+    var appAttr = JsonUtility.FromJson&amp;lt;AppAttributes&amp;gt;(udpFileContents);
+    Unity.RemoteConfig.ConfigManager.FetchCompleted += ConfigManager_FetchCompleted;
+    Unity.RemoteConfig.ConfigManager.FetchConfigs(null, appAttr);
+}
+</code>
+</li>
+<li>Ensure the AppAttributes struct is used in ConfigManager.FetchConfigs.</li>
+<li>Open the <strong>Remote Config</strong> window (<strong>Window</strong> &gt; <strong>Remote Config</strong>), and create the parameters that you’d want to change based on the UDP store.</li>
+<li>When the parameters are set up, and instrumented in the game code, create a rule for each store in the Remote Config window.</li>
+<li>In each rule’s condition, put: app.udpStore == “[storeName]”<br>
+
+<ul>
+<li>See the <a href="#udp-values">values for udpStore</a><br>
+ <img src="../uploads/Main/UDPServiceInteroperability_01.png" alt="">
+</li>
+</ul>
+</li>
+<li>To enable the setting, select the checkbox next to the name of the rule on the left panel in the Remote Config window.</li>
+<li>Build the app to a device and ensure the rules are properly applied, and ship it.</li>
+</ol>
+
+<p><a name="iap"></a></p>
+
+<h2>Implementing IAP items for UDP with Unity IAP</h2>
+
+<p>If you want to implement UDP using Unity IAP, first <a href="https://docs.unity3d.com/Manual/UnityIAPSettingUp.html">set up Unity IAP</a>. </p>
+
+<p><strong>Note</strong>: If you choose to implement UDP with Unity IAP version 1.22.0–1.23.5 (instead of using the UDP package) then implement via Unity IAP only.</p>
+
+<p>Unity IAP automatically handles the following:</p>
+
+<ul>
+<li>Initializing UDP</li>
+<li>Querying the store’s IAP product inventory</li>
+<li>Requesting to purchase a product</li>
+<li>Consuming the purchased item</li>
+</ul>
+
+<p>However, your game must properly use Unity IAP’s similar functions (such as initialization and purchase) according to the <a href="https://docs.unity3d.com/Manual/UnityIAP.html">Unity IAP Documentation</a>.</p>
+
+<p>When you’ve implemented your game’s in-app purchases with Unity IAP, take the following steps to set up UDP with Unity IAP.</p>
+
+<p><a name="query-iap"></a></p>
+
+<h3>Querying IAP inventory</h3>
+
+<h4>With Unity IAP (code implementation)</h4>
+
+<h5>Fetching IAP products defined in the Editor</h5>
+
+<p>When fetching the IAP products to pass to the <code>queryInventory</code> method, invoke <code>ProductCatalog.LoadDefaultCatalog()</code>. This returns the IAP products defined in the Editor’s <strong>IAP Catalog</strong> (<strong>Window</strong> &gt; <strong>Unity IAP</strong> &gt; <strong>IAP Catalog</strong>).</p>
+
+<p>For instance:</p>
+
+<pre><code>var catalog = ProductCatalog.LoadDefaultCatalog();
+
+foreach (var product in catalog.allValidProducts)
+{
+   if (product.allStoreIDs.Count &gt; 0)
+   {
+       var ids = new IDs();
+       foreach (var storeID in product.allStoreIDs)
+       {
+           ids.Add(storeID.id, storeID.store);
+       }
+       builder.AddProduct(product.id, product.type, ids);
+   }
+   else
+   {
+       builder.AddProduct(product.id, product.type);
+   }
+}
+</code></pre>
+
+<h5>Fetching IAP product information from the UDP console</h5>
+
+<p>If you plan to modify your game’s IAP Catalog on the UDP Console, prepare your game to fetch IAP product information from the UDP Console.</p>
+
+<p>When fetching the IAP products to pass to the <code>queryInventory</code> method, invoke builder.AddProduct to retrieve specific IAP products defined from the UDP console:</p>
+
+<p><code>builder.AddProduct(product.id, product.type, new IDs{})</code></p>
+
+<p>To display the product price, formatted with currency, use <code>productInfo.Value.Price</code>.</p>
+
+<h5>Fetching the IAP Catalog from the UDP console</h5>
+
+<p>To retrieve all the IAP products defined on the UDP Console, don’t invoke any IAP product retrieval method. Your game will then fetch the entire IAP Catalog from the UDP Console. </p>
+
+<p>Note: Uploading a CSV file of IAP products on the UDP Console entirely overwrites your IAP Catalog.</p>
+
+<h4>Filling in the IAP Catalog with the Unity IAP package</h4>
+
+<p>Add and configure your <a href="udp.html#iap-catalog">IAP Catalog</a> all your in-app purchases for UDP. </p>
+
+<p><strong>Note</strong>: If you don’t use an IAP Catalog in your game client (for instance, you maintain your IAP items solely on your game server) you must still <a href="udp-implementing-iap.html#create">create your IAP Catalog on the UDP console</a>.</p>
+
+<ol>
+<li>In the Unity Editor, select <strong>Window</strong> &gt; <strong>Unity IAP</strong> &gt; <strong>IAP Catalog</strong>.</li>
+<li>Select <strong>Add Product</strong> and enter the details for each IAP product.
+
+<ol>
+<li>Add the price for the IAP item under Unity Distribution Portal Configuration.
+<img src="../uploads/Main/UDPGamesWithIAP_09.png" alt="">
+</li>
+</ol>
+</li>
+<li>To save your IAP product to the UDP console, select <strong>Sync to UDP</strong>. Do this for each IAP product you create.</li>
+</ol>
+
+<p>To make sure the IAP Catalog is properly saved, check that the items you added are displayed in the UDP console.</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="udp-managing-and-publishing.html"></a></span><div class="tip">Managing and publishing your game on the UDP console</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="udp-reference.html"></a></span><div class="tip">UDP reference</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2019 Unity Technologies. Publication 2018.4</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>
